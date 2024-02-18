@@ -69,10 +69,10 @@ gettext:
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) locale/sources
 	@echo "Generation finished."
 
-$(HTML_BUILD_DIR)/_static/style.css: extensions/odoo_theme/static/style.scss extensions/odoo_theme/static/scss/*.scss
+$(HTML_BUILD_DIR)/_static/style.css: extensions/exo_theme/static/style.scss extensions/exo_theme/static/scss/*.scss
 	@echo "Compiling stylesheets..."
 	mkdir -p $(HTML_BUILD_DIR)/_static
-	python3 -m pysassc extensions/odoo_theme/static/style.scss $(HTML_BUILD_DIR)/_static/style.css
+	python3 -m pysassc extensions/exo_theme/static/style.scss $(HTML_BUILD_DIR)/_static/style.css
 	@echo "Compilation finished."
 
 #=== Development and debugging rules ===#
@@ -81,7 +81,7 @@ fast: SPHINXOPTS += -A collapse_menu=True
 fast: html
 
 static: $(HTML_BUILD_DIR)/_static/style.css
-	cp -r extensions/odoo_theme/static/* $(HTML_BUILD_DIR)/_static/
+	cp -r extensions/exo_theme/static/* $(HTML_BUILD_DIR)/_static/
 	cp -r static/* $(HTML_BUILD_DIR)/_static/
 
 # Called by runbot for the ci/documentation_guideline check.

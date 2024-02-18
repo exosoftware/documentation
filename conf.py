@@ -16,8 +16,8 @@ _logger = logging.getLogger(__name__)
 #=== General configuration ===#
 
 # General information about the project.
-project = 'Odoo'
-copyright = 'Odoo S.A.'
+project = 'Exo Documentation'
+copyright = 'Exo Software, Lda.'
 
 # `version` is the version info for the project being documented, acts as replacement for |version|,
 # also used in various other places throughout the built documents.
@@ -43,7 +43,7 @@ needs_sphinx = '3.0.0'
 
 # The default language in which the documentation is written. It is set to `None` because Sphinx
 # considers that no language means 'en'.
-language = None
+language = 'pt'
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -152,7 +152,7 @@ extensions = [
     'sphinx.ext.todo',
 
     # Custom Odoo theme
-    'odoo_theme',
+    'exo_theme',
 
     # Youtube and Vimeo videos integration (youtube, vimeo directives)
     'embedded_video',
@@ -249,7 +249,7 @@ sphinx_tabs_disable_css_loading = True
 
 #=== Options for HTML output ===#
 
-html_theme = 'odoo_theme'
+html_theme = 'exo_theme'
 
 # The name of the Pygments (syntax highlighting) style to use.
 # See extensions/odoo_theme/pygments_override.py
