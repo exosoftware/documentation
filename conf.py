@@ -213,31 +213,32 @@ sphinx.transforms.i18n.docname_to_domain = (
 # is populated. If a version is passed to `versions` but is not listed here, it will not be shown.
 versions_names = {
     'master': "Master",
-    'saas-17.1': "Odoo Online",
+    # 'saas-17.1': "Odoo Online",
     '17.0': "Odoo 17",
-    'saas-16.4': "Odoo Online",
-    'saas-16.3': "Odoo Online",
-    'saas-16.2': "Odoo Online",
-    'saas-16.1': "Odoo Online",
-    '16.0': "Odoo 16",
-    'saas-15.2': "Odoo Online",
-    '15.0': "Odoo 15",
-    '14.0': "Odoo 14",
+    # 'saas-16.4': "Odoo Online",
+    # 'saas-16.3': "Odoo Online",
+    # 'saas-16.2': "Odoo Online",
+    # 'saas-16.1': "Odoo Online",
+    # '16.0': "Odoo 16",
+    # 'saas-15.2': "Odoo Online",
+    # '15.0': "Odoo 15",
+    # '14.0': "Odoo 14",
 }
 
 # The language names that should be shown in the language switcher, if the config option `languages`
 # is populated. If a language is passed to `languages` but is not listed here, it will not be shown.
 languages_names = {
-    'de': 'DE',
+    # 'de': 'DE',
     'en': 'EN',
-    'es': 'ES',
-    'fr': 'FR',
-    'it': 'IT',
-    'nl': 'NL',
-    'pt_BR': 'PT',
-    'uk': 'UA',
-    'zh_CN': 'ZH (CN)',
-    'zh_TW': 'ZH (TW)'
+    # 'es': 'ES',
+    # 'fr': 'FR',
+    # 'it': 'IT',
+    # 'nl': 'NL',
+    # 'pt_BR': 'PT',
+    # 'uk': 'UA',
+    # 'zh_CN': 'ZH (CN)',
+    # 'zh_TW': 'ZH (TW)',
+    'pt': 'PT',
 }
 
 # The directory in which files holding redirect rules used by the 'redirects' extension are listed.
