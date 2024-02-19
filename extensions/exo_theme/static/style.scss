@@ -95,6 +95,11 @@ header {
                     @include o-easter-egg($img:'img/ducky.svg');
                     @include font-size($font-size-base);
                     color: $secondary;
+                    bottom: 10px;
+
+                    @include media-breakpoint-up(lg) {
+                        bottom: 15px;
+                    }
                 }
             }
         }
