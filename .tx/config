@@ -1,6 +1,7 @@
 [main]
 host = https://www.transifex.com
 
+
 [o:odoo:p:odoo-17-doc:r:administration]
 file_filter            = locale/<lang>/LC_MESSAGES/administration.po
 source_file            = locale/sources/administration.pot
