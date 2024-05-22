@@ -4,9 +4,9 @@
 :show-toc:
 
 
-=========
-User Docs
-=========
+========================
+Documentos do Utilizador
+========================
 
 Discover our user guides and configuration tutorials per application.
 
@@ -14,12 +14,7 @@ Discover our user guides and configuration tutorials per application.
 .. toctree::
     :maxdepth: 2
 
-    applications/finance
-    applications/sales
-    applications/websites
-    applications/inventory_and_mrp
-    applications/hr
-    applications/marketing
-    applications/services
-    applications/productivity
-    applications/general
+    applications/faturacao
+    applications/contabilidade
+    applications/salarios
+    applications/outros

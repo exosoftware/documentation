@@ -3,9 +3,9 @@
 :hide-page-toc:
 :show-toc:
 
-====================
-Install and Maintain
-====================
+=======================
+Instalação e Manutenção
+=======================
 
 These guides provide instructions on how to install, maintain and upgrade Odoo databases.
 
@@ -16,7 +16,7 @@ These guides provide instructions on how to install, maintain and upgrade Odoo d
 .. toctree::
     :titlesonly:
 
-    administration/install
-    administration/maintain
+    administration/instalar
+    administration/manutencao
     administration/upgrade
-    administration/odoo_sh
+    administration/api
