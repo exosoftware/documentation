@@ -256,7 +256,6 @@ Guias de devolução
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
 
-=================
 Código QR e ATCUD
 =================
 O Código QR é um código de barras bidimensional que contém informação pertinente sobre o conteúdo do documento.

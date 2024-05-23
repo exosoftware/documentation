@@ -1,41 +1,44 @@
-:show-content:
-:hide-page-toc:
+===============
+SAF-T Faturação
+===============
 
-===========
-Spreadsheet
-===========
+Exportação
+==========
+Para poder exportar o ficheiro SAF-T de Faturação que tem de submeter à Autoridade Tributária, aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu **Relatórios** e no separador **Portugal** selecione a opção **Exportar SAF-T**.
 
-.. toctree::
-   :titlesonly:
-
-   spreadsheet/insert
-   spreadsheet/templates
-
-Spreadsheet lets you organize, analyze, and visualize your data in tabular form. Among others, you
-can:
-
-- :doc:`Insert and link your Odoo data (pivots, graphs, lists, and menus) <spreadsheet/insert>`.
-- :doc:`Use default templates or create new ones <spreadsheet/templates>`.
-- Format data.
-- Use formulas and functions.
-- Sort and filter data.
-
-.. _spreadsheet/glossary:
-
-Glossary
-========
-
-Some of Spreadsheet's main :abbr:`UI (user interface)` elements are highlighted and defined below.
-
-.. image:: spreadsheet/ui-elements.png
+.. image:: saft_faturacao/appFaturacaoContabilidade.png
    :align: center
-   :alt: Spreadsheet main UI elements
 
-#. Menu bar
-#. Top bar
-#. Formula bar
-#. Filters button
-#. Row header
-#. Column header
-#. Cell menu
-#. Bottom bar
+.. image:: saft_faturacao/exportSAFT1.png
+   :align: center
+
+Vai abrir uma janela que predefine o **Período** como Mês Passado, mas pode selecionar o período como lhe for mais conveniente, mudando o **Período** ou alterando a **Data Inicial** e/ou **Data Final**.
+
+É recomendadoque mantenha o visto na opção **Validar** para fazer uma verificação do ficheiro, no entanto se espera que o ficheiro seja muito grande pode optar por não fazer esta verificação.
+
+Carregue em **Exportar XML**.
+
+.. image:: saft_faturacao/exportSAFT2.png
+   :align: center
+
+Vai ser gerada uma nova janela com um resumo de possíveis erros que existam nos documentos para que seja mais fácil ver necesidade de correção de erros
+
+.. image:: saft_faturacao/exportSAFT3.png
+   :align: center
+
+Depois de não ter erros, faça download do ficheiro gerado para inserir no site da Autoridade Tributária.
+
+.. image:: saft_faturacao/exportSAFT4.png
+   :align: center
+
+Esta janela tem ainda duas opções:
+   - **Registar ao Fechar**, Vai criar uma entrada junto com uma cópia do ficheiro gerado para que possa consultar posteriormente
+   - **Registar como Submetido**, se o visto estiver ativo o registo gerado vai ser considerado como submetido sem problemas à AT
+
+.. image:: saft_faturacao/exportSAFT5.png
+   :align: center
+
+Submeta o ficheiro à AT, depois de submeter o ficheiro pode fechar esta janela.
+
+Importação
+==========
