@@ -43,7 +43,7 @@ needs_sphinx = '3.0.0'
 
 # The default language in which the documentation is written. It is set to `None` because Sphinx
 # considers that no language means 'en'.
-language = 'pt_BR'
+language = 'pt'
 
 # The suffix of source filenames.
 source_suffix = '.rst'
