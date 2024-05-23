@@ -1,3 +1,5 @@
+:show-content:
+
 =================
 Registo de Séries
 =================

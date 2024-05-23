@@ -11,7 +11,7 @@ Descubra como instalar e fazer a manutenção do seu Odoo e da Localização PT+
 
 
 .. toctree::
-    :titlesonly:
+    :maxdepth: 2
 
     instalacao/instalar
     instalacao/manutencao

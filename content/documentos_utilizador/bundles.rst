@@ -6,6 +6,7 @@ Bundles
 
 
 .. toctree::
+    :titlesonly:
 
    bundles/inventory
    bundles/manufacturing

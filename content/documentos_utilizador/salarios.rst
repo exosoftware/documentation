@@ -6,6 +6,7 @@ Salários
 
 
 .. toctree::
+    :titlesonly:
 
     salarios/website
     salarios/ecommerce

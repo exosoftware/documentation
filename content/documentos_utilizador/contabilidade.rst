@@ -6,6 +6,7 @@ Contabilidade
 
 
 .. toctree::
+    :titlesonly:
 
     contabilidade/crm
     contabilidade/sales

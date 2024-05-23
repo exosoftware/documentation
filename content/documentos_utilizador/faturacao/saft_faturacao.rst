@@ -1,3 +1,5 @@
+:show-content:
+
 ===============
 SAF-T Faturação
 ===============
