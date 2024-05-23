@@ -1,13 +1,12 @@
 :nosearch:
 
-==================
-Odoo Documentation
-==================
+========================
+Documentação Exosoftware
+========================
 
 
 .. toctree::
 
-    applications
-    administration
-    developer
-    contributing
+    documentos_utilizador
+    instalacao
+    desenvolver

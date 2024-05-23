@@ -204,10 +204,10 @@ github_project = 'documentation'
 locale_dirs = ['../locale/']
 templates_path = ['../extensions']
 
-# custom docname_to_domain to divide the translations of applications in subdirectories
+# custom docname_to_domain to divide the translations of documentos_utilizador in subdirectories
 sphinx.transforms.i18n.docname_to_domain = (
     sphinx.util.i18n.docname_to_domain
-) = lambda docname, compact: docname.split('/')[1 if docname.startswith('applications/') else 0]
+) = lambda docname, compact: docname.split('/')[1 if docname.startswith('documentos_utilizador/') else 0]
 
 # The version names that should be shown in the version switcher, if the config option `versions`
 # is populated. If a version is passed to `versions` but is not listed here, it will not be shown.

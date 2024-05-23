@@ -76,7 +76,7 @@ def resolve(old_resolve, tree, docname, *args, **kwargs):
         _parent_directory_occurrences = _ref.count('..')
         if not _parent_directory_occurrences and '/' not in docname:
             # The current document is at the root of the documentation source directory
-            # (e.g. docname == 'index'|'applications'|...). i.e., the ref is already the docname.
+            # (e.g. docname == 'index'|'documentos_utilizador'|...). i.e., the ref is already the docname.
             _docname = _ref
         else:
             _path_parts = _ref.split('/')
