@@ -8,7 +8,7 @@
 Documentos do Utilizador
 ========================
 
-Discover our user guides and configuration tutorials per application.
+Descubra o nosso guia para o ajudar a utilizar o Odoo por temática.
 
 
 .. toctree::

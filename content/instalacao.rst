@@ -7,10 +7,7 @@
 Instalação e Manutenção
 =======================
 
-These guides provide instructions on how to install, maintain and upgrade Odoo databases.
-
-.. seealso::
-    :doc:`History of Versions <administration/maintain/supported_versions>`
+Descubra como instalar e fazer a manutenção do seu Odoo e da Localização PT+ da ExoSoftware.
 
 
 .. toctree::

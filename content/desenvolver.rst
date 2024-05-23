@@ -4,11 +4,11 @@
 :show-toc:
 
 
-=========
-Denvolver
-=========
+===========
+Desenvolver
+===========
 
-Learn through tutorials and get help using reference guides.
+Aprenda a desenvolver em Odoo lendo a documentação técnica.
 
 
 .. toctree::
