@@ -32,6 +32,7 @@ No caso de se instalar a **Localizção PT+ Exo**, muitos mais impostos e grupos
 Onde criar
 ----------
 Para aceder ao menu de impostos instalados basta ir à app **Faturação/Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), no menu :menuselection:`Configuração --> Contabilidade --> Impostos`
+
 .. image:: impostos/appFaturacaoContabilidade.png
   :align: center
 
@@ -101,5 +102,5 @@ Motivos de isenção de IVA
 =========================
 
 .. seealso::
-   Estes são os motivos aceites pela AT para isenção no IVA
-   :doc:`Motivos de isenção de IVA <faturacao/impostos/motivos_isenção_IVA.pdf>`
+    Estes são os motivos aceites pela AT para isenção no IVA
+        :doc:`Motivos de isenção de IVA <faturacao/impostos/motivos_isenção_IVA.pdf>`
