@@ -229,7 +229,7 @@ versions_names = {
 # is populated. If a language is passed to `languages` but is not listed here, it will not be shown.
 languages_names = {
     # 'de': 'DE',
-    'en': 'EN',
+    #'en': 'EN',
     # 'es': 'ES',
     # 'fr': 'FR',
     # 'it': 'IT',
@@ -334,7 +334,7 @@ latex_documents = [
 # `languages_names`. These translations will have a link to their versions of the legal
 # contracts, instead of the default EN one. The main legal documents are not part of the
 # translations since they have legal meaning.
-legal_translations = ['de', 'es', 'fr', 'nl', 'pt_BR']
+legal_translations = ['de', 'es', 'fr', 'nl', 'pt_PT']
 
 # The name of an image file (relative to this directory) to place at the top of the title page.
 latex_logo = 'static/img/odoo_logo.png'
@@ -506,3 +506,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
     _canonicalize()
     _versionize()
     _localize()
+
+
+# conf.py
+html_extra_path = ['content/documentos_utilizador/faturacao/impostos']

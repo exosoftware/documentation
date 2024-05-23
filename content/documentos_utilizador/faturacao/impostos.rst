@@ -103,4 +103,4 @@ Motivos de isenção de IVA
 
 .. seealso::
     Estes são os motivos aceites pela AT para isenção no IVA
-        :doc:`Motivos de isenção de IVA <faturacao/impostos/motivos_isenção_IVA.pdf>`
+        :download:`Motivos de isenção de IVA <faturacao/impostos/motivos_isenção_IVA.pdf>`
