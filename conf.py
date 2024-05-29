@@ -43,7 +43,7 @@ needs_sphinx = '3.0.0'
 
 # The default language in which the documentation is written. It is set to `None` because Sphinx
 # considers that no language means 'en'.
-language = 'pt'
+language = 'pt_PT'
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -229,7 +229,7 @@ versions_names = {
 # is populated. If a language is passed to `languages` but is not listed here, it will not be shown.
 languages_names = {
     # 'de': 'DE',
-    # 'en': 'EN',
+    'en': 'EN',
     # 'es': 'ES',
     # 'fr': 'FR',
     # 'it': 'IT',
@@ -238,7 +238,7 @@ languages_names = {
     # 'uk': 'UA',
     # 'zh_CN': 'ZH (CN)',
     # 'zh_TW': 'ZH (TW)',
-    'pt': 'PT',
+    'pt_PT': 'PT',
 }
 
 # The directory in which files holding redirect rules used by the 'redirects' extension are listed.
