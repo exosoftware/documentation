@@ -509,4 +509,4 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
 
 
 # conf.py
-html_extra_path = ['documentos_utilizador/faturacao/impostos']
+html_extra_path = ['content/documentos_utilizador/faturacao/impostos']
