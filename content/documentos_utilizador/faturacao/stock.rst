@@ -1,6 +1,7 @@
 :nosearch:
-:show-content:
 
 =====
 Stock
 =====
+
+Brevemente

@@ -1,6 +1,7 @@
 :nosearch:
-:show-content:
 
 =============
 Autofaturação
 =============
+
+Brevemente

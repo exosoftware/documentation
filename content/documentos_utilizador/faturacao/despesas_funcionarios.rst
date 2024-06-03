@@ -1,6 +1,7 @@
 :nosearch:
-:show-content:
 
 ========================
 Despesas de Funcionários
 ========================
+
+Brevemente

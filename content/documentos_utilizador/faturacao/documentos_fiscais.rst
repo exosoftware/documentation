@@ -79,14 +79,22 @@ Contem:
 Folha de obra
 -------------
 
+Brevemente
+
 Fatura de consignação
 ---------------------
+
+Brevemente
 
 Crédito de consignação
 ----------------------
 
+Brevemente
+
 Consulta de mesa ou encomenda (POS)
 -----------------------------------
+
+Brevemente
 
 Fatura
 ======
@@ -193,6 +201,8 @@ Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e
 Nota de débito
 --------------
 
+Brevemente
+
 
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
@@ -226,11 +236,15 @@ Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e seleciona
 Recibo de IVA de caixa
 ----------------------
 
+Brevemente
+
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
 
 Guia de remessa / Guia de transporte
 ====================================
+
+Brevemente
 
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
@@ -238,8 +252,12 @@ Guia de remessa / Guia de transporte
 Guias de Remessa para fora de Portugal
 --------------------------------------
 
+Brevemente
+
 Guias de transporte de ativos
 -----------------------------
+
+Brevemente
 
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
@@ -247,11 +265,15 @@ Guias de transporte de ativos
 Guias de consignação
 --------------------
 
+Brevemente
+
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
 
 Guias de devolução
 ------------------
+
+Brevemente
 
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`

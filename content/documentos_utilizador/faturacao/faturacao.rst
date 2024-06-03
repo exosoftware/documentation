@@ -7,6 +7,8 @@ Faturação
 Em Odoo
 =======
 
+Brevemente
+
 Notas de crédito
 ----------------
 A nota de crédito deve ser emitida a partir do documento da fatura para que se mantenha a informação necessária

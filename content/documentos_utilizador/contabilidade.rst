@@ -17,5 +17,5 @@ Contabilidade
     contabilidade/declaracoes_iva
     contabilidade/declaracoes_retencao_fonte
     contabilidade/relatorios_contabilisticos
-    contabilidade/outras_declaracoes
     contabilidade/demonstracao_resultados
+    contabilidade/outras_declaracoes
