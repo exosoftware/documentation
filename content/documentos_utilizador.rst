@@ -16,4 +16,4 @@ Descubra o nosso guia para o ajudar a utilizar o Odoo por temática.
     documentos_utilizador/faturacao
     documentos_utilizador/contabilidade
     documentos_utilizador/salarios
-    documentos_utilizador/outros
+    documentos_utilizador/bundles
