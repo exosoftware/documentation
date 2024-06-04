@@ -1020,7 +1020,7 @@ span.viewcode-link {
 
     // Note
     &.alert-primary {
-        --o-alert-code-border-color: #{tint-color($teal, 50%)};
+        --o-alert-code-border-color: #{tint-color($note, 50%)};
         --o-alert-icon: '#{$i-note}';
     }
 
@@ -1030,7 +1030,7 @@ span.viewcode-link {
         --o-alert-code-border-color: #{tint-color($danger, 30%)};
 
         a {
-            color: $secondary;
+            color: $danger;
         }
     }
 
