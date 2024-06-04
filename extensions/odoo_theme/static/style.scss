@@ -1015,17 +1015,17 @@ span.viewcode-link {
 
     // Note
     &.alert-primary {
-        --o-alert-code-border-color: #{tint-color($primary, 50%)};
+        --o-alert-code-border-color: #{tint-color($note, 50%)};
         --o-alert-icon: '#{$i-note}';
     }
 
     // See Also
     &.alert-secondary {
         --o-alert-icon: '#{$i-article}';
-        --o-alert-code-border-color: #{tint-color($secondary, 30%)};
+        --o-alert-code-border-color: #{tint-color($danger, 30%)};
 
         a {
-            color: $secondary;
+            color: $danger;
         }
     }
 
