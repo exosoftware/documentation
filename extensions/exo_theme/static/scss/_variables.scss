@@ -154,7 +154,7 @@ $o-alert-code-border-color: $o-gray-border;
 $o-alert-types: (
     "primary": ("color": $primary, "icon": $i-exercise),
     "secondary": ("color": $secondary, "icon": $i-arrow-right),
-    "tip": ("color": $teal, "icon": $i-lightbulb),
+    "tip": ("color": $primary, "icon": $i-lightbulb),
     "success": ("color": $success, "icon": $i-knowledge),
     "warning": ("color": $warning, "icon": $i-warning),
     "danger": ("color": $danger, "icon": $i-danger),
