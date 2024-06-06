@@ -33,22 +33,25 @@ Para emitir o pdf do orçamento basta ir ao menu **Ação** do documento e selec
    :align: center
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :ref:`Como fazer... <faturacao_orcamentacao>`
 
 Fatura pró-forma
 ----------------
 
 Documento informativo frequentemente utilizado na cotação de produtos e na justificação da transacção internacional de produtos. Após aprovação do cliente pode ser convertida em nota de encomenda.
 
-Para que este tipo de documento fique disponível, primeiro terá de ir à app **Vendas** ir ao menu :menuselection:`Configuração --> Configurações`, no bloco **Orçamentos e Encomendas** ativar a opção **Fatura Pró-Forma**
+Para que este tipo de documento fique disponível, primeiro terá de ir à app **Vendas**, ir ao menu :menuselection:`Configuração --> Configurações`, no bloco **Orçamentos e Encomendas** ative a opção **Fatura Pró-Forma**
 
 .. image:: documentos_fiscais/ativarProforma.png
    :align: center
 
 Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Fatura PRÓ-FORMA`
 
+.. image:: documentos_fiscais/imprimirFaturaProForma.png
+   :align: center
+
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :ref:`Como fazer... <faturacao_orcamentacao>`
 
 Nota de encomenda
 -----------------
