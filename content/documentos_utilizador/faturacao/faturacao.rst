@@ -33,6 +33,7 @@ Depois deve preencher os campos necessários e selecionar o tipo de documento a 
 
 .. note::
     No caso das **Subscrições** terá também de selecionar o **Plano de Recorrência** que determina de quanto em quanto tempo serão feitas novas faturas de forma automática, bem como pode especificar uma data para término da subscrição.
+
     .. image:: faturacao/planoRecorrente.png
        :align: center
     Exemplo 1: se cobra uma vez a um cliente por um serviço de 2 anos, o Plano de Recorrencia deve ser 2 anos e quantidade do serviço 1, não deve ser Plano de Recorrência anual mas quantidade a 2
@@ -51,6 +52,7 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
     No entanto podem partilhar o orçamento no portal com o vosso cliente.
 
     Basta ir ao menu :menuselection:`Ação --> Partilhar` e vai abrir uma nova janela onde pode inserir o contacto do parceiro
+
     .. image:: faturacao/partilharOrcamento1.png
         :align: center
     .. image:: faturacao/partilharOrcamento2.png
@@ -58,10 +60,12 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
 
     Em seguida o parceiro pode aceder ao link do orçamento para verificar o mesmo e deixar algum comentário que será adicionado ao chatter do Odoo
     Também tem acesso a outras funcionalidades. Esta é a vista do lado do parceiro
+
     .. image:: faturacao/partilharOrcamento3.png
         :align: center
 
     Toda a informação do envio e visionamento fica registada no chatter do próprio documento.
+
     .. image:: faturacao/partilharOrcamento4.png
         :align: center
 
@@ -76,7 +80,7 @@ A nota de crédito deve ser emitida a partir do documento da fatura para que se 
 Mais informação
 ---------------
 .. seealso::
-    Se pretender formação mais detalhada sobre o processo Oddo contacte a `ExoSoftware <https://exosoftware.pt/appointment/2?>__`
+    Se pretender formação mais detalhada sobre o processo Oddo contacte a `ExoSoftware <https://exosoftware.pt/appointment/2?>`
 
 Por API
 =======
