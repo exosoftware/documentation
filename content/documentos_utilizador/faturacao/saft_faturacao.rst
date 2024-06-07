@@ -34,6 +34,7 @@ Depois de não ter erros, faça download do ficheiro gerado para inserir no site
    :align: center
 
 Esta janela tem ainda duas opções:
+
    - **Registar ao Fechar**, Vai criar uma entrada junto com uma cópia do ficheiro gerado para que possa consultar posteriormente
    - **Registar como Submetido**, se o visto estiver ativo o registo gerado vai ser considerado como submetido sem problemas à AT
 

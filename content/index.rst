@@ -1,7 +1,7 @@
 :nosearch:
 
 ========================
-Documentação Exosoftware
+Documentação ExoSoftware
 ========================
 
 

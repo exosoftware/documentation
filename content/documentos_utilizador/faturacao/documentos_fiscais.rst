@@ -66,13 +66,16 @@ Para emitir o pdf da nota de encomenda basta ir ao menu **Ação** do documento 
    :align: center
 
 Contem:
+
    - Número da nota de encomenda
    - Data de vencimento
    - Comerciante
+
       - Nome ou denominação social
       - Morada
       - NIF
    - Cliente
+
       - Nome ou denominação social
       - NIF (se pretendido, pode ser só como consumidor final)
    - Denominação e quantidade dos bens ou serviços
@@ -104,16 +107,19 @@ Fatura
 Documento que deve ser emitido sempre que se adquire um bem ou serviço sujeito a IVA
 
 Contem:
+
    - Data de emissão
    - Número da fatura
    - Comerciante
+
       -   Nome ou denominação social
       -   Morada
       -   NIF
    - Cliente
-     - Nome ou denominação social
-     - NIF (se pretendido, pode ser só como consumidor final)
-     - Denominação e quantidade dos bens ou serviços
+
+        - Nome ou denominação social
+        - NIF (se pretendido, pode ser só como consumidor final)
+        - Denominação e quantidade dos bens ou serviços
    - Valor da prestação de serviços ou da transmissão de bens
    - Taxas aplicáveis
    - Montante de IVA liquidado
@@ -217,13 +223,16 @@ Documento que comprova pagamento efetuado. A sua emissão comprova que o pagamen
 A emissão de recibos permite controlar a conta corrente de um cliente, através de uma verificação entre faturação e recibos.
 
 Deve conter:
+
    - Data de transação
    - Número do recibo
    - Comerciante
+
       - Nome ou denominação social
       - Morada
       - NIF
    - Cliente
+
       - Nome ou denominação social
       - NIF (se pretendido, pode ser só como consumidor final)
    - Valor do recibo
@@ -292,6 +301,7 @@ São ambos gerados no momento da emissão do documento, pelo software, e adicion
 Pode configurar a posição acedendo à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de :menuselection:`Configuração --> Configurações` e na secção **Portugal** selecione a opção que deseja para **Posição do Código QR**.
 
 As opções disponíveis são:
+
    - Topo da primeira página
    - Fim da última página
 

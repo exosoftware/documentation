@@ -30,16 +30,19 @@ Pode no entanto manter a mesma série e mudar só a sequência, arquivando a ant
 Deve ainda comunicar à AT o encerramento de uma série quando deixar de a utilizar.
 
 Dentro de cada série pode inserir diversas informações, como:
+
    - **Nome**, que pode ser o que desejar
    - **Tipo**, pode escolher de uma lista de todos os tipos que são disponibilizados pela localização
    - **Empresa** da base de dados esse tipo de documentos está associado, esta opção é mais útil nos casos de empresas com ambiente multi empresa para que cada uma das suas empresas tenham séries e sequências diferentes
    - **Método de Origem**, método de comunicação em SAF-T
+
       - **Aplicação**, significa que vai ser O Odoo a emitir os documentos e o responsável por os comunicar em SAF-T
       - **Integração**, significa que este tipo de documentos foi emitido por outro sistema e só está a ser utilizado para inserir os dados em Odoo (por exemplo sistema POS externo) logo a comunicação em SAF-T é da responsabilidade do sistema emissor
       - **Manual/Reposição**, significa que os documentos já foram emitidos e comunicados anteriormente em SAF-T, mas por algum motivo (por exemplo avaria do servidor externo) não se encontram atualmente inseridos em Odoo, pelo que precisam de ser reinseridos. Não vai existir nova comunicação em SAF-T e os movimentos são só para reproduzir algo que já deveria de existir
    - **Sequência**, nome da sequência que está associada à série, é recomendado que a sequência tenha o mesmo nome da série, podendo acrescer o período para distinção
 
 Outras informações são automaticamente preenchidas com base nas escolhas anteriores
+
    - **Secção SAF-T**, onde vai ser mencionado qual das secções do SAF-T vai conter os documentos da série específica, esse mapeamento já é feito pela localização Exo
    - **Usada**, mostra se a série já foi usada ou não
 
@@ -58,6 +61,7 @@ Preencha o campo Sequência com o nome que quer dar à sequência e selecione Cr
    :align: center
 
 Vai abrir uma nova janela:
+
    - Deve ter a **Implementação** como **Sem lacunas**
    - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
    - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitosPP que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
@@ -82,6 +86,7 @@ Preencha o campo **Sequência** com o nome que quer dar à sequência e selecion
    :align: center
 
 Vai abrir uma nova janela:
+
   - Deve ter a **Implementação** como **Sem lacunas**
   - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
   - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitos** que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
@@ -93,12 +98,13 @@ Guarde as alterações.
 
 Isto vai configurar a sua sequência no Odoo, mas ainda falta comunicar a séria na AT.
 
-Para isso garanta que o campo **Código de Validação** está vazio e clique no botão **RegistarP** para iniciar o processo de comunicação.
+Para isso garanta que o campo **Código de Validação** está vazio e clique no botão **Registar** para iniciar o processo de comunicação.
 
 .. image:: registo_series/novaSerie3.png
    :align: center
 
 Vai aparecer uma nova janela onde deve indicar a **Data de Início Esperada**, tenha em atenção que:
+
    - Só vai poder emitir documentos com data posterior à constante neste campo
    - A data inserida não pode ser anterior ao dia atual em que está a fazer a comunicação
 Clique no botão **Comunicar**.

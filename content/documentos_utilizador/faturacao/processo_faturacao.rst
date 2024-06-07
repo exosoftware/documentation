@@ -8,11 +8,13 @@ Em Odoo
 =======
 
 O processo de faturação em Odoo foi pensado para seguir sempre a mesma sequência:
+
     - Orçamentação
     - Emissão de Fatura
     - Emissão do Recibo
     - Reconciliação de documentos
     - Correções
+
         - Nota de crédito
         - Nota de Débito
 
@@ -37,9 +39,12 @@ Depois deve preencher os campos necessários e selecionar o tipo de documento a 
 
     .. image:: faturacao/planoRecorrente.png
        :align: center
-    Exemplo 1: se cobra uma vez a um cliente por um serviço de 2 anos, o Plano de Recorrencia deve ser 2 anos e quantidade do serviço 1, não deve ser Plano de Recorrência anual mas quantidade a 2
 
-    Exemplo 2: se cobra mensalmente durante 2 anos por um serviço, o plano de recorrência deve ser mensal mas com uma data de término 2 anos no futuro
+    .. example::
+    Se cobra uma vez a um cliente por um serviço de 2 anos, o Plano de Recorrencia deve ser 2 anos e quantidade do serviço 1, não deve ser Plano de Recorrência anual mas quantidade a 2
+
+    .. example::
+    Se cobra mensalmente durante 2 anos por um serviço, o plano de recorrência deve ser mensal mas com uma data de término 2 anos no futuro
 
 Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será gerada uma **Nota de encomenda**
 
@@ -47,7 +52,7 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
    :align: center
 
 .. tip::
-    Para as empresas que gostam/precisam de enviar um orçamento não confirmado para o cliente fica o seguinte alerta
+    Para as empresas que gostam/precisam de enviar um orçamento não confirmado para o cliente fica o seguinte alerta.
 
     A legislação portuguesa proíbe a emissão de documentos não confirmados, pelo que se tentarem fazer impressão do documento o mesmo sairá invalidado.
     No entanto podem partilhar o orçamento no portal com o vosso cliente.
@@ -89,8 +94,10 @@ O processo de emissão da fatura deve então ser iniciado na **Nota de encomenda
         :align: center
 
 Na janela que abre decida o tipo de fatura que pretende criar de entre as opções:
+
     - Fatura real
     - Fatura de adiantamento
+
         - Percentagem do valor total da encomenda
         - Valor nominal à escolha
 
@@ -117,12 +124,13 @@ Em seguida confirme a fatura
 
 .. tip::
     O processo de criação de farura sem ligação a Nota de encomenda é bastante parecido, exceto em 2 pontos:
+
         - Onde se inicia o processo
         - A necessidade de preencher quase todos os campos de raíz
 
     Para iniciar o processo aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu :menuselection:`Clientes --> Faturas` ou :menuselection:`Fornecedores --> Faturas de Foenecedores`
 
-    Clique na opção Novo
+    Clique na opção **Novo**
 
     .. image:: faturacao/novaFatura.png
         :align: center
