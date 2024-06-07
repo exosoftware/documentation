@@ -33,7 +33,7 @@ Para emitir o pdf do orçamento basta ir ao menu **Ação** do documento e selec
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <faturacao_orcamentacao>`
+   :ref:`Como fazer... <processo_faturacao_orcamentacao>`
 
 Fatura pró-forma
 ----------------
@@ -51,7 +51,7 @@ Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento 
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <faturacao_orcamentacao>`
+   :ref:`Como fazer... <processo_faturacao_orcamentacao>`
 
 Nota de encomenda
 -----------------
@@ -125,7 +125,7 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <faturacao_emitir_fatura>`
+   :ref:`Como fazer... <processo_faturacao_emitir_fatura>`
 .. note::
    A forma correta de corrigir qualquer tipo de documento de fatura, é anular a mesma usando uma nota de crédito
 
@@ -141,7 +141,7 @@ Para emitir o pdf da fatura-recibo basta ir ao menu **Ação** do documento e se
    :align: center
 
 .. seealso::
-      :ref:`Como fazer... <faturacao_emitir_fatura>`
+      :ref:`Como fazer... <processo_faturacao_emitir_fatura>`
 
 Fatura-simplificada
 -------------------
@@ -157,7 +157,7 @@ Para emitir o pdf da fatura simplificada basta ir ao menu **Ação** do document
    :align: center
 
 .. seealso::
-      :ref:`Como fazer... <faturacao_emitir_fatura>`
+      :ref:`Como fazer... <processo_faturacao_emitir_fatura>`
 
 Fatura eletrónica
 -----------------
@@ -199,7 +199,7 @@ Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e
    :align: center
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :doc:`Como fazer... <faturacao/processo_faturacao>`
 
 Nota de débito
 --------------
@@ -208,7 +208,7 @@ Documentação em breve
 
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :doc:`Como fazer... <faturacao/processo_faturacao>`
 
 Recibo
 ======
@@ -234,7 +234,7 @@ Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e seleciona
    :align: center
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :doc:`Como fazer... <faturacao/processo_faturacao>`
 
 Recibo de IVA de caixa
 ----------------------
@@ -242,7 +242,7 @@ Recibo de IVA de caixa
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :doc:`Como fazer... <faturacao/processo_faturacao>`
 
 Guia de remessa / Guia de transporte
 ====================================
@@ -250,7 +250,7 @@ Guia de remessa / Guia de transporte
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :doc:`Como fazer... <faturacao/processo_faturacao>`
 
 Guias de Remessa para fora de Portugal
 --------------------------------------
@@ -263,7 +263,7 @@ Guias de transporte de ativos
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :doc:`Como fazer... <faturacao/processo_faturacao>`
 
 Guias de consignação
 --------------------
@@ -271,7 +271,7 @@ Guias de consignação
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :doc:`Como fazer... <faturacao/processo_faturacao>`
 
 Guias de devolução
 ------------------
@@ -279,7 +279,7 @@ Guias de devolução
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :doc:`Como fazer... <faturacao/processo_faturacao>`
 
 Código QR e ATCUD
 =================
@@ -299,3 +299,10 @@ As opções disponíveis são:
    :align: center
 .. image:: documentos_fiscais/ATCUDcodigoQR.png
    :align: center
+
+
+.. toctree::
+    :hidden:
+
+    documentos_utilizador/faturacao/documentos_fiscais
+    documentos_utilizador/faturacao/processo_faturacao

@@ -16,7 +16,8 @@ O processo de faturação em Odoo foi pensado para seguir sempre a mesma sequên
         - Nota de crédito
         - Nota de Débito
 
-.. _faturacao_orcamentacao:
+.. _processo_faturacao_orcamentacao:
+
 Orçamentação
 ------------
 A orçamentação em Odoo pode ser feita em diversas apps **Vendas**, **Compras**, **Subscrições** e **CRM**
@@ -69,7 +70,8 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
     .. image:: faturacao/partilharOrcamento4.png
         :align: center
 
-.. _faturacao_emitir_fatura:
+.. _processo_faturacao_emitir_fatura:
+
 Emissão de Fatura
 -----------------
 .. important::
@@ -127,7 +129,8 @@ Em seguida confirme a fatura
 
     Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a criar um orçamento.
 
-.. _faturacao_emitir_recibo:
+.. _processo_faturacao_emitir_recibo:
+
 Emissão de Recibos
 ------------------
 
