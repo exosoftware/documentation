@@ -69,6 +69,69 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
     .. image:: faturacao/partilharOrcamento4.png
         :align: center
 
+.. _faturacao_emitir_fatura:
+Emissão de Fatura
+-----------------
+.. important::
+    Existem 3 processos para se emitir uma fatura.
+
+    O **processo recomendado** é emitir sempre a fatura a partir da Nota de encomenda. Que vai gerar um novo documento de fatura em rascunho.
+
+    No entanto pode ser feita uma fatura sem esta ligação se realmente for necessário.
+
+    O 3º processo é o **automático**, em que o próprio Odoo gera de forma autónoma a fatura para certo tipo de artigos vendidos, como as **subscrições**.
+
+O processo de emissão da fatura deve então ser iniciado na **Nota de encomenda** e carregar no botão **Criar Fatura**
+
+    .. image:: faturacao/criarFatura1.png
+        :align: center
+
+Na janela que abre decida o tipo de fatura que pretende criar de entre as opções:
+    - Fatura real
+    - Fatura de adiantamento
+        - Percentagem do valor total da encomenda
+        - Valor nominal à escolha
+
+.. image:: faturacao/criarFatura2.png
+    :align: center
+
+.. note::
+    No caso de ser uma fatura de adiantamento o aspeto será diferente e terá mais informação para preencher
+
+    .. image:: faturacao/criarFatura3.png
+        :align: center
+
+Depois de ter a fatura em modo de rascunho, deve preencher os campos necessários e escolher o tipo de documento de fatura que pretende.
+
+A maioria dos campos já vão estar preenchidos pois são herdados da Nota de encomenda.
+
+.. image:: faturacao/tipoFatura.png
+    :align: center
+
+Em seguida confirme a fatura
+
+.. image:: faturacao/confirmarFatura.png
+    :align: center
+
+.. tip::
+    O processo de criação de farura sem ligação a Nota de encomenda é bastante parecido, exceto em 2 pontos:
+        - Onde se inicia o processo
+        - A necessidade de preencher quase todos os campos de raíz
+
+    Para iniciar o processo aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu :menuselection:`Clientes --> Faturas` ou :menuselection:`Fornecedores --> Faturas de Foenecedores`
+
+    Clique na opção Novo
+
+    .. image:: faturacao/novaFatura.png
+        :align: center
+
+    Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a criar um orçamento.
+
+.. _faturacao_emitir_recibo:
+Emissão de Recibos
+------------------
+
+Documentação em Breve
 
 Notas de crédito
 ----------------
@@ -80,7 +143,7 @@ A nota de crédito deve ser emitida a partir do documento da fatura para que se 
 Mais informação
 ---------------
 .. seealso::
-    Se pretender formação mais detalhada sobre o processo Oddo contacte a `ExoSoftware <https://exosoftware.pt/appointment/2?>`
+    Se pretender formação mais detalhada sobre o processo Oddo contacte a :ref:`ExoSoftware <https://exosoftware.pt/appointment/2?>`
 
 Por API
 =======
