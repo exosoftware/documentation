@@ -1,4 +1,4 @@
-:show-content:
+:nosearch:
 
 ========================
 Instalação e Confguração
