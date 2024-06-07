@@ -178,7 +178,7 @@ Para que esta funcionalidade esteja disponível é preciso aceder à app **Fatur
    :align: center
 
 .. seealso::
-   :doc:`faturacao/faturacao_eletronica`
+   :doc:`Saber mais... <faturacao_eletronica>`
 
 Autofaturação
 -------------
