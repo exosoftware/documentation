@@ -167,4 +167,4 @@ Estes módulos ou apps podem já existir ou ser personalizados às necessidades 
 As configurações de API são feitas numa fase inicial, entre os departamentos técnicos da Exo e da sua entidade, para que tudo fique a funcionar corretamente e como utilizador não tenha de se preocupar com o processo.
 
 .. seealso::
-   - :ref:`Mecanismo de API <index/insalacao/api>`
+   - :doc:`Mecanismo de API <index/insalacao/api>`

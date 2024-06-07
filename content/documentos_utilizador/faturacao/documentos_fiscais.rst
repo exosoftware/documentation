@@ -132,6 +132,7 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
 
 .. seealso::
    :ref:`Como fazer... <processo_faturacao_emitir_fatura>`
+
 .. note::
    A forma correta de corrigir qualquer tipo de documento de fatura, é anular a mesma usando uma nota de crédito
 
@@ -186,7 +187,7 @@ Autofaturação
 Documento emitido por software de faturação certificado e enviado por email. A esta fatura está associada uma assinatura digital que permite validar a autenticidade do documento.
 
 .. seealso::
-   :ref:`Saiba mais... <faturacao/autofaturacao>`
+   :doc:`Saiba mais... <autofaturacao>`
 
 Nota de crédito
 ---------------
@@ -259,7 +260,7 @@ Guia de remessa / Guia de transporte
 Documentação em breve
 
 .. seealso::
-   :ref:`Como fazer... <faturacao/processo_faturacao>`
+   :doc:`Como fazer... <outros>`
 
 Guias de Remessa para fora de Portugal
 --------------------------------------
@@ -272,7 +273,7 @@ Guias de transporte de ativos
 Documentação em breve
 
 .. seealso::
-   :ref:`Como fazer... <faturacao/processo_faturacao>`
+   :doc:`Como fazer... <outros>`
 
 Guias de consignação
 --------------------
@@ -280,7 +281,7 @@ Guias de consignação
 Documentação em breve
 
 .. seealso::
-   :ref:`Como fazer... <faturacao/processo_faturacao>`
+   :doc:`Como fazer... <outros>`
 
 Guias de devolução
 ------------------
@@ -288,7 +289,7 @@ Guias de devolução
 Documentação em breve
 
 .. seealso::
-   :ref:`Como fazer... <faturacao/processo_faturacao>`
+   :doc:`Como fazer... <outros>`
 
 Código QR e ATCUD
 =================
