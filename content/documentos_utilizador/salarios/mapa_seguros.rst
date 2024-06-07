@@ -4,4 +4,4 @@
 Mapa de Seguros
 ===============
 
-Brevemente
+Documentação em breve

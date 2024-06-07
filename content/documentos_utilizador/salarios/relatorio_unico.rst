@@ -4,4 +4,4 @@
 Relatório Único
 ===============
 
-Brevemente
+Documentação em breve

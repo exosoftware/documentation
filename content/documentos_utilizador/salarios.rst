@@ -4,7 +4,7 @@
 Salários
 ========
 
-Brevemente
+Documentação em breve
 
 .. toctree::
     :titlesonly:

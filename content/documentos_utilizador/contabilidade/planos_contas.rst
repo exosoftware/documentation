@@ -4,4 +4,4 @@
 Planos de Contas SNC
 ====================
 
-Brevemente
+Documentação em breve

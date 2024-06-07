@@ -4,4 +4,4 @@
 SAF-T Contabilidade
 ===================
 
-Brevemente
+Documentação em breve

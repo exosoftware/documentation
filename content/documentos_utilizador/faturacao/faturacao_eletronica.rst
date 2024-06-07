@@ -4,4 +4,4 @@
 Faturação Eletrónica
 ====================
 
-Brevemente
+Documentação em breve

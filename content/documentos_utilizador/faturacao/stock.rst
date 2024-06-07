@@ -4,4 +4,4 @@
 Stock
 =====
 
-Brevemente
+Documentação em breve

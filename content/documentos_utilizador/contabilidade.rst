@@ -4,6 +4,7 @@
 Contabilidade
 =============
 
+Documentação em breve
 
 .. toctree::
     :titlesonly:

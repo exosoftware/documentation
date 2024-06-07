@@ -4,4 +4,4 @@
 Integrações com apps Odoo
 =========================
 
-Brevemente
+Documentação em breve

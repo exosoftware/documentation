@@ -4,6 +4,8 @@
 Manutenção
 ==========
 
+Documentação em breve
+
 .. toctree::
 
     manutencao/domain_names

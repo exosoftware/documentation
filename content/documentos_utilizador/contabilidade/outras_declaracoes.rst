@@ -4,4 +4,4 @@
 Outras Declarações
 ==================
 
-Brevemente
+Documentação em breve

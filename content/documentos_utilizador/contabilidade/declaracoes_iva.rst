@@ -4,4 +4,4 @@
 Declarações de IVA
 ==================
 
-Brevemente
+Documentação em breve

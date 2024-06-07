@@ -4,7 +4,7 @@
 Instalação e Confguração
 ========================
 
-
+Documentação em breve
 
 .. toctree::
 

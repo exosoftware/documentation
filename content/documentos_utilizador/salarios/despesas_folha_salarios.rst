@@ -4,4 +4,4 @@
 Integração de despesas na Folha de Vencimentos
 ==============================================
 
-Brevemente
+Documentação em breve

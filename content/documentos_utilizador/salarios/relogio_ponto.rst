@@ -4,4 +4,4 @@
 Relógio de Ponto
 ================
 
-Brevemente
+Documentação em breve

@@ -4,4 +4,4 @@
 Despesas de Funcionários
 ========================
 
-Brevemente
+Documentação em breve

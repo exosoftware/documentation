@@ -4,4 +4,4 @@
 Relatórios Contabilísticos
 ==========================
 
-Brevemente
+Documentação em breve

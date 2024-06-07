@@ -4,4 +4,4 @@
 e-Fatura
 ========
 
-Brevemente
+Documentação em breve

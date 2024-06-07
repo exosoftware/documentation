@@ -4,4 +4,4 @@
 Recibos e Declarações
 =====================
 
-Brevemente
+Documentação em breve

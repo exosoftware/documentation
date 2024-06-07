@@ -4,4 +4,4 @@
 Plataformas de Pagamentos
 =========================
 
-Brevemente
+Documentação em breve

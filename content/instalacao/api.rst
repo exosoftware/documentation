@@ -4,6 +4,7 @@
 APIs
 ====
 
+Documentação em breve
 
 .. toctree::
 

@@ -82,22 +82,22 @@ Contem:
 Folha de obra
 -------------
 
-Brevemente
+Documentação em breve
 
 Fatura de consignação
 ---------------------
 
-Brevemente
+Documentação em breve
 
 Crédito de consignação
 ----------------------
 
-Brevemente
+Documentação em breve
 
 Consulta de mesa ou encomenda (POS)
 -----------------------------------
 
-Brevemente
+Documentação em breve
 
 Fatura
 ======
@@ -125,7 +125,7 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
    :align: center
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+   :ref:`Como fazer... <faturacao_emitir_fatura>`
 .. note::
    A forma correta de corrigir qualquer tipo de documento de fatura, é anular a mesma usando uma nota de crédito
 
@@ -141,7 +141,7 @@ Para emitir o pdf da fatura-recibo basta ir ao menu **Ação** do documento e se
    :align: center
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+      :ref:`Como fazer... <faturacao_emitir_fatura>`
 
 Fatura-simplificada
 -------------------
@@ -157,7 +157,7 @@ Para emitir o pdf da fatura simplificada basta ir ao menu **Ação** do document
    :align: center
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/faturacao>`
+      :ref:`Como fazer... <faturacao_emitir_fatura>`
 
 Fatura eletrónica
 -----------------
@@ -204,7 +204,7 @@ Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e
 Nota de débito
 --------------
 
-Brevemente
+Documentação em breve
 
 
 .. seealso::
@@ -239,7 +239,7 @@ Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e seleciona
 Recibo de IVA de caixa
 ----------------------
 
-Brevemente
+Documentação em breve
 
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
@@ -247,7 +247,7 @@ Brevemente
 Guia de remessa / Guia de transporte
 ====================================
 
-Brevemente
+Documentação em breve
 
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
@@ -255,12 +255,12 @@ Brevemente
 Guias de Remessa para fora de Portugal
 --------------------------------------
 
-Brevemente
+Documentação em breve
 
 Guias de transporte de ativos
 -----------------------------
 
-Brevemente
+Documentação em breve
 
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
@@ -268,7 +268,7 @@ Brevemente
 Guias de consignação
 --------------------
 
-Brevemente
+Documentação em breve
 
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
@@ -276,7 +276,7 @@ Brevemente
 Guias de devolução
 ------------------
 
-Brevemente
+Documentação em breve
 
 .. seealso::
    :doc:`Como fazer... <faturacao/faturacao>`
