@@ -10,7 +10,7 @@ Faturação, Pagamentos e Stock
     faturacao/documentos_fiscais
     faturacao/registo_series
     faturacao/impostos
-    faturacao/faturacao
+    faturacao/processo_faturacao
     faturacao/faturacao_eletronica
     faturacao/autofaturacao
     faturacao/pos
