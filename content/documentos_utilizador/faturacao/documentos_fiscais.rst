@@ -178,7 +178,7 @@ Para que esta funcionalidade esteja disponível é preciso aceder à app **Fatur
    :align: center
 
 .. seealso::
-   :doc:`Saiba mais... <faturacao/faturacao_eletronica>`
+   :ref:`Saiba mais... <faturacao/faturacao_eletronica>`
 
 Autofaturação
 -------------
@@ -186,7 +186,7 @@ Autofaturação
 Documento emitido por software de faturação certificado e enviado por email. A esta fatura está associada uma assinatura digital que permite validar a autenticidade do documento.
 
 .. seealso::
-   :doc:`Saiba mais... <faturacao/autofaturacao>`
+   :ref:`Saiba mais... <faturacao/autofaturacao>`
 
 Nota de crédito
 ---------------
@@ -205,7 +205,7 @@ Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e
    :align: center
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/processo_faturacao>`
+   :ref:`Como fazer... <faturacao/processo_faturacao>`
 
 Nota de débito
 --------------
@@ -214,7 +214,7 @@ Documentação em breve
 
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/processo_faturacao>`
+   :ref:`Como fazer... <faturacao/processo_faturacao>`
 
 Recibo
 ======
@@ -243,7 +243,7 @@ Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e seleciona
    :align: center
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/processo_faturacao>`
+   :ref:`Como fazer... <faturacao/processo_faturacao>`
 
 Recibo de IVA de caixa
 ----------------------
@@ -251,7 +251,7 @@ Recibo de IVA de caixa
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/processo_faturacao>`
+   :ref:`Como fazer... <faturacao/processo_faturacao>`
 
 Guia de remessa / Guia de transporte
 ====================================
@@ -259,7 +259,7 @@ Guia de remessa / Guia de transporte
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/processo_faturacao>`
+   :ref:`Como fazer... <faturacao/processo_faturacao>`
 
 Guias de Remessa para fora de Portugal
 --------------------------------------
@@ -272,7 +272,7 @@ Guias de transporte de ativos
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/processo_faturacao>`
+   :ref:`Como fazer... <faturacao/processo_faturacao>`
 
 Guias de consignação
 --------------------
@@ -280,7 +280,7 @@ Guias de consignação
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/processo_faturacao>`
+   :ref:`Como fazer... <faturacao/processo_faturacao>`
 
 Guias de devolução
 ------------------
@@ -288,7 +288,7 @@ Guias de devolução
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <faturacao/processo_faturacao>`
+   :ref:`Como fazer... <faturacao/processo_faturacao>`
 
 Código QR e ATCUD
 =================
