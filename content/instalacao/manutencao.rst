@@ -7,6 +7,7 @@ Manutenção
 Documentação em breve
 
 .. toctree::
+    :hise:
 
     manutencao/domain_names
     manutencao/azure_oauth

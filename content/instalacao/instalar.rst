@@ -7,6 +7,7 @@ Instalação e Confguração
 Documentação em breve
 
 .. toctree::
+    :hide:
 
    instalar/odoo
    instalar/configuracoes
