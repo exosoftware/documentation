@@ -143,7 +143,7 @@ A nota de crédito deve ser emitida a partir do documento da fatura para que se 
 Mais informação
 ---------------
 .. seealso::
-    Se pretender formação mais detalhada sobre o processo Oddo contacte a :ref:`ExoSoftware <https://exosoftware.pt/appointment/2?__>`
+    Se pretender formação mais detalhada sobre o processo Oddo contacte a `ExoSoftware <https://exosoftware.pt/appointment/2>`_.
 
 Por API
 =======
