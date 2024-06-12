@@ -86,34 +86,33 @@
                 </ul>
             </div>
         </div>
-        <div class="row gx-lg-5">
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4"><a href="{{ pathto('desenvolver') }}">{{ _("Desenvolver") }}</a></h2>
-                <p class="text-dark">{{ _("Aprenda a desenvolver em Odoo lendo a documentação técnica.") }}</p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="{{ pathto('desenvolver/tutorials/getting_started') }}" class="stretched-link">
-                            {{ _("Tutorial: Getting started") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('desenvolver/reference/backend/orm') }}" class="stretched-link">
-                            {{ _("ORM") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('desenvolver/reference/user_interface/view_records') }}" class="stretched-link">
-                            {{ _("Regular Views") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('desenvolver/reference/frontend/qweb') }}" class="stretched-link">
-                            {{ _("QWeb Views") }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
+        <div class="col-lg-6">
+            <h2 class="border-top pt-4"><a href="{{ pathto('desenvolver') }}">{{ _("Desenvolver") }}</a></h2>
+            <p class="text-dark">{{ _("Aprenda a desenvolver em Odoo lendo a documentação técnica.") }}</p>
+            <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="{{ pathto('desenvolver/tutorials/getting_started') }}" class="stretched-link">
+                        {{ _("Tutorial: Getting started") }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ pathto('desenvolver/reference/backend/orm') }}" class="stretched-link">
+                        {{ _("ORM") }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ pathto('desenvolver/reference/user_interface/view_records') }}" class="stretched-link">
+                        {{ _("Regular Views") }}
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ pathto('desenvolver/reference/frontend/qweb') }}" class="stretched-link">
+                        {{ _("QWeb Views") }}
+                    </a>
+                </li>
+            </ul>
+        </div>
     </section>
     {# If changelog exists import it here}
         {% include "layout_templates/changelog.html" %}
