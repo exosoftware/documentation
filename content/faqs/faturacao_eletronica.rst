@@ -11,6 +11,7 @@ Erro no CIUS-PT: DT-CIUS-PT-012
 **CÓDIGO:** DT-CIUS-PT-012
 
 **CAMPO:**
+
 .. code-block:: text
     /*:Invoice[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:Invoice-2'][1]/*:OrderReference[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'][1]/*:ID[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2'][1]
 
@@ -28,6 +29,7 @@ Erro no CIUS-PT: DT-CIUS-PT-134
 **CÓDIGO:** DT-CIUS-PT-134
 
 **CAMPO:**
+
 .. code-block:: text
     /*:Invoice[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:Invoice-2'][1]/*:InvoiceLine[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'][1]/*:Item[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'][1]/*:Description[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2'][1]
 
