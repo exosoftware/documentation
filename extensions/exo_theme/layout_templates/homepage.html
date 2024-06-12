@@ -32,6 +32,33 @@
                 </ul>
             </div>
             <div class="col-lg-6">
+                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('faqs') }}">{{ _("FAQs") }}</a></h2>
+                <p class="text-dark">{{ _("Explore os nossos guias rápidos de resolução de problemas comuns") }}</p>
+                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>
+                <ul class="list-unstyled">
+                    <li>
+                        <a href=" {{ pathto('instalacao/instalar') }} " class="stretched-link">
+                            {{ _("Em Breve") }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ pathto('instalacao/manutencao') }}" class="stretched-link">
+                            {{ _("Em Breve") }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ pathto('instalacao/upgrade') }}" class="stretched-link">
+                            {{ _("Em Breve") }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ pathto('instalacao/api') }}" class="stretched-link">
+                            {{ _("Em Breve") }}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6">
                 <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('instalacao') }}">{{ _("Instalação e Manutenção") }}</a></h2>
                 <p class="text-dark">{{ _("Descubra como instalar e fazer a manutenção do seu Odoo e da Localização PT+ da ExoSoftware.") }}</p>
                 <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>
