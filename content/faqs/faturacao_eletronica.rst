@@ -10,7 +10,10 @@ Erro no CIUS-PT: DT-CIUS-PT-012
 
 **CÓDIGO:** DT-CIUS-PT-012
 
-**CAMPO:** `` /*:Invoice[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:Invoice-2'][1]/*:OrderReference[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'][1]/*:ID[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2'][1] ``
+**CAMPO:** /\*:Invoice\[namespace-uri\(\)='urn\:oasis\:names\:specification\:ubl\:schema\:xsd\:Invoice-2'\]\[1\]/\*:OrderReference\[namespace-uri\(\)='urn\:oasis\:names\:specification\:ubl\:schema\:xsd\:CommonAggregateComponents-2'\]\[1\]/\*:ID\[namespace-uri\(\)='urn\:oasis\:names\:specification\:ubl\:schema\:xsd\:CommonBasicComponents-2'\]\[1\]
+
+
+`` /*:Invoice[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:Invoice-2'][1]/*:OrderReference[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2'][1]/*:ID[namespace-uri()='urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2'][1] ``
 
 **VALORES:** [DT-CIUS-PT-012]-The BT-13 does not meet the defined format: alphanumeric with size between 1 and 20.
 
