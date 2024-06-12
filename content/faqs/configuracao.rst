@@ -33,6 +33,9 @@ O formato da morada está errado, aparece primeiro a cidade e depois o código p
 
 .. note::
     %(street)s
+
     %(street2)s
+
     **%(zip)s %(city)s, %(state_name)s**
+
     %(country_name)s
