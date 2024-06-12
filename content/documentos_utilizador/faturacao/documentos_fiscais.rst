@@ -40,14 +40,9 @@ Fatura pró-forma
 
 Documento informativo frequentemente utilizado na cotação de produtos e na justificação da transacção internacional de produtos. Após aprovação do cliente pode ser convertida em nota de encomenda.
 
-Para que este tipo de documento fique disponível, primeiro terá de ir à app **Vendas**, ir ao menu :menuselection:`Configuração --> Configurações`, no bloco **Orçamentos e Encomendas** ative a opção **Fatura Pró-Forma**
+Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Orçamento / Encomenda`
 
-.. image:: documentos_fiscais/ativarProforma.png
-   :align: center
-
-Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Fatura PRÓ-FORMA`
-
-.. image:: documentos_fiscais/imprimirFaturaProForma.png
+.. image:: documentos_fiscais/imprimirOrcamento.png
    :align: center
 
 .. seealso::
