@@ -18,7 +18,7 @@ Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
     faqs/ficheiro_saft_pt
     faqs/comunicacao_series
     faqs/assinatura_digital_pdf
-    faqs/documento
+    faqs/fatura
     faqs/faturacao_eletronica
     faqs/configuracao_pos
     faqs/documentos_transporte
