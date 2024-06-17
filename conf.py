@@ -22,7 +22,7 @@ copyright = 'Exo Software, Lda.'
 # `version` is the version info for the project being documented, acts as replacement for |version|,
 # also used in various other places throughout the built documents.
 # `release` is the full version, including alpha/beta/rc tags. Acts as replacement for |release|.
-version = release = 'master'
+version = release = '17.0'
 
 # `current_branch` is the technical name of the current branch.
 # E.g., saas-15.4 -> saas-15.4; 12.0 -> 12.0, master -> master (*).
@@ -43,7 +43,7 @@ needs_sphinx = '3.0.0'
 
 # The default language in which the documentation is written. It is set to `None` because Sphinx
 # considers that no language means 'en'.
-language = 'pt_PT'
+language = None
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -204,10 +204,10 @@ github_project = 'documentation'
 locale_dirs = ['../locale/']
 templates_path = ['../extensions']
 
-# custom docname_to_domain to divide the translations of documentos_utilizador in subdirectories
+# custom docname_to_domain to divide the translations of applications in subdirectories
 sphinx.transforms.i18n.docname_to_domain = (
     sphinx.util.i18n.docname_to_domain
-) = lambda docname, compact: docname.split('/')[1 if docname.startswith('documentos_utilizador/') else 0]
+) = lambda docname, compact: docname.split('/')[1 if docname.startswith('applications/') else 0]
 
 # The version names that should be shown in the version switcher, if the config option `versions`
 # is populated. If a version is passed to `versions` but is not listed here, it will not be shown.
@@ -228,16 +228,16 @@ versions_names = {
 # The language names that should be shown in the language switcher, if the config option `languages`
 # is populated. If a language is passed to `languages` but is not listed here, it will not be shown.
 languages_names = {
-    # 'de': 'DE',
+    'de': 'DE',
     'en': 'EN',
-    # 'es': 'ES',
-    # 'fr': 'FR',
-    # 'it': 'IT',
-    # 'nl': 'NL',
-    # 'pt_BR': 'PT',
-    # 'uk': 'UA',
-    # 'zh_CN': 'ZH (CN)',
-    # 'zh_TW': 'ZH (TW)',
+    'es': 'ES',
+    'fr': 'FR',
+    'it': 'IT',
+    'nl': 'NL',
+    'pt_BR': 'PT',
+    'uk': 'UA',
+    'zh_CN': 'ZH (CN)',
+    'zh_TW': 'ZH (TW)',
     'pt_PT': 'PT',
 }
 
@@ -328,13 +328,16 @@ latex_documents = [
 
     ('legal/terms/i18n/enterprise_tex_pt_BR', 'odoo_enterprise_agreement_pt_BR.tex',
      'Odoo Enterprise Subscription Agreement (PT)', '', 'howto'),
+
+    # ('legal/terms/i18n/enterprise_tex_pt_BR', 'odoo_enterprise_agreement_pt_PT.tex',
+    #  'Odoo Enterprise Subscription Agreement (PT)', '', 'howto'),
 ]
 
 # List of languages that have legal translations (excluding EN). The keys must be in
 # `languages_names`. These translations will have a link to their versions of the legal
 # contracts, instead of the default EN one. The main legal documents are not part of the
 # translations since they have legal meaning.
-legal_translations = ['de', 'es', 'fr', 'nl', 'pt_BR']
+legal_translations = ['de', 'es', 'fr', 'nl', 'pt_BR', 'pt_PT']
 
 # The name of an image file (relative to this directory) to place at the top of the title page.
 latex_logo = 'static/img/odoo_logo.png'
