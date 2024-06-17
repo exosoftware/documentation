@@ -1022,15 +1022,35 @@ span.viewcode-link {
     &.alert-primary {
         --o-alert-code-border-color: #{tint-color($note, 50%)};
         --o-alert-icon: '#{$i-note}';
+
+        $background: shift-color($note, $alert-bg-scale);
+        $border: shift-color($note, $alert-border-scale);
+        $color: shift-color($note, $alert-color-scale);
+
+        @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+            $color: mix($primary, color-contrast($background), abs($alert-color-scale));
+        }
+
+        @include alert-variant($background, $border, $color);
     }
 
     // See Also
     &.alert-secondary {
         --o-alert-icon: '#{$i-article}';
-        --o-alert-code-border-color: #{tint-color($danger, 30%)};
+        --o-alert-code-border-color: #{tint-color($see, 30%)};
+
+        $background: shift-color($see, $alert-bg-scale);
+        $border: shift-color($see, $alert-border-scale);
+        $color: shift-color($see, $alert-color-scale);
+
+        @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+            $color: mix($primary, color-contrast($background), abs($alert-color-scale));
+        }
+
+        @include alert-variant($background, $border, $color);
 
         a {
-            color: $danger;
+            color: $see;
         }
     }
 
