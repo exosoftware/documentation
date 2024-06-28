@@ -10,7 +10,7 @@ ifndef BUILD_DIR
 endif
 
 ifndef CURRENT_LANG
-  CURRENT_LANG = 'pt_PT'
+  CURRENT_LANG = pt_PT
 endif
 
 SPHINX_BUILD   = sphinx-build

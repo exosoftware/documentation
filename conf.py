@@ -329,7 +329,7 @@ latex_documents = [
     ('legal/terms/i18n/enterprise_tex_pt_BR', 'odoo_enterprise_agreement_pt_BR.tex',
      'Odoo Enterprise Subscription Agreement (PT)', '', 'howto'),
 
-    # ('legal/terms/i18n/enterprise_tex_pt_BR', 'odoo_enterprise_agreement_pt_PT.tex',
+    # ('legal/terms/i18n/enterprise_tex_pt_PT', 'odoo_enterprise_agreement_pt_PT.tex',
     #  'Odoo Enterprise Subscription Agreement (PT)', '', 'howto'),
 ]
 
