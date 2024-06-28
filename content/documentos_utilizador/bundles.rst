@@ -1,13 +1,13 @@
 :nosearch:
 
-=======
-Bundles
-=======
+======
+Outros
+======
 
 Documentação em breve
 
 .. toctree::
     :titlesonly:
 
-    bundles/producao
-    bundles/projeto
+    outros/producao
+    outros/projeto

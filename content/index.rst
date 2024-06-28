@@ -1,8 +1,8 @@
 :nosearch:
 
-========================
-Documentação ExoSoftware
-========================
+=========================
+Documentação Exo Software
+=========================
 
 
 .. toctree::
