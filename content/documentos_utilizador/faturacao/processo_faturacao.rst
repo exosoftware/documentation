@@ -75,6 +75,7 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
     .. image:: faturacao/partilharOrcamento4.png
         :align: center
 
+
 .. _processo_faturacao_emitir_fatura:
 
 Emissão de Fatura
@@ -142,14 +143,31 @@ Em seguida confirme a fatura
 Emissão de Recibos
 ------------------
 
-Documentação em Breve
+Documentação em breve
+
+Reconciliação de documentos
+---------------------------
+
+Documentação em breve
+
+Correções
+---------
+
+.. _processo_faturacao_emitir_nota_credito:
 
 Notas de crédito
-----------------
+^^^^^^^^^^^^^^^^
 A nota de crédito deve ser emitida a partir do documento da fatura para que se mantenha a informação necessária
 
 .. image:: faturacao/criarNotaCredito.png
    :align: center
+
+.. _processo_faturacao_emitir_nota_debito:
+
+Notas de debito
+^^^^^^^^^^^^^^^^
+
+Documentação em breve
 
 Mais informação
 ---------------

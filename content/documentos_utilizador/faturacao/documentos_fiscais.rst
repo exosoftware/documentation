@@ -128,7 +128,7 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
 .. seealso::
    :ref:`Como fazer... <processo_faturacao_emitir_fatura>`
 
-.. note::
+.. important::
    A forma correta de corrigir qualquer tipo de documento de fatura, é anular a mesma usando uma nota de crédito
 
 Existem outros documentos com validade fiscal que poderão ser utilizados como substituto da fatura.
@@ -239,7 +239,7 @@ Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e seleciona
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <faturacao/processo_faturacao>`
+   :ref:`Como fazer... <processo_faturacao_emitir_recibo>`
 
 Recibo de IVA de caixa
 ----------------------
