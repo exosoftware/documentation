@@ -51,32 +51,16 @@ Outras informações são automaticamente preenchidas com base nas escolhas ante
 
 Como registar
 =============
-Para registar uma série válida junto da AT em Odoo, existem 2 processos. Continuar uma série que já transita do seu software anterior, ou registar uma nova.
+Para registar uma série válida junto da AT em Odoo, existem 2 processos. Registar uma nova, ou continuar uma série que já existente.
 
-Manter Série
-------------
-Preencha o campo Sequência com o nome que quer dar à sequência e selecione Criar e Editar.
+.. note::
+    Se transitar de outro software o ideal é sempre criar uma nova série.
+    A opção de manter séries só deve ser utilizada para os seguintes casos:
 
-.. image:: registo_series/manterSerie1.png
-   :align: center
+     - Transitou entre sistemas Odoo
+     - Por dificuldades técnicas teve de registar a série primeiro na AT e só depois a vai usar no Odoo
 
-Vai abrir uma nova janela:
-
-   - Deve ter a **Implementação** como **Sem lacunas**
-   - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
-   - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitosPP que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
-   - Qual é o **Próximo Número** na sequência (coloque mais um do que o último que usou).
-Guarde as alterações.
-
-.. image:: registo_series/manterSerie2.png
-   :align: center
-
-Isto vai configurar a sua sequência no Odoo, mas ainda não está completo pois falta estabelecer a relação com a séria na AT.
-
-Para isso preencha o campo **Código de Validação** com o código que está disponível na AT, o botão **Registar** muda para **Sincronizar**, clique nele para poder continuar a utilizar a sua série anterior.
-
-.. image:: registo_series/manterSerie3.png
-   :align: center
+    Para todos os outros cenários deve sempre usar uma nova série
 
 Nova Série
 ----------
@@ -89,6 +73,13 @@ Vai abrir uma nova janela:
 
   - Deve ter a **Implementação** como **Sem lacunas**
   - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
+    .. tip::
+        Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela Localização PT+ Exo
+        .. exemple::
+            - Nas faturas é necessário ter FT, a localização já insere "FT "
+            - Nas notas de encomenda é necessário ter NE, a localização já insere "NE "
+            - etc.
+
   - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitos** que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
   - O **Próximo Número** na sequência deve ser 1
 Guarde as alterações.
@@ -113,3 +104,35 @@ Clique no botão **Comunicar**.
    :align: center
 
 A partir desde momento a série está comunicada e pode começar a emitir documentos.
+
+Manter Série
+------------
+Preencha o campo Sequência com o nome que quer dar à sequência e selecione Criar e Editar.
+
+.. image:: registo_series/manterSerie1.png
+   :align: center
+
+Vai abrir uma nova janela:
+
+   - Deve ter a **Implementação** como **Sem lacunas**
+   - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
+    .. tip::
+        Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela Localização PT+ Exo
+        .. exemple::
+            - Nas faturas é necessário ter FT, a localização já insere "FT "
+            - Nas notas de encomenda é necessário ter NE, a localização já insere "NE "
+            - etc.
+
+   - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitos** que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
+   - Qual é o **Próximo Número** na sequência (coloque mais um do que o último que usou).
+Guarde as alterações.
+
+.. image:: registo_series/manterSerie2.png
+   :align: center
+
+Isto vai configurar a sua sequência no Odoo, mas ainda não está completo pois falta estabelecer a relação com a séria na AT.
+
+Para isso preencha o campo **Código de Validação** com o código que está disponível na AT, o botão **Registar** muda para **Sincronizar**, clique nele para poder continuar a utilizar a sua série anterior.
+
+.. image:: registo_series/manterSerie3.png
+   :align: center
