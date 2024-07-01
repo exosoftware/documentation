@@ -3,9 +3,9 @@
 :hide-page-toc:
 :show-toc:
 
-========================
-Documentos do Utilizador
-========================
+==============================
+Documentação para Utilizadores
+==============================
 
 Descubra o nosso guia para o ajudar a utilizar o Odoo por temática.
 

@@ -9,5 +9,5 @@ Documentação Exo Software
 
     documentos_utilizador
     faqs
-    instalacao
-    desenvolver
+    administration
+    developer
