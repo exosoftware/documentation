@@ -174,12 +174,12 @@ Para que esta funcionalidade esteja disponível é preciso aceder à app **Fatur
    :align: center
 
 .. seealso::
-   :doc:`Saber mais... <faturacao_eletronica>`
+   :doc:`Saiba mais... <faturacao_eletronica>`
 
 Autofaturação
 -------------
 
-Documento emitido por software de faturação certificado e enviado por email. A esta fatura está associada uma assinatura digital que permite validar a autenticidade do documento.
+Documento emitido por software de faturação certificado e enviado por email. À esta fatura está associada uma assinatura digital que permite validar a autenticidade do documento.
 
 .. seealso::
    :doc:`Saiba mais... <autofaturacao>`
