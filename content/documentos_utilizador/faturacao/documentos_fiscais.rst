@@ -114,7 +114,7 @@ Contem:
 
         - Nome ou denominação social
         - NIF (se pretendido, pode ser só como consumidor final)
-        - Denominação e quantidade dos bens ou serviços
+   - Denominação e quantidade dos bens ou serviços
    - Valor da prestação de serviços ou da transmissão de bens
    - Taxas aplicáveis
    - Montante de IVA liquidado
