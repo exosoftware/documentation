@@ -254,13 +254,14 @@ Guia de remessa / Guia de transporte
 
 Documentação em breve
 
+.. note::
+   Guias de Remessa para fora de Portugal
+   --------------------------------------
+
+   As Guias de Remessa só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal. Quando exporta produtos os mesmos não precisam de comunicar a Guia de Remessa pois essa é uma figura da legislação portuguesa que não existe noutros países.
+
 .. seealso::
    :doc:`Como fazer... <outros>`
-
-Guias de Remessa para fora de Portugal
---------------------------------------
-
-Documentação em breve
 
 Guias de transporte de ativos
 -----------------------------
