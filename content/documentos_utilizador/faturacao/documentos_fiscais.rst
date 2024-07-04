@@ -150,7 +150,7 @@ Fatura-simplificada
 Documento emitido apenas para operações em território nacional, sujeito a condições:
 
    - Venda de bens por parte de retalhistas/vendedores ambulantes a um consumidor final, não sujeito passivo de IVA
-   - O montante total da transação de um bem não pode ser superior a 1.000,00€
+   - O montante total da transação de um bem não pode ser superior a 1000€
    - O montante total da prestação de um serviço não pode ser superior a 100€
 
 Para emitir o pdf da fatura simplificada basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Faturas ou Faturas (multi-via)`
