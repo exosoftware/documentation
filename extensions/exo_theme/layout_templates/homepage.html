@@ -5,91 +5,96 @@
     <section>
         <div class="row gx-lg-5">
             <div class="col-lg-6">
-                <h2><a href="{{ pathto('documentos_utilizador') }}">{{ _("Documentos do Utilizador") }}</a></h2>
+                <h2><a href="{{ pathto('documentos_utilizador') }}">{{ _("Documentação para Utilizadores") }}</a></h2>
                 <p class="text-dark">{{ _("Descubra os nossos guias de utilização do Odoo PT+ e muito mais.") }}</p>
                 <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Temáticas") }}</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="{{ pathto('documentos_utilizador/faturacao') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/invoicing') }}" class="stretched-link">
                             {{ _("Faturação, Pagamentos e Stock") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('documentos_utilizador/contabilidade') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/accounting') }}" class="stretched-link">
                             {{ _("Contabilidade") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('documentos_utilizador/salarios') }}" class="stretched-link">
+                        <a href="{{ pathto('appications/payroll') }}" class="stretched-link">
                             {{ _("Salários") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('documentos_utilizador/bundles') }}" class="stretched-link">
-                            {{ _("Bundles Exo") }}
+                        <a href="{{ pathto('applications/multibanco') }}" class="stretched-link">
+                            {{ _("Multibanco e MBWay") }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ pathto('applications/other') }}" class="stretched-link">
+                            {{ _("Outros") }}
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="col-lg-6">
-                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('faqs') }}">{{ _("FAQs") }}</a></h2>
+                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('applications/faq') }}">{{ _("FAQs") }}</a></h2>
                 <p class="text-dark">{{ _("Explore os nossos guias rápidos de resolução de problemas comuns") }}</p>
                 <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href=" {{ pathto('faqs/configuracao') }} " class="stretched-link">
+                        <a href=" {{ pathto('applications/faq/configuracao') }} " class="stretched-link">
                             {{ _("Configuração") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('faqs/permissoes') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/faq/permissoes') }}" class="stretched-link">
                             {{ _("Permissões") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('faqs/ficheiro_saft_pt') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/faq/ficheiro_saft_pt') }}" class="stretched-link">
                             {{ _("Ficheiro SAF-T PT") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('faqs/comunicacao_series') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/faq/comunicacao_series') }}" class="stretched-link">
                             {{ _("Comunicação de Séries") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('faqs/assinatura_digital_pdf') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/faq/assinatura_digital_pdf') }}" class="stretched-link">
                             {{ _("Assinatura digital de PDFs") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('faqs/fatura') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/faq/fatura') }}" class="stretched-link">
                             {{ _("Fatura") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('faqs/faturacao_eletronica') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/faq/faturacao_eletronica') }}" class="stretched-link">
                             {{ _("Faturação eletrónica") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('faqs/configuracao_pos') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/faq/configuracao_pos') }}" class="stretched-link">
                             {{ _("Coonfiguração POS") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('faqs/documentos_transporte') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/faq/documentos_transporte') }}" class="stretched-link">
                             {{ _("Documentos de transporte") }}
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="col-lg-6">
-                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('instalacao') }}">{{ _("Instalação e Manutenção") }}</a></h2>
-                <p class="text-dark">{{ _("Descubra como instalar e fazer a manutenção do seu Odoo e da Localização PT+ da ExoSoftware.") }}</p>
+                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('administration') }}">{{ _("Administração") }}</a></h2>
+                <p class="text-dark">{{ _("Documentação técnica sobre instalação, manutenção e atualização de sistemas Odoo PT+ e outros.") }}</p>
                 <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href=" {{ pathto('instalacao/instalar') }} " class="stretched-link">
+                        <a href=" {{ pathto('administration/install') }} " class="stretched-link">
                             {{ _("Instalação e Configuração") }}
                         </a>
                     </li>
