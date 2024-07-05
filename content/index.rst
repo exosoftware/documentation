@@ -7,7 +7,6 @@ Documentação Exo Software
 
 .. toctree::
 
-    documentos_utilizador
-    faqs
+    applications
     administration
     developer

@@ -3062,42 +3062,6 @@ msgstr ""
 msgid "Accessing the database management options"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:15
-msgid ":ref:`odoo_online/upgrade`"
-msgstr ""
-
-#: ../../content/administration/maintain/odoo_online.rst:16
-msgid ":ref:`odoo_online/duplicate`"
-msgstr ""
-
-#: ../../content/administration/maintain/odoo_online.rst:17
-msgid ":ref:`odoo_online/rename`"
-msgstr ""
-
-#: ../../content/administration/maintain/odoo_online.rst:18
-msgid ":ref:`odoo_online/download`"
-msgstr ""
-
-#: ../../content/administration/maintain/odoo_online.rst:19
-msgid ":ref:`odoo_online/domains`"
-msgstr ""
-
-#: ../../content/administration/maintain/odoo_online.rst:20
-msgid ":ref:`odoo_online/tags`"
-msgstr ""
-
-#: ../../content/administration/maintain/odoo_online.rst:21
-msgid ":ref:`odoo_online/delete`"
-msgstr ""
-
-#: ../../content/administration/maintain/odoo_online.rst:22
-msgid ":ref:`odoo_online/contact-support`"
-msgstr ""
-
-#: ../../content/administration/maintain/odoo_online.rst:23
-msgid ":ref:`odoo_online/users`"
-msgstr ""
-
 #: ../../content/administration/maintain/odoo_online.rst:28
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:293
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:77
