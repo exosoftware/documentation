@@ -114,7 +114,7 @@ Contem:
 
         - Nome ou denominação social
         - NIF (se pretendido, pode ser só como consumidor final)
-        - Denominação e quantidade dos bens ou serviços
+   - Denominação e quantidade dos bens ou serviços
    - Valor da prestação de serviços ou da transmissão de bens
    - Taxas aplicáveis
    - Montante de IVA liquidado
@@ -150,7 +150,7 @@ Fatura-simplificada
 Documento emitido apenas para operações em território nacional, sujeito a condições:
 
    - Venda de bens por parte de retalhistas/vendedores ambulantes a um consumidor final, não sujeito passivo de IVA
-   - O montante total da transação de um bem não pode ser superior a 1.000,00€
+   - O montante total da transação de um bem não pode ser superior a 1000€
    - O montante total da prestação de um serviço não pode ser superior a 100€
 
 Para emitir o pdf da fatura simplificada basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Faturas ou Faturas (multi-via)`
@@ -174,12 +174,12 @@ Para que esta funcionalidade esteja disponível é preciso aceder à app **Fatur
    :align: center
 
 .. seealso::
-   :doc:`Saber mais... <e-invoicing>`
+   :doc:`Saiba mais... <e-invoicing>`
 
 Autofaturação
 -------------
 
-Documento emitido por software de faturação certificado e enviado por email. A esta fatura está associada uma assinatura digital que permite validar a autenticidade do documento.
+Documento emitido por software de faturação certificado e enviado por email. À esta fatura está associada uma assinatura digital que permite validar a autenticidade do documento.
 
 .. seealso::
    :doc:`Saiba mais... <self-billing>`
@@ -257,13 +257,14 @@ Guia de remessa / Guia de transporte
 
 Documentação em breve
 
+.. note::
+   Guias de Remessa para fora de Portugal
+   --------------------------------------
+
+   As Guias de Remessa só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal. Quando exporta produtos os mesmos não precisam de comunicar a Guia de Remessa pois essa é uma figura da legislação portuguesa que não existe noutros países.
+
 .. seealso::
-   :doc:`Como fazer... <other>`
-
-Guias de Remessa para fora de Portugal
---------------------------------------
-
-Documentação em breve
+   :doc:`Como fazer... <outros>`
 
 Guias de transporte de ativos
 -----------------------------

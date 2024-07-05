@@ -42,7 +42,7 @@ Para aceder ao menu de impostos instalados basta ir à app **Faturação/Contabi
 .. example::
     **IVA N/S:**
 
-    Existem diversos motivos para não se aplicar IVA, para cada motivo, deve ser duplicado o IVA N/S, ir à tab Opções Avançadas e alterar o que precisa. depois é só gravar com um nome diferente.
+    Existem diversos motivos para não se aplicar IVA, para cada motivo, deve ser duplicado o IVA N/S, ir à tab Opções Avançadas e alterar o que precisa. Depois é só gravar com um nome diferente.
 
 .. tip::
    **Grupo de Imposto**

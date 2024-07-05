@@ -33,7 +33,7 @@ Dentro de cada série pode inserir diversas informações, como:
 
    - **Nome**, que pode ser o que desejar
    - **Tipo**, pode escolher de uma lista de todos os tipos que são disponibilizados pela localização
-   - **Empresa** da base de dados esse tipo de documentos está associado, esta opção é mais útil nos casos de empresas com ambiente multi empresa para que cada uma das suas empresas tenham séries e sequências diferentes
+   - **Empresa** da base de dados a que esse tipo de documentos está associado, esta opção é mais útil nos casos de empresas com ambiente multi empresa para que cada uma das suas empresas tenham séries e sequências diferentes
    - **Método de Origem**, método de comunicação em SAF-T
 
       - **Aplicação**, significa que vai ser O Odoo a emitir os documentos e o responsável por os comunicar em SAF-T
