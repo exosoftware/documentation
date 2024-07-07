@@ -17,3 +17,9 @@ Em cada repositório, encontrará um arquivo requirements.txt contendo a lista d
 python libraries necessárias. Quanto a pacotes de sistema operativo, não é
 necessário nenhum específico.
 
+Que versões de Python são suportadas?
+=====================================
+
+Por regra, as apps Exo suportam as versões Python cujo estado seja *security* ou
+*bugfix* (ver `página oficial <https://devguide.python.org/versions/#versions>`_).
+Atualmente, isso corresponde às versões 3.8, 3.9, 3.10, 3.11 e 3.12.

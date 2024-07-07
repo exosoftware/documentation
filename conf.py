@@ -43,7 +43,7 @@ needs_sphinx = '3.0.0'
 
 # The default language in which the documentation is written. It is set to `None` because Sphinx
 # considers that no language means 'en'.
-language = None
+language = 'pt'
 
 # The suffix of source filenames.
 source_suffix = '.rst'
@@ -212,7 +212,7 @@ sphinx.transforms.i18n.docname_to_domain = (
 # The version names that should be shown in the version switcher, if the config option `versions`
 # is populated. If a version is passed to `versions` but is not listed here, it will not be shown.
 versions_names = {
-    'master': "Master",
+    # 'master': "Master",
     # 'saas-17.1': "Odoo Online",
     '17.0': "Odoo 17",
     # 'saas-16.4': "Odoo Online",
@@ -228,16 +228,16 @@ versions_names = {
 # The language names that should be shown in the language switcher, if the config option `languages`
 # is populated. If a language is passed to `languages` but is not listed here, it will not be shown.
 languages_names = {
-    'de': 'DE',
-    'en': 'EN',
-    'es': 'ES',
-    'fr': 'FR',
-    'it': 'IT',
-    'nl': 'NL',
-    'pt_BR': 'PT',
-    'uk': 'UA',
-    'zh_CN': 'ZH (CN)',
-    'zh_TW': 'ZH (TW)',
+    # 'de': 'DE',
+    # 'en': 'EN',
+    # 'es': 'ES',
+    # 'fr': 'FR',
+    # 'it': 'IT',
+    # 'nl': 'NL',
+    # 'pt_BR': 'PT',
+    # 'uk': 'UA',
+    # 'zh_CN': 'ZH (CN)',
+    # 'zh_TW': 'ZH (TW)',
     'pt_PT': 'PT',
 }
 

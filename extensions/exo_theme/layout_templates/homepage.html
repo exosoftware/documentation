@@ -34,60 +34,65 @@
                             {{ _("Outros") }}
                         </a>
                     </li>
-                </ul>
-            </div>
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('applications/faq') }}">{{ _("FAQs") }}</a></h2>
-                <p class="text-dark">{{ _("Explore os nossos guias rápidos de resolução de problemas comuns") }}</p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>
-                <ul class="list-unstyled">
                     <li>
-                        <a href=" {{ pathto('applications/faq/configuracao') }} " class="stretched-link">
-                            {{ _("Configuração") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/faq/permissoes') }}" class="stretched-link">
-                            {{ _("Permissões") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/faq/ficheiro_saft_pt') }}" class="stretched-link">
-                            {{ _("Ficheiro SAF-T PT") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/faq/comunicacao_series') }}" class="stretched-link">
-                            {{ _("Comunicação de Séries") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/faq/assinatura_digital_pdf') }}" class="stretched-link">
-                            {{ _("Assinatura digital de PDFs") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/faq/fatura') }}" class="stretched-link">
-                            {{ _("Fatura") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/faq/faturacao_eletronica') }}" class="stretched-link">
-                            {{ _("Faturação eletrónica") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/faq/configuracao_pos') }}" class="stretched-link">
-                            {{ _("Coonfiguração POS") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('applications/faq/documentos_transporte') }}" class="stretched-link">
-                            {{ _("Documentos de transporte") }}
+                        <a href="{{ pathto('applications/faq') }}" class="stretched-link">
+                            {{ _("FAQ") }}
                         </a>
                     </li>
                 </ul>
             </div>
+<!--            <div class="col-lg-6">-->
+<!--                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('applications/faq') }}">{{ _("FAQs") }}</a></h2>-->
+<!--                <p class="text-dark">{{ _("Explore os nossos guias rápidos de resolução de problemas comuns") }}</p>-->
+<!--                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>-->
+<!--                <ul class="list-unstyled">-->
+<!--                    <li>-->
+<!--                        <a href=" {{ pathto('applications/faq/configuracao') }} " class="stretched-link">-->
+<!--                            {{ _("Configuração") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('applications/faq/permissoes') }}" class="stretched-link">-->
+<!--                            {{ _("Permissões") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('applications/faq/ficheiro_saft_pt') }}" class="stretched-link">-->
+<!--                            {{ _("Ficheiro SAF-T PT") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('applications/faq/comunicacao_series') }}" class="stretched-link">-->
+<!--                            {{ _("Comunicação de Séries") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('applications/faq/assinatura_digital_pdf') }}" class="stretched-link">-->
+<!--                            {{ _("Assinatura digital de PDFs") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('applications/faq/fatura') }}" class="stretched-link">-->
+<!--                            {{ _("Fatura") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('applications/faq/faturacao_eletronica') }}" class="stretched-link">-->
+<!--                            {{ _("Faturação eletrónica") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('applications/faq/configuracao_pos') }}" class="stretched-link">-->
+<!--                            {{ _("Coonfiguração POS") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('applications/faq/documentos_transporte') }}" class="stretched-link">-->
+<!--                            {{ _("Documentos de transporte") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
             <div class="col-lg-6">
                 <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('administration') }}">{{ _("Administração") }}</a></h2>
                 <p class="text-dark">{{ _("Documentação técnica sobre instalação, manutenção e atualização de sistemas Odoo PT+ e outros.") }}</p>
@@ -99,49 +104,49 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('instalacao/manutencao') }}" class="stretched-link">
-                            {{ _("Fazer a manutenção do Odoo") }}
+                        <a href="{{ pathto('administration/supported_versions') }}" class="stretched-link">
+                            {{ _("Versões suportadas") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('instalacao/upgrade') }}" class="stretched-link">
+                        <a href="{{ pathto('administration/upgrade') }}" class="stretched-link">
                             {{ _("Upgrade de versões") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('instalacao/api') }}" class="stretched-link">
-                            {{ _("APIs") }}
+                        <a href="{{ pathto('administration/faq') }}" class="stretched-link">
+                            {{ _("FAQ") }}
                         </a>
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4"><a href="{{ pathto('desenvolver') }}">{{ _("Desenvolver") }}</a></h2>
-                <p class="text-dark">{{ _("Aprenda a desenvolver em Odoo lendo a documentação técnica.") }}</p>
-                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="{{ pathto('desenvolver/tutorials/getting_started') }}" class="stretched-link">
-                            {{ _("Tutorial: Getting started") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('desenvolver/reference/backend/orm') }}" class="stretched-link">
-                            {{ _("ORM") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('desenvolver/reference/user_interface/view_records') }}" class="stretched-link">
-                            {{ _("Regular Views") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('desenvolver/reference/frontend/qweb') }}" class="stretched-link">
-                            {{ _("QWeb Views") }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<!--            <div class="col-lg-6">-->
+<!--                <h2 class="border-top pt-4"><a href="{{ pathto('desenvolver') }}">{{ _("Desenvolver") }}</a></h2>-->
+<!--                <p class="text-dark">{{ _("Aprenda a desenvolver em Odoo lendo a documentação técnica.") }}</p>-->
+<!--                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>-->
+<!--                <ul class="list-unstyled">-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('desenvolver/tutorials/getting_started') }}" class="stretched-link">-->
+<!--                            {{ _("Tutorial: Getting started") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('desenvolver/reference/backend/orm') }}" class="stretched-link">-->
+<!--                            {{ _("ORM") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('desenvolver/reference/user_interface/view_records') }}" class="stretched-link">-->
+<!--                            {{ _("Regular Views") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('desenvolver/reference/frontend/qweb') }}" class="stretched-link">-->
+<!--                            {{ _("QWeb Views") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
         </div>
     </section>
     {# If changelog exists import it here}
