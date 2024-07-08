@@ -10,11 +10,11 @@ Faturação, Pagamentos e Stock
     invoicing/fiscal_documents
     invoicing/series_registration
     invoicing/taxes
-    invoicing/processo_faturacao
+    invoicing/invoicing_process
     invoicing/e-invoicing
     invoicing/self-billing
     invoicing/pos
-    invoicing/saft_faturacao
+    invoicing/saft_invoicing
     invoicing/pdf_signing
     invoicing/hr_expenses
     invoicing/stock
