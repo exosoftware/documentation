@@ -13,7 +13,7 @@ Configuração do utilizador
 
 Para poder comunicar com a AT através de Odoo tem de inserir as credênciais de acesso. Para tal terá de aceder ao seu utilizador Odoo e inserir os dados na aba **Portugal**
 
-.. image:: series_registration/credenciaisAT.png
+.. image:: series_registration/v17_ATcredentials.png
    :align: center
 
 Deve garantir que em Odoo o utilizador tem permissões para fazer a comunicação de séries, mas também o login de acesso na AT está atutorizado a fazer essa mesma comunicação.
@@ -46,7 +46,7 @@ Outras informações são automaticamente preenchidas com base nas escolhas ante
    - **Secção SAF-T**, onde vai ser mencionado qual das secções do SAF-T vai conter os documentos da série específica, esse mapeamento já é feito pela localização Exo
    - **Usada**, mostra se a série já foi usada ou não
 
-.. image:: series_registration/series.png
+.. image:: series_registration/v17_series.png
    :align: center
 
 Como registar
@@ -66,7 +66,7 @@ Nova Série
 ----------
 Preencha o campo **Sequência** com o nome que quer dar à sequência e selecione **Criar e Editar**.
 
-.. image:: series_registration/novaSerie1.png
+.. image:: series_registration/v17_newSerie1.png
    :align: center
 
 Vai abrir uma nova janela:
@@ -85,14 +85,14 @@ Vai abrir uma nova janela:
 
 Guarde as alterações.
 
-.. image:: series_registration/novaSerie2.png
+.. image:: series_registration/v17_newSerie2.png
    :align: center
 
 Isto vai configurar a sua sequência no Odoo, mas ainda falta comunicar a séria na AT.
 
 Para isso garanta que o campo **Código de Validação** está vazio e clique no botão **Registar** para iniciar o processo de comunicação.
 
-.. image:: series_registration/novaSerie3.png
+.. image:: series_registration/v17_newSerie3.png
    :align: center
 
 Vai aparecer uma nova janela onde deve indicar a **Data de Início Esperada**, tenha em atenção que:
@@ -102,7 +102,7 @@ Vai aparecer uma nova janela onde deve indicar a **Data de Início Esperada**, t
 
 Clique no botão **Comunicar**.
 
-.. image:: series_registration/novaSerie4.png
+.. image:: series_registration/v17_newSerie4.png
    :align: center
 
 A partir desde momento a série está comunicada e pode começar a emitir documentos.
@@ -111,7 +111,7 @@ Manter Série
 ------------
 Preencha o campo Sequência com o nome que quer dar à sequência e selecione Criar e Editar.
 
-.. image:: series_registration/manterSerie1.png
+.. image:: series_registration/v17_keepSerie1.png
    :align: center
 
 Vai abrir uma nova janela:
@@ -131,12 +131,12 @@ Vai abrir uma nova janela:
 
 Guarde as alterações.
 
-.. image:: series_registration/manterSerie2.png
+.. image:: series_registration/v17_keepSerie2.png
    :align: center
 
 Isto vai configurar a sua sequência no Odoo, mas ainda não está completo pois falta estabelecer a relação com a séria na AT.
 
 Para isso preencha o campo **Código de Validação** com o código que está disponível na AT, o botão **Registar** muda para **Sincronizar**, clique nele para poder continuar a utilizar a sua série anterior.
 
-.. image:: series_registration/manterSerie3.png
+.. image:: series_registration/v17_keepSerie3.png
    :align: center

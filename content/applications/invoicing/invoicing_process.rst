@@ -18,7 +18,7 @@ O processo de faturação em Odoo foi pensado para seguir sempre a mesma sequên
         - Nota de Crédito
         - Nota de Débito
 
-.. _processo_faturacao_orcamentacao:
+.. _invoicing_process_quotation:
 
 Orçamentação
 ------------
@@ -26,12 +26,17 @@ A orçamentação em Odoo pode ser feita em diversas apps **Vendas**, **Compras*
 
 Nas apps de **Vendas**, **Compras** e **Subscrições** basta aceder à app respetiva e carregar no botão **Novo**
 
-.. image:: invoicing/criarOrcamento.png
+.. image:: invoicing_process/v17_createQuote1.png
+   :align: center
+
+Na app de **CRM** dentro de cada lead pode carregar no botão **Novo Orçamento**
+
+.. image:: invoicing_process/v17_createQuote2.png
    :align: center
 
 Depois deve preencher os campos necessários e selecionar o tipo de documento a ser usado na orçamentação
 
-.. image:: invoicing/tiposOrcamento.png
+.. image:: invoicing_process/v17_quoteTypes.png
    :align: center
 
 .. note::
@@ -39,7 +44,7 @@ Depois deve preencher os campos necessários e selecionar o tipo de documento a 
     que determina de quanto em quanto tempo serão feitas novas faturas de forma
     automática, bem como pode especificar uma data para o término da subscrição.
 
-    .. image:: invoicing/planoRecorrente.png
+    .. image:: invoicing_process/v17_recurringPlan.png
        :align: center
 
     .. example::
@@ -54,35 +59,37 @@ Depois deve preencher os campos necessários e selecionar o tipo de documento a 
 Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será gerada uma **Nota de encomenda**
 
 
-.. image:: invoicing/confirmarOrcamento.png
+.. image:: invoicing_process/v17_confirmQuote.png
    :align: center
 
-.. tip::
+.. important::
     Para as empresas que gostam/precisam de enviar um orçamento não confirmado para o cliente fica o seguinte alerta.
 
     A legislação portuguesa proíbe a emissão de documentos não confirmados, pelo que se tentarem fazer impressão do documento o mesmo sairá invalidado.
-    No entanto podem partilhar o orçamento no portal com o vosso cliente.
+
+.. tip::
+    No entanto, o Odoo permite partilhar documentos no portal com o vosso cliente.
 
     Basta ir ao menu :menuselection:`Ação --> Partilhar` e vai abrir uma nova janela onde pode inserir o contacto do parceiro
 
-    .. image:: invoicing/partilharOrcamento1.png
+    .. image:: invoicing_process/v17_shareQuote1.png
         :align: center
-    .. image:: invoicing/partilharOrcamento2.png
+    .. image:: invoicing_process/v17_shareQuote2.png
         :align: center
 
     Em seguida o parceiro pode aceder ao link do orçamento para verificar o mesmo e deixar algum comentário que será adicionado ao chatter do Odoo
     Também tem acesso a outras funcionalidades. Esta é a vista do lado do parceiro
 
-    .. image:: invoicing/partilharOrcamento3.png
+    .. image:: invoicing_process/v17_shareQuote3.png
         :align: center
 
     Toda a informação do envio e visionamento fica registada no chatter do próprio documento.
 
-    .. image:: invoicing/partilharOrcamento4.png
+    .. image:: invoicing_process/v17_shareQuote4.png
         :align: center
 
 
-.. _processo_faturacao_emitir_fatura:
+.. _invoicing_process_creat_invoice:
 
 Emissão de Fatura
 -----------------
@@ -97,7 +104,7 @@ Emissão de Fatura
 
 O processo de emissão da fatura deve então ser iniciado na **Nota de encomenda** e carregar no botão **Criar Fatura**
 
-    .. image:: invoicing/criarFatura1.png
+    .. image:: invoicing_process/v17_createInvoice1.png
         :align: center
 
 Na janela que abre decida o tipo de fatura que pretende criar de entre as opções:
@@ -108,25 +115,25 @@ Na janela que abre decida o tipo de fatura que pretende criar de entre as opçõ
         - Percentagem do valor total da encomenda
         - Valor nominal à escolha
 
-.. image:: invoicing/criarFatura2.png
+.. image:: invoicing_process/v17_createInvoice2.png
     :align: center
 
 .. note::
     No caso de ser uma fatura de adiantamento o aspeto será diferente e terá mais informação para preencher
 
-    .. image:: invoicing/criarFatura3.png
+    .. image:: invoicing_process/v17_createInvoice3.png
         :align: center
 
 Depois de ter a fatura em modo de rascunho, deve preencher os campos necessários e escolher o tipo de documento de fatura que pretende.
 
 A maioria dos campos já vão estar preenchidos pois são herdados da Nota de encomenda.
 
-.. image:: invoicing/tipoFatura.png
+.. image:: invoicing_process/v17_invoiceTypes.png
     :align: center
 
 Em seguida confirme a fatura
 
-.. image:: invoicing/confirmarFatura.png
+.. image:: invoicing_process/v17_confirmInvoice.png
     :align: center
 
 .. tip::
@@ -139,12 +146,12 @@ Em seguida confirme a fatura
 
     Clique na opção **Novo**
 
-    .. image:: invoicing/novaFatura.png
+    .. image:: invoicing_process/v17_newInvoice.png
         :align: center
 
     Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a criar um orçamento.
 
-.. _processo_faturacao_emitir_recibo:
+.. _invoicing_process_create_recipt:
 
 Emissão de Recibos
 ------------------
@@ -159,16 +166,16 @@ Documentação em breve
 Correções
 ---------
 
-.. _processo_faturacao_emitir_nota_credito:
+.. _invoicing_process_create_creditNote:
 
 Notas de crédito
 ^^^^^^^^^^^^^^^^
 A nota de crédito deve ser emitida a partir do documento da fatura para que se mantenha a informação necessária
 
-.. image:: invoicing/criarNotaCredito.png
+.. image:: invoicing_process/v17_criateCreditNote.png
    :align: center
 
-.. _processo_faturacao_emitir_nota_debito:
+.. _invoicing_create_debitNote:
 
 Notas de débito
 ^^^^^^^^^^^^^^^^

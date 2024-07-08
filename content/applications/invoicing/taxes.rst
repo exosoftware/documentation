@@ -33,10 +33,10 @@ Onde criar
 ----------
 Para aceder ao menu de impostos instalados basta ir à app **Faturação/Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), no menu :menuselection:`Configuração --> Contabilidade --> Impostos`
 
-.. image:: taxes/appFaturacaoContabilidade.png
+.. image:: taxes/v17_appInvoicingAccounting.png
   :align: center
 
-.. image:: taxes/impostos1.png
+.. image:: taxes/v17_taxes1.png
   :align: center
 
 .. example::
@@ -69,15 +69,15 @@ Impostos predefinidos
 =====================
 Na app **Faturação/Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), no menu :menuselection:`Configuração --> Configurações` pode ser escolhido qual é o imposto predefinido a aplicar em Vendas e Compras, neste caso se nada for dito no produto ou no parceiro, este será o imposto a ser aplicado.
 
-.. image:: taxes/appFaturacaoContabilidade.png
+.. image:: taxes/v17_appInvoicingAccounting.png
   :align: center
 
-.. image:: taxes/impostoPredefinido.png
+.. image:: taxes/v17_defaultTaxes.png
   :align: center
 
 No mesmo local também pode logo selecionar se quer que o **arredondamento de impostos** seja aplicado linha a linha ou ao documento todo.
 
-.. image:: taxes/arredondamentoImpostos.png
+.. image:: taxes/v17_roundingMethod.png
   :align: center
 
 Localização Fiscal
@@ -93,10 +93,10 @@ Onde criar
 ----------
 Na app Faturação/Contabilidade (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), no menu :menuselection:`Configuração --> Contabilidade --> Posições Fiscais`, pode ver todas as opções disponíveis. **Não deve alterar as que existem** e se tiver necessidade de criar na nova posição, deve duplicar uma das existentes e fazer as devidas alterações. Depois é só gravar com outro nome.
 
-.. image:: taxes/appFaturacaoContabilidade.png
+.. image:: taxes/v17_appInvoicingAccounting.png
   :align: center
 
-.. image:: taxes/posicoesFiscais.png
+.. image:: taxes/v17_fiscalPositions.png
   :align: center
 
 Motivos de isenção de IVA
