@@ -8,10 +8,10 @@ A localização Exo está preparada para o cumprimento e emissão de diversos do
 
 Para aceder aos documentos fiscais aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries**.
 
-.. image:: fiscal_documents/appFaturacaoContabilidade.png
+.. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
 
-.. image:: fiscal_documents/menuSeries.png
+.. image:: fiscal_documents/v17_seriesMenu.png
    :align: center
 
 .. note::
@@ -19,7 +19,7 @@ Para aceder aos documentos fiscais aceda à app **Faturação / Contabilidade** 
    - A coluna Filtro de Operações pode ser preenchida em cada série em que for necessária e corresponde aos Tipos de Operações que estão configurados na app Inventário
    - Por recomendação deve associar-se a Guia de Remessa à operação de Entregas e a Guia de Devolução a Devoluções (pode utilizar outros nomes para os tipos de operações)
 
-.. image:: fiscal_documents/listaSeries.png
+.. image:: fiscal_documents/v17_seriesList.png
    :align: center
 
 Orçamento
@@ -29,11 +29,11 @@ Documento informativo da cotação de serviços ou produtos. Depois de aprovado 
 
 Para emitir o pdf do orçamento basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Orçamento / Encomenda`
 
-.. image:: fiscal_documents/imprimirOrcamento.png
+.. image:: fiscal_documents/v17_printQuote.png
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <processo_faturacao_orcamentacao>`
+   :ref:`Como fazer... <invoicing_process_quotation>`
 
 Fatura pró-forma
 ----------------
@@ -42,11 +42,11 @@ Documento informativo frequentemente utilizado na cotação de produtos e na jus
 
 Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Orçamento / Encomenda`
 
-.. image:: fiscal_documents/imprimirOrcamento.png
+.. image:: fiscal_documents/v17_printQuote.png
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <processo_faturacao_orcamentacao>`
+   :ref:`Como fazer... <invoicing_process_quotation>`
 
 Nota de encomenda
 -----------------
@@ -57,7 +57,7 @@ Este documento tem uma série de numeração independente dos anteriores.
 
 Para emitir o pdf da nota de encomenda basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Orçamento / Encomenda`
 
-.. image:: fiscal_documents/imprimirNotaEncomenda.png
+.. image:: fiscal_documents/v17_printOrder.png
    :align: center
 
 Contem:
@@ -122,11 +122,11 @@ Contem:
 
 Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Faturas ou Faturas (multi-via)`
 
-.. image:: fiscal_documents/imprimirFatura.png
+.. image:: fiscal_documents/v17_printInvoice.png
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <processo_faturacao_emitir_fatura>`
+   :ref:`Como fazer... <invoicing_process_creat_invoice>`
 
 .. important::
    A forma correta de corrigir qualquer tipo de documento de fatura, é anular a mesma usando uma nota de crédito
@@ -139,11 +139,11 @@ Documento que agrega a fatura e o recibo, podendo apenas ser emitida quando a da
 
 Para emitir o pdf da fatura-recibo basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Faturas ou Faturas (multi-via)`
 
-.. image:: fiscal_documents/imprimirFaturaRecibo.png
+.. image:: fiscal_documents/v17_printInvoiceRecipt.png
    :align: center
 
 .. seealso::
-      :ref:`Como fazer... <processo_faturacao_emitir_fatura>`
+      :ref:`Como fazer... <invoicing_process_creat_invoice>`
 
 Fatura-simplificada
 -------------------
@@ -155,11 +155,11 @@ Documento emitido apenas para operações em território nacional, sujeito a con
 
 Para emitir o pdf da fatura simplificada basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Faturas ou Faturas (multi-via)`
 
-.. image:: fiscal_documents/imprimirFaturaSimplificada.png
+.. image:: fiscal_documents/v17_printSimplifiedInvoice.png
    :align: center
 
 .. seealso::
-      :ref:`Como fazer... <processo_faturacao_emitir_fatura>`
+      :ref:`Como fazer... <invoicing_process_creat_invoice>`
 
 Fatura eletrónica
 -----------------
@@ -168,9 +168,9 @@ Documento emitido por software de faturação certificado e enviado por email. A
 
 Para que esta funcionalidade esteja disponível é preciso aceder à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de :menuselection:`Configuração --> Configurações` e na secção **Portugal** ative a opção **Faturação Eletrónica**.
 
-.. image:: fiscal_documents/appFaturacaoContabilidade.png
+.. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
-.. image:: fiscal_documents/faturacaoEletronica.png
+.. image:: fiscal_documents/v17_e_invoicing.png
    :align: center
 
 .. seealso::
@@ -200,11 +200,11 @@ A Autoridade Tributária e Aduaneira aconselha a emissão de nota de crédito na
 
 Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Faturas ou Faturas (multi-via)`
 
-.. image:: fiscal_documents/imprimirNotaCredito.png
+.. image:: fiscal_documents/v17_printCreditNote.png
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <processo_faturacao_emitir_nota_credito>`
+   :ref:`Como fazer... <invoicing_process_create_creditNote>`
 
 Nota de débito
 --------------
@@ -213,7 +213,7 @@ Documentação em breve
 
 
 .. seealso::
-   :ref:`Como fazer... <processo_faturacao_emitir_nota_debito>`
+   :ref:`Como fazer... <invoicing_create_debitNote>`
 
 Recibo
 ======
@@ -238,11 +238,11 @@ Deve conter:
 
 Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Recibo de Pagamento`
 
-.. image:: fiscal_documents/imprimirRecibo.png
+.. image:: fiscal_documents/v17_printRecipt.png
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <processo_faturacao_emitir_recibo>`
+   :ref:`Como fazer... <invoicing_process_create_recipt>`
 
 Recibo de IVA de caixa
 ----------------------
@@ -250,7 +250,7 @@ Recibo de IVA de caixa
 Documentação em breve
 
 .. seealso::
-   :ref:`Como fazer... <processo_faturacao_emitir_recibo>`
+   :ref:`Como fazer... <invoicing_process_create_recipt>`
 
 Guia de remessa / Guia de transporte
 ====================================
@@ -304,13 +304,13 @@ As opções disponíveis são:
    - Topo da primeira página
    - Fim da última página
 
-.. image:: fiscal_documents/appFaturacaoContabilidade.png
+.. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
-.. image:: fiscal_documents/ATCUDcodigoQR.png
+.. image:: fiscal_documents/v17_ATCUD_QRcode.png
    :align: center
 
 
 .. toctree::
     :hidden:
 
-    processo_faturacao
+    invoicing_process
