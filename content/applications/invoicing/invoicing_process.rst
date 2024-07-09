@@ -1,8 +1,8 @@
 :show-content:
 
-=========
-Faturação
-=========
+=====================
+Processo de Faturação
+=====================
 
 Em Odoo
 =======
@@ -63,8 +63,6 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
    :align: center
 
 .. important::
-    Para as empresas que gostam/precisam de enviar um orçamento não confirmado para o cliente fica o seguinte alerta.
-
     A legislação portuguesa proíbe a emissão de documentos não confirmados, pelo que se tentarem fazer impressão do documento o mesmo sairá invalidado.
 
 .. tip::
