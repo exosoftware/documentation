@@ -185,7 +185,7 @@ Para que esta funcionalidade esteja disponível é preciso aceder à app **Fatur
 Autofaturação
 -------------
 
-Documento emitido por software de faturação certificado e enviado por email. À esta fatura está associada uma assinatura digital que permite validar a autenticidade do documento.
+Documento emitido por software de faturação certificado e enviado por email. A esta fatura está associada uma assinatura digital que permite validar a autenticidade do documento.
 
 .. seealso::
    :doc:`Saiba mais... <self-billing>`
@@ -214,14 +214,26 @@ Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e
 .. seealso::
    :ref:`Como fazer... <invoicing_process_create_creditNote>`
 
+.. _fiscal_documents_debitNote:
+
 Nota de débito
 --------------
+Tal como a nota de crédito, a nota de débito é um documento que se emite quando há necessidade de efetuar uma retificação à fatura original.
 
-Documentação em breve
+No entanto essa retificação só acrescenta valor à fatura original, não deve ser usada para corrigir dados da fatura, apenas para correção do IVA.
 
+A Autoridade Tributária e Aduaneira aconselha a emissão de nota de débito nas seguintes situações:
+
+    - **Não aplicação de IVA**: incorretamente não foi aplicado IVA a um produto ao qual deveria ter sido
+    - **Aplicação de IVA inferior**: incorretamente foi aplicada uma taxa de IVA inferior ao que deveria ter sido
+
+Para emitir o pdf da nota de débito basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Faturas ou Faturas (multi-via)`
+
+.. image:: fiscal_documents/v17_printDebitNote.png
+   :align: center
 
 .. seealso::
-   :ref:`Como fazer... <invoicing_create_debitNote>`
+   :ref:`Como fazer... <invoicing_process_create_debitNote>`
 
 Recibo
 ======

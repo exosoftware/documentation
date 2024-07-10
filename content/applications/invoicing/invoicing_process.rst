@@ -179,12 +179,12 @@ Notas de crédito
 .. important::
     Segundo as regras da AT as notas de crédito têm de estar ligadas ao documento de fatura a que dizem respeito e devem mencionar o mesmo.
 
-Por esse motivo, as notas de crédito devem ser emitida a partir do documento da fatura para que se cumpram as regras
+Por esse motivo, as notas de crédito devem ser emitidas a partir do documento da fatura para que se cumpram as regras
 
 .. image:: invoicing_process/v17_createCreditNote1.png
    :align: center
 
-Não se esqueça de mencionar o motivo para a criação da nota de crédito, que vai ser exibido na fatura, bem como a norma de regularização do IVA associada à nota de crédito. Em seguida reverta o movimento da fatura
+Não se esqueça de mencionar o motivo para a criação da nota de crédito, que vai ser exibido na nota de crédito, bem como a norma de regularização do IVA associada à nota de crédito. Em seguida reverta o movimento da fatura
 
 .. important::
     Normas de regularização de IVA são diferentes dos motivos de isenção de IVA
@@ -227,15 +227,58 @@ Devem depois ser feitos os ajustes necessários, mediante o motivo que levou à 
     .. image:: invoicing_process/v17_createCreditNote5.png
         :align: center
 
+Em seguida confirme a nota de crédito.
+
+.. image:: invoicing_process/v17_confirmCreditNote.png
+    :align: center
+
 .. seealso::
    :ref:`O que é uma nota de crédito <fiscal_documents_creditNote:>`
 
-.. _invoicing_create_debitNote:
+.. _invoicing_process_create_debitNote:
 
 Notas de débito
 ^^^^^^^^^^^^^^^^
+.. important::
+    Segundo as regras da AT as notas de débito têm de estar ligadas ao documento de fatura a que dizem respeito e devem mencionar o mesmo.
 
-Documentação em breve
+Por esse motivo, as notas de débito devem ser emitidas a partir do documento da fatura para que se cumpram as regras. Para isso deve ir ao menu **Ação** e selecionar a opção **Nota de Débito**
+
+.. image:: invoicing_process/v17_createDebitNote1.png
+   :align: center
+
+Não se esqueça de mencionar o motivo para a criação da nota de débito, bem como a norma de regularização do IVA associada à nota de débito. Em seguida selecione **Criar Nota de Débito**
+
+.. tip::
+    Não se esqueça de mencionar o diário onde vão ser registaddos os movimentos da nota de débito
+
+    Pode adicionar as linhas da fatura à nota de débito se, as alterações a efetuar forem em todas as linhas da fatura, selecionando a opção **Copiar linhas**
+
+.. important::
+    Normas de regularização de IVA são diferentes dos motivos de isenção de IVA
+
+.. seealso::
+    As normas de regularização de IVA permitidas podem ser consultadas nos seguintes artigos do CIVA:
+
+    - `Artigo 23º <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva23.aspx>`_
+    - `Artigo 24º <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva24.aspx>`_
+    - `Artigo 25º <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva25.aspx>`_
+    - `Artigo 26º <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva26.aspx>`_
+    - `Artigo 78º <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva78.aspx>`_
+    - `Artigo 78º-A <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva78a.aspx>`_
+    - `Artigo 78º-B <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva78b.aspx>`_
+    - `Artigo 78º-C <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva78c.aspx>`_
+
+.. image:: invoicing_process/v17_createDebitNote2.png
+    :align: center
+
+Em seguida confirme a nota de débito.
+
+.. image:: invoicing_process/v17_confirmDebitNote.png
+    :align: center
+
+.. seealso::
+   :ref:`O que é uma nota de débito <fiscal_documents_debitNote:>`
 
 Mais informação
 ---------------
