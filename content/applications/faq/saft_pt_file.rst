@@ -7,8 +7,8 @@ Ficheiro SAF-T PT
 .. seealso::
     :doc:`Consulte o nosso Guia sobre SAF-T de Faturação <../invoicing/saft_invoicing>`
 
-Erro: Value doesn't match any pattern of ['AD|AE|AF|AG|AI|AL|AM|AO|AQ|AR|AS|AT|AU|AW|AX|AZ|(...)
-================================================================================================
+Erro: Value doesn't match any pattern of ['AD|AE|AF|AG|AI|AL|AM|AO|AQ|AR|(...)
+==============================================================================
 Quando o validador do SAF-T dá uma indicação parecida com esta:
 
 .. image:: ficheiro_saft_pt/erro_saft_1.png
@@ -31,7 +31,7 @@ Existem 2 locais onde a situação pode estar em falha:
     - Atribua ao cliente o país correto e grave
     - Extraia novamente o ficheiro SAF-T que o erro deve desaparecer
 
-    .. image::ficheiro_saft_pt/v17_partner_country.png
+    .. image:: ficheiro_saft_pt/v17_partner_country.png
         :align: center
 
 .. tip::
