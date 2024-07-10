@@ -22,6 +22,8 @@ Para aceder aos documentos fiscais aceda à app **Faturação / Contabilidade** 
 .. image:: fiscal_documents/v17_seriesList.png
    :align: center
 
+.. _fiscal_documents_quote:
+
 Orçamento
 =========
 
@@ -47,6 +49,8 @@ Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento 
 
 .. seealso::
    :ref:`Como fazer... <invoicing_process_quotation>`
+
+.. _fiscal_documents_order:
 
 Nota de encomenda
 -----------------
@@ -96,6 +100,8 @@ Consulta de mesa ou encomenda (POS)
 -----------------------------------
 
 Documentação em breve
+
+.. _fiscal_documents_invoice:
 
 Fatura
 ======
@@ -183,6 +189,8 @@ Documento emitido por software de faturação certificado e enviado por email. �
 
 .. seealso::
    :doc:`Saiba mais... <self-billing>`
+
+.. _fiscal_documents_creditNote:
 
 Nota de crédito
 ---------------

@@ -63,29 +63,34 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
    :align: center
 
 .. important::
-    A legislação portuguesa proíbe a emissão de documentos não confirmados, pelo que se tentarem fazer impressão do documento o mesmo sairá invalidado.
+    A legislação portuguesa proíbe a emissão de documentos não confirmados e comunicados, pelo que se tentarem fazer impressão do documento o mesmo sairá invalidado.
 
-.. tip::
-    No entanto, o Odoo permite partilhar documentos no portal com o vosso cliente.
+..
+    .. tip::
+        No entanto, o Odoo permite partilhar documentos no portal com o vosso cliente.
 
-    Basta ir ao menu :menuselection:`Ação --> Partilhar` e vai abrir uma nova janela onde pode inserir o contacto do parceiro
+        Basta ir ao menu :menuselection:`Ação --> Partilhar` e vai abrir uma nova janela onde pode inserir o contacto do parceiro
 
-    .. image:: invoicing_process/v17_shareQuote1.png
-        :align: center
-    .. image:: invoicing_process/v17_shareQuote2.png
-        :align: center
+        .. image:: invoicing_process/v17_shareQuote1.png
+            :align: center
+        .. image:: invoicing_process/v17_shareQuote2.png
+            :align: center
 
-    Em seguida o parceiro pode aceder ao link do orçamento para verificar o mesmo e deixar algum comentário que será adicionado ao chatter do Odoo
-    Também tem acesso a outras funcionalidades. Esta é a vista do lado do parceiro
+        Em seguida o parceiro pode aceder ao link do orçamento para verificar o mesmo e deixar algum comentário que será adicionado ao chatter do Odoo
+        Também tem acesso a outras funcionalidades. Esta é a vista do lado do parceiro
 
-    .. image:: invoicing_process/v17_shareQuote3.png
-        :align: center
+        .. image:: invoicing_process/v17_shareQuote3.png
+            :align: center
 
-    Toda a informação do envio e visionamento fica registada no chatter do próprio documento.
+        Toda a informação do envio e visionamento fica registada no chatter do próprio documento.
 
-    .. image:: invoicing_process/v17_shareQuote4.png
-        :align: center
+        .. image:: invoicing_process/v17_shareQuote4.png
+            :align: center
 
+
+.. seealso::
+   :ref:`O que é um orçamento e suas variantes <fiscal_documents_quote>`
+   :ref:`O que é uma nota de encomenda <fiscal_documents_order>`
 
 .. _invoicing_process_creat_invoice:
 
@@ -149,6 +154,9 @@ Em seguida confirme a fatura
 
     Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a criar um orçamento.
 
+.. seealso::
+   :ref:`O que é uma fatura e suas variantes <fiscal_documents_invoice>`
+
 .. _invoicing_process_create_recipt:
 
 Emissão de Recibos
@@ -168,10 +176,59 @@ Correções
 
 Notas de crédito
 ^^^^^^^^^^^^^^^^
-A nota de crédito deve ser emitida a partir do documento da fatura para que se mantenha a informação necessária
+.. important::
+    Segundo as regras da AT as notas de crédito têm de estar ligadas ao documento de fatura a que dizem respeito e devem mencionar o mesmo.
 
-.. image:: invoicing_process/v17_criateCreditNote.png
+Por esse motivo, as notas de crédito devem ser emitida a partir do documento da fatura para que se cumpram as regras
+
+.. image:: invoicing_process/v17_createCreditNote1.png
    :align: center
+
+Não se esqueça de mencionar o motivo para a criação da nota de crédito, que vai ser exibido na fatura, bem como a norma de regularização do IVA associada à nota de crédito. Em seguida reverta o movimento da fatura
+
+.. important::
+    Normas de regularização de IVA são diferentes dos motivos de isenção de IVA
+
+.. seealso::
+    As normas de regularização de IVA permitidas podem ser consultadas nos seguintes artigos do CIVA:
+
+    - `Artigo 23º <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva23.aspx>`_
+    - `Artigo 24º <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva24.aspx>`_
+    - `Artigo 25º <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva25.aspx>`_
+    - `Artigo 26º <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva26.aspx>`_
+    - `Artigo 78º <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva78.aspx>`_
+    - `Artigo 78º-A <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva78a.aspx>`_
+    - `Artigo 78º-B <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva78b.aspx>`_
+    - `Artigo 78º-C <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/civa_rep/Pages/iva78c.aspx>`_
+
+.. image:: invoicing_process/v17_createCreditNote2.png
+    :align: center
+
+Devem depois ser feitos os ajustes necessários, mediante o motivo que levou à emissão da nota de crédito e confirmar o documento
+
+.. tip::
+    Existe um tipo de nota de crédito que não precisa de estar ligado à sua fatura original, as Notas de Crédito de Rappel, estes tipos de notas de crédito só devem ser emitidos para descontos de "rappel" concedidos
+
+    Definição de **desconto de "Rappel"**
+    Um desconto “rappel” escalonado, cujo primeiro escalão se inicia na unidade (em euros, quilos, litros, etc.), é um desconto de quantidade que, nos termos dos n.os 2 e 3 do artigo 3.º do Decreto-Lei n.º 370/93, de 29 de Outubro, na redacção do Decreto-Lei n.º 140/98, de 16 de Maio, releva para a determinação do preço de compra efectivo, satisfeitas que se mostrem as restantes exigências de se encontrar identificado na factura ou, por remissão desta, em contratos de fornecimento ou tabelas de preços e de ser susceptível de determinação no momento da respectiva emissão.
+
+    Para poder utilizar esta funcionalidade deve:
+
+    - Iniciar uma nota de crédito vazia indo a um dos menus :menuselection:`Clientes --> Notas de Crédito` ou :menuselection:`Fornecedores --> Reembolsos` e selecionar a opção **Novo**
+
+    .. image:: invoicing_process/v17_createCreditNote3.png
+        :align: center
+
+    .. image:: invoicing_process/v17_createCreditNote4.png
+        :align: center
+
+    - Dentro do formulário, na aba **Outra Informação** selecionar a opção **Nota de Crédito de Rappel**
+
+    .. image:: invoicing_process/v17_createCreditNote5.png
+        :align: center
+
+.. seealso::
+   :ref:`O que é uma nota de crédito <fiscal_documents_creditNote:>`
 
 .. _invoicing_create_debitNote:
 
@@ -183,7 +240,7 @@ Documentação em breve
 Mais informação
 ---------------
 .. seealso::
-    Se pretender formação mais detalhada sobre o processo Oddo contacte a `ExoSoftware <https://exosoftware.pt/appointment/2>`_.
+    Se pretender formação mais detalhada sobre o processo Oddo contacte a `Exo Software <https://exosoftware.pt/appointment/2>`_.
 
 Por API
 =======
@@ -194,3 +251,8 @@ Para essa finalidade são instalados módulos ou apps específicos que lhe permi
 Estes módulos ou apps podem já existir ou ser personalizados às necessidades do utilizador pela nossa equipa técnica.
 
 As configurações de API são feitas numa fase inicial, entre os departamentos técnicos da Exo e da sua entidade, para que tudo fique a funcionar corretamente e como utilizador não tenha de se preocupar com o processo.
+
+.. toctree::
+    :hidden:
+
+    fiscal_documents
