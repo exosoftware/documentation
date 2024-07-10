@@ -44,7 +44,7 @@ Esta janela tem ainda duas opções:
 Submeta o ficheiro à AT, depois de submeter o ficheiro pode fechar esta janela.
 
 .. seealso::
-   :doc:`Consulte as nossas FAQs sobre SAF-T de Faturação <../faq/saft_pt_file>`
+   :doc:`Consulte as nossas FAQs sobre SAF-T de Faturação <../faq/saft_errors>`
 
 Importação
 ==========

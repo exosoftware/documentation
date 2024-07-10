@@ -15,7 +15,7 @@ Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
 
     faq/configuracao
     faq/permissoes
-    faq/saft_pt_file
+    faq/saft_errors
     faq/comunicacao_series
     faq/assinatura_digital_pdf
     faq/fatura

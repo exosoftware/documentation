@@ -1,8 +1,8 @@
 :show-content:
 
-=================
-Ficheiro SAF-T PT
-=================
+===========
+Erros SAF-T
+===========
 
 .. seealso::
     :doc:`Consulte o nosso Guia sobre SAF-T de Faturação <../invoicing/saft_invoicing>`
@@ -11,7 +11,7 @@ Erro: Value doesn't match any pattern of ['AD|AE|AF|AG|AI|AL|AM|AO|AQ|AR|(...)
 ==============================================================================
 Quando o validador do SAF-T dá uma indicação parecida com esta:
 
-.. image:: ficheiro_saft_pt/erro_saft_1.png
+.. image:: saft_errors/erro_saft_1.png
    :align: center
 
 Significa que o validador não consegue associar um país ao imposto usado, ou ao cliente.
@@ -31,7 +31,7 @@ Existem 2 locais onde a situação pode estar em falha:
     - Atribua ao cliente o país correto e grave
     - Extraia novamente o ficheiro SAF-T que o erro deve desaparecer
 
-    .. image:: ficheiro_saft_pt/v17_partner_country.png
+    .. image:: saft_errors/v17_partner_country.png
         :align: center
 
 .. tip::
@@ -47,7 +47,7 @@ Existem 2 locais onde a situação pode estar em falha:
 
     - Extraia novamente o ficheiro SAF-T que o erro deve desaparecer
 
-    .. image:: ficheiro_saft_pt/v17_tax_countryRegion.png
+    .. image:: saft_errors/v17_tax_countryRegion.png
         :align: center
 
 Erro: o imposto IVA N/S deve ter uma etiqueta a mencionar a região do imposto
@@ -63,14 +63,14 @@ A configuração inicial do imposto em questão (IVA Não Sujeito) deixa proposi
 
     - Extraia novamente o ficheiro SAF-T que o erro deve desaparecer
 
-    .. image:: ficheiro_saft_pt/v17_tax_countryRegion.png
+    .. image:: saft_errors/v17_tax_countryRegion.png
         :align: center
 
 Erro: Unexpected child with tag 'ns:DocumentTotals' at position 12. Tag 'ns:Line' expected.
 ===========================================================================================
 Quando o validador do SAF-T dá uma indicação parecida com esta:
 
-.. image:: ficheiro_saft_pt/erro_saft_4.png
+.. image:: saft_errors/erro_saft_4.png
    :align: center
 
 é porque há um pagamento de cliente que não está reconciliado com nenhum fatura (nem foi cancelado). Neste caso, é o 65º pagamento a contar a partir do início do período que está a ser reportado. Dado que a AT não permite a existência de pagamentos nestas condições, teremos que o associar a uma fatura.
@@ -81,7 +81,7 @@ Quando o validador do SAF-T dá uma indicação parecida com esta:
         - Será exibido o nó XML do SAF-T com a informação do pagamento. O nº do recibo aparece logo no início, no tag **<PaymentRefNo>**
     - Em alternativa, vá à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo) e no menu :menuselection:`Clientes --> Pagamentos`
 
-    .. image:: ficheiro_saft_pt/v17_access_payments.png
+    .. image:: saft_errors/v17_access_payments.png
         :align: center
 
         - filtre os pagamento que estejam dentro do período e tenham o estado publicado
@@ -91,10 +91,10 @@ Quando o validador do SAF-T dá uma indicação parecida com esta:
 
     Com fatura associada
 
-    .. image:: ficheiro_saft_pt/v17_payment_with_invoice.png
+    .. image:: saft_errors/v17_payment_with_invoice.png
         :align: center
 
     Sem fatura associada
 
-    .. image:: ficheiro_saft_pt/v17_payment_without_invoice.png
+    .. image:: saft_errors/v17_payment_without_invoice.png
         :align: center
