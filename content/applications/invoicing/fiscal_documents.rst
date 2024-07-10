@@ -135,10 +135,13 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
    :ref:`Como fazer... <invoicing_process_creat_invoice>`
 
 .. important::
-   As formas corretas de corrigir qualquer tipo de documento de fatura, são:
+   Formas de corrigir faturas:
 
-    - Anular a mesma, de forma total ou parcial, usando uma nota de crédito
-    - Corrigir problemas de IVA incorretamente cobrado, usando uma nota de débito
+    - Pode cancelar o documento se o mesmo não foi comunicado em SAF-T, nem foi enviado ao cliente
+
+        - Se já foi comunicado em SAF-T, ainda pode cancelar o documento, mas terá de submeter os devidos documentos de substituição à AT
+    - Pode anular o documento, de forma total ou parcial, usando uma nota de crédito
+    - Pode corrigir problemas de IVA incorretamente cobrado, usando uma nota de débito
 
 Existem outros documentos com validade fiscal que poderão ser utilizados como substituto da fatura.
 
@@ -197,7 +200,7 @@ Documento emitido por software de faturação certificado e enviado por email. A
 
 Nota de crédito
 ---------------
-Documento que se emite quando há necessidade de efetuar uma retificação à fatura original.
+Documento que se emite quando há necessidade de efetuar uma retificação à fatura original, que reduz o seu valor.
 
 A Autoridade Tributária e Aduaneira aconselha a emissão de nota de crédito nas seguintes situações:
 
@@ -208,11 +211,18 @@ A Autoridade Tributária e Aduaneira aconselha a emissão de nota de crédito na
    - **Devolução de Produtos**: emissão de nota de crédito do valor parcial ou total dos
      produtos devolvidos
 
-
 Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Faturas ou Faturas (multi-via)`
 
 .. image:: fiscal_documents/v17_printCreditNote.png
    :align: center
+
+.. important::
+   Formas de corrigir notas de crédito:
+
+    - Pode cancelar o documento se o mesmo não foi comunicado em SAF-T, nem foi enviado ao cliente
+
+        - Se já foi comunicado em SAF-T, ainda pode cancelar o documento, mas terá de submeter os devidos documentos de substituição à AT
+    - Pode anular o documento, emitindo uma nota de débito na fatura original
 
 .. seealso::
    :ref:`Como fazer... <invoicing_process_create_creditNote>`
@@ -235,8 +245,18 @@ Para emitir o pdf da nota de débito basta ir ao menu **Ação** do documento e 
 .. image:: fiscal_documents/v17_printDebitNote.png
    :align: center
 
+.. important::
+   Formas de corrigir notas de débito:
+
+    - Pode cancelar o documento se o mesmo não foi comunicado em SAF-T, nem foi enviado ao cliente
+
+        - Se já foi comunicado em SAF-T, ainda pode cancelar o documento, mas terá de submeter os devidos documentos de substituição à AT
+    - Pode anular o documento, emitindo uma nota de crédito na fatura original
+
 .. seealso::
    :ref:`Como fazer... <invoicing_process_create_debitNote>`
+
+.. _fiscal_documents_receipt:
 
 Recibo
 ======

@@ -163,7 +163,9 @@ Em seguida confirme a fatura
 Emissão de Recibos
 ------------------
 
-Documentação em breve
+
+.. seealso::
+   :ref:`O que é um recibo <fiscal_documents_receipt>`
 
 Reconciliação de documentos
 ---------------------------
