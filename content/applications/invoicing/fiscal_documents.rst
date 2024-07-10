@@ -135,7 +135,10 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
    :ref:`Como fazer... <invoicing_process_creat_invoice>`
 
 .. important::
-   A forma correta de corrigir qualquer tipo de documento de fatura, é anular a mesma usando uma nota de crédito
+   As formas corretas de corrigir qualquer tipo de documento de fatura, são:
+
+    - Anular a mesma, de forma total ou parcial, usando uma nota de crédito
+    - Corrigir problemas de IVA incorretamente cobrado, usando uma nota de débito
 
 Existem outros documentos com validade fiscal que poderão ser utilizados como substituto da fatura.
 

@@ -134,11 +134,6 @@ A maioria dos campos já vão estar preenchidos pois são herdados da Nota de en
 .. image:: invoicing_process/v17_invoiceTypes.png
     :align: center
 
-Em seguida confirme a fatura
-
-.. image:: invoicing_process/v17_confirmInvoice.png
-    :align: center
-
 .. tip::
     O processo de criação de farura sem ligação a Nota de encomenda é bastante parecido, exceto em 2 pontos:
 
@@ -153,6 +148,12 @@ Em seguida confirme a fatura
         :align: center
 
     Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a criar um orçamento.
+
+
+Em seguida confirme a fatura
+
+.. image:: invoicing_process/v17_confirmInvoice.png
+    :align: center
 
 .. seealso::
    :ref:`O que é uma fatura e suas variantes <fiscal_documents_invoice>`
