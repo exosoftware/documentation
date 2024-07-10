@@ -73,19 +73,27 @@ Quando o validador do SAF-T dá uma indicação parecida com esta:
 .. image:: saft_errors/erro_saft_4.png
    :align: center
 
-é porque há um pagamento de cliente que não está reconciliado com nenhum fatura (nem foi cancelado). Neste caso, é o 65º pagamento a contar a partir do início do período que está a ser reportado. Dado que a AT não permite a existência de pagamentos nestas condições, teremos que o associar a uma fatura.
+é porque há um pagamento de cliente que não está reconciliado com nenhum fatura (nem foi cancelado). Neste caso, é
+o 65º pagamento a contar a partir do início do período que está a ser reportado. Dado que a AT não permite a
+existência de pagamentos nestas condições, teremos que o associar a uma fatura.
 
 .. tip::
     - Identifique o pagamento
-        - Na janela onde é apresentado o erro SAF-T, coloque o rato por cima da coluna **Caminho** e da linha que provocou o erro
-        - Será exibido o nó XML do SAF-T com a informação do pagamento. O nº do recibo aparece logo no início, no tag **<PaymentRefNo>**
-    - Em alternativa, vá à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo) e no menu :menuselection:`Clientes --> Pagamentos`
+        - Na janela onde é apresentado o erro SAF-T, coloque o rato por cima da coluna **Caminho** e da linha que
+          provocou o erro
+        - Será exibido o nó XML do SAF-T com a informação do pagamento. O nº do recibo aparece logo no início, no
+          tag **<PaymentRefNo>**
+    - Em alternativa, vá à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou
+      Enterprise do Odoo) e no menu :menuselection:`Clientes --> Pagamentos`
 
-    .. image:: saft_errors/v17_access_payments.png
-        :align: center
+        .. image:: saft_errors/v17_access_payments.png
+            :align: center
 
         - filtre os pagamento que estejam dentro do período e tenham o estado publicado
-        - Como infelizmente, não há forma de filtrar por pagamentos que não estejam reconciliados com nenhuma fatura, é necessário ver a ficha de cada um até aparecer o que não tem o botão de acesso rápido **Faturas** no topo do formulário
+        - Como, infelizmente, não há forma de filtrar por pagamentos que não estejam reconciliados com nenhuma fatura,
+          é necessário ver a ficha de cada um até aparecer o que não tem o botão de acesso rápido **Faturas** no topo do
+          formulário
+
     - Escolha uma fatura em aberto do mesmo parceiro e reconcilie com o pagamento identificado
     - Extraia novamente o ficheiro SAF-T
 
