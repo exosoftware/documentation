@@ -149,7 +149,6 @@ A maioria dos campos já vão estar preenchidos pois são herdados da Nota de en
 
     Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a criar um orçamento.
 
-
 Em seguida confirme a fatura
 
 .. image:: invoicing_process/v17_confirmInvoice.png
@@ -162,7 +161,49 @@ Em seguida confirme a fatura
 
 Emissão de Recibos
 ------------------
+.. important::
+    Existem 2 processos para se emitir um recibo.
 
+    O **processo recomendado** é emitir sempre o recibo a partir da Fatura. Que vai gerar um novo documento de recibo e publicar o mesmo.
+
+    No entanto pode ser feita um recibo sem esta ligação se realmente for necessário.
+
+O processo de emissão do recibo deve então ser iniciado na **Fatura** e carregar no botão **Registar Pagamento**
+
+.. image:: invoicing_process/v17_createRecipt1.png
+    :align: center
+
+Em seguida deve estolher as seguintes opções:
+
+- Em que Diário vai registar o pagamento
+- O método de pagamento utilizado
+- O valor do pagamento
+
+Os restantes campos normalmente já estão preenchidos se seguir este processo. Carregue no botão **Criar pagamento**
+
+.. image:: invoicing_process/v17_createRecipt2.png
+    :align: center
+
+.. note::
+    No caso de o valor a receber ser diferente do valor total da fatura, vai ter uma vista diferente onde pode escolher o que fazer com a diferença
+
+    .. image:: invoicing_process/v17_createRecipt3.png
+        :align: center
+
+.. tip::
+    O processo de criação de recibos sem ligação a faturas é parecido, exceto em 2 pontos:
+
+        - Onde se inicia o processo
+        - A necessidade de preencher quase todos os campos de raíz
+
+    Para iniciar o processo aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu :menuselection:`Clientes --> Pagamentos` ou :menuselection:`Fornecedores --> Pagamentos`
+
+    Clique na opção **Novo**
+
+    .. image:: invoicing_process/v17_newRecipt.png
+        :align: center
+
+    Como os campos não são herdados da fatura terão de ser preenchidos manualmente.
 
 .. seealso::
    :ref:`O que é um recibo <fiscal_documents_receipt>`

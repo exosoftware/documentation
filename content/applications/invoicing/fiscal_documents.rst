@@ -140,6 +140,7 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
     - Pode cancelar o documento se o mesmo não foi comunicado em SAF-T, nem foi enviado ao cliente
 
         - Se já foi comunicado em SAF-T, ainda pode cancelar o documento, mas terá de submeter os devidos documentos de substituição à AT
+        - Se já foi enviado ao cliente, deve ainda enviar comprovativo do seu cancelamento
     - Pode anular o documento, de forma total ou parcial, usando uma nota de crédito
     - Pode corrigir problemas de IVA incorretamente cobrado, usando uma nota de débito
 
@@ -190,8 +191,17 @@ Para que esta funcionalidade esteja disponível é preciso aceder à app **Fatur
 
 Autofaturação
 -------------
+No processo de autofaturação o cliente substitiu-se ao fornecedor na emissão e comunicação dos documentos fiscais.
 
-Documento emitido por software de faturação certificado e enviado por email. A esta fatura está associada uma assinatura digital que permite validar a autenticidade do documento.
+Para poder utilizar a autofaturação deve garantir as seguintes condições:
+
+    - Existência de **acordo prévio** entre cliente e fornecedor, que tem de ser registado no portal da AT
+    - Provar que o fornecedor tomou conhecimento da emissão dos documentos
+    - O documento tem de mencionar o termo autofaturação
+    - Utilização de uma série única com numeração sequencial
+
+        - Para os fornecedores que sejam sujeitos passivos, tem de utilizar uma série única para cada um
+        - Para os foenecedores que não forem sujeitos passivos, pode utilizar uma série para todos eles
 
 .. seealso::
    :doc:`Saiba mais... <self-billing>`
@@ -222,6 +232,7 @@ Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e
     - Pode cancelar o documento se o mesmo não foi comunicado em SAF-T, nem foi enviado ao cliente
 
         - Se já foi comunicado em SAF-T, ainda pode cancelar o documento, mas terá de submeter os devidos documentos de substituição à AT
+        - Se já foi enviado ao cliente, deve ainda enviar comprovativo do seu cancelamento
     - Pode anular o documento, emitindo uma nota de débito na fatura original
 
 .. seealso::
@@ -251,6 +262,7 @@ Para emitir o pdf da nota de débito basta ir ao menu **Ação** do documento e 
     - Pode cancelar o documento se o mesmo não foi comunicado em SAF-T, nem foi enviado ao cliente
 
         - Se já foi comunicado em SAF-T, ainda pode cancelar o documento, mas terá de submeter os devidos documentos de substituição à AT
+        - Se já foi enviado ao cliente, deve ainda enviar comprovativo do seu cancelamento
     - Pode anular o documento, emitindo uma nota de crédito na fatura original
 
 .. seealso::
@@ -284,6 +296,16 @@ Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e seleciona
 .. image:: fiscal_documents/v17_printRecipt.png
    :align: center
 
+.. important::
+   Como os recibos são um comprovativo do recebimento efetivo de recebimentos, deve evitar a todo custo erros na sua emissão
+
+    No entanto pode:
+
+    - Cancelar o documento se o mesmo não foi comunicado em SAF-T, nem foi enviado ao cliente
+
+        - Se já foi comunicado em SAF-T, ainda pode cancelar o documento, mas terá de submeter os devidos documentos de substituição à AT
+        - Se já foi enviado ao cliente, deve ainda enviar comprovativo do seu cancelamento
+
 .. seealso::
    :ref:`Como fazer... <invoicing_process_create_recipt>`
 
@@ -308,24 +330,24 @@ Documentação em breve
 .. seealso::
    :doc:`Como fazer... <other>`
 
-Guias de transporte de ativos
------------------------------
+Guia de transporte de ativos
+----------------------------
 
 Documentação em breve
 
 .. seealso::
    :doc:`Como fazer... <other>`
 
-Guias de consignação
---------------------
+Guia de consignação
+-------------------
 
 Documentação em breve
 
 .. seealso::
    :doc:`Como fazer... <other>`
 
-Guias de devolução
-------------------
+Guia de devolução
+-----------------
 
 Documentação em breve
 
