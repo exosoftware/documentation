@@ -10,7 +10,7 @@ Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
 .. toctree::
     :titlesonly:
 
-    faq/configuracao
+    faq/configuration
     faq/permissoes
     faq/saft_errors
     faq/comunicacao_series
