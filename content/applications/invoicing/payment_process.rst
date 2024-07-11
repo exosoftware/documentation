@@ -33,7 +33,7 @@ Emissão de Recibos
 
 O processo de emissão do recibo deve então ser iniciado na **Fatura** e carregar no botão **Registar Pagamento**
 
-.. image:: invoicing_process/v17_createRecipt1.png
+.. image:: payment_process/v17_createRecipt1.png
     :align: center
 
 Em seguida deve estolher as seguintes opções:
@@ -44,13 +44,13 @@ Em seguida deve estolher as seguintes opções:
 
 Os restantes campos normalmente já estão preenchidos se seguir este processo. Carregue no botão **Criar pagamento**
 
-.. image:: invoicing_process/v17_createRecipt2.png
+.. image:: payment_process/v17_createRecipt2.png
     :align: center
 
 .. note::
     No caso de o valor a receber ser diferente do valor total da fatura, vai ter uma vista diferente onde pode escolher o que fazer com a diferença
 
-    .. image:: invoicing_process/v17_createRecipt3.png
+    .. image:: payment_process/v17_createRecipt3.png
         :align: center
 
 .. tip::
@@ -63,7 +63,7 @@ Os restantes campos normalmente já estão preenchidos se seguir este processo. 
 
     Clique na opção **Novo**
 
-    .. image:: invoicing_process/v17_newRecipt.png
+    .. image:: payment_process/v17_newRecipt.png
         :align: center
 
     Como os campos não são herdados da fatura terão de ser preenchidos manualmente.
@@ -73,8 +73,57 @@ Os restantes campos normalmente já estão preenchidos se seguir este processo. 
 
 Reconciliação de documentos
 ---------------------------
+A reconciliação de documentos é feita de forma automática, desde que siga os processos indicados.
 
-Documentação em breve
+.. note::
+    Em Odoo o controlo e rastreabilidade entre documentos é feito linha a linha para cada documento
+
+Essa ligação tem diferentes estados dependendo da fase em que se encontra:
+
+    - :menuselection:`Nota de encomenda --> Fatura`
+    - :menuselection:`Fatura --> Notas de crédito / Notas de débito / Recibos`
+
+No Processo :menuselection:`Nota de encomenda --> Fatura` pode ver 3 tipos de estados:
+
+    - **Nada a faturar** - dos diversos artigos que possam existir na nota de encomenda, ainda faltam cumprir requisitos para poder faturar alguns ou a totalidade dos artigos
+    - **Para faturar** - dos diversos artigos que possam existir na nota de encomenda, alguns ou a totalidade já cumprem os requisitos para poderem ser faturados
+
+    .. note::
+        Se faturar artigos que estavam com os requisitos cumpridos, mas os restantes artigos não cumprirem ainda os seus requisitos, o estado volta de **Para faturar** para **Nada a faturar**
+
+    - **Totalmente Faturado** - todos os artigos da nota de encomenda cumpriram os seus requisitos e estão faturados
+
+.. image:: payment_process/v17_statusNE.png
+    :align: center
+
+No processo :menuselection:`Fatura --> Notas de crédito / Notas de débito / Recibos`, dependendo da sua versão do Odoo (Community ou Enterprise), pode ter 3 ou 4 tipos de estado respetivamente.
+
+Community
+^^^^^^^^^
+Na versão Community terá 3 tipos de estado nas faturas:
+
+    - **Não Paga** - Ainda não existe qualquer documento a liquidar o valor da fatura
+    - **Parcialmente Pago** - Já existe(m) algum(uns) documento(s) a liquidar a fatura, mas o(s) seu(s) valor(es) é(são) inferior(s) ao total da fatura
+    - **Pago** - O(s) documento(s) associado(s) à fatura liquidam a totalidade do valor da fatura
+
+.. image:: payment_process/v17_statusFaturaCommunity.png
+    :align: center
+
+Os tipos de documento que podem servir para liquidar valores da fatura são as notas de crédito e os recibos
+
+Enterprise
+^^^^^^^^^^
+Na versão Enterprise terá 4 tipos de estado nas faturas:
+
+    - **Não Paga** - Ainda não existe qualquer documento a liquidar o valor da fatura
+    - **Parcialmente Pago** - Já existe(m) algum(uns) documento(s) a liquidar a fatura, mas o(s) seu(s) valor(es) é(são) inferior(s) ao total da fatura
+    - **Em pagamento** - O(s) documento(s) associado(s) à fatura liquidam total ou parcialmente o valor da fatura, mas ainda carecem de reconciliação com diário de pagamentos, pelo que o seu valor se encontra em contas transitórias
+    - **Pago** - O(s) documento(s) associado(s) à fatura liquidam a totalidade do valor da fatura
+
+.. image:: payment_process/v17_statusFaturaEnterprise.png
+    :align: center
+
+Os tipos de documento que podem servir para liquidar valores da fatura são as notas de crédito e os recibos
 
 Mais informação
 ---------------
