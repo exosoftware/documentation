@@ -60,4 +60,5 @@ A numeração das séries registadas tem que começar por 1?
 **Não necessariamente**
 
 Se se tratar de uma **Série nova**, tem que começar por 1 (um)
-Se a Série já está a ser usada no momento do registo, pode ser comunicada tal como está, sendo automaticamente indicado o número do último documento emitido
+
+Se a **Série já está a ser usada** no momento do registo, pode ser comunicada tal como está, sendo automaticamente indicado o número do último documento emitido
