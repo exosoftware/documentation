@@ -195,7 +195,9 @@ Para que esta funcionalidade esteja disponível é preciso aceder à app **Fatur
    :align: center
 
 .. seealso::
-   :doc:`Saiba mais... <e-invoicing>`
+    :doc:`Saiba mais... <e-invoicing>`
+
+    :doc:`Consulte as nossas FAQs sobre Faturação eletrónica <../faq/e-invoicing_errors>
 
 Autofaturação
 -------------
@@ -212,7 +214,7 @@ Para poder utilizar a autofaturação deve garantir as seguintes condições:
         - Para os foenecedores que não forem sujeitos passivos, pode utilizar uma série para todos eles
 
 .. seealso::
-   :doc:`Saiba mais... <self-billing>`
+    :doc:`Saiba mais... <self-billing>`
 
 .. _fiscal_documents_creditNote:
 

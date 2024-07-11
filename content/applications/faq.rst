@@ -13,7 +13,7 @@ Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
     faq/configuration
     faq/series_communication
     faq/invoice
-    faq/faturacao_eletronica
+    faq/e-invoicing_errors
     faq/transportation_docs
     faq/configuracao_pos
     faq/saft_errors
