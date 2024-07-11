@@ -7,17 +7,18 @@ Processo Odoo
 Em Odoo
 =======
 
-O processo de faturação em Odoo foi pensado para seguir sempre a mesma sequência:
+.. note::
+    O processo de faturação em Odoo foi pensado para seguir sempre a mesma sequência:
 
-    - Orçamentação
-    - Emissão de Fatura
-    - Emissão do Recibo
-    - Correções
+        - Orçamentação
+        - Emissão de Fatura
+        - Emissão do Recibo
+        - Correções
 
-        - Nota de Crédito
-        - Nota de Débito
+            - Nota de Crédito
+            - Nota de Débito
 
-    - Reconciliação de documentos
+        - Reconciliação de documentos
 
 .. _odoo_process_quotation:
 
@@ -91,6 +92,7 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
 
 .. seealso::
    :ref:`O que é um orçamento e suas variantes <fiscal_documents_quote>`
+
    :ref:`O que é uma nota de encomenda <fiscal_documents_order>`
 
 .. _odoo_process_creat_invoice:
@@ -222,7 +224,7 @@ Em seguida confirme a nota de crédito.
     :align: center
 
 .. seealso::
-   :ref:`O que é uma nota de crédito <fiscal_documents_creditNote:>`
+   :ref:`O que é uma nota de crédito <fiscal_documents_creditNote>`
 
 .. _odoo_process_create_debitNote:
 
@@ -267,7 +269,7 @@ Em seguida confirme a nota de débito.
     :align: center
 
 .. seealso::
-   :ref:`O que é uma nota de débito <fiscal_documents_debitNote:>`
+   :ref:`O que é uma nota de débito <fiscal_documents_debitNote>`
 
 .. _odoo_process_create_recipt:
 
@@ -336,10 +338,6 @@ No Processo :menuselection:`Nota de encomenda --> Fatura` pode ver 3 tipos de es
 
     - **Nada a faturar** - dos diversos artigos que possam existir na nota de encomenda, ainda faltam cumprir requisitos para poder faturar alguns ou a totalidade dos artigos
     - **Para faturar** - dos diversos artigos que possam existir na nota de encomenda, alguns ou a totalidade já cumprem os requisitos para poderem ser faturados
-
-    .. note::
-        Se faturar artigos que estavam com os requisitos cumpridos, mas os restantes artigos não cumprirem ainda os seus requisitos, o estado volta de **Para faturar** para **Nada a faturar**
-
     - **Totalmente Faturado** - todos os artigos da nota de encomenda cumpriram os seus requisitos e estão faturados
 
 .. image:: odoo_process/v17_statusNE.png
