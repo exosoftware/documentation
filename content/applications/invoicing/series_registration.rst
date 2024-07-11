@@ -140,3 +140,6 @@ Para isso preencha o campo **Código de Validação** com o código que está di
 
 .. image:: series_registration/v17_keepSerie3.png
    :align: center
+
+.. seealso::
+    :doc:`Consulte as nossas FAQs sobre comunicação de Séries <../faq/series_comunication>`

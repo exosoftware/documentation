@@ -11,9 +11,9 @@ Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
     :titlesonly:
 
     faq/configuration
+    faq/series_comunication
     faq/permissoes
     faq/saft_errors
-    faq/comunicacao_series
     faq/assinatura_digital_pdf
     faq/fatura
     faq/faturacao_eletronica
