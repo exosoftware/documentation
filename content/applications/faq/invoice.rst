@@ -5,7 +5,7 @@ Fatura
 ======
 
 .. seealso::
-    :ref:`Consulte o nosso Guia sobre Faturas <../invoicing/fiscal_documents/fiscal_documents_invoice>`
+    :ref:`Consulte o nosso Guia sobre Faturas <fiscal_documents_invoice>`
 
 Como incluir nas faturas a menção "Os artigos/serviços faturados foram colocados à disposição do adquirente (...)"
 ==================================================================================================================

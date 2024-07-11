@@ -134,7 +134,7 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
 .. seealso::
     :ref:`Como fazer... <odoo_process_creat_invoice>`
 
-    :doc:`Consulte as nossas FAQs sobre Faturas <../faq/saft_errors>`
+    :doc:`Consulte as nossas FAQs sobre Faturas <../faq/invoice>`
 
 .. important::
    Formas de corrigir faturas:
@@ -160,7 +160,7 @@ Para emitir o pdf da fatura-recibo basta ir ao menu **Ação** do documento e se
 .. seealso::
     :ref:`Como fazer... <odoo_process_creat_invoice>`
 
-    :doc:`Consulte as nossas FAQs sobre Faturas <../faq/saft_errors>`
+    :doc:`Consulte as nossas FAQs sobre Faturas <../faq/invoice>`
 
 
 Fatura-simplificada
@@ -179,7 +179,7 @@ Para emitir o pdf da fatura simplificada basta ir ao menu **Ação** do document
 .. seealso::
     :ref:`Como fazer... <odoo_process_creat_invoice>`
 
-    :doc:`Consulte as nossas FAQs sobre Faturas <../faq/saft_errors>`
+    :doc:`Consulte as nossas FAQs sobre Faturas <../faq/invoice>`
 
 
 Fatura eletrónica
@@ -338,7 +338,7 @@ Documentação em breve
 .. seealso::
     :doc:`Como fazer... <stock>`
 
-    :ref:`Consulte as nossas FAQs sobre usar Faturas como Guia <../faq/invoice/faq_invoice_invoiceTransportationDoc>`
+    :ref:`Consulte as nossas FAQs sobre usar Faturas como Guia <faq_invoice_invoiceTransportationDoc>`
 
 Guia de transporte de ativos
 ----------------------------
