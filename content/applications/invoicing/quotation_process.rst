@@ -108,8 +108,3 @@ Para essa finalidade são instalados módulos ou apps específicos que lhe permi
 Estes módulos ou apps podem já existir ou ser personalizados às necessidades do utilizador pela nossa equipa técnica.
 
 As configurações de API são feitas numa fase inicial, entre os departamentos técnicos da Exo Software e da sua entidade, para que tudo fique a funcionar corretamente e o utilizador não tenha de se preocupar com o processo.
-
-.. toctree::
-    :hidden:
-
-    fiscal_documents

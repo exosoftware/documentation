@@ -373,12 +373,3 @@ As opções disponíveis são:
    :align: center
 .. image:: fiscal_documents/v17_ATCUD_QRcode.png
    :align: center
-
-
-.. toctree::
-    :hidden:
-
-    quotation_process
-    invoicing_process
-    payment_process
-    stock
