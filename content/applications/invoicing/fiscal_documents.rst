@@ -132,7 +132,9 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <odoo_process_creat_invoice>`
+    :ref:`Como fazer... <odoo_process_creat_invoice>`
+
+    :doc:`Consulte as nossas FAQs sobre Faturas <../faq/saft_errors>`
 
 .. important::
    Formas de corrigir faturas:
@@ -156,7 +158,10 @@ Para emitir o pdf da fatura-recibo basta ir ao menu **Ação** do documento e se
    :align: center
 
 .. seealso::
-      :ref:`Como fazer... <odoo_process_creat_invoice>`
+    :ref:`Como fazer... <odoo_process_creat_invoice>`
+
+    :doc:`Consulte as nossas FAQs sobre Faturas <../faq/saft_errors>`
+
 
 Fatura-simplificada
 -------------------
@@ -172,7 +177,10 @@ Para emitir o pdf da fatura simplificada basta ir ao menu **Ação** do document
    :align: center
 
 .. seealso::
-      :ref:`Como fazer... <odoo_process_creat_invoice>`
+    :ref:`Como fazer... <odoo_process_creat_invoice>`
+
+    :doc:`Consulte as nossas FAQs sobre Faturas <../faq/saft_errors>`
+
 
 Fatura eletrónica
 -----------------
@@ -328,7 +336,9 @@ Documentação em breve
    As Guias de Remessa só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal. Quando exporta produtos os mesmos não precisam de comunicar a Guia de Remessa pois essa é uma figura da legislação portuguesa que não existe noutros países.
 
 .. seealso::
-   :doc:`Como fazer... <stock>`
+    :doc:`Como fazer... <stock>`
+
+    :ref:`Consulte as nossas FAQs sobre usar Faturas como Guia <../faq/invoice/faq_invoice_invoiceTransportationDoc>`
 
 Guia de transporte de ativos
 ----------------------------
