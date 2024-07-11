@@ -10,6 +10,9 @@ Quando é instalado, um sistema Odoo Enterprise tem um período experimental de 
 
 Antes desse período terminar, vai aparecer o respetivo aviso, no menu principal (app drawer), juntamente com a possibilidade de introduzir o código da subscrição.
 
+.. image:: configuration/v17_subscriptionRegistration.png
+    :align: center
+
 Introduz-se o código fornecido pela Odoo SA e pronto, sistema ativado.
 
 .. tip::
@@ -18,7 +21,7 @@ Introduz-se o código fornecido pela Odoo SA e pronto, sistema ativado.
     Nesse caso, temos que forçar a sua exibição com o seguinte procedimento:
 
    - Ativar o modo programador
-   - Na app Definições, ir ao menu :menuselection:`Técnico --> Parâmetros dos Sistema`
+   - Na app Configurações, ir ao menu :menuselection:`Técnico --> Parâmetros dos Sistema`
    - Adicionar ou editar a chave **database.expiration_date**. Colocar a data do próprio dia no valor e gravar
    - Voltar ao menu principal e pressionar F5. Já vai aparecer o aviso de expiração da BD
    - Clicar em Renovar a Subscrição e introduzir o código de subscrição. A BD fica ativada e a data de expiração é alterada para a que consta na Odoo SA
@@ -46,3 +49,6 @@ Para corrigir, é necessário:
     **%(zip)s %(city)s, %(state_name)s**
 
     %(country_name)s
+
+.. image:: configuration/v17_address.png
+    :align: center
