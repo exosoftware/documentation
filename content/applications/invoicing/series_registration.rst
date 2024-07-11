@@ -142,4 +142,4 @@ Para isso preencha o campo **Código de Validação** com o código que está di
    :align: center
 
 .. seealso::
-    :doc:`Consulte as nossas FAQs sobre comunicação de Séries <../faq/series_comunication>`
+    :doc:`Consulte as nossas FAQs sobre comunicação de Séries <../faq/series_communication>`
