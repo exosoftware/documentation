@@ -90,11 +90,15 @@ natureza gratuita, a opção SSH é a mais comum.
 
          .. tab:: Clone with HTTPS
 
-            Indisponível.
+            .. code-block:: doscon
+
+               Indisponível
 
          .. tab:: Clone with SSH
 
-            Indisponível.
+            .. code-block:: doscon
+
+               Indisponível
 
    .. group-tab:: Mac OS
 
@@ -102,11 +106,15 @@ natureza gratuita, a opção SSH é a mais comum.
 
          .. tab:: Clone with HTTPS
 
-            Indisponível.
+            .. code-block:: console
+
+               Indisponível
 
          .. tab:: Clone with SSH
 
-            Indisponível.
+            .. code-block:: console
+
+               Indisponível
 
 .. note::
    **The Enterprise git repository does not contain the full Odoo source code**. It is only a
