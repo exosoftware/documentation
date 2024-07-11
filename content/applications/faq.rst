@@ -13,9 +13,9 @@ Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
     faq/configuration
     faq/series_comunication
     faq/invoice
+    faq/faturacao_eletronica
     faq/saft_errors
+    faq/transportation_docs
     faq/permissoes
     faq/assinatura_digital_pdf
-    faq/faturacao_eletronica
     faq/configuracao_pos
-    faq/documentos_transporte

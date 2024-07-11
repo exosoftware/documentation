@@ -325,6 +325,8 @@ Documentação em breve
 .. seealso::
    :ref:`Como fazer... <odoo_process_create_recipt>`
 
+.. _fiscal_documents_transportationDocs:
+
 Guia de remessa / Guia de transporte
 ====================================
 
@@ -338,6 +340,8 @@ Documentação em breve
 .. seealso::
     :doc:`Como fazer... <stock>`
 
+    :doc:`Consulte as nossas FAQs sobre Guias de transporte <../faq/transportation_docs>`
+
     :ref:`Consulte as nossas FAQs sobre usar Faturas como Guia <faq_invoice_invoiceTransportationDoc>`
 
 Guia de transporte de ativos
@@ -346,7 +350,9 @@ Guia de transporte de ativos
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <stock>`
+    :doc:`Como fazer... <stock>`
+
+    :doc:`Consulte as nossas FAQs sobre Guias de transporte <../faq/transportation_docs>`
 
 Guia de consignação
 -------------------
