@@ -35,7 +35,7 @@ Para emitir o pdf do orçamento basta ir ao menu **Ação** do documento e selec
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <quotation_process_quotation>`
+   :ref:`Como fazer... <odoo_process_quotation>`
 
 Fatura pró-forma
 ----------------
@@ -48,7 +48,7 @@ Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento 
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <quotation_process_quotation>`
+   :ref:`Como fazer... <odoo_process_quotation>`
 
 .. _fiscal_documents_order:
 
@@ -132,7 +132,7 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <invoicing_process_creat_invoice>`
+   :ref:`Como fazer... <odoo_process_creat_invoice>`
 
 .. important::
    Formas de corrigir faturas:
@@ -156,7 +156,7 @@ Para emitir o pdf da fatura-recibo basta ir ao menu **Ação** do documento e se
    :align: center
 
 .. seealso::
-      :ref:`Como fazer... <invoicing_process_creat_invoice>`
+      :ref:`Como fazer... <odoo_process_creat_invoice>`
 
 Fatura-simplificada
 -------------------
@@ -172,7 +172,7 @@ Para emitir o pdf da fatura simplificada basta ir ao menu **Ação** do document
    :align: center
 
 .. seealso::
-      :ref:`Como fazer... <invoicing_process_creat_invoice>`
+      :ref:`Como fazer... <odoo_process_creat_invoice>`
 
 Fatura eletrónica
 -----------------
@@ -236,7 +236,7 @@ Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e
     - Pode anular o documento, emitindo uma nota de débito na fatura original
 
 .. seealso::
-   :ref:`Como fazer... <invoicing_process_create_creditNote>`
+   :ref:`Como fazer... <odoo_process_create_creditNote>`
 
 .. _fiscal_documents_debitNote:
 
@@ -266,7 +266,7 @@ Para emitir o pdf da nota de débito basta ir ao menu **Ação** do documento e 
     - Pode anular o documento, emitindo uma nota de crédito na fatura original
 
 .. seealso::
-   :ref:`Como fazer... <invoicing_process_create_debitNote>`
+   :ref:`Como fazer... <odoo_process_create_debitNote>`
 
 .. _fiscal_documents_receipt:
 
@@ -307,7 +307,7 @@ Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e seleciona
         - Se já foi enviado ao cliente, deve ainda enviar comprovativo do seu cancelamento
 
 .. seealso::
-   :ref:`Como fazer... <payment_process_create_recipt>`
+   :ref:`Como fazer... <odoo_process_create_recipt>`
 
 Recibo de IVA de caixa
 ----------------------
@@ -315,7 +315,7 @@ Recibo de IVA de caixa
 Documentação em breve
 
 .. seealso::
-   :ref:`Como fazer... <invoicing_process_create_recipt>`
+   :ref:`Como fazer... <odoo_process_create_recipt>`
 
 Guia de remessa / Guia de transporte
 ====================================
