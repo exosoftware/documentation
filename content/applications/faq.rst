@@ -18,4 +18,4 @@ Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
     faq/configuracao_pos
     faq/saft_errors
     faq/assinatura_digital_pdf
-    faq/permissioes
+    faq/permissions
