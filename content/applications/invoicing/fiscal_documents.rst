@@ -35,7 +35,7 @@ Para emitir o pdf do orçamento basta ir ao menu **Ação** do documento e selec
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <invoicing_process_quotation>`
+   :ref:`Como fazer... <quotation_process_quotation>`
 
 Fatura pró-forma
 ----------------
@@ -48,7 +48,7 @@ Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento 
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <invoicing_process_quotation>`
+   :ref:`Como fazer... <quotation_process_quotation>`
 
 .. _fiscal_documents_order:
 
@@ -307,7 +307,7 @@ Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e seleciona
         - Se já foi enviado ao cliente, deve ainda enviar comprovativo do seu cancelamento
 
 .. seealso::
-   :ref:`Como fazer... <invoicing_process_create_recipt>`
+   :ref:`Como fazer... <payment_process_create_recipt>`
 
 Recibo de IVA de caixa
 ----------------------
@@ -328,7 +328,7 @@ Documentação em breve
    As Guias de Remessa só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal. Quando exporta produtos os mesmos não precisam de comunicar a Guia de Remessa pois essa é uma figura da legislação portuguesa que não existe noutros países.
 
 .. seealso::
-   :doc:`Como fazer... <other>`
+   :doc:`Como fazer... <stock>`
 
 Guia de transporte de ativos
 ----------------------------
@@ -336,7 +336,7 @@ Guia de transporte de ativos
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <other>`
+   :doc:`Como fazer... <stock>`
 
 Guia de consignação
 -------------------
@@ -344,7 +344,7 @@ Guia de consignação
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <other>`
+   :doc:`Como fazer... <stock>`
 
 Guia de devolução
 -----------------
@@ -352,7 +352,7 @@ Guia de devolução
 Documentação em breve
 
 .. seealso::
-   :doc:`Como fazer... <other>`
+   :doc:`Como fazer... <stock>`
 
 Código QR e ATCUD
 =================
@@ -378,4 +378,7 @@ As opções disponíveis são:
 .. toctree::
     :hidden:
 
+    quotation_process
     invoicing_process
+    payment_process
+    stock

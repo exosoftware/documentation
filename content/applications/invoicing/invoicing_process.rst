@@ -18,79 +18,7 @@ O processo de faturação em Odoo foi pensado para seguir sempre a mesma sequên
         - Nota de Crédito
         - Nota de Débito
 
-.. _invoicing_process_quotation:
-
-Orçamentação
-------------
-A orçamentação em Odoo pode ser feita em diversas apps **Vendas**, **Compras**, **Subscrições** e **CRM**
-
-Nas apps de **Vendas**, **Compras** e **Subscrições** basta aceder à app respetiva e carregar no botão **Novo**
-
-.. image:: invoicing_process/v17_createQuote1.png
-   :align: center
-
-Na app de **CRM** dentro de cada lead pode carregar no botão **Novo Orçamento**
-
-.. image:: invoicing_process/v17_createQuote2.png
-   :align: center
-
-Depois deve preencher os campos necessários e selecionar o tipo de documento a ser usado na orçamentação
-
-.. image:: invoicing_process/v17_quoteTypes.png
-   :align: center
-
-.. note::
-    No caso das **Subscrições**, terá também de selecionar o **Plano de Recorrência**
-    que determina de quanto em quanto tempo serão feitas novas faturas de forma
-    automática, bem como pode especificar uma data para o término da subscrição.
-
-    .. image:: invoicing_process/v17_recurringPlan.png
-       :align: center
-
-    .. example::
-       Se cobra uma vez a um cliente por um serviço de 2 anos, o Plano de Recorrência
-       deve ser de 2 anos e quantidade do serviço 1, não deve ser Plano de Recorrência
-       anual mas quantidade a 2
-
-    .. example::
-       Se cobra mensalmente durante 2 anos por um serviço, o plano de recorrência deve
-       ser mensal mas com uma data de término 2 anos no futuro
-
-Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será gerada uma **Nota de encomenda**
-
-
-.. image:: invoicing_process/v17_confirmQuote.png
-   :align: center
-
-.. important::
-    A legislação portuguesa proíbe a emissão de documentos não confirmados e comunicados, pelo que se tentarem fazer impressão do documento o mesmo sairá invalidado.
-
-..
-    .. tip::
-        No entanto, o Odoo permite partilhar documentos no portal com o vosso cliente.
-
-        Basta ir ao menu :menuselection:`Ação --> Partilhar` e vai abrir uma nova janela onde pode inserir o contacto do parceiro
-
-        .. image:: invoicing_process/v17_shareQuote1.png
-            :align: center
-        .. image:: invoicing_process/v17_shareQuote2.png
-            :align: center
-
-        Em seguida o parceiro pode aceder ao link do orçamento para verificar o mesmo e deixar algum comentário que será adicionado ao chatter do Odoo
-        Também tem acesso a outras funcionalidades. Esta é a vista do lado do parceiro
-
-        .. image:: invoicing_process/v17_shareQuote3.png
-            :align: center
-
-        Toda a informação do envio e visionamento fica registada no chatter do próprio documento.
-
-        .. image:: invoicing_process/v17_shareQuote4.png
-            :align: center
-
-
-.. seealso::
-   :ref:`O que é um orçamento e suas variantes <fiscal_documents_quote>`
-   :ref:`O que é uma nota de encomenda <fiscal_documents_order>`
+Nesta secção vamos abordar os processos de **Faturação** e **Correções**
 
 .. _invoicing_process_creat_invoice:
 
@@ -157,62 +85,6 @@ Em seguida confirme a fatura
 .. seealso::
    :ref:`O que é uma fatura e suas variantes <fiscal_documents_invoice>`
 
-.. _invoicing_process_create_recipt:
-
-Emissão de Recibos
-------------------
-.. important::
-    Existem 2 processos para se emitir um recibo.
-
-    O **processo recomendado** é emitir sempre o recibo a partir da Fatura. Que vai gerar um novo documento de recibo e publicar o mesmo.
-
-    No entanto pode ser feita um recibo sem esta ligação se realmente for necessário.
-
-O processo de emissão do recibo deve então ser iniciado na **Fatura** e carregar no botão **Registar Pagamento**
-
-.. image:: invoicing_process/v17_createRecipt1.png
-    :align: center
-
-Em seguida deve estolher as seguintes opções:
-
-- Em que Diário vai registar o pagamento
-- O método de pagamento utilizado
-- O valor do pagamento
-
-Os restantes campos normalmente já estão preenchidos se seguir este processo. Carregue no botão **Criar pagamento**
-
-.. image:: invoicing_process/v17_createRecipt2.png
-    :align: center
-
-.. note::
-    No caso de o valor a receber ser diferente do valor total da fatura, vai ter uma vista diferente onde pode escolher o que fazer com a diferença
-
-    .. image:: invoicing_process/v17_createRecipt3.png
-        :align: center
-
-.. tip::
-    O processo de criação de recibos sem ligação a faturas é parecido, exceto em 2 pontos:
-
-        - Onde se inicia o processo
-        - A necessidade de preencher quase todos os campos de raíz
-
-    Para iniciar o processo aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu :menuselection:`Clientes --> Pagamentos` ou :menuselection:`Fornecedores --> Pagamentos`
-
-    Clique na opção **Novo**
-
-    .. image:: invoicing_process/v17_newRecipt.png
-        :align: center
-
-    Como os campos não são herdados da fatura terão de ser preenchidos manualmente.
-
-.. seealso::
-   :ref:`O que é um recibo <fiscal_documents_receipt>`
-
-Reconciliação de documentos
----------------------------
-
-Documentação em breve
-
 Correções
 ---------
 
@@ -260,15 +132,15 @@ Devem depois ser feitos os ajustes necessários, mediante o motivo que levou à 
 
     - Iniciar uma nota de crédito vazia indo a um dos menus :menuselection:`Clientes --> Notas de Crédito` ou :menuselection:`Fornecedores --> Reembolsos` e selecionar a opção **Novo**
 
-    .. image:: invoicing_process/v17_createCreditNote3.png
+    .. image:: invoicing_process/v17_newCreditNote1.png
         :align: center
 
-    .. image:: invoicing_process/v17_createCreditNote4.png
+    .. image:: invoicing_process/v17_newCreditNote2.png
         :align: center
 
     - Dentro do formulário, na aba **Outra Informação** selecionar a opção **Nota de Crédito de Rappel**
 
-    .. image:: invoicing_process/v17_createCreditNote5.png
+    .. image:: invoicing_process/v17_createCreditNote3.png
         :align: center
 
 Em seguida confirme a nota de crédito.
@@ -337,7 +209,7 @@ Para essa finalidade são instalados módulos ou apps específicos que lhe permi
 
 Estes módulos ou apps podem já existir ou ser personalizados às necessidades do utilizador pela nossa equipa técnica.
 
-As configurações de API são feitas numa fase inicial, entre os departamentos técnicos da Exo e da sua entidade, para que tudo fique a funcionar corretamente e como utilizador não tenha de se preocupar com o processo.
+As configurações de API são feitas numa fase inicial, entre os departamentos técnicos da Exo Software e da sua entidade, para que tudo fique a funcionar corretamente e o utilizador não tenha de se preocupar com o processo.
 
 .. toctree::
     :hidden:
