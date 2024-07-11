@@ -197,7 +197,7 @@ Para que esta funcionalidade esteja disponível é preciso aceder à app **Fatur
 .. seealso::
     :doc:`Saiba mais... <e-invoicing>`
 
-    :doc:`Consulte as nossas FAQs sobre Faturação eletrónica <../faq/e-invoicing_errors>
+    :doc:`Consulte as nossas FAQs sobre Faturação eletrónica <../faq/e-invoicing_errors>`
 
 Autofaturação
 -------------
