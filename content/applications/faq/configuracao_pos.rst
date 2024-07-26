@@ -1,8 +1,8 @@
 :show-content:
 
-================
-Configuração POS
-================
+=============================
+POS Configuração Utilizadores
+=============================
 
 O botão no canto superior direito para fechar sessão do POS não está disponível
 ===============================================================================
