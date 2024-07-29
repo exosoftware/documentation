@@ -15,7 +15,7 @@ Informações da Empresa
 - NIF
 - Moeda em que opera
 
-.. warning::
+.. danger::
     É fundamental que a moeda esteja corretamente selecionada antes da emissão dos primeiros documentos, depois de estarem emitidos não pode ser alterada
 
 .. image:: initial_configuration/v17_companyDetails.png
@@ -95,7 +95,7 @@ Se utilizar a fatura como Guia de Remessa deve selecionar as opções que o perm
 Plano de Contas
 ===============
 
-.. warning::
+.. danger::
     É fundamental escolher corretamente o plano de contas correto a aplicar à empresa em específico antes da emissão dos primeiros documentos
     :doc:`Veja os planos de contas que estão disponíveis com a Localização PT+ <../../applications/faq/invoice>`
 
