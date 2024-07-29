@@ -4,6 +4,52 @@
 Configuração inicial
 ====================
 
+Informações da Empresa
+======================
+
+É importante que sejam inseridos os dados corretos na informação da empresa como:
+
+- Nome
+- Logo
+- Morada completa
+- NIF
+- Moeda em que opera
+
+.. warning::
+    É fundamental que a moeda esteja corretamente selecionada antes da emissão dos primeiros documentos, depois de estarem emitidos não pode ser alterada
+
+.. image:: initial_configuration/v17_companyDetails.png
+   :align: center
+
+.. tip::
+    Não é obrigatório que o nome da empresa seja o nome legal completo que vai aparecer nos documentos
+
+    Terá a possibilidade de ter um cabeçalho personalizado onde pode inserir esse nome completo
+
+Confuguração de Cabeçalho e Rodapé dos documentos
+-------------------------------------------------
+
+.. important::
+    Por defeito se o cabeçalho não for preenchido, o Odoo preenche o mesmo com o Logo, Nome e Morada da empresa
+
+    Se o rodapé não for preenchido, por defeito o Odoo deixa em branco e só exibe o nº da página
+
+Para alterar os valores pré-definidos, pode aceder à app **Configurações** e na secção **Empresas** selecione **Configure o layout do Documento**
+
+.. image:: initial_configuration/v17_appSettings.png
+   :align: center
+
+.. image:: initial_configuration/v17_documentLayout.png
+   :align: center
+
+Na janela que se abre pode fazer as alterações que achar convenientes em relação aos valores por defeito e guardar.
+
+.. tip::
+    Para ter espaçamento menor entre as linhas pode carregar em **Shift+Enter** em vez de só **Enter**
+
+.. image:: initial_configuration/v17_documentLayoutWizard.png
+   :align: center
+
 Como ativar a Localização PT+
 =============================
 A nossa localização está dividida em vários módulos para que seja o mais conveniente possível de utilizar, pelo que nos deve indicar quais os conteúdos da mesma que pretende ter ao seu dispor.
@@ -44,7 +90,14 @@ Se utilizar a fatura como Guia de Remessa deve selecionar as opções que o perm
 .. seealso::
     :doc:`Consulte as nossas FAQs sobre configuração <../../applications/faq/configuration>`
 
-    :doc:`Consulte as nossas FAQs sobre a secção Detalhes da Fatura <../../applications/faq/invoice>`
+    :doc:`Consulte as nossas FAQs sobre a secção Detalhes da Fatura <../../applications/accounting/cao>`
+
+Plano de Contas
+===============
+
+.. warning::
+    É fundamental escolher corretamente o plano de contas correto a aplicar à empresa em específico antes da emissão dos primeiros documentos
+    :doc:`Veja os planos de contas que estão disponíveis com a Localização PT+ <../../applications/faq/invoice>`
 
 Configuração do utilizador
 ==========================
@@ -57,47 +110,4 @@ Para poder comunicar com a AT através de Odoo tem de inserir as credênciais de
 Deve garantir que em Odoo o utilizador tem permissões para fazer as comunicações desejadas, mas também o login de acesso na AT está atutorizado a fazer essas mesmas comunicações.
 
 .. seealso::
-    :doc:`Consulte as nossas FAQs sobre utilizadores na AT <faq_invoice_ATusers>`
-
-Configurações adicionais
-========================
-
-É importante que sejam inseridos os dados corretos na informação da empresa como:
-
-- Nome da empresa
-- Morada Completa
-- NIF
-- Moeda em que opera
-- Logo da empresa
-
-.. image:: initial_configuration/v17_companyDetails.png
-   :align: center
-
-.. tip::
-    Não é obrigatório que o nome da empresa seja o nome legal completo que vai aparecer nos documentos
-
-    Terá a possibilidade de ter um cabeçalho personalizado onde pode inserir esse nome completo
-
-Confuguração de Cabeçalho e Rodapé dos documentos
--------------------------------------------------
-
-.. important::
-    Por defeito se o cabeçalho não for preenchido, o Odoo preenche o mesmo com o Logo, Nome e Morada da empresa
-
-    Se o rodapé não for preenchido, por defeito o Odoo deixa em branco e só exibe o nº da página
-
-Para alterar os valores pré-definidos, pode aceder à app **Configurações** e na secção **Empresas** selecione **Configure o layout do Documento**
-
-.. image:: initial_configuration/v17_appSettings.png
-   :align: center
-
-.. image:: initial_configuration/v17_documentLayout.png
-   :align: center
-
-Na janela que se abre pode fazer as alterações que achar convenientes em relação aos valores por defeito e guardar.
-
-.. tip::
-    Para ter espaçamento menor entre as linhas pode carregar em **Shift+Enter** em vez de só **Enter**
-
-.. image:: initial_configuration/v17_documentLayoutWizard.png
-   :align: center
+    :ref:`Consulte as nossas FAQs sobre utilizadores na AT <faq_invoice_ATusers>`

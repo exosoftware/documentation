@@ -4,6 +4,9 @@
 Configuração
 ============
 
+.. seealso::
+    :doc:`Consulte o nosso Guia sobre configurações iniciais <../../applications/faq/configuration>`
+
 Como ativar a subscrição Enterprise?
 ====================================
 Quando é instalado, um sistema Odoo Enterprise tem um período experimental de 1 mês.
