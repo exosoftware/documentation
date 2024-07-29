@@ -7,11 +7,13 @@ Comunicação de Séries
 .. seealso::
     :doc:`Consulte o nosso Guia sobre registo de Séries <../invoicing/series_registration>`
 
+.. _faq_invoice_ATusers:
+
 Preciso de criar um subutilizador no site das Finanças?
 =======================================================
 **Não**
 
-Pode ser usado o nome de utilizador e a senha de acesso geral às Finanças.Estas credenciais têm, por definição, autorização para efetuar qualquer tipo de operação
+Pode ser usado o nome de utilizador e a senha de acesso geral às Finanças. Estas credenciais têm, por definição, autorização para efetuar qualquer tipo de operação
 
 .. note::
     A criação de subutlizadores é recomendada quando a empresa tem vários colaboradores a interagir com as Finanças e se pretende separar as autorizações de cada um
