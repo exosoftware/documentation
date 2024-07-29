@@ -8,7 +8,7 @@ Como ativar a Localização PT+
 =============================
 A nossa localização está dividida em vários módulos para que seja o mais conveniente possível de utilizar, pelo que nos deve indicar quais os conteúdos da mesma que pretende ter ao seu dispor.
 
-Para ativar a nossa localização deve ir à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração**, no separador Faturação / Contabilidade Deve procurar a secção **Portugal**, ativar a opçãp **Faturação Portuguesa** e guardar.
+Para ativar a nossa localização deve ir à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração**, no separador Faturação / Contabilidade Deve procurar a secção **Portugal**, ativar a opção **Faturação Portuguesa** e guardar.
 
 .. image:: ../../applications/invoicing/fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
@@ -42,9 +42,9 @@ Se utilizar a fatura como Guia de Remessa deve selecionar as opções que o perm
    :align: center
 
 .. seealso::
-    :doc:`Consulte as nossas FAQs sobre configuração <../../invoicing/faq/configuration>`
+    :doc:`Consulte as nossas FAQs sobre configuração <../../applications/faq/configuration>`
 
-    :doc:`Consulte as nossas FAQs sobre a secção Detalhes da Fatura <../../invoicing/faq/invoice>`
+    :doc:`Consulte as nossas FAQs sobre a secção Detalhes da Fatura <../../applications/faq/invoice>`
 
 Configuração do utilizador
 ==========================
