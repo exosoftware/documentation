@@ -97,6 +97,7 @@ Plano de Contas
 
 .. danger::
     É fundamental escolher corretamente o plano de contas correto a aplicar à empresa em específico antes da emissão dos primeiros documentos
+
     :doc:`Veja os planos de contas que estão disponíveis com a Localização PT+ <../../applications/faq/invoice>`
 
 Configuração do utilizador
