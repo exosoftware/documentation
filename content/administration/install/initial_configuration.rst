@@ -26,7 +26,7 @@ Informações da Empresa
 
     Terá a possibilidade de ter um cabeçalho personalizado onde pode inserir esse nome completo
 
-Confuguração de Cabeçalho e Rodapé dos documentos
+Configuração de Cabeçalho e Rodapé dos documentos
 -------------------------------------------------
 
 .. important::
@@ -64,7 +64,7 @@ Para ativar a nossa localização deve ir à app **Faturação / Contabilidade**
 
 A partir deste momento a Localização está ativa e vai começar a aplicar as restrições e verificações exigidas pela Autoridade Tributária.
 
-No entanto, ainda tem algumas vericifações que deve fazer para que tudo fique a funcionar corretamente.
+No entanto, ainda tem algumas verificações que deve fazer para que tudo fique a funcionar corretamente.
 
 Dependendo do tipo de base de dados que está a usar (Testes ou Produção) deve ter atenção à opção **Backend do Serviço de Certificação**. Se estiver numa base de dados de teste deve ter selecionada a opção **Testes**, se estiver numa base de dados de **Produção** deve selecionar a opção **Exo Software**.
 
@@ -90,7 +90,7 @@ Se utilizar a fatura como Guia de Remessa deve selecionar as opções que o perm
 .. seealso::
     :doc:`Consulte as nossas FAQs sobre configuração <../../applications/faq/configuration>`
 
-    :doc:`Consulte as nossas FAQs sobre a secção Detalhes da Fatura <../../applications/accounting/cao>`
+    :doc:`Consulte as nossas FAQs sobre a secção Detalhes da Fatura <../../applications/faq/invoice>`
 
 Plano de Contas
 ===============
@@ -98,7 +98,7 @@ Plano de Contas
 .. danger::
     É fundamental escolher corretamente o plano de contas correto a aplicar à empresa em específico antes da emissão dos primeiros documentos
 
-    :doc:`Veja os planos de contas que estão disponíveis com a Localização PT+ <../../applications/faq/invoice>`
+    :doc:`Veja os planos de contas que estão disponíveis com a Localização PT+ <../../applications/accounting/cao>`
 
 Configuração do utilizador
 ==========================
