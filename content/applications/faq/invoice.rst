@@ -7,6 +7,8 @@ Fatura
 .. seealso::
     :ref:`Consulte o nosso Guia sobre Faturas <fiscal_documents_invoice>`
 
+    :doc:`Consulte o nosso Guia sobre configurações iniciais <../../applications/faq/configuration>`
+
 Como incluir nas faturas a menção "Os artigos/serviços faturados foram colocados à disposição do adquirente (...)"
 ==================================================================================================================
 Em primeiro lugar, é necessário ativar a opção **Mostrar data de disponibilização dos bens** nas configurações da app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo)

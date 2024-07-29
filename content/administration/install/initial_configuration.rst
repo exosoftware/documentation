@@ -82,7 +82,9 @@ Nesta fase também pode já escolher se quer que o código QR fique no cabeçalh
 .. image:: initial_configuration/v17_multiway_QR.png
    :align: center
 
-Se utilizar a fatura como Guia de Remessa deve selecionar as opções que o permitem em Detalhes da Fatura. Uma das opções disponibiliza a data em que os bens foram disponibilizados ao cliente (mesmo que não use Guia de Remessa pode usar esta opção), a outra opção coloca os campos Carga e Descarga. Em seguida guardar novamente as alterações.
+Se utilizar a fatura como Guia de Remessa deve selecionar as opções que o permitem em Detalhes da Fatura. Uma das opções disponibiliza a data em que os bens foram disponibilizados ao cliente (mesmo que não use Guia de Remessa pode usar esta opção), a outra opção coloca os campos Carga e Descarga.
+
+No caso de usar a fatura como guia de remessa pode ainda definir o local de carga padrão. Em seguida guardar novamente as alterações.
 
 .. image:: initial_configuration/v17_invoiceDetails.png
    :align: center
