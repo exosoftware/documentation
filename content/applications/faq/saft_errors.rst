@@ -79,6 +79,7 @@ existência de pagamentos nestas condições, teremos que o associar a uma fatur
 
 .. tip::
     - Identifique o pagamento
+
         - Na janela onde é apresentado o erro SAF-T, coloque o rato por cima da coluna **Caminho** e da linha que
           provocou o erro
         - Será exibido o nó XML do SAF-T com a informação do pagamento. O nº do recibo aparece logo no início, no
@@ -105,4 +106,23 @@ existência de pagamentos nestas condições, teremos que o associar a uma fatur
     Sem fatura associada
 
     .. image:: saft_errors/v17_payment_without_invoice.png
+        :align: center
+
+Erro: duplicated value ('MNBBR') for Xsd11Unique(name='ns:ProductCodeConstraint')
+=================================================================================
+Quando o validador do SAF-T dá uma indicação parecida com esta (o texto MNBBR pode ser diferente):
+
+.. image:: saft_errors/v17_erroSaft2.png
+   :align: center
+
+é porque ao validar o documento SAF-T foi verificado que existe mais do que um artigo com a mesma referência interna, a causa mais comum para este erro é que exista 1 artigo ativo e 1 artigo arquivado com a mesma Referência Interna
+
+No exemplo acima o texto **MNBBR** significa que existem múltiplos produtos com a Referência Interna **MNBBR**
+
+.. tip::
+    - Procure na sua base de dados os artigos que têm o valor do erro no campo Referência Interna
+    - Se tiver artigos arquivados com essa Referência Interna limpe o campo
+    - Se ambos os artigos estiverem ativos, modifique a Referência Interna de um deles
+
+    .. image:: saft_errors/v17_internalReferenceField.png
         :align: center
