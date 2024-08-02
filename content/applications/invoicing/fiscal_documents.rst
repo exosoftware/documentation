@@ -391,6 +391,3 @@ As opções disponíveis são:
    :align: center
 .. image:: fiscal_documents/v17_ATCUD_QRcode.png
    :align: center
-
-Glossário
-=========
