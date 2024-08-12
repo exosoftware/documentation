@@ -43,6 +43,9 @@ Os tipos de blocos mais comuns que utilizaremos são os seguintes
 .. seealso::
     Informações adicionais sobre conteúdo relevante a consultar sobre o tema que está a ver no momento
 
+.. admonition:: Legenda
+    Aqui vai poder ver uma legenda que o ajude a melhor interpretar o conteúdo exibido
+
 .. important::
     Avisos sobre coisas que podem causar problemas, seja na utilização do Odoo, seja na forma como cumpre os requisitos legais impostos
 

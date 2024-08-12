@@ -7,7 +7,15 @@
 Utilização
 ==============================
 
-Descubra os nossos guias de utilização do Odoo PT+ e muito mais.
+Descubra os nossos guias de utilização do Odoo PT+
+
+Vai poder consultar diversas temáticas sobre a utilização do seu Odoo, melhorado pela Localização PT+
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
 
 
 .. toctree::

@@ -7,13 +7,13 @@ Instalação
 Que sistemas operativos são suportados?
 =======================================
 
-Embora o Odoo funcione em Windows, Linux e MacOS, a localização PT+, de momento, apenas poderá ser
+Embora o Odoo funcione em Windows, Linux e MacOS, a Localização PT+, de momento, apenas poderá ser
 usada em sistemas Linux.
 
 Que pacotes de S.O. e bibliotecas python são necessários?
 ========================================================================
 
-A lista de dependência está publicada: :ref:`ptplus_dependencies`. Quanto a pacotes de sistema
+Consulte a lista de dependência está publicada: :ref:`ptplus_dependencies`. Quanto a pacotes de sistema
 operativo, não é necessário nenhum específico.
 
 Que versões de Python são suportadas?

@@ -35,7 +35,7 @@ de repositórios Git. Há um total de 4 repositórios, contendo módulos de dife
 Acesso aos repositórios
 -----------------------
 
-.. note::
+.. important::
    O acesso aos repositórios privados é concedido mediante subscrição e estará disponível enquanto
    esta estiver ativa.
 
@@ -51,11 +51,11 @@ Há 2 tipos de acesso possíveis:
 Obter o código
 -----------------
 
-.. note::
+.. important::
    O único sistema operativo suportado é **Linux**. Outros, nomeadamente o Windows, poderão também
    ser adicionados quando (e se) a procura o justificar.
 
-.. note::
+.. important::
    O código dos repositórios privados está ofuscado por motivos legais. Embora o seu comportamento
    funcional seja idêntico ao código não ofuscado, obriga a
 

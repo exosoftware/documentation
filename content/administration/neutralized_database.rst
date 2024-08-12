@@ -10,6 +10,12 @@ envio de email para clientes).
 .. important::
    A neutralização converte automaticamente uma BD num ambiente de testes
 
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
+
 Funcionalidades desativadas
 ===========================
 
@@ -31,3 +37,6 @@ Estas alterações complementam as desativações que acontecem em qualquer BD O
 .. note::
    **É apresentada uma faixa vermelha no topo do ecrã das BD neutralizadas para
    reconhecimento imediato.**
+
+    .. image:: neutralized_database/v17_bdNeutralized.png
+        :align: center

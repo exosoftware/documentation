@@ -11,6 +11,12 @@ alojamento, **para as 3 últimas versões** do Odoo. A calendarização é
 alinhada com o ciclo de lançamento de versões do Odoo, com acréscimo de
 3 meses para testes e estabilização.
 
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
+
 A seguinte matriz mostra o estado do suporte de cada versão das apps Exo:
 
 .. list-table::
