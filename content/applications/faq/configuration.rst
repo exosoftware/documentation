@@ -5,7 +5,7 @@ Configuração
 ============
 
 .. seealso::
-    :doc:`Consulte o nosso Guia sobre configurações iniciais <../../applications/faq/configuration>`
+    :doc:`Consulte o nosso Guia sobre configurações iniciais <../../administration/install/initial_configuration>`
 
 Como ativar a subscrição Enterprise?
 ====================================
@@ -26,8 +26,8 @@ Introduz-se o código fornecido pela Odoo SA e pronto, sistema ativado.
    - Ativar o modo programador
    - Na app Configurações, ir ao menu :menuselection:`Técnico --> Parâmetros dos Sistema`
    - Adicionar ou editar a chave **database.expiration_date**. Colocar a data do próprio dia no valor e gravar
-   - Voltar ao menu principal e pressionar F5. Já vai aparecer o aviso de expiração da BD
-   - Clicar em Renovar a Subscrição e introduzir o código de subscrição. A BD fica ativada e a data de expiração é alterada para a que consta na Odoo SA
+   - Voltar ao menu principal e pressionar F5. Já vai aparecer o aviso de expiração da base de dados
+   - Clicar em **Renovar a Subscrição** e introduzir o código de subscrição. A base de dados fica ativada e a data de expiração é alterada para a que consta na Odoo SA
 
 
 Pode consultar mais detalhes na `página oficial Odoo <https://www.odoo.com/documentation/17.0/pt_BR/administration/on_premise.html>`_.
@@ -36,7 +36,8 @@ Pode consultar mais detalhes na `página oficial Odoo <https://www.odoo.com/docu
 Formato de morada errado
 ========================
 O formato da morada está errado, aparece primeiro a cidade e depois o código postal
-É verdade que a configuração do formato da morada que vem com o Odoo standard é incorreta no caso Português.
+
+É verdade que a configuração do formato da morada que vem com o Odoo standard é incorreta no caso Português
 
 Para corrigir, é necessário:
 
@@ -44,7 +45,7 @@ Para corrigir, é necessário:
 - Na app **Contactos** ir ao menu :menuselection:`Configuração --> Localização --> Países` e selecionar **Portugal**
 - Mudar o valor do campo **Formato do Endereço** para:
 
-.. note::
+.. example::
     %(street)s
 
     %(street2)s

@@ -30,7 +30,7 @@ A partir desse momento, todas as faturas incluirão a menção **"Os artigos/ser
 
 Posso usar a fatura como guia de remessa?
 =========================================
-Sim, desde que os elementos obrigatórios sejam adicionados aos da fatura regular
+**Sim**, desde que os elementos obrigatórios sejam adicionados aos da fatura regular
 
 Para isso, deve ir a secção **Portugal** nas configurações da app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo)
 

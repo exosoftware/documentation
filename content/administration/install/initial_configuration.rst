@@ -4,6 +4,17 @@
 Configuração inicial
 ====================
 
+Estas configurações serão a base da sua utilização Odoo, é importante que estejam devidamente configuradas para que não surjam problemas mais tarde.
+
+Também poderá ver como ativar a Localização PT+ da Exo Software e algumas configurações rápidas das principais ferramentas para que possa começar a trabalhar com
+o Odoo em Portugal.
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
+
 Informações da Empresa
 ======================
 
@@ -21,10 +32,12 @@ Informações da Empresa
 .. image:: initial_configuration/v17_companyDetails.png
    :align: center
 
-.. tip::
+.. note::
     Não é obrigatório que o nome da empresa seja o nome legal completo que vai aparecer nos documentos
 
-    Terá a possibilidade de ter um cabeçalho personalizado onde pode inserir esse nome completo
+    Terá a possibilidade de ter um cabeçalho personalizado, onde pode inserir esse nome completo
+
+    Este nome é o nome pelo qual vai ficar identificado no seu sistema Odoo, é como se fosse um nome Odoo do contacto, e se eventualmente usar um sistema multi-empresa poder identificar a organização
 
 Configuração de Cabeçalho e Rodapé dos documentos
 -------------------------------------------------
@@ -97,10 +110,19 @@ No caso de usar a fatura como guia de remessa pode ainda definir o local de carg
 Plano de Contas
 ===============
 
+Atualmente a Localização PT+ disponibiliza 2 tipos de planos de contas:
+
+- **Base**, que é o plano normal do SNC
+- **Microentidades**, plano simplificado para microempresas
+
+.. note::
+    Pode personalizar o seu plano de contas depois de selecionar um dos planos disponíveis para melhor se adaptar ao seu caso específico
+
 .. danger::
     É fundamental escolher corretamente o plano de contas correto a aplicar à empresa em específico antes da emissão dos primeiros documentos
 
-    :doc:`Veja os planos de contas que estão disponíveis com a Localização PT+ <../../applications/accounting/cao>`
+.. seealso::
+    :doc:`Veja em detalhe os planos de contas que estão disponíveis com a Localização PT+ <../../applications/accounting/coa>`
 
 Configuração do utilizador
 ==========================
