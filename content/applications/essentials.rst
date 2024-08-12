@@ -15,8 +15,10 @@ O objetivo desta documentação não é de se sobrepor ao conteúdo nativo do Od
 Recomendamos sempre que consulte a `Documentação Odoo <https://www.odoo.com/pt_BR/page/docs>`_ que pode encontrar no canto superior direito da página,
 bem como os diversos tutoriais que o Odoo disponibiliza.
 
-.. centered::
-    ─── ✦ ───
+.. raw:: html
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
 
 A nossa **Documentação**, está organizada em secções para maior facilidade de consulta para os utilizadores. Utiliza alguns blocos de informações padrão, para informar
 tipos de informação relevante mais comum.
