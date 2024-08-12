@@ -16,6 +16,7 @@ Recomendamos sempre que consulte a `Documentação Odoo <https://www.odoo.com/pt
 bem como os diversos tutoriais que o Odoo disponibiliza.
 
 .. raw:: html
+
     <div style="text-align: center; margin: 20px 0;">
         ─── ✦ ───
     </div>
