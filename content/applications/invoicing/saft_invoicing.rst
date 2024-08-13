@@ -3,27 +3,43 @@
 ===============
 SAF-T Faturação
 ===============
+O SAF-T de faturação é uma obrigação legal que tem de ser cumprida junto da AT
+
+Aprenda como o gerar e lidar com alguns erros de validação que possam surgir durante a sua criação
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
 
 Exportação
 ==========
-Para poder exportar o ficheiro SAF-T de Faturação que tem de submeter à Autoridade Tributária, aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu **Relatórios** e no separador **Portugal** selecione a opção **Exportar SAF-T**.
+Para poder exportar o ficheiro SAF-T de Faturação que tem de submeter à Autoridade Tributária, aceda à app
+**Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu
+**Relatórios** e no separador **Portugal** selecione a opção **Exportar SAF-T**.
 
-.. image:: saft_invoicing/v17_appInvoicingAccounting.png
+.. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
 
 .. image:: saft_invoicing/v17_exportSAFT1.png
    :align: center
 
-Vai abrir uma janela que predefine o **Período** como Mês Passado, mas pode selecionar o período como lhe for mais conveniente, mudando o **Período** ou alterando a **Data Inicial** e/ou **Data Final**.
+Vai abrir uma janela que predefine o **Período** como Mês Passado, mas pode selecionar o período como lhe for mais
+conveniente, mudando o **Período** ou alterando a **Data Inicial** e/ou **Data Final**.
 
-É recomendadoque mantenha o visto na opção **Validar** para fazer uma verificação do ficheiro, no entanto se espera que o ficheiro seja muito grande pode optar por não fazer esta verificação.
+É recomendadoque mantenha o visto na opção **Validar** para fazer uma verificação do ficheiro, no entanto se espera que
+o ficheiro seja muito grande pode optar por não fazer esta verificação.
 
 Carregue em **Exportar XML**.
 
 .. image:: saft_invoicing/v17_exportSAFT2.png
    :align: center
 
-Vai ser gerada uma nova janela com um resumo de possíveis erros que existam nos documentos para que seja mais fácil ver necesidade de correção de erros
+Vai ser gerada uma nova janela com um resumo de possíveis erros que existam nos documentos para que seja mais fácil ver
+necesidade de correção de erros
+
+No campo **Motivo** pode encontrar uma descrição do que está a causar o erro
 
 .. image:: saft_invoicing/v17_exportSAFT3.png
    :align: center
@@ -48,5 +64,6 @@ Submeta o ficheiro à AT, depois de submeter o ficheiro pode fechar esta janela.
 
 Importação
 ==========
+.. FIXME : O que é isto?
 
 Documentação em breve
