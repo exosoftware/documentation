@@ -49,20 +49,20 @@ Há 2 tipos de acesso possíveis:
   HTTPS e SSH.
 
 Obter o código
------------------
+--------------
 
 .. important::
    O único sistema operativo suportado é **Linux**. Outros, nomeadamente o Windows, poderão também
    ser adicionados quando (e se) a procura o justificar.
 
-.. FIXME :  bloco abaixo não está acabado
 .. important::
    O código dos repositórios privados está ofuscado por motivos legais. Embora o seu comportamento
-   funcional seja idêntico ao código não ofuscado, obriga a
+   funcional seja idêntico ao código não ofuscado.
 
 Para clonar um repositório, escolha entre o método HTTPS ou SSH (ver secção anterior). Dada a sua
 natureza gratuita, a opção SSH é a mais comum.
 
+.. FIXME : O problema aqui deve ser JS, na documentação Odoo ao mudar a tab do sistema operativo ele muda todas as tabs da página de sistema operativo
 .. tabs::
 
    .. group-tab:: Linux
@@ -117,7 +117,6 @@ natureza gratuita, a opção SSH é a mais comum.
 
                Indisponível
 
-
 .. FIXME :  bloco abaixo não está traduzido, é para ficar em inglês?
 .. note::
    **The Enterprise git repository does not contain the full Odoo source code**. It is only a
@@ -127,12 +126,15 @@ natureza gratuita, a opção SSH é a mais comum.
    and Enterprise repositories to have a working Odoo Enterprise installation.
 
 Escolher o *branch*
---------------------
+-------------------
+.. important::
+    Devido ao ofuscamento de código, é necessário um passo adicional no momento de escolher o *branch*.
 
-O código dos repositórios privados está ofuscado por motivos legais. Embora o seu comportamento
-funcional seja idêntico ao código não ofuscado, obriga a um passo adicional no momento de escolher
-o *branch*. Dado que é feita uma ofuscação para cada versão Python, os branches são combinações de
-versões Odoo com versões Python. Por exemplo, em vez de 17.0 podemos ter 17.0-py3.12.
+    Dado que é feita uma ofuscação para cada versão Python, os branches são combinações de
+    versões Odoo com versões Python.
+
+    .. example::
+        Em vez de 17.0 podemos ter 17.0-py3.12
 
 Antes de continuar, é portanto necessário determinar a versão do Python no seu sistema Odoo. Uma
 forma fácil é através do comando:
@@ -141,15 +143,16 @@ forma fácil é através do comando:
 
         $ python3 --version
 
-Do resultado, considere apenas a versão principal e a subversão. Por exemplo, se for 3.10.2,
-a versão Python é 3.10.
+Do resultado, considere apenas a versão principal e a subversão.
 
-Pode agora calcular o *branch* que pretende com a fórmula <ODOO_VERSION>-py<>PYTHON_VERSION
+.. example::
+    Se for 3.10.2, a versão Python é 3.10
 
-Exemplos:
+Pode agora calcular o *branch* que pretende com a fórmula <ODOO_VERSION>**-py**<PYTHON_VERSION>
 
-- Odoo 15.0 e Python 3.8: branch 15.0-py3.8
-- Odoo 17.0 e Python 3.10: branch 16.0-py3.10
+.. example::
+    Odoo 15.0 e Python 3.8: branch 15.0-py3.8
+    Odoo 17.0 e Python 3.10: branch 16.0-py3.10
 
 .. note::
    As versões Python suportadas são: 3.8, 3.9, 3.10, 3.11 e 3.12.
