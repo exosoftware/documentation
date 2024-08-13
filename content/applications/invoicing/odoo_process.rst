@@ -3,12 +3,7 @@
 =============
 Processo Odoo
 =============
-
-Em Odoo
-=======
-
-.. note::
-    O processo de faturação em Odoo foi pensado para seguir sempre a mesma sequência:
+O processo de faturação em Odoo foi pensado para seguir sempre a mesma sequência:
 
         - Orçamentação
         - Emissão de Fatura
@@ -19,6 +14,17 @@ Em Odoo
             - Nota de Débito
 
         - Reconciliação de documentos
+
+Por esse motivo, é aconselhado que sigam sempre o processo normalizado para evitar problemas operacionais
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
+
+Operação em Odoo
+================
 
 .. _odoo_process_quotation:
 
@@ -41,7 +47,7 @@ Depois deve preencher os campos necessários e selecionar o tipo de documento a 
 .. image:: odoo_process/v17_quoteTypes.png
    :align: center
 
-.. note::
+.. tip::
     No caso das **Subscrições**, terá também de selecionar o **Plano de Recorrência**
     que determina de quanto em quanto tempo serão feitas novas faturas de forma
     automática, bem como pode especificar uma data para o término da subscrição.
@@ -65,21 +71,25 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
    :align: center
 
 .. important::
-    A legislação portuguesa proíbe a emissão de documentos não confirmados e comunicados, pelo que se tentarem fazer impressão do documento o mesmo sairá invalidado.
+    A legislação portuguesa proíbe a emissão de documentos não confirmados e comunicados, pelo que se tentarem fazer
+    impressão do documento o mesmo sairá invalidado.
+
+.. FIXME : a metodologia abaixo não é para divulgar aos clientes até que seja confirmado pela AT a sua possibilidade, por isso está comentada
 
 ..
     .. tip::
         No entanto, o Odoo permite partilhar documentos no portal com o vosso cliente.
 
-        Basta ir ao menu :menuselection:`Ação --> Partilhar` e vai abrir uma nova janela onde pode inserir o contacto do parceiro
+        Basta ir ao menu :menuselection:`Ação --> Partilhar` e vai abrir uma nova janela onde pode inserir o contacto
+        do parceiro
 
         .. image:: odoo_process/v17_shareQuote1.png
             :align: center
         .. image:: odoo_process/v17_shareQuote2.png
             :align: center
 
-        Em seguida o parceiro pode aceder ao link do orçamento para verificar o mesmo e deixar algum comentário que será adicionado ao chatter do Odoo
-        Também tem acesso a outras funcionalidades. Esta é a vista do lado do parceiro
+        Em seguida o parceiro pode aceder ao link do orçamento para verificar o mesmo e deixar algum comentário que
+        será adicionado ao chatter do Odoo. Também tem acesso a outras funcionalidades. Esta é a vista do lado do parceiro
 
         .. image:: odoo_process/v17_shareQuote3.png
             :align: center
@@ -102,11 +112,13 @@ Emissão de Fatura
 .. important::
     Existem 3 processos para se emitir uma fatura.
 
-    O **processo recomendado** é emitir sempre a fatura a partir da Nota de encomenda. Que vai gerar um novo documento de fatura em rascunho.
+    O **processo recomendado** é emitir sempre a fatura a partir da Nota de encomenda. Que vai gerar um novo documento
+    de fatura em rascunho.
 
     No entanto pode ser feita uma fatura sem esta ligação se realmente for necessário.
 
-    O 3º processo é o **automático**, em que o próprio Odoo gera de forma autónoma a fatura para certo tipo de artigos vendidos, como as **subscrições**.
+    O 3º processo é o **automático**, em que o próprio Odoo gera de forma autónoma a fatura para certo tipo de artigos
+    vendidos, como as **subscrições**.
 
 O processo de emissão da fatura deve então ser iniciado na **Nota de encomenda** e carregar no botão **Criar Fatura**
 
@@ -130,7 +142,8 @@ Na janela que abre decida o tipo de fatura que pretende criar de entre as opçõ
     .. image:: odoo_process/v17_createInvoice3.png
         :align: center
 
-Depois de ter a fatura em modo de rascunho, deve preencher os campos necessários e escolher o tipo de documento de fatura que pretende.
+Depois de ter a fatura em modo de rascunho, deve preencher os campos necessários e escolher o tipo de documento de
+fatura que pretende.
 
 A maioria dos campos já vão estar preenchidos pois são herdados da Nota de encomenda.
 
@@ -143,14 +156,16 @@ A maioria dos campos já vão estar preenchidos pois são herdados da Nota de en
         - Onde se inicia o processo
         - A necessidade de preencher quase todos os campos de raíz
 
-    Para iniciar o processo aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu :menuselection:`Clientes --> Faturas` ou :menuselection:`Fornecedores --> Faturas de Foenecedores`
+    Para iniciar o processo aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
+    Community ou Enterprise do Odoo), vá ao menu :menuselection:`Clientes --> Faturas` ou :menuselection:`Fornecedores --> Faturas de Fornecedores`
 
     Clique na opção **Novo**
 
     .. image:: odoo_process/v17_newInvoice.png
         :align: center
 
-    Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a criar um orçamento.
+    Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a
+    criar um orçamento.
 
 Em seguida confirme a fatura
 
@@ -168,14 +183,16 @@ Correções
 Notas de crédito
 ^^^^^^^^^^^^^^^^
 .. important::
-    Segundo as regras da AT as notas de crédito têm de estar ligadas ao documento de fatura a que dizem respeito e devem mencionar o mesmo.
+    Segundo as regras da AT as notas de crédito têm de estar ligadas ao documento de fatura a que dizem respeito e devem
+    mencionar o mesmo.
 
 Por esse motivo, as notas de crédito devem ser emitidas a partir do documento da fatura para que se cumpram as regras
 
 .. image:: odoo_process/v17_createCreditNote1.png
    :align: center
 
-Não se esqueça de mencionar o motivo para a criação da nota de crédito, que vai ser exibido na nota de crédito, bem como a norma de regularização do IVA associada à nota de crédito. Em seguida reverta o movimento da fatura
+Não se esqueça de mencionar o motivo para a criação da nota de crédito, que vai ser exibido na nota de crédito, bem como
+a norma de regularização do IVA associada à nota de crédito. Em seguida reverta o movimento da fatura
 
 .. important::
     Normas de regularização de IVA são diferentes dos motivos de isenção de IVA
@@ -198,10 +215,16 @@ Não se esqueça de mencionar o motivo para a criação da nota de crédito, que
 Devem depois ser feitos os ajustes necessários, mediante o motivo que levou à emissão da nota de crédito e confirmar o documento
 
 .. tip::
-    Existe um tipo de nota de crédito que não precisa de estar ligado à sua fatura original, as Notas de Crédito de Rappel, estes tipos de notas de crédito só devem ser emitidos para descontos de "rappel" concedidos
+    Existe um tipo de nota de crédito que não precisa de estar ligado à sua fatura original, as Notas de Crédito de
+    Rappel, estes tipos de notas de crédito só devem ser emitidos para descontos de "rappel" concedidos
 
     Definição de **desconto de "Rappel"**
-    Um desconto “rappel” escalonado, cujo primeiro escalão se inicia na unidade (em euros, quilos, litros, etc.), é um desconto de quantidade que, nos termos dos n.os 2 e 3 do artigo 3.º do Decreto-Lei n.º 370/93, de 29 de Outubro, na redacção do Decreto-Lei n.º 140/98, de 16 de Maio, releva para a determinação do preço de compra efectivo, satisfeitas que se mostrem as restantes exigências de se encontrar identificado na factura ou, por remissão desta, em contratos de fornecimento ou tabelas de preços e de ser susceptível de determinação no momento da respectiva emissão.
+
+    Um desconto “rappel” escalonado, cujo primeiro escalão se inicia na unidade (em euros, quilos, litros, etc.), é um
+    desconto de quantidade que, nos termos dos n.os 2 e 3 do artigo 3.º do Decreto-Lei n.º 370/93, de 29 de Outubro, na
+    redacção do Decreto-Lei n.º 140/98, de 16 de Maio, releva para a determinação do preço de compra efectivo,
+    satisfeitas que se mostrem as restantes exigências de se encontrar identificado na factura ou, por remissão desta,
+    em contratos de fornecimento ou tabelas de preços e de ser susceptível de determinação no momento da respectiva emissão.
 
     Para poder utilizar esta funcionalidade deve:
 
@@ -231,14 +254,17 @@ Em seguida confirme a nota de crédito.
 Notas de débito
 ^^^^^^^^^^^^^^^^
 .. important::
-    Segundo as regras da AT as notas de débito têm de estar ligadas ao documento de fatura a que dizem respeito e devem mencionar o mesmo.
+    Segundo as regras da AT as notas de débito têm de estar ligadas ao documento de fatura a que dizem respeito e devem
+    mencionar o mesmo.
 
-Por esse motivo, as notas de débito devem ser emitidas a partir do documento da fatura para que se cumpram as regras. Para isso deve ir ao menu **Ação** e selecionar a opção **Nota de Débito**
+Por esse motivo, as notas de débito devem ser emitidas a partir do documento da fatura para que se cumpram as regras.
+Para isso deve ir ao menu **Ação** e selecionar a opção **Nota de Débito**
 
 .. image:: odoo_process/v17_createDebitNote1.png
    :align: center
 
-Não se esqueça de mencionar o motivo para a criação da nota de débito, bem como a norma de regularização do IVA associada à nota de débito. Em seguida selecione **Criar Nota de Débito**
+Não se esqueça de mencionar o motivo para a criação da nota de débito, bem como a norma de regularização do IVA
+associada à nota de débito. Em seguida selecione **Criar Nota de Débito**
 
 .. tip::
     Não se esqueça de mencionar o diário onde vão ser registaddos os movimentos da nota de débito
@@ -278,7 +304,8 @@ Emissão de Recibos
 .. important::
     Existem 2 processos para se emitir um recibo.
 
-    O **processo recomendado** é emitir sempre o recibo a partir da Fatura. Que vai gerar um novo documento de recibo e publicar o mesmo.
+    O **processo recomendado** é emitir sempre o recibo a partir da Fatura. Que vai gerar um novo documento de recibo
+    e publicar o mesmo.
 
     No entanto pode ser feita um recibo sem esta ligação se realmente for necessário.
 
@@ -287,7 +314,7 @@ O processo de emissão do recibo deve então ser iniciado na **Fatura** e carreg
 .. image:: odoo_process/v17_createRecipt1.png
     :align: center
 
-Em seguida deve estolher as seguintes opções:
+Em seguida deve escolher as seguintes opções:
 
 - Em que Diário vai registar o pagamento
 - O método de pagamento utilizado
@@ -298,11 +325,14 @@ Os restantes campos normalmente já estão preenchidos se seguir este processo. 
 .. image:: odoo_process/v17_createRecipt2.png
     :align: center
 
-.. note::
-    No caso de o valor a receber ser diferente do valor total da fatura, vai ter uma vista diferente onde pode escolher o que fazer com a diferença
+.. tip::
+    No caso de o valor a receber ser diferente do valor total da fatura, vai ter uma vista diferente onde pode escolher
+    o que fazer com a diferença
 
     .. image:: odoo_process/v17_createRecipt3.png
         :align: center
+
+    Se optar por marcar como totalmente pago, será feito um Abatimento (Write-off) da diferença
 
 .. tip::
     O processo de criação de recibos sem ligação a faturas é parecido, exceto em 2 pontos:
@@ -310,7 +340,8 @@ Os restantes campos normalmente já estão preenchidos se seguir este processo. 
         - Onde se inicia o processo
         - A necessidade de preencher quase todos os campos de raíz
 
-    Para iniciar o processo aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu :menuselection:`Clientes --> Pagamentos` ou :menuselection:`Fornecedores --> Pagamentos`
+    Para iniciar o processo aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
+    Community ou Enterprise do Odoo), vá ao menu :menuselection:`Clientes --> Pagamentos` ou :menuselection:`Fornecedores --> Pagamentos`
 
     Clique na opção **Novo**
 
@@ -343,7 +374,8 @@ No Processo :menuselection:`Nota de encomenda --> Fatura` pode ver 3 tipos de es
 .. image:: odoo_process/v17_statusNE.png
     :align: center
 
-No processo :menuselection:`Fatura --> Notas de crédito / Notas de débito / Recibos`, dependendo da sua versão do Odoo (Community ou Enterprise), pode ter 3 ou 4 tipos de estado respetivamente.
+No processo :menuselection:`Fatura --> Notas de crédito / Notas de débito / Recibos`, dependendo da sua versão do Odoo
+(Community ou Enterprise), pode ter 3 ou 4 tipos de estado respetivamente.
 
 Community
 ^^^^^^^^^
@@ -365,7 +397,7 @@ Na versão Enterprise terá 4 tipos de estado nas faturas:
     - **Não Paga** - Ainda não existe qualquer documento a liquidar o valor da fatura
     - **Parcialmente Pago** - Já existe(m) algum(uns) documento(s) a liquidar a fatura, mas o(s) seu(s) valor(es) é(são) inferior(s) ao total da fatura
     - **Em pagamento** - O(s) documento(s) associado(s) à fatura liquidam total ou parcialmente o valor da fatura, mas ainda carecem de reconciliação com diário de pagamentos, pelo que o seu valor se encontra em contas transitórias
-    - **Pago** - O(s) documento(s) associado(s) à fatura liquidam a totalidade do valor da fatura
+    - **Pago** - O(s) documento(s) associado(s) à fatura liquidam a totalidade do valor da fatura e a reconciliação com as contas transitórias foi feita
 
 .. image:: odoo_process/v17_statusFaturaEnterprise.png
     :align: center
@@ -377,12 +409,14 @@ Mais informação
 .. seealso::
     Se pretender formação mais detalhada sobre o processo Oddo contacte a `Exo Software <https://exosoftware.pt/appointment/2>`_.
 
-Por API
-=======
+Comunicação por API
+===================
 É possível fazer a comunicação de documentos através de API em vez de serem gerados pelo utilizador no Odoo.
 
-Para essa finalidade são instalados módulos ou apps específicos que lhe permitirão continuar a usar o seu sistema atual, mas ter o Odoo como a ferramenta de backend.
+Para essa finalidade são instalados módulos ou apps específicos que lhe permitirão continuar a usar o seu sistema atual,
+mas ter o Odoo como a ferramenta de backend.
 
 Estes módulos ou apps podem já existir ou ser personalizados às necessidades do utilizador pela nossa equipa técnica.
 
-As configurações de API são feitas numa fase inicial, entre os departamentos técnicos da Exo Software e da sua entidade, para que tudo fique a funcionar corretamente e o utilizador não tenha de se preocupar com o processo.
+As configurações de API são feitas numa fase inicial, entre os departamentos técnicos da Exo Software e da sua entidade,
+para que tudo fique a funcionar corretamente e o utilizador não tenha de se preocupar com o processo.
