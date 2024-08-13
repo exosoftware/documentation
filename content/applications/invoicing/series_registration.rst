@@ -135,19 +135,19 @@ Preencha o campo Sequência com o nome que quer dar à sequência e selecione Cr
 
 Vai abrir uma nova janela:
 
-   - Deve ter a **Implementação** como **Sem lacunas**
-   - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
+  - Deve ter a **Implementação** como **Sem lacunas**
+  - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
 
     .. tip::
         Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela Localização PT+ Exo
 
-    .. exemple::
+    .. example::
         - Nas faturas é necessário ter FT, a localização já insere "FT "
         - Nas notas de encomenda é necessário ter NE, a localização já insere "NE "
         - etc.
 
-   - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitos** que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
-   - Qual é o **Próximo Número** na sequência (coloque mais um do que o último que usou).
+  - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitos** que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
+  - O **Próximo Número** na sequência deve ser 1
 
 Guarde as alterações.
 
