@@ -18,5 +18,5 @@ Faturação, Pagamentos e Stock
     invoicing/pdf_signing
     invoicing/hr_expenses
     invoicing/stock
-    invoicing/plataformas_pagamentos
+    invoicing/payment_providers
     invoicing/other
