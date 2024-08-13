@@ -44,6 +44,7 @@ Os tipos de blocos mais comuns que utilizaremos são os seguintes
     Informações adicionais sobre conteúdo relevante a consultar sobre o tema que está a ver no momento
 
 .. admonition:: Legenda
+
     Aqui vai poder ver uma legenda que o ajude a melhor interpretar o conteúdo exibido
 
 .. important::
