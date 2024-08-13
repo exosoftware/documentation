@@ -4,7 +4,8 @@
 Documentos Fiscais
 ==================
 
-A localização Exo está preparada para o cumprimento e emissão de diversos documentos fiscais exigidos pela Autoridade Tributária e Aduaneira.
+A localização Exo está preparada para o cumprimento e emissão de diversos documentos fiscais exigidos pela Autoridade
+Tributária e Aduaneira.
 
 Consulte nesta página os diversos tipos de documentos fiscais disponíveis
 
@@ -14,7 +15,8 @@ Consulte nesta página os diversos tipos de documentos fiscais disponíveis
         ─── ✦ ───
     </div>
 
-Para aceder aos documentos fiscais aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries**.
+Para aceder aos documentos fiscais aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
+Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries**.
 
 .. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
@@ -23,9 +25,12 @@ Para aceder aos documentos fiscais aceda à app **Faturação / Contabilidade** 
    :align: center
 
 .. note::
-   - A coluna Ativo define se essa série vai estar disponível aos utilizadores, a coluna Usada significa se essa série está em uso, ou não
-   - A coluna Filtro de Operações pode ser preenchida em cada série em que for necessária e corresponde aos Tipos de Operações que estão configurados na app Inventário
-   - Por recomendação deve associar-se a Guia de Remessa à operação de Entregas e a Guia de Devolução a Devoluções (pode utilizar outros nomes para os tipos de operações)
+    - A coluna Ativo define se essa série vai estar disponível aos utilizadores, a coluna Usada significa se essa série
+    está em uso, ou não
+    - A coluna Filtro de Operações pode ser preenchida em cada série em que for necessária e corresponde aos Tipos de
+    Operações que estão configurados na app Inventário
+    - Por recomendação deve associar-se a Guia de Remessa à operação de Entregas e a Guia de Devolução a Devoluções
+    (pode utilizar outros nomes para os tipos de operações)
 
 .. image:: fiscal_documents/v17_seriesList.png
    :align: center
@@ -48,7 +53,8 @@ Para emitir o pdf do orçamento basta ir ao menu **Ação** do documento e selec
 Fatura pró-forma
 ----------------
 
-Documento informativo frequentemente utilizado na cotação de produtos e na justificação da transacção internacional de produtos. Após aprovação do cliente pode ser convertida em nota de encomenda.
+Documento informativo frequentemente utilizado na cotação de produtos e na justificação da transacção internacional de produtos.
+Após aprovação do cliente pode ser convertida em nota de encomenda.
 
 Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Orçamento / Encomenda`
 
@@ -63,7 +69,8 @@ Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento 
 Nota de encomenda
 -----------------
 
-A nota de encomenda é um documento que é gerado automaticamente, sempre que um orçamento ou fatura pró-forma são confirmados depois da aprovação do cliente.
+A nota de encomenda é um documento que é gerado automaticamente, sempre que um orçamento ou fatura pró-forma são
+confirmados depois da aprovação do cliente.
 
 Este documento tem uma série de numeração independente dos anteriores.
 
@@ -154,7 +161,8 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
     - Pode cancelar o documento se o mesmo não foi comunicado em SAF-T, nem foi enviado ao cliente
 
         - Se já foi enviado ao cliente, aconselhamos que emita nota de crédito
-        - Se não foi enviado ao cliente, pode cancelar o documento mas se já foi comunicado em SAF-T, terá de submeter os devidos documentos de substituição à AT
+        - Se não foi enviado ao cliente, pode cancelar o documento mas se já foi comunicado em SAF-T, terá de submeter
+        os devidos documentos de substituição à AT
 
     - Pode anular o documento, de forma total ou parcial, usando uma nota de crédito
     - Pode corrigir problemas de IVA incorretamente cobrado, usando uma nota de débito
@@ -185,7 +193,8 @@ Documento emitido apenas para operações em território nacional, sujeito a con
    - O montante total da prestação de serviços não pode ser superior a 100€
 
 .. note::
-    Na eventualidade de a fatura conter bens e serviços, e dado que a verificação é feita pelo valor total da fatura e não pelo subtotal dos parciais,
+    Na eventualidade de a fatura conter bens e serviços, e dado que a verificação é feita pelo valor total da fatura e
+    não pelo subtotal dos parciais,
     não vai conseguir emitir fatura simplificada se o valor passar dos 100€ que é o primeiro dos limites a ser atingido.
 
     Nesses casos deve emitir uma fatura normal ou uma fatura-recibo
@@ -204,9 +213,12 @@ Para emitir o pdf da fatura simplificada basta ir ao menu **Ação** do document
 Fatura eletrónica
 -----------------
 
-Documento emitido por software de faturação certificado e enviado por email. A esta fatura está associada uma assinatura digital que permite validar a autenticidade do documento.
+Documento emitido por software de faturação certificado e enviado por email. A esta fatura está associada uma assinatura
+digital que permite validar a autenticidade do documento.
 
-Para que esta funcionalidade esteja disponível é preciso aceder à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de :menuselection:`Configuração --> Configurações` e na secção **Portugal** ative a opção **Faturação Eletrónica**.
+Para que esta funcionalidade esteja disponível é preciso aceder à app **Faturação / Contabilidade** (dependendo
+respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de :menuselection:`Configuração --> Configurações`
+e na secção **Portugal** ative a opção **Faturação Eletrónica**.
 
 .. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
@@ -271,9 +283,11 @@ Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e
 
 Nota de débito
 --------------
-Tal como a nota de crédito, a nota de débito é um documento que se emite quando há necessidade de efetuar uma retificação à fatura original.
+Tal como a nota de crédito, a nota de débito é um documento que se emite quando há necessidade de efetuar uma
+retificação à fatura original.
 
-No entanto essa retificação só acrescenta valor à fatura original, não deve ser usada para corrigir dados da fatura, apenas para correção do IVA.
+No entanto essa retificação só acrescenta valor à fatura original, não deve ser usada para corrigir dados da fatura,
+apenas para correção do IVA.
 
 A Autoridade Tributária e Aduaneira aconselha a emissão de nota de débito nas seguintes situações:
 
@@ -358,8 +372,9 @@ Documentação em breve
 .. note::
     **Guias de Remessa para fora de Portugal**
 
-    As Guias de Remessa só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal. Quando exporta produtos os mesmos não precisam
-    de comunicar a Guia de Remessa pois essa é uma figura da legislação portuguesa que não existe noutros países.
+    As Guias de Remessa só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal.
+    Quando exporta produtos os mesmos não precisam de comunicar a Guia de Remessa pois essa é uma figura da legislação
+    portuguesa que não existe noutros países.
 
 .. seealso::
     :doc:`Como fazer... <stock>`
@@ -401,11 +416,14 @@ Código QR e ATCUD
 =================
 O Código QR é um código de barras bidimensional que contém informação pertinente sobre o conteúdo do documento.
 
-O ATCUD é um código único que permite identificar univocamente um documento, independentemente do seu emitente, do tipo de documento e da série utilizada.
+O ATCUD é um código único que permite identificar univocamente um documento, independentemente do seu emitente, do tipo
+de documento e da série utilizada.
 
 São ambos gerados no momento da emissão do documento, pelo software, e adicionados ao mesmo tempo no documento.
 
-Pode configurar a posição acedendo à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de :menuselection:`Configuração --> Configurações` e na secção **Portugal** selecione a opção que deseja para **Posição do Código QR**.
+Pode configurar a posição acedendo à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
+Community ou Enterprise do Odoo), vá ao menu de :menuselection:`Configuração --> Configurações` e na secção **Portugal**
+selecione a opção que deseja para **Posição do Código QR**.
 
 As opções disponíveis são:
 
