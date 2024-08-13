@@ -2427,7 +2427,7 @@ msgstr ""
 #: ../../content/contributing/documentation/rst_cheat_sheet.rst:520
 #: ../../content/contributing/documentation/rst_guidelines.rst:17
 msgid "Example"
-msgstr ""
+msgstr "Exemplo"
 
 #: ../../content/contributing/documentation/rst_cheat_sheet.rst:526
 msgid "Use this alert block to show an example."
