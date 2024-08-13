@@ -117,6 +117,7 @@ natureza gratuita, a opção SSH é a mais comum.
 
                Indisponível
 
+
 .. FIXME :  bloco abaixo não está traduzido, é para ficar em inglês?
 .. note::
    **The Enterprise git repository does not contain the full Odoo source code**. It is only a
