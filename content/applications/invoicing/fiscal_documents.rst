@@ -25,12 +25,9 @@ Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separad
    :align: center
 
 .. note::
-    - A coluna Ativo define se essa série vai estar disponível aos utilizadores, a coluna Usada significa se essa série
-        está em uso, ou não
-    - A coluna Filtro de Operações pode ser preenchida em cada série em que for necessária e corresponde aos Tipos de
-        Operações que estão configurados na app Inventário
-    - Por recomendação deve associar-se a Guia de Remessa à operação de Entregas e a Guia de Devolução a Devoluções
-        (pode utilizar outros nomes para os tipos de operações)
+    - A coluna Ativo define se essa série vai estar disponível aos utilizadores, a coluna Usada significa se essa série está em uso, ou não
+    - A coluna Filtro de Operações pode ser preenchida em cada série em que for necessária e corresponde aos Tipos de Operações que estão configurados na app Inventário
+    - Por recomendação deve associar-se a Guia de Remessa à operação de Entregas e a Guia de Devolução a Devoluções (pode utilizar outros nomes para os tipos de operações)
 
 .. image:: fiscal_documents/v17_seriesList.png
    :align: center
@@ -161,8 +158,7 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
     - Pode cancelar o documento se o mesmo não foi comunicado em SAF-T, nem foi enviado ao cliente
 
         - Se já foi enviado ao cliente, aconselhamos que emita nota de crédito
-        - Se não foi enviado ao cliente, pode cancelar o documento mas se já foi comunicado em SAF-T, terá de submeter
-        os devidos documentos de substituição à AT
+        - Se não foi enviado ao cliente, pode cancelar o documento mas se já foi comunicado em SAF-T, terá de submeter os devidos documentos de substituição à AT
 
     - Pode anular o documento, de forma total ou parcial, usando uma nota de crédito
     - Pode corrigir problemas de IVA incorretamente cobrado, usando uma nota de débito
@@ -194,8 +190,8 @@ Documento emitido apenas para operações em território nacional, sujeito a con
 
 .. note::
     Na eventualidade de a fatura conter bens e serviços, e dado que a verificação é feita pelo valor total da fatura e
-    não pelo subtotal dos parciais,
-    não vai conseguir emitir fatura simplificada se o valor passar dos 100€ que é o primeiro dos limites a ser atingido.
+    não pelo subtotal dos parciais, não vai conseguir emitir fatura simplificada se o valor passar dos 100€ que é o
+    primeiro dos limites a ser atingido.
 
     Nesses casos deve emitir uma fatura normal ou uma fatura-recibo
 
@@ -255,12 +251,9 @@ Documento que se emite quando há necessidade de efetuar uma retificação à fa
 
 A Autoridade Tributária e Aduaneira aconselha a emissão de nota de crédito nas seguintes situações:
 
-   - **Erro na fatura**: emissão de nota de crédito na totalidade do valor da fatura e
-     emissão de nova fatura com os novos dados
-   - **Troca de Produtos**: emissão da nota de crédito apenas dos produtos a trocar
-     e processamento de uma nova fatura
-   - **Devolução de Produtos**: emissão de nota de crédito do valor parcial ou total dos
-     produtos devolvidos
+   - **Erro na fatura**: emissão de nota de crédito na totalidade do valor da fatura e emissão de nova fatura com os novos dados
+   - **Troca de Produtos**: emissão da nota de crédito apenas dos produtos a trocar e processamento de uma nova fatura
+   - **Devolução de Produtos**: emissão de nota de crédito do valor parcial ou total dos produtos devolvidos
 
 Para emitir o pdf da nota de crédito basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Faturas ou Faturas (multi-via)`
 

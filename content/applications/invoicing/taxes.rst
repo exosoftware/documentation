@@ -7,8 +7,7 @@ Nesta página vai poder encontrar diversa informação sobre impostos em Odoo, e
 **Localização PT+**
 
 Ao contrário de outros softwares, a **Localização PT+** tenta dar ao utilizador um conjunto sólido de impostos
-pré-configurados, para
-que seja mais simples de utilizar o seu Odoo e garantir a conformidade com as normas portuguesas.
+pré-configurados, para que seja mais simples de utilizar o seu Odoo e garantir a conformidade com as normas portuguesas.
 
 Também se procura que diversas posições fiscais estejam já incluídas e corretamente mapeadas para agilizar a interação
 com parceiros comerciais de outros países
@@ -34,10 +33,8 @@ cumpram as regras base da legislação portuguesa e seja feita a devida ligaçã
 
     Para que fiquem disponíveis:
 
-    - Deve começar por ver se o imposto em causa já existe e apenas está **Inativo/Arquivado**. Neste caso, basta ativar
-    para ficar disponível.
-    - Se ainda não existir, basta duplicar o imposto base mais parecido, aplicar a exceção e gravar com um nome mais
-    detalhado para mais fácil procura na utilização.
+    - Deve começar por ver se o imposto em causa já existe e apenas está **Inativo/Arquivado**. Neste caso, basta ativar para ficar disponível.
+    - Se ainda não existir, basta duplicar o imposto base mais parecido, aplicar a exceção e gravar com um nome mais detalhado para mais fácil procura na utilização.
 
     .. example::
         **IVA N/S:**
@@ -114,8 +111,8 @@ ao documento todo.
 Posição Fiscal
 ==============
 Independentemente do tipo de imposto aplicado a produtos ou serviços, **a Posição Fiscal associada a cada parceiro, sobrepõe-se**.
-Estas posições fiscais já estão configuradas na Localização PT+ Exo, basta associar ao parceiro que o
-mapeamento automático trata das conversões.
+Estas posições fiscais já estão configuradas na Localização PT+ Exo, basta associar ao parceiro que o mapeamento
+automático trata das conversões.
 
 .. important::
     **Criação de posições fiscais diretamente nos formulários**

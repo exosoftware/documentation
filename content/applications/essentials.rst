@@ -25,8 +25,7 @@ A nossa **Documentação**:
 
 - está organizada em secções para maior facilidade de consulta para os utilizadores
 - utiliza alguns blocos de informações padrão, para informar sobre tipos de informação relevante mais comum
-- tenta dentro do possível, que fornecer acesso a links de informação adicional que lhe permitem uma navegação mais
-rápida entre as diversas páginas associadas ao mesmo tema
+- tenta dentro do possível, que fornecer acesso a links de informação adicional que lhe permitem uma navegação mais rápida entre as diversas páginas associadas ao mesmo tema
 
 **No entanto recomendamos sempre que leia toda a informação relativa ao assunto que pretende esclarecer**
 
