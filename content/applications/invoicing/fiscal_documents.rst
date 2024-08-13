@@ -26,11 +26,11 @@ Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separad
 
 .. note::
     - A coluna Ativo define se essa série vai estar disponível aos utilizadores, a coluna Usada significa se essa série
-    está em uso, ou não
+        está em uso, ou não
     - A coluna Filtro de Operações pode ser preenchida em cada série em que for necessária e corresponde aos Tipos de
-    Operações que estão configurados na app Inventário
+        Operações que estão configurados na app Inventário
     - Por recomendação deve associar-se a Guia de Remessa à operação de Entregas e a Guia de Devolução a Devoluções
-    (pode utilizar outros nomes para os tipos de operações)
+        (pode utilizar outros nomes para os tipos de operações)
 
 .. image:: fiscal_documents/v17_seriesList.png
    :align: center
