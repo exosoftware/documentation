@@ -55,6 +55,7 @@ Obter o código
    O único sistema operativo suportado é **Linux**. Outros, nomeadamente o Windows, poderão também
    ser adicionados quando (e se) a procura o justificar.
 
+.. FIXME :  bloco abaixo não está acabado
 .. important::
    O código dos repositórios privados está ofuscado por motivos legais. Embora o seu comportamento
    funcional seja idêntico ao código não ofuscado, obriga a
@@ -68,7 +69,7 @@ natureza gratuita, a opção SSH é a mais comum.
 
       .. tabs::
 
-         .. tab:: Clone with HTTPS
+         .. tab:: Clonar com HTTPS
 
             .. code-block:: console
 
@@ -76,7 +77,7 @@ natureza gratuita, a opção SSH é a mais comum.
                $ git clone https://github.com/exosoftware/pt-payment.git
                $ git clone https://github.com/exosoftware/pt-payroll.git
 
-         .. tab:: Clone with SSH
+         .. tab:: Clonar com SSH
 
             .. code-block:: console
 
@@ -88,13 +89,13 @@ natureza gratuita, a opção SSH é a mais comum.
 
       .. tabs::
 
-         .. tab:: Clone with HTTPS
+         .. tab:: Clonar com HTTPS
 
             .. code-block:: doscon
 
                Indisponível
 
-         .. tab:: Clone with SSH
+         .. tab:: Clonar com SSH
 
             .. code-block:: doscon
 
@@ -104,18 +105,19 @@ natureza gratuita, a opção SSH é a mais comum.
 
       .. tabs::
 
-         .. tab:: Clone with HTTPS
+         .. tab:: Clonar com HTTPS
 
             .. code-block:: console
 
                Indisponível
 
-         .. tab:: Clone with SSH
+         .. tab:: Clonar com SSH
 
             .. code-block:: console
 
                Indisponível
 
+.. FIXME :  bloco abaixo não está traduzido, é para ficar em inglês?
 .. note::
    **The Enterprise git repository does not contain the full Odoo source code**. It is only a
    collection of extra add-ons. The main server code is in the Community edition. Running the
