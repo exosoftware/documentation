@@ -35,8 +35,8 @@ Estas alterações complementam as desativações que acontecem em qualquer BD O
 - visibilidade do website (impede os motores de busca de indexarem o site)
 
 .. note::
-   **É apresentada uma faixa vermelha no topo do ecrã das BD neutralizadas para
-   reconhecimento imediato.**
+   É apresentada uma faixa vermelha no topo do ecrã das BD neutralizadas para
+   reconhecimento imediato.
 
     .. image:: neutralized_database/v17_bdNeutralized.png
         :align: center
