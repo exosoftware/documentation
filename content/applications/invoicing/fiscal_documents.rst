@@ -6,6 +6,14 @@ Documentos Fiscais
 
 A localização Exo está preparada para o cumprimento e emissão de diversos documentos fiscais exigidos pela Autoridade Tributária e Aduaneira.
 
+Consulte nesta página os diversos tipos de documentos fiscais disponíveis
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
+
 Para aceder aos documentos fiscais aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries**.
 
 .. image:: fiscal_documents/v17_appInvoicingAccounting.png
@@ -83,21 +91,25 @@ Contem:
 
 Folha de obra
 -------------
+.. FIXME : Folha de obra - O que é e como se faz?
 
 Documentação em breve
 
 Fatura de consignação
 ---------------------
+.. FIXME : Fatura de consignação - O que é e como se faz?
 
 Documentação em breve
 
 Crédito de consignação
 ----------------------
+.. FIXME : Crédito de consignação - O que é e como se faz?
 
 Documentação em breve
 
 Consulta de mesa ou encomenda (POS)
 -----------------------------------
+.. FIXME : Consulta de mesa ou encomenda (POS) - O que é e como se faz?
 
 Documentação em breve
 
@@ -141,8 +153,9 @@ Para emitir o pdf da fatura basta ir ao menu **Ação** do documento e seleciona
 
     - Pode cancelar o documento se o mesmo não foi comunicado em SAF-T, nem foi enviado ao cliente
 
-        - Se já foi comunicado em SAF-T, ainda pode cancelar o documento, mas terá de submeter os devidos documentos de substituição à AT
-        - Se já foi enviado ao cliente, deve ainda enviar comprovativo do seu cancelamento
+        - Se já foi enviado ao cliente, aconselhamos que emita nota de crédito
+        - Se não foi enviado ao cliente, pode cancelar o documento mas se já foi comunicado em SAF-T, terá de submeter os devidos documentos de substituição à AT
+
     - Pode anular o documento, de forma total ou parcial, usando uma nota de crédito
     - Pode corrigir problemas de IVA incorretamente cobrado, usando uma nota de débito
 
@@ -168,8 +181,14 @@ Fatura-simplificada
 Documento emitido apenas para operações em território nacional, sujeito a condições:
 
    - Venda de bens por parte de retalhistas/vendedores ambulantes a um consumidor final, não sujeito passivo de IVA
-   - O montante total da transação de um bem não pode ser superior a 1000€
-   - O montante total da prestação de um serviço não pode ser superior a 100€
+   - O montante total da transação de bens não pode ser superior a 1000€
+   - O montante total da prestação de serviços não pode ser superior a 100€
+
+.. note::
+    Na eventualidade de a fatura conter bens e serviços, e dado que a verificação é feita pelo valor total da fatura e não pelo subtotal dos parciais,
+    não vai conseguir emitir fatura simplificada se o valor passar dos 100€ que é o primeiro dos limites a ser atingido.
+
+    Nesses casos deve emitir uma fatura normal ou uma fatura-recibo
 
 Para emitir o pdf da fatura simplificada basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Faturas ou Faturas (multi-via)`
 
@@ -321,6 +340,7 @@ Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e seleciona
 
 Recibo de IVA de caixa
 ----------------------
+.. FIXME : Recibo de IVA de caixa - O que é e como se faz?
 
 Documentação em breve
 
@@ -331,13 +351,15 @@ Documentação em breve
 
 Guia de remessa / Guia de transporte
 ====================================
+.. FIXME : Guia de remessa / Guia de transporte
 
 Documentação em breve
 
 .. note::
-   **Guias de Remessa para fora de Portugal**
+    **Guias de Remessa para fora de Portugal**
 
-   As Guias de Remessa só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal. Quando exporta produtos os mesmos não precisam de comunicar a Guia de Remessa pois essa é uma figura da legislação portuguesa que não existe noutros países.
+    As Guias de Remessa só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal. Quando exporta produtos os mesmos não precisam
+    de comunicar a Guia de Remessa pois essa é uma figura da legislação portuguesa que não existe noutros países.
 
 .. seealso::
     :doc:`Como fazer... <stock>`
@@ -348,6 +370,7 @@ Documentação em breve
 
 Guia de transporte de ativos
 ----------------------------
+.. FIXME : Guia de transporte de ativos
 
 Documentação em breve
 
@@ -358,6 +381,7 @@ Documentação em breve
 
 Guia de consignação
 -------------------
+.. FIXME : Guia de consignação - O que é e como se faz?
 
 Documentação em breve
 
@@ -366,6 +390,7 @@ Documentação em breve
 
 Guia de devolução
 -----------------
+.. FIXME : Guia de devolução
 
 Documentação em breve
 
