@@ -67,8 +67,6 @@ natureza gratuita, a opção SSH é a mais comum.
 
    .. group-tab:: Linux
 
-      .. tabs::
-
          .. tab:: Clonar com HTTPS
 
             .. code-block:: console
@@ -87,8 +85,6 @@ natureza gratuita, a opção SSH é a mais comum.
 
    .. group-tab:: Windows
 
-      .. tabs::
-
          .. tab:: Clonar com HTTPS
 
             .. code-block:: doscon
@@ -102,8 +98,6 @@ natureza gratuita, a opção SSH é a mais comum.
                Indisponível
 
    .. group-tab:: Mac OS
-
-      .. tabs::
 
          .. tab:: Clonar com HTTPS
 
