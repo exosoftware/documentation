@@ -6,7 +6,14 @@ Registo de Séries
 
 Para cada documento fiscal deve existir uma série única, que tem de ser comunicada à Autoridade Tributária e Aduaneira de forma prévia à sua implementação.
 
-Para poder registar uma série junto da AT precisa de cumprir certos requisitos.
+Para poder registar uma série junto da AT precisa de cumprir certos requisitos. Veja aqui como o fazer.
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
+
 
 Configuração do utilizador
 ==========================
@@ -62,6 +69,16 @@ Para registar uma série válida junto da AT em Odoo, existem 2 processos. Regis
 
     Para todos os outros cenários deve sempre usar uma nova série
 
+Para ter acesso às Séries aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries**.
+
+.. image:: fiscal_documents/v17_appInvoicingAccounting.png
+   :align: center
+
+.. image:: fiscal_documents/v17_seriesMenu.png
+   :align: center
+
+Selecione o tipo de série que quer criar/importar e siga um dos métodos seguintes.
+
 Nova Série
 ----------
 Preencha o campo **Sequência** com o nome que quer dar à sequência e selecione **Criar e Editar**.
@@ -73,12 +90,14 @@ Vai abrir uma nova janela:
 
   - Deve ter a **Implementação** como **Sem lacunas**
   - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
+
     .. tip::
-    Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela Localização PT+ Exo
+        Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela Localização PT+ Exo
+
     .. example::
-    - Nas faturas é necessário ter FT, a localização já insere "FT "
-    - Nas notas de encomenda é necessário ter NE, a localização já insere "NE "
-    - etc.
+        - Nas faturas é necessário ter FT, a localização já insere "FT "
+        - Nas notas de encomenda é necessário ter NE, a localização já insere "NE "
+        - etc.
 
   - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitos** que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
   - O **Próximo Número** na sequência deve ser 1
@@ -121,7 +140,8 @@ Vai abrir uma nova janela:
 
     .. tip::
         Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela Localização PT+ Exo
-        .. exemple::
+
+    .. exemple::
         - Nas faturas é necessário ter FT, a localização já insere "FT "
         - Nas notas de encomenda é necessário ter NE, a localização já insere "NE "
         - etc.
