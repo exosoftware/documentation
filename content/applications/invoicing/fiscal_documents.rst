@@ -16,7 +16,7 @@ Consulte nesta página os diversos tipos de documentos fiscais disponíveis
     </div>
 
 Para aceder aos documentos fiscais aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
-Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries**.
+Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries Documentais**.
 
 .. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
@@ -225,6 +225,8 @@ e na secção **Portugal** ative a opção **Faturação Eletrónica**.
     :doc:`Saiba mais... <e-invoicing>`
 
     :doc:`Consulte as nossas FAQs sobre Faturação eletrónica <../faq/e-invoicing_errors>`
+
+.. _fiscal_documents_self-billing:
 
 Autofaturação
 -------------
