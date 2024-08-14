@@ -69,7 +69,7 @@ Para registar uma série válida junto da AT em Odoo, existem 2 processos. Regis
 
     Para todos os outros cenários deve sempre usar uma nova série
 
-Para ter acesso às Séries aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries Documentais**.
+Para ter acesso às Séries Documentais aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries Documentais**.
 
 .. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
@@ -78,6 +78,8 @@ Para ter acesso às Séries aceda à app **Faturação / Contabilidade** (depend
    :align: center
 
 Selecione o tipo de série que quer criar/importar e siga um dos métodos seguintes.
+
+.. _invoicing_series_registration_new:
 
 Nova Série
 ----------

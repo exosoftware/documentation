@@ -4,8 +4,8 @@
 Documentos Fiscais
 ==================
 
-A localização Exo está preparada para o cumprimento e emissão de diversos documentos fiscais exigidos pela Autoridade
-Tributária e Aduaneira.
+A localização Exo está preparada para o cumprimento e emissão de diversos tipos de documentos fiscais (Séries
+Documentais) exigidos pela Autoridade Tributária e Aduaneira.
 
 Consulte nesta página os diversos tipos de documentos fiscais disponíveis
 
@@ -15,7 +15,7 @@ Consulte nesta página os diversos tipos de documentos fiscais disponíveis
         ─── ✦ ───
     </div>
 
-Para aceder aos documentos fiscais aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
+Para ter acesso às Séries Documentais aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
 Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries Documentais**.
 
 .. image:: fiscal_documents/v17_appInvoicingAccounting.png
