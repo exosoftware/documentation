@@ -4,7 +4,8 @@
 Registo de Séries
 =================
 
-Para cada documento fiscal deve existir uma série única, que tem de ser comunicada à Autoridade Tributária e Aduaneira de forma prévia à sua implementação.
+Para cada documento fiscal deve existir uma série única, que tem de ser comunicada à Autoridade Tributária e Aduaneira
+de forma prévia à sua implementação.
 
 Para poder registar uma série junto da AT precisa de cumprir certos requisitos. Veja aqui como o fazer.
 
@@ -18,21 +19,26 @@ Para poder registar uma série junto da AT precisa de cumprir certos requisitos.
 Configuração do utilizador
 ==========================
 
-Para poder comunicar com a AT através de Odoo tem de inserir as credênciais de acesso. Para tal terá de aceder ao seu utilizador Odoo e inserir os dados na aba **Portugal**
+Para poder comunicar com a AT através de Odoo tem de inserir as credênciais de acesso. Para tal terá de aceder ao seu
+utilizador Odoo e inserir os dados na aba **Portugal**
 
 .. image:: series_registration/v17_ATcredentials.png
    :align: center
 
-Deve garantir que em Odoo o utilizador tem permissões para fazer a comunicação de séries, mas também o login de acesso na AT está atutorizado a fazer essa mesma comunicação.
+Deve garantir que em Odoo o utilizador tem permissões para fazer a comunicação de séries, mas também o login de acesso
+na AT está atutorizado a fazer essa mesma comunicação.
 
 Séries
 ======
 
 Pode utilizar as séries que já são inseridas pela localização.
 
-No entanto, se decidir que o prefixo da sua série vai incluir ano e/ou mês, deve ir duplicando a série anterior, para que possa gerar documentos de correção contabilísticos nos períodos corretos, arquivando as anteriores quando deixarem de ser necessárias.
+No entanto, se decidir que o prefixo da sua série vai incluir ano e/ou mês, deve ir duplicando a série anterior, para
+que possa gerar documentos de correção contabilísticos nos períodos corretos, arquivando as anteriores quando deixarem
+de ser necessárias.
 
-Pode no entanto manter a mesma série e mudar só a sequência, arquivando a antiga, no entanto lembre-se que terá de ter atenção redobrada se quiser efetuar correções no período correto. Pelo que duplicar a série é mais recomendado.
+Pode no entanto manter a mesma série e mudar só a sequência, arquivando a antiga, no entanto lembre-se que terá de ter
+atenção redobrada se quiser efetuar correções no período correto. Pelo que duplicar a série é mais recomendado.
 
 Deve ainda comunicar à AT o encerramento de uma série quando deixar de a utilizar.
 
@@ -58,7 +64,8 @@ Outras informações são automaticamente preenchidas com base nas escolhas ante
 
 Como registar
 =============
-Para registar uma série válida junto da AT em Odoo, existem 2 processos. Registar uma nova, ou continuar uma série que já existente.
+Para registar uma série válida junto da AT em Odoo, existem 2 processos. Registar uma nova, ou continuar uma série
+documental já existente.
 
 .. note::
     Se transitar de outro software o ideal é sempre criar uma nova série.
@@ -69,7 +76,9 @@ Para registar uma série válida junto da AT em Odoo, existem 2 processos. Regis
 
     Para todos os outros cenários deve sempre usar uma nova série
 
-Para ter acesso às Séries Documentais aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção **Séries Documentais**.
+Para ter acesso às Séries Documentais aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
+Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Faturação selecione a opção
+**Séries Documentais**.
 
 .. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
@@ -94,7 +103,8 @@ Vai abrir uma nova janela:
   - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
 
     .. tip::
-        Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela Localização PT+ Exo
+        Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela
+        Localização PT+ Exo
 
     .. example::
         - Nas faturas é necessário ter FT, a localização já insere "FT "
@@ -111,7 +121,12 @@ Guarde as alterações.
 
 Isto vai configurar a sua sequência no Odoo, mas ainda falta comunicar a séria na AT.
 
-Para isso garanta que o campo **Código de Validação** está vazio e clique no botão **Registar** para iniciar o processo de comunicação.
+.. important::
+    No caso de estar a registar série documental de autofaturação, deve parar o processo neste ponto e concluir outras
+    configurações antes de prosseguir
+
+Para isso garanta que o campo **Código de Validação** está vazio e clique no botão **Registar** para iniciar o processo
+de comunicação.
 
 .. image:: series_registration/v17_newSerie3.png
    :align: center
@@ -141,7 +156,8 @@ Vai abrir uma nova janela:
   - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
 
     .. tip::
-        Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela Localização PT+ Exo
+        Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela
+        Localização PT+ Exo
 
     .. example::
         - Nas faturas é necessário ter FT, a localização já insere "FT "
@@ -158,7 +174,8 @@ Guarde as alterações.
 
 Isto vai configurar a sua sequência no Odoo, mas ainda não está completo pois falta estabelecer a relação com a séria na AT.
 
-Para isso preencha o campo **Código de Validação** com o código que está disponível na AT, o botão **Registar** muda para **Sincronizar**, clique nele para poder continuar a utilizar a sua série anterior.
+Para isso preencha o campo **Código de Validação** com o código que está disponível na AT, o botão **Registar** muda
+para **Sincronizar**, clique nele para poder continuar a utilizar a sua série anterior.
 
 .. image:: series_registration/v17_keepSerie3.png
    :align: center

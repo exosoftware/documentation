@@ -60,7 +60,19 @@ Esta janela tem ainda duas opções:
 Submeta o ficheiro à AT, depois de submeter o ficheiro pode fechar esta janela.
 
 .. seealso::
-   :doc:`Consulte as nossas FAQs sobre SAF-T de Faturação <../faq/saft_errors>`
+    :doc:`Consulte as nossas FAQs sobre SAF-T de Faturação <../faq/saft_errors>`
+
+.. _invoice_saft_invoice_cron:
+
+Automatismo (Cron)
+==================
+A nossa **Localização PT+** possuí uma ferramenta excessional para emissão automática dos ficheiros SAFT
+
+Esse automatismo carece de configuração específica às suas necessidades, pelo que pode solicitar os nossos serviços
+para o ajudar com as configurações. No entanto uma vez configurado não terá de se preocupar mais.
+
+.. seealso::
+    `Saiba mais sobre o nosso automatismo de criação de SAF-T <https://exosoftware.pt/appointment/2?>_`
 
 Importação
 ==========
