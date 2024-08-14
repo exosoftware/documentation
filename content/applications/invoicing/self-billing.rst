@@ -21,7 +21,7 @@ Como para diversas outras situações é preciso primeiro instalar o nosso módu
 chamado Portugal - Self-billing.
 
 .. important::
-    :ref:`verifique que cumpre os requisitos obrigatórios para poder usar esta ferramenta <fiscal_documents_self-billing>`
+    :ref:`Verifique que cumpre os requisitos obrigatórios para poder usar esta ferramenta <fiscal_documents_self-billing>`
 
 Com o módulo instalado vai passar a ter acesso a novos campos na ficha de contacto do parceiro.
 
@@ -53,10 +53,10 @@ Em seguida deve seguir o processo normal de criação de uma nova Série Documen
 com a informação necessária, pelo que preste atenção ao processo
 
 .. seealso::
-    :ref:`criação de Série Documental <invoicing_series_registration_new>`
+    :ref:`Criação de Série Documental <invoicing_series_registration_new>`
 
 .. important::
-    Quando chegar ao passo de Registar a série documentl, pare, esse passo só deve ser efetuado depois de validar a
+    Quando chegar ao passo de Registar a série documental, pare, esse passo só deve ser efetuado depois de validar a
     existência de um contrato válido entre as partes
 
     Mais à frente nesta documentação vai ser dito quando deve completar esse passo
@@ -75,7 +75,7 @@ com a informação necessária, pelo que preste atenção ao processo
        :align: center
 
 Em seguida, garanta que tem o parceiro correto e valide junto da AT que o acordo entre as partes está registado, para
-tal carregue no botão "Check Agreement"
+tal carregue no botão **Check Agreement**
 
 .. image:: self-billing/v17_checkAgreement1.png
     :align: center
@@ -91,7 +91,7 @@ Abre uma nova janela para validação de dados:
 .. image:: self-billing/v17_checkAgreement2.png
     :align: center
 
-Seleciono o botão Comunicar e será feita uma verificação em tempo real com os servidores da AT para validar a existência
+Seleciono o botão **Comunicar** e será feita uma verificação em tempo real com os servidores da AT para validar a existência
 de um contrato válido entre as duas partes.
 
 .. important::
@@ -117,7 +117,7 @@ As únicas diferenças estão centradas no facto de ter de escolher um fornecedo
 ativo nas suas definições de contacto, tem de especificar que a fatura é de autofaturação e tem de selecionar a Série
 Documental correta para autofaturação a esse fornecedor
 
-.. image:: fiscal_documents/v17_selfBillingInvoice2.png
+.. image:: self-billing/v17_selfBillingInvoice2.png
    :align: center
 
 O processo de criação de nota de crédito também é identico ao :ref:`processo normal de emissão de nota de crédito <odoo_process_create_creditNote>`,
