@@ -42,7 +42,7 @@ Na app de **CRM** dentro de cada lead pode carregar no botão **Novo Orçamento*
 .. image:: odoo_process/v17_createQuote2.png
    :align: center
 
-Depois deve preencher os campos necessários e selecionar o tipo de documento a ser usado na orçamentação
+Depois deve preencher os campos necessários e selecionar a série documental a ser usada na orçamentação
 
 .. image:: odoo_process/v17_quoteTypes.png
    :align: center
@@ -65,7 +65,6 @@ Depois deve preencher os campos necessários e selecionar o tipo de documento a 
        ser mensal mas com uma data de término 2 anos no futuro
 
 Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será gerada uma **Nota de encomenda**
-
 
 .. image:: odoo_process/v17_confirmQuote.png
    :align: center
@@ -142,7 +141,7 @@ Na janela que abre decida o tipo de fatura que pretende criar de entre as opçõ
     .. image:: odoo_process/v17_createInvoice3.png
         :align: center
 
-Depois de ter a fatura em modo de rascunho, deve preencher os campos necessários e escolher o tipo de documento de
+Depois de ter a fatura em modo de rascunho, deve preencher os campos necessários e escolher a série documental de
 fatura que pretende.
 
 A maioria dos campos já vão estar preenchidos pois são herdados da Nota de encomenda.
