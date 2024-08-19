@@ -360,9 +360,11 @@ Documentação em breve
 
 Guia de remessa / Guia de transporte
 ====================================
-.. FIXME : Guia de remessa / Guia de transporte
+A **Guia de Remessa** representa o envio de mercadoria, por seu lado a **Guia de Transpote** é o documento que acompanha
+a mercadoria durante o seu transporte. Os documentos possuem a mesma estrutura e têm o mesmo valor jurídico, pelo que
+pode usar um ou outro para acompanhar as mercadorias que envia.
 
-Documentação em breve
+Estas guias têm de ser emitidas quando envia/transporta mercadorias em território nacional
 
 .. note::
     **Guias de Remessa para fora de Portugal**
@@ -370,6 +372,38 @@ Documentação em breve
     As Guias de Remessa só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal.
     Quando exporta produtos os mesmos não precisam de comunicar a Guia de Remessa pois essa é uma figura da legislação
     portuguesa que não existe noutros países.
+
+.. important::
+    A validade deste tipo de documentos só existe entre o momento em que o mesmo é emitido, e apenas até que se
+    verifique a entrega efetiva dos bens
+
+    Não precisa de circular com o documento em papel, pois o mesmo é comunicado em tempo real à AT, no entanto tem de
+    ter em sua posse o código para que possa informar em caso de fiscalização
+
+    A sua comunicação tem de ser feita antes da saída dos bens para entrega
+
+    Existe uma transmissão da propriedade dos bens do remetente para o destinatário
+
+Informação obrigatória nas guias segundo `art 4º Regime de bens em circulação <https://diariodarepublica.pt/dr/legislacao-consolidada/decreto-lei/2003-114116775-119662925>`_:
+
+- Remetente
+
+    - Nome ou denominação social
+    - Morada
+    - NIF
+- Destinatário
+
+    - Nome ou denominação social
+    - Morada
+    - NIF (se for sujeito pssivo de IVA)
+- Bens e suas quantidades
+- Locais de carga e descarga
+- Data e hora em que se inicia o transporte
+
+Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Documentos de Transporte`
+
+.. image:: fiscal_documents/v17_printTransport1.png
+   :align: center
 
 .. seealso::
     :doc:`Como fazer... <stock>`
@@ -380,9 +414,19 @@ Documentação em breve
 
 Guia de transporte de ativos
 ----------------------------
-.. FIXME : Guia de transporte de ativos
+É uma guia de transporte normal, que tem como objetivo acompanhar a movimentação de bens, no entanto varia no facto de
+não existir troca de propriedade (venda) desses mesmos bens
 
-Documentação em breve
+Os motivos que podem levar à emissão deste tipo de guiassão os seguintes:
+
+- Movimentação de bens entre armazéns/instalações do mesmo agente económico
+- Movimentação de bens para empresas subcontratadas para transformação
+- Deslocações de bens para exposições ou feiras
+
+Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Documentos de Transporte`
+
+.. image:: fiscal_documents/v17_printTransport2.png
+   :align: center
 
 .. seealso::
     :doc:`Como fazer... <stock>`
