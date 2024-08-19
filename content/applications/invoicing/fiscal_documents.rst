@@ -367,9 +367,9 @@ pode usar um ou outro para acompanhar as mercadorias que envia.
 Estas guias têm de ser emitidas quando envia/transporta mercadorias em território nacional
 
 .. note::
-    **Guias de Remessa para fora de Portugal**
+    **Guias de Remessa/transporte para fora de Portugal**
 
-    As Guias de Remessa só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal.
+    As Guias de Remessa/transporte só são informadas à Autoridade Tributária se a entrega for feita para um cliente em Portugal.
     Quando exporta produtos os mesmos não precisam de comunicar a Guia de Remessa pois essa é uma figura da legislação
     portuguesa que não existe noutros países.
 
@@ -417,7 +417,7 @@ Guia de transporte de ativos
 É uma guia de transporte normal, que tem como objetivo acompanhar a movimentação de bens, no entanto varia no facto de
 não existir troca de propriedade (venda) desses mesmos bens
 
-Os motivos que podem levar à emissão deste tipo de guiassão os seguintes:
+Os motivos que podem levar à emissão deste tipo de guias são os seguintes:
 
 - Movimentação de bens entre armazéns/instalações do mesmo agente económico
 - Movimentação de bens para empresas subcontratadas para transformação
