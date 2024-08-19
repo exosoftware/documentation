@@ -41,10 +41,10 @@ e ativar a opção **"Usar faturas como guias de remessa"**
 
 Poderá assim, em cada fatura, controlar os Locais e Horas de Carga e Descarga conforme a imagem seguinte. Poderá saber mais sobre o comportamento de cada um dos campos colocando o cursor do rato por cima destes.
 
-.. image:: invoice/documento2.png
+.. image:: invoice/v17_invoiceTransportDoc2.png
    :align: center
 
 A fatura passará a incluir a informação relacionada
 
-.. image:: invoice/documento3.png
+.. image:: invoice/v17_invoiceTransportDoc3.png
    :align: center
