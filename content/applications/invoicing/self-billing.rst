@@ -35,7 +35,7 @@ Navegue para a ficha de contacto de um parceiro com o qual pretende iniciar o pr
     Deve ter reparado que por baixo da opção de **Auto-faturação** existe uma opção para tipo de entidade. Esta opção só
     existe se o parceiro em questão tiver selecionado um país que não seja Portugal
 
-    .. image:: self-billing/v17_SelfBillingPT.png
+    .. image:: self-billing/v17_selfBillingPT.png
        :align: center
 
     As opções para este campo são:

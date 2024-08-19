@@ -72,7 +72,7 @@ Esse automatismo carece de configuração específica às suas necessidades, pel
 para o ajudar com as configurações. No entanto uma vez configurado não terá de se preocupar mais.
 
 .. seealso::
-    `Saiba mais sobre o nosso automatismo de criação de SAF-T <https://exosoftware.pt/appointment/2?>`_
+    `Saiba mais sobre o nosso automatismo de criação de SAF-T marcando uma **Formação** <https://exosoftware.pt/en/appointment>`_
 
 Importação
 ==========

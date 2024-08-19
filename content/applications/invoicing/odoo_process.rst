@@ -73,7 +73,7 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
     A legislação portuguesa proíbe a emissão de documentos não confirmados e comunicados, pelo que se tentarem fazer
     impressão do documento o mesmo sairá invalidado.
 
-.. FIXME : a metodologia abaixo não é para divulgar aos clientes até que seja confirmado pela AT a sua possibilidade, por isso está comentada
+.. FIXME : a metodologia abaixo é sobre como partilhar orçamentos não confirmados, não é para divulgar aos clientes até que seja confirmado pela AT a sua possibilidade, por isso está comentada
 
 ..
     .. tip::
