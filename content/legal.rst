@@ -1,7 +1,8 @@
-:hide-content:
+:show-content:
 :hide-page-toc:
 :custom-css: legal.css
 :orphan:
+:noindex:
 
 =====
 Legal
