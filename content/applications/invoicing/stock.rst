@@ -211,7 +211,7 @@ atenção para:
 
 Consumo Interno em Odoo
 -----------------------
-**É ser suportado nativamente pelo Odoo**, no entanto o consumo interno de artigos que foram comprados para stock, não é
+**É suportado nativamente pelo Odoo**, no entanto o consumo interno de artigos que foram comprados para stock, não é
 intuitivo de se reproduzir, por esse motivo a Exo Software desenvolveu uma metodologia para simplificar este processo,
 bem como a possibilidade de reportar esses mesmos custos a projetos específicos.
 
