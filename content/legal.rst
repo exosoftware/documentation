@@ -3,6 +3,7 @@
 :custom-css: legal.css
 :orphan:
 :noindex:
+:nosearch:
 
 =====
 Legal
