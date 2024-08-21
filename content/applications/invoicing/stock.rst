@@ -48,7 +48,7 @@ da normalidade.
 .. important::
     De notar que existe uma grande diferença entre **Tipo de Artigo** e **Categoria Fiscal**:
 
-    - **Tipo de Artigo**, é a designação que o Odoo usa para saber se o tipo de tratamento a dar aos artigos
+    - **Tipo de Artigo**, é a designação que o Odoo usa para saber se vai o não controlar o stock para os artigos
     - **Categoria Fiscal** é a classificação que é atribuída em Portugal aos tipos de bens
 
     .. image:: stock/v17_stock_products03.png
@@ -72,7 +72,7 @@ da normalidade.
 
     - Serviços
 
-        - **Pré-pago/Preço Fixo**, assim que exista uam Compra/Venda já pode gerar a fatura
+        - **Pré-pago/Preço Fixo**, assim que exista uma Compra/Venda já pode gerar a fatura
         - **Baseado em Timesheet**, só depois de registar consumo de tempos é que vai poder faturar
         - **Baseado em Milestones**, só depois de cumpridas as metas vai poder faturar
         - **Quantidades Entregues (Manual)**, pode preencher manualmente o consumo e ir faturando
@@ -133,8 +133,6 @@ da normalidade.
 
 Armazéns e Localizações
 =======================
-.. FIXME : Armazéns e localizações - fazer
-
 Em Odoo um **Armazém** é um local físico separado de outros. Uma **Localização** é uma zona dentro de um armazém, pelo
 que cada armazém pode ter diversas localizações (e sublocalizações), mas uma localização só pode pertencer a um
 armazém.
@@ -178,12 +176,53 @@ Em seguida, pode ir à configuração do armazém e decidir em quantos passos qu
 
 Operações
 =========
-???
+As **Rotas** são compostas por **Operações**, ou seja, cada etapa de uma rota vai ser operação, estas Operações vão
+estar visíveis no menu **Visão Geral** da app **Inventário**
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_stock_operations01.png
+    :align: center
+
+.. tip::
+    As **Operações** principais vão ser repetidas para cada armazém, mas depois pode criar operações específicas para
+    cada armazém conforme as necessidades.
+
+    Se existir alguma Operação que não vá utilizar, pode arquivar a mesma para que não esteja disponível aos
+    utilizadores
+
+Pode configurar as Operações para que se adquem ao seu fluxo e âs suas necessidades, para isso aceda à app de
+**Inventário** e vá ao menu :menuselection:`Configuração --> Gestão de armazém --> Tipos de Operações` e selecione a
+operação a modificar
+
+.. image:: stock/v17_stock_operations02.png
+    :align: center
+
+Dependendo do tipo de operação, as informações que pode alterar são ligeiramente diferentes, no entanto chamamos a
+atenção para:
+
+- **Desativar Doc. Fiscal**, para as operações que não o exijam, pode desativar a obrigatoriedade de associar uma série documental a esta operação
+- **Desativar Auto-emissão de Guias** não sendo obrigatório pode cancelar a emissão automática de guias para certas operações, no entanto mantém a possibilidade de fazer a emissão manual das mesmas em qualquer momento
+- **Localizações**, nestes campos pode estipular as localizações poe defeito a usar quando esta operação é selecionada, no entanto pode movimento a movimento alterar as mesmas
+
+.. image:: stock/v17_stock_operations03.png
+    :align: center
+
+Consumo Interno em Odoo
+-----------------------
+**É ser suportado nativamente pelo Odoo**, no entanto o consumo interno de artigos que foram comprados para stock, não é
+intuitivo de se reproduzir, por esse motivo a Exo Software desenvolveu uma metodologia para simplificar este processo,
+bem como a possibilidade de reportar esses mesmos custos a projetos específicos.
+
+`Aprenda como e marque uma formação com os nossos consultores <https://exosoftware.pt/en/appointment>`_
 
 Como gerar as guias
 ===================
-???
+.. FIXME : guias - fazer
+
+Documentação em breve
 
 Relatórios de Stock
 ===================
-???
+Documentação em breve
