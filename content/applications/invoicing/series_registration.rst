@@ -149,14 +149,14 @@ A partir desde momento a série está comunicada e pode começar a emitir docume
     Vai reparar que tem um campo para **Filtro de Operações**, este campo permite configurar que operações vão ter
     acesso à série documental.
 
+    .. seealso::
+       :ref:`Saiba mais sobre Operações de inventário <invoicing_stock_operations>`
+
     Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai coneguir ver a
     série documental quando for tentar gerar o documento.
 
     .. image:: series_registration/v17_operations.png
         :align: center
-
-.. seealso::
-   :ref:`Saiba mais sobre Operações de inventário <invoicing_stock_operations>`
 
 Manter Série
 ------------
@@ -201,14 +201,14 @@ para **Sincronizar**, clique nele para poder continuar a utilizar a sua série a
     Vai reparar que tem um campo para **Filtro de Operações**, este campo permite configurar que operações vão ter
     acesso à série documental.
 
+    .. seealso::
+       :ref:`Saiba mais sobre Operações de inventário <invoicing_stock_operations>`
+
     Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai coneguir ver a
     série documental quando for tentar gerar o documento.
 
     .. image:: series_registration/v17_operations.png
         :align: center
-
-.. seealso::
-   :ref:`Saiba mais sobre Operações de inventário <invoicing_stock_operations>`
 
 .. seealso::
     :doc:`Consulte as nossas FAQs sobre comunicação de Séries <../faq/series_communication>`
