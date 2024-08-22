@@ -152,7 +152,7 @@ A partir desde momento a série está comunicada e pode começar a emitir docume
     .. seealso::
        :ref:`Saiba mais sobre operações de inventário <stock_operations>`
 
-.. FIXME : Link está a linkar para a página de stock e não para a secção das operações
+    .. FIXME : Link está a linkar para a página de stock e não para a secção das operações
 
     Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai coneguir ver a
     série documental quando for tentar gerar o documento.
@@ -206,7 +206,7 @@ para **Sincronizar**, clique nele para poder continuar a utilizar a sua série a
     .. seealso::
        :ref:`Saiba mais sobre operações de inventário <stock_operations>`
 
-.. FIXME : Link está a linkar para a página de stock e não para a secção das operações
+    .. FIXME : Link está a linkar para a página de stock e não para a secção das operações
 
     Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai coneguir ver a
     série documental quando for tentar gerar o documento.

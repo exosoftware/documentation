@@ -219,7 +219,8 @@ Consumo Interno em Odoo
 intuitivo de se reproduzir, por esse motivo a Exo Software desenvolveu uma metodologia para simplificar este processo,
 bem como a possibilidade de reportar esses mesmos custos a projetos específicos.
 
-`Aprenda como e marque uma formação com os nossos consultores <https://exosoftware.pt/en/appointment>`_
+.. seealso::
+    `Aprenda como e marque uma formação com os nossos consultores <https://exosoftware.pt/en/appointment>`_
 
 Como gerar as guias
 ===================
