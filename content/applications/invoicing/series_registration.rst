@@ -156,7 +156,7 @@ A partir desde momento a série está comunicada e pode começar a emitir docume
         :align: center
 
 .. seealso::
-   :ref:`Saiba mais sobre Operações de inventário <stock:invoicing_stock_operations>`
+   :ref:`Saiba mais sobre Operações de inventário <invoicing_stock_operations>`
 
 Manter Série
 ------------
@@ -208,7 +208,7 @@ para **Sincronizar**, clique nele para poder continuar a utilizar a sua série a
         :align: center
 
 .. seealso::
-   :ref:`Saiba mais sobre Operações de inventário <stock:invoicing_stock_operations>`
+   :ref:`Saiba mais sobre Operações de inventário <invoicing_stock_operations>`
 
 .. seealso::
     :doc:`Consulte as nossas FAQs sobre comunicação de Séries <../faq/series_communication>`
