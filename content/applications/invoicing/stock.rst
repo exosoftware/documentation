@@ -357,8 +357,104 @@ Depois disso siga o processo normal de validação de movimentos de stock e no f
 
 .. FIXME : consignação - fazer
 
+Ajuste de inventário
+====================
+Pode fazer ajustes de inventário diretamente da app de inventário para isso aceda respetivamente a :menuselection:`Operações --> Ajustes --> Inventário Físico`
+ou a :menuselection:`Operações --> Ajustes --> Quebras`, dependendo do que pretende fazer
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_ajustments.png
+    :align: center
+
 Relatórios de Stock
 ===================
-.. FIXME : relatórios - fazer
+Em Odoo pode ter vários relatórios, mas no que diz respeito aos stocks os mais importantes são:
 
-Documentação em breve
+Relatório de reabastecimento
+----------------------------
+Apesar de não ser propriamente um relatório funciona como tal pois permite-nos:
+
+- ver as necessidades de inventário
+- selecionar as rotas a utilizar para satisfazer essas necessidades
+- estabelecer regras de automatismo uasndo quantidades mínimas e máximas
+- dar ordem de reabastecimento às necessidades de inventário
+
+Para ter acesso basta aceder ao menu :menuselection:`Operações --> Aprovisionamento --> Reabastecimento` a partir da app
+de **Inventário**
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_reports1.png
+    :align: center
+
+.. image:: stock/v17_reports2.png
+    :align: center
+
+.. seealso::
+    `Saiba mais sobre a metodologia de reabastecimento Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.html>`_
+
+Relatório de Stock
+------------------
+Permite ver a quantidade de inventário (Em Mão, não reservado, entradas esperadas para entrar e sair) e filtrar por
+localizações e categorias de produtos
+
+Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Stock` a partir da app de **Inventário**
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_reports3.png
+    :align: center
+
+.. image:: stock/v17_reports4.png
+    :align: center
+
+.. seealso::
+    `Saiba mais sobre realtórios de inventário Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.html>`_
+
+Relatório de valorização
+------------------------
+Neste relatório vai poder ver um agregado de todos os movimentos de inventário, com possibilidade de o filtrar e agrupar
+de diversas formas para que obtenha a informação que precisa
+
+Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Valorização` a partir da app de **Inventário**
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_reports5.png
+    :align: center
+
+.. image:: stock/v17_reports6.png
+    :align: center
+
+.. seealso::
+    `Saiba mais sobre realtórios de valorização Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.html#inventory-valuation-report>`_
+
+Comunicação de inventário
+-------------------------
+A **Localização PT+** da **Exo** ainda acrescenta a todas estas funcionalidades o reporte à AT do inventário
+
+Para aceder a esta funcionalidade aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
+Community ou Enterprise do Odoo), vá ao menu :menuselection:`Relatórios --> Portugal --> Comunicação de Inventário`
+
+.. image:: fiscal_documents/v17_appInvoicingAccounting.png
+   :align: center
+
+.. image:: stock/v17_reports7.png
+   :align: center
+
+Na janela que se abre selecione o ano Fiscal, pode alterar as datas se precisar de algo diferente das definições padrão
+e carregue em **Exportar XML**
+
+.. image:: stock/v17_reports8.png
+   :align: center
+
+Em seguida vai ver um resumo da informação que possa causar erros e terá acesso ao ao download do ficheiro,
+depois é só submeter no site da AT e fechar a janela
+
+.. image:: stock/v17_reports8.png
+   :align: center
