@@ -174,7 +174,7 @@ Em seguida, pode ir à configuração do armazém e decidir em quantos passos qu
 .. image:: stock/v17_stock_locations3.png
     :align: center
 
-.. _invoicing_stock_operations:
+.. _stock_operations:
 
 Operações
 =========
