@@ -175,7 +175,6 @@ Em seguida, pode ir à configuração do armazém e decidir em quantos passos qu
     :align: center
 
 .. _invoicing_stock_operations:
-
 Operações
 =========
 As **Rotas** são compostas por **Operações**, ou seja, cada etapa de uma rota vai ser operação, estas Operações vão

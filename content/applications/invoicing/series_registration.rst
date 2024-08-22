@@ -150,7 +150,6 @@ A partir desde momento a série está comunicada e pode começar a emitir docume
     acesso à série documental.
 
     .. seealso::
-
         :ref:`Saiba mais sobre Operações de inventário <invoicing_stock_operations>`
 
     Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai coneguir ver a
@@ -203,7 +202,6 @@ para **Sincronizar**, clique nele para poder continuar a utilizar a sua série a
     acesso à série documental.
 
     .. seealso::
-
         :ref:`Saiba mais sobre Operações de inventário <invoicing_stock_operations>`
 
     Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai coneguir ver a
