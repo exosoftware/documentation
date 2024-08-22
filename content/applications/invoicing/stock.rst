@@ -174,9 +174,9 @@ Em seguida, pode ir à configuração do armazém e decidir em quantos passos qu
 .. image:: stock/v17_stock_locations3.png
     :align: center
 
-.. _stock_operations:
-
 .. FIXME : Link está a linkar para a página de stock e não para a secção das operações
+
+.. _stock_operations:
 
 Operações
 =========
@@ -222,11 +222,109 @@ bem como a possibilidade de reportar esses mesmos custos a projetos específicos
 .. seealso::
     `Aprenda como e marque uma formação com os nossos consultores <https://exosoftware.pt/en/appointment>`_
 
+.. _stock_transportationDocs:
+
 Como gerar as guias
 ===================
+Existem dua formas de emitir guias em Odoo:
+
+- diretamente do documento de Compra/Venda
+- a partir da operação correspondente
+
+No documento de Compra/Venda
+----------------------------
+Ao gerar um documento de Compra/Venda que inclua artigos físicos (consumíveis ou artigos armazenáveis) é gerado de forma
+automática um smartbutton no topo da página com o icon de um camião. Esse smartbutton agrupa todos os documentos de
+Recebimento/Entrega associados ao processo, clique no mesmo
+
+.. image:: stock/v17_slips01.png
+    :align: center
+
+.. note::
+    No caso de só ter um movimento vai ser redirecionado diretamente para o documento, se tiver múltiplos documentos vai
+    ser redirecionado para uma listagem de todos os movimentos e poderá escolher o correto.
+
+O documento de transporte vai herdar os produtos ligados à Compra/Venda
+
+Em seguida deve fazer o processo de validação necessário mediante as escolhas que fez nas suas rotas e classificação de
+produtos.
+
+Ao validar o documento as guias vão ser comunicadas e passar a estar disponíveis para impressão
+
+.. image::  stock/v17_slips02.png
+    :align: center
+
+.. tip::
+    Por defeito, na eventualidade de as quantidades serem diferentes da procura vai ser questionado sobre se pretende
+    fazer uma transferência diferida da quantidade remanescente.
+
+    Se optar por o fazer, vai gerar um novo documento de transporte, associado à sua Compra/Venda
+
+.. note::
+    Só é obrigado a comunicar à AT (e emitir guia no caso de desejar) a entidade que envia os produtos
+
+.. important::
+    No caso de a comunicação ter falhado vai surgir uma mensagem de erro com hipótese de voltar a tentar a comunicação
+
+    .. image::  stock/v17_slips03.png
+        :align: center
+
+.. seealso::
+    :ref:`O que é uma guia e como imprimir o documento <fiscal_documents_transportationDocs>`
+
+Na operação correspondente
+--------------------------
+Caso pretenda gerar movimentos de artigos que não estão associadoss a Compras/Vendas deve ir à Operação correspondente
+e fazer **Novo**
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_stock_operations01.png
+    :align: center
+
+.. image::  stock/v17_slips04.png
+    :align: center
+
+Em seguida preencha o documento de transferência, quando estiver satisfeito pressione em **Marcar como a Fazer** este
+passo vai tornar o movimento disponível para execussão.
+
+.. image::  stock/v17_slips05.png
+    :align: center
+
+Em seguida deve fazer o processo de validação necessário mediante as escolhas que fez na classificação de produtos.
+
+Ao validar o documento as guias vão ser comunicadas e passar a estar disponíveis para impressão
+
+.. image::  stock/v17_slips02.png
+    :align: center
+
+.. tip::
+    Por defeito, na eventualidade de as quantidades serem diferentes da procura vai ser questionado sobre se pretende
+    fazer uma transferência diferida da quantidade remanescente.
+
+    Se optar por o fazer, vai gerar um novo documento de transporte, associado à sua Compra/Venda
+
+.. note::
+    Só é obrigado a comunicar à AT (e emitir guia no caso de desejar) a entidade que envia os produtos
+
+.. important::
+    No caso de a comunicação ter falhado vai surgir uma mensagem de erro com hipótese de voltar a tentar a comunicação
+
+    .. image::  stock/v17_slips03.png
+        :align: center
+
+.. seealso::
+    :ref:`O que é uma guia e como imprimir o documento <fiscal_documents_transportationDocs>`
+
+Guias de Devolução
+------------------
 .. FIXME : guias - fazer
 
 Documentação em breve
+
+..
+    As guias de devolução devem ser feitas a partir do documento origial que lhes deu origem
 
 Relatórios de Stock
 ===================

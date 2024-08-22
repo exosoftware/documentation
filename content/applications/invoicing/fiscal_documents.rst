@@ -406,7 +406,9 @@ Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar 
    :align: center
 
 .. seealso::
-    :doc:`Como fazer... <stock>`
+    :ref:`Como fazer... <stock_transportationDocs>`
+
+    :doc:`Consulte o nosso guia de stocks em Odoo <stock>`
 
     :doc:`Consulte as nossas FAQs sobre Guias de transporte <../faq/transportation_docs>`
 
@@ -429,7 +431,9 @@ Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar 
    :align: center
 
 .. seealso::
-    :doc:`Como fazer... <stock>`
+    :ref:`Como fazer... <stock_transportationDocs>`
+
+    :doc:`Consulte o nosso guia de stocks em Odoo <stock>`
 
     :doc:`Consulte as nossas FAQs sobre Guias de transporte <../faq/transportation_docs>`
 
