@@ -222,6 +222,8 @@ bem como a possibilidade de reportar esses mesmos custos a projetos específicos
 .. seealso::
     `Aprenda como e marque uma formação com os nossos consultores <https://exosoftware.pt/en/appointment>`_
 
+.. FIXME : Link está a linkar para a página de stock e não para a secção das guias
+
 .. _stock_transportationDocs:
 
 Como gerar as guias
@@ -316,6 +318,8 @@ Ao validar o documento as guias vão ser comunicadas e passar a estar disponíve
 
 .. seealso::
     :ref:`O que é uma guia e como imprimir o documento <fiscal_documents_transportationDocs>`
+
+.. FIXME : Link está a linkar para a página de stock e não para a secção das guias de devolução
 
 .. _stock_returnSlip:
 

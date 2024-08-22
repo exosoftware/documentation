@@ -408,6 +408,8 @@ Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar 
 .. seealso::
     :ref:`Como fazer... <stock_transportationDocs>`
 
+    .. FIXME : Link está a linkar para a página de stock e não para a secção das guias
+
     :doc:`Consulte o nosso guia de stocks em Odoo <stock>`
 
     :doc:`Consulte as nossas FAQs sobre Guias de transporte <../faq/transportation_docs>`
@@ -432,6 +434,8 @@ Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar 
 
 .. seealso::
     :ref:`Como fazer... <stock_transportationDocs>`
+
+    .. FIXME : Link está a linkar para a página de stock e não para a secção das guias
 
     :doc:`Consulte o nosso guia de stocks em Odoo <stock>`
 
@@ -465,6 +469,8 @@ Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar 
 
 .. seealso::
     :ref:`Como fazer... <stock_returnSlip>`
+
+    .. FIXME : Link está a linkar para a página de stock e não para a secção da guia de devolução
 
     :doc:`Consulte o nosso guia de stocks em Odoo <stock>`
 
