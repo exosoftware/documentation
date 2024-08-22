@@ -176,6 +176,8 @@ Em seguida, pode ir à configuração do armazém e decidir em quantos passos qu
 
 .. _stock_operations:
 
+.. FIXME : Link está a linkar para a página de stock e não para a secção das operações
+
 Operações
 =========
 As **Rotas** são compostas por **Operações**, ou seja, cada etapa de uma rota vai ser operação, estas Operações vão
