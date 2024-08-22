@@ -317,15 +317,44 @@ Ao validar o documento as guias vão ser comunicadas e passar a estar disponíve
 .. seealso::
     :ref:`O que é uma guia e como imprimir o documento <fiscal_documents_transportationDocs>`
 
+.. _stock_returnSlip:
+
 Guias de Devolução
 ------------------
-.. FIXME : guias - fazer
+As guias de devolução devem ser feitas a partir do documento origial que lhes deu origem para que se mantenha o
+rastreamento do processo. Por esse motivo, em Odoo nos documentos de Recebimento/Entrega tem rápido acesso ao botão
+**Devolução**
 
-Documentação em breve
+.. image::  stock/v17_slips06.png
+    :align: center
 
-..
-    As guias de devolução devem ser feitas a partir do documento origial que lhes deu origem
+Carregue neste botão e irá abrir uma nova janela onde poderá escolher os produtos a devolver e a localização de destino
+da devolução, em seguida carregue no botão **Devolução**
+
+.. image::  stock/v17_slips07.png
+    :align: center
+
+Um novo documento vai ser gerado usando a operação de devolução que foi especificada na operação original bem como a
+localização de destino especificada
+
+.. image::  stock/v17_slips08.png
+    :align: center
+
+Em seguida deve escolher a série documental dedicada para devoluções ou a série correta de movimento de transporte que
+normalmente usa, dependendo se quer ter séries dedicadas ou não.
+
+Depois disso siga o processo normal de validação de movimentos de stock e no fim valide.
+
+.. image::  stock/v17_slips09.png
+    :align: center
+
+.. seealso::
+    :ref:`O que é uma guia de devolução e como imprimir o documento <fiscal_documents_returnSlip>`
+
+.. FIXME : consignação - fazer
 
 Relatórios de Stock
 ===================
+.. FIXME : relatórios - fazer
+
 Documentação em breve
