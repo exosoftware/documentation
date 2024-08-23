@@ -406,7 +406,11 @@ Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar 
    :align: center
 
 .. seealso::
-    :doc:`Como fazer... <stock>`
+    :ref:`Como fazer... <stock_transportationDocs>`
+
+    .. FIXME : Link está a linkar para a página de stock e não para a secção das guias
+
+    :doc:`Consulte o nosso guia de stocks em Odoo <stock>`
 
     :doc:`Consulte as nossas FAQs sobre Guias de transporte <../faq/transportation_docs>`
 
@@ -429,7 +433,11 @@ Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar 
    :align: center
 
 .. seealso::
-    :doc:`Como fazer... <stock>`
+    :ref:`Como fazer... <stock_transportationDocs>`
+
+    .. FIXME : Link está a linkar para a página de stock e não para a secção das guias
+
+    :doc:`Consulte o nosso guia de stocks em Odoo <stock>`
 
     :doc:`Consulte as nossas FAQs sobre Guias de transporte <../faq/transportation_docs>`
 
@@ -442,14 +450,29 @@ Documentação em breve
 .. seealso::
    :doc:`Como fazer... <stock>`
 
+.. _fiscal_documents_returnSlip:
+
 Guia de devolução
 -----------------
-.. FIXME : Guia de devolução
+Uma guia de devolução é um documento utilizado para formalizar uma devolução de bens previamente adquiridos do cliente
+para o fornecedor.
 
-Documentação em breve
+.. important::
+    A guia deve ser sempre emitida pelo cliente, se este for sujeito passivo de IVA
+
+Essa devolução dará depois direito a reenvio de novos bens como substituição ou emissão de nota de crédito.
+
+Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Documentos de Transporte`
+
+.. image:: fiscal_documents/v17_printTransport3.png
+   :align: center
 
 .. seealso::
-   :doc:`Como fazer... <stock>`
+    :ref:`Como fazer... <stock_returnSlip>`
+
+    .. FIXME : Link está a linkar para a página de stock e não para a secção da guia de devolução
+
+    :doc:`Consulte o nosso guia de stocks em Odoo <stock>`
 
 Código QR e ATCUD
 =================

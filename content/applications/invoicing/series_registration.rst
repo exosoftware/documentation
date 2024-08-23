@@ -107,8 +107,8 @@ Vai abrir uma nova janela:
         Localização PT+ Exo
 
     .. example::
-        - Nas faturas é necessário ter FT, a localização já insere "FT "
-        - Nas notas de encomenda é necessário ter NE, a localização já insere "NE "
+        - Nas faturas é necessário ter FT, a localização já insere 'FT '
+        - Nas notas de encomenda é necessário ter NE, a localização já insere 'NE '
         - etc.
 
   - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitos** que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
@@ -143,6 +143,23 @@ Clique no botão **Comunicar**.
 
 A partir desde momento a série está comunicada e pode começar a emitir documentos.
 
+.. important::
+    No caso das **séries documentais relativas a transporte de bens** existe um passo extra.
+
+    Vai reparar que tem um campo para **Filtro de Operações**, este campo permite configurar que operações vão ter
+    acesso à série documental.
+
+    .. seealso::
+       :ref:`Saiba mais sobre operações de inventário <stock_operations>`
+
+    .. FIXME : Link está a linkar para a página de stock e não para a secção das operações
+
+    Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai coneguir ver a
+    série documental quando for tentar gerar o documento.
+
+    .. image:: series_registration/v17_operations.png
+        :align: center
+
 Manter Série
 ------------
 Preencha o campo Sequência com o nome que quer dar à sequência e selecione Criar e Editar.
@@ -160,8 +177,8 @@ Vai abrir uma nova janela:
         Localização PT+ Exo
 
     .. example::
-        - Nas faturas é necessário ter FT, a localização já insere "FT "
-        - Nas notas de encomenda é necessário ter NE, a localização já insere "NE "
+        - Nas faturas é necessário ter FT, a localização já insere 'FT '
+        - Nas notas de encomenda é necessário ter NE, a localização já insere 'NE '
         - etc.
 
   - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitos** que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
@@ -179,6 +196,23 @@ para **Sincronizar**, clique nele para poder continuar a utilizar a sua série a
 
 .. image:: series_registration/v17_keepSerie3.png
    :align: center
+
+.. important::
+    No caso das **séries documentais relativas a transporte de bens** existe um passo extra.
+
+    Vai reparar que tem um campo para **Filtro de Operações**, este campo permite configurar que operações vão ter
+    acesso à série documental.
+
+    .. seealso::
+       :ref:`Saiba mais sobre operações de inventário <stock_operations>`
+
+    .. FIXME : Link está a linkar para a página de stock e não para a secção das operações
+
+    Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai coneguir ver a
+    série documental quando for tentar gerar o documento.
+
+    .. image:: series_registration/v17_operations.png
+        :align: center
 
 .. seealso::
     :doc:`Consulte as nossas FAQs sobre comunicação de Séries <../faq/series_communication>`

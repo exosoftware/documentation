@@ -1,4 +1,4 @@
-:nosearch:
+:show-content:
 
 =====
 Stock
@@ -174,6 +174,10 @@ Em seguida, pode ir à configuração do armazém e decidir em quantos passos qu
 .. image:: stock/v17_stock_locations3.png
     :align: center
 
+.. FIXME : Link está a linkar para a página de stock e não para a secção das operações
+
+.. _stock_operations:
+
 Operações
 =========
 As **Rotas** são compostas por **Operações**, ou seja, cada etapa de uma rota vai ser operação, estas Operações vão
@@ -215,14 +219,242 @@ Consumo Interno em Odoo
 intuitivo de se reproduzir, por esse motivo a Exo Software desenvolveu uma metodologia para simplificar este processo,
 bem como a possibilidade de reportar esses mesmos custos a projetos específicos.
 
-`Aprenda como e marque uma formação com os nossos consultores <https://exosoftware.pt/en/appointment>`_
+.. seealso::
+    `Aprenda como e marque uma formação com os nossos consultores <https://exosoftware.pt/en/appointment>`_
+
+.. FIXME : Link está a linkar para a página de stock e não para a secção das guias
+
+.. _stock_transportationDocs:
 
 Como gerar as guias
 ===================
-.. FIXME : guias - fazer
+Existem dua formas de emitir guias em Odoo:
 
-Documentação em breve
+- diretamente do documento de Compra/Venda
+- a partir da operação correspondente
+
+No documento de Compra/Venda
+----------------------------
+Ao gerar um documento de Compra/Venda que inclua artigos físicos (consumíveis ou artigos armazenáveis) é gerado de forma
+automática um smartbutton no topo da página com o icon de um camião. Esse smartbutton agrupa todos os documentos de
+Recebimento/Entrega associados ao processo, clique no mesmo
+
+.. image:: stock/v17_slips01.png
+    :align: center
+
+.. note::
+    No caso de só ter um movimento vai ser redirecionado diretamente para o documento, se tiver múltiplos documentos vai
+    ser redirecionado para uma listagem de todos os movimentos e poderá escolher o correto.
+
+O documento de transporte vai herdar os produtos ligados à Compra/Venda
+
+Em seguida deve fazer o processo de validação necessário mediante as escolhas que fez nas suas rotas e classificação de
+produtos.
+
+Ao validar o documento as guias vão ser comunicadas e passar a estar disponíveis para impressão
+
+.. image::  stock/v17_slips02.png
+    :align: center
+
+.. tip::
+    Por defeito, na eventualidade de as quantidades serem diferentes da procura vai ser questionado sobre se pretende
+    fazer uma transferência diferida da quantidade remanescente.
+
+    Se optar por o fazer, vai gerar um novo documento de transporte, associado à sua Compra/Venda
+
+.. note::
+    Só é obrigado a comunicar à AT (e emitir guia no caso de desejar) a entidade que envia os produtos
+
+.. important::
+    No caso de a comunicação ter falhado vai surgir uma mensagem de erro com hipótese de voltar a tentar a comunicação
+
+    .. image::  stock/v17_slips03.png
+        :align: center
+
+.. seealso::
+    :ref:`O que é uma guia e como imprimir o documento <fiscal_documents_transportationDocs>`
+
+Na operação correspondente
+--------------------------
+Caso pretenda gerar movimentos de artigos que não estão associadoss a Compras/Vendas deve ir à Operação correspondente
+e fazer **Novo**
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_stock_operations01.png
+    :align: center
+
+.. image::  stock/v17_slips04.png
+    :align: center
+
+Em seguida preencha o documento de transferência, quando estiver satisfeito pressione em **Marcar como a Fazer** este
+passo vai tornar o movimento disponível para execussão.
+
+.. image::  stock/v17_slips05.png
+    :align: center
+
+Em seguida deve fazer o processo de validação necessário mediante as escolhas que fez na classificação de produtos.
+
+Ao validar o documento as guias vão ser comunicadas e passar a estar disponíveis para impressão
+
+.. image::  stock/v17_slips02.png
+    :align: center
+
+.. tip::
+    Por defeito, na eventualidade de as quantidades serem diferentes da procura vai ser questionado sobre se pretende
+    fazer uma transferência diferida da quantidade remanescente.
+
+    Se optar por o fazer, vai gerar um novo documento de transporte, associado à sua Compra/Venda
+
+.. note::
+    Só é obrigado a comunicar à AT (e emitir guia no caso de desejar) a entidade que envia os produtos
+
+.. important::
+    No caso de a comunicação ter falhado vai surgir uma mensagem de erro com hipótese de voltar a tentar a comunicação
+
+    .. image::  stock/v17_slips03.png
+        :align: center
+
+.. seealso::
+    :ref:`O que é uma guia e como imprimir o documento <fiscal_documents_transportationDocs>`
+
+.. FIXME : Link está a linkar para a página de stock e não para a secção das guias de devolução
+
+.. _stock_returnSlip:
+
+Guias de Devolução
+------------------
+As guias de devolução devem ser feitas a partir do documento origial que lhes deu origem para que se mantenha o
+rastreamento do processo. Por esse motivo, em Odoo nos documentos de Recebimento/Entrega tem rápido acesso ao botão
+**Devolução**
+
+.. image::  stock/v17_slips06.png
+    :align: center
+
+Carregue neste botão e irá abrir uma nova janela onde poderá escolher os produtos a devolver e a localização de destino
+da devolução, em seguida carregue no botão **Devolução**
+
+.. image::  stock/v17_slips07.png
+    :align: center
+
+Um novo documento vai ser gerado usando a operação de devolução que foi especificada na operação original bem como a
+localização de destino especificada
+
+.. image::  stock/v17_slips08.png
+    :align: center
+
+Em seguida deve escolher a série documental dedicada para devoluções ou a série correta de movimento de transporte que
+normalmente usa, dependendo se quer ter séries dedicadas ou não.
+
+Depois disso siga o processo normal de validação de movimentos de stock e no fim valide.
+
+.. image::  stock/v17_slips09.png
+    :align: center
+
+.. seealso::
+    :ref:`O que é uma guia de devolução e como imprimir o documento <fiscal_documents_returnSlip>`
+
+.. FIXME : consignação - fazer
+
+Ajuste de inventário
+====================
+Pode fazer ajustes de inventário diretamente da app de inventário para isso aceda respetivamente a :menuselection:`Operações --> Ajustes --> Inventário Físico`
+ou a :menuselection:`Operações --> Ajustes --> Quebras`, dependendo do que pretende fazer
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_ajustments.png
+    :align: center
 
 Relatórios de Stock
 ===================
-Documentação em breve
+Em Odoo pode ter vários relatórios, mas no que diz respeito aos stocks os mais importantes são:
+
+Relatório de reabastecimento
+----------------------------
+Apesar de não ser propriamente um relatório funciona como tal pois permite-nos:
+
+- ver as necessidades de inventário
+- selecionar as rotas a utilizar para satisfazer essas necessidades
+- estabelecer regras de automatismo uasndo quantidades mínimas e máximas
+- dar ordem de reabastecimento às necessidades de inventário
+
+Para ter acesso basta aceder ao menu :menuselection:`Operações --> Aprovisionamento --> Reabastecimento` a partir da app
+de **Inventário**
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_reports1.png
+    :align: center
+
+.. image:: stock/v17_reports2.png
+    :align: center
+
+.. seealso::
+    `Saiba mais sobre a metodologia de reabastecimento Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.html>`_
+
+Relatório de Stock
+------------------
+Permite ver a quantidade de inventário (Em Mão, não reservado, entradas esperadas para entrar e sair) e filtrar por
+localizações e categorias de produtos
+
+Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Stock` a partir da app de **Inventário**
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_reports3.png
+    :align: center
+
+.. image:: stock/v17_reports4.png
+    :align: center
+
+.. seealso::
+    `Saiba mais sobre realtórios de inventário Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.html>`_
+
+Relatório de valorização
+------------------------
+Neste relatório vai poder ver um agregado de todos os movimentos de inventário, com possibilidade de o filtrar e agrupar
+de diversas formas para que obtenha a informação que precisa
+
+Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Valorização` a partir da app de **Inventário**
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_reports5.png
+    :align: center
+
+.. image:: stock/v17_reports6.png
+    :align: center
+
+.. seealso::
+    `Saiba mais sobre realtórios de valorização Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.html#inventory-valuation-report>`_
+
+Comunicação de inventário
+-------------------------
+A **Localização PT+** da **Exo** ainda acrescenta a todas estas funcionalidades o reporte à AT do inventário
+
+Para aceder a esta funcionalidade aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
+Community ou Enterprise do Odoo), vá ao menu :menuselection:`Relatórios --> Portugal --> Comunicação de Inventário`
+
+.. image:: fiscal_documents/v17_appInvoicingAccounting.png
+   :align: center
+
+.. image:: stock/v17_reports7.png
+   :align: center
+
+Na janela que se abre selecione o ano Fiscal, pode alterar as datas se precisar de algo diferente das definições padrão
+e carregue em **Exportar XML**
+
+.. image:: stock/v17_reports8.png
+   :align: center
+
+Em seguida vai ver um resumo da informação que possa causar erros e terá acesso ao ao download do ficheiro,
+depois é só submeter no site da AT e fechar a janela
+
+.. image:: stock/v17_reports8.png
+   :align: center
