@@ -406,7 +406,7 @@ Os tipos de documento que podem servir para liquidar valores da fatura são as n
 Mais informação
 ---------------
 .. seealso::
-    Se pretender formação mais detalhada sobre o processo Oddo contacte a `Exo Software <https://exosoftware.pt/appointment/2>`_.
+    Se pretender formação mais detalhada sobre o processo Odoo contacte a `Exo Software <https://exosoftware.pt/appointment/2>`_.
 
 Comunicação por API
 ===================
