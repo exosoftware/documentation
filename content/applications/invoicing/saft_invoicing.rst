@@ -76,6 +76,6 @@ para o ajudar com as configurações. No entanto uma vez configurado não terá 
 
 Importação
 ==========
-.. FIXME : O que é isto?
+.. FIXME : Parece que ainda não existe nada mas está no roadmap
 
 Documentação em breve

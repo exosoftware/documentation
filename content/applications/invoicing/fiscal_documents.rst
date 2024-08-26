@@ -101,19 +101,19 @@ Documentação em breve
 
 Fatura de consignação
 ---------------------
-.. FIXME : Fatura de consignação - O que é e como se faz?
+.. FIXME : Fatura de consignação - Ver com o Pedro e André o que é e como se faz
 
 Documentação em breve
 
 Crédito de consignação
 ----------------------
-.. FIXME : Crédito de consignação - O que é e como se faz?
+.. FIXME : Crédito de consignação - Ver com o Pedro e André o que é e como se faz
 
 Documentação em breve
 
 Consulta de mesa ou encomenda (POS)
 -----------------------------------
-.. FIXME : Consulta de mesa ou encomenda (POS) - O que é e como se faz?
+.. FIXME : Consulta de mesa ou encomenda (POS) - Ver com o André o que é e como se faz
 
 Documentação em breve
 
@@ -443,7 +443,7 @@ Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar 
 
 Guia de consignação
 -------------------
-.. FIXME : Guia de consignação - O que é e como se faz?
+.. FIXME : Guia de consignação - Ver com o Pedro e André o que é e como se faz
 
 Documentação em breve
 
