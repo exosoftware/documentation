@@ -82,9 +82,7 @@ tal carregue no botão **Check Agreement**
 
 Abre uma nova janela para validação de dados:
 
-.. FIXME : O que está relacionado ao estado?
-
-- **Estado** do contrato (opções são **Enable** e **Disable**)
+- **Estado** do contrato (opções são **Enable** e **Disable**), permite simplificar se a procura é por contratos ativos ou contratos já inativados
 - **Data Inicial** do contrato
 - **Data Final** do contrato
 
