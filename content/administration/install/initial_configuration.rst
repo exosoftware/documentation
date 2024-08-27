@@ -50,7 +50,8 @@ Configuração de Cabeçalho e Rodapé dos documentos
 
     Se o rodapé não for preenchido, por defeito o Odoo deixa em branco e só exibe o nº da página
 
-Para alterar os valores pré-definidos, pode aceder à app **Configurações** e na secção **Empresas** selecione **Configure o layout do Documento**
+Para alterar os valores pré-definidos, pode aceder à app **Configurações** e na secção **Empresas** selecione
+**Configure o layout do Documento**
 
 .. image:: initial_configuration/v17_appSettings.png
    :align: center
@@ -86,9 +87,9 @@ Autoridade Tributária.
 
 No entanto, ainda tem algumas verificações que deve fazer para que tudo fique a funcionar corretamente.
 
-Dependendo do tipo de base de dados que está a usar (Testes ou Produção) deve ter atenção à opção **Backend do Serviço de Certificação**.
-Se estiver numa base de dados de teste deve ter selecionada a opção **Testes**, se estiver numa base de dados de
-**Produção** deve selecionar a opção **Exo Software**.
+Dependendo do tipo de base de dados que está a usar (Testes ou Produção) deve ter atenção à opção
+**Backend do Serviço de Certificação**. Se estiver numa base de dados de teste deve ter selecionada a opção **Testes**,
+se estiver numa base de dados de **Produção** deve selecionar a opção **Exo Software**.
 
 .. image:: initial_configuration/v17_backend.png
    :align: center
@@ -100,7 +101,8 @@ nomenclatura que vai ser utilizada, as opções são as seguintes:
  - Original e Duplicado
  - Original, Duplicado e Triplicado
 
-Nesta fase também pode já escolher se quer que o código QR fique no cabeçalho da primeira página ou no final do conteúdo da última página
+Nesta fase também pode já escolher se quer que o código QR fique no cabeçalho da primeira página ou no final do conteúdo
+da última página
 
 .. image:: initial_configuration/v17_multiway_QR.png
    :align: center
@@ -109,7 +111,8 @@ Se utilizar a fatura como Guia de Remessa deve selecionar as opções que o perm
 Uma das opções disponibiliza a data em que os bens foram disponibilizados ao cliente (mesmo que não use Guia de Remessa
 pode usar esta opção), a outra opção coloca os campos **Carga** e **Descarga**.
 
-No caso de usar a fatura como guia de remessa pode ainda definir o local de carga padrão. Em seguida guardar novamente as alterações.
+No caso de usar a fatura como guia de remessa pode ainda definir o local de carga padrão. Em seguida guardar novamente
+as alterações.
 
 .. image:: initial_configuration/v17_invoiceDetails.png
    :align: center
@@ -125,7 +128,8 @@ inserido na fatura.
 
     Se a empresa em que está a trabalhar for titular de pelo menos uma conta, o Odoo vai de forma automática preencher
     todas as faturas a clientes com essa conta. Caso tenha várias vai predefinir a primeira conta da listagem que cumpra
-    o requisito, mas pode documento a documento mudar essa conta no campo **Banco beneficiário** do separador **Outra Informação**
+    o requisito, mas pode documento a documento mudar essa conta no campo **Banco beneficiário** do separador
+    **Outra Informação**
 
     .. image:: initial_configuration/v17_bankAccount2.png
         :align: center
@@ -150,19 +154,23 @@ como é comportamento nativo do Odoo. No entanto, se retirar o visto da opção 
 
     :doc:`Consulte as nossas FAQs sobre a secção Detalhes da Fatura <../../applications/faq/invoice>`
 
-Plano de Contas
-===============
+Localização Fiscal
+==================
 
-Atualmente a Localização PT+ disponibiliza 2 tipos de planos de contas:
+Atualmente a Localização PT+ disponibiliza 2 localizações fiscais:
 
-- **Base**, que é o plano normal do SNC
-- **Microentidades**, plano simplificado para microempresas
+- **Base**, onde tem aceso ao plano normal do SNC
+- **Microentidades**, onde tem acesso ao plano simplificado do SNC para microempresas
 
 .. note::
-    Pode personalizar o seu plano de contas depois de selecionar um dos planos disponíveis para melhor se adaptar ao seu caso específico
+    Pode personalizar o seu plano de contas depois de selecionar um dos planos disponíveis para melhor se adaptar ao seu
+    caso específico
 
 .. danger::
-    É fundamental escolher corretamente o plano de contas correto a aplicar à empresa em específico antes da emissão dos primeiros documentos
+    É fundamental escolher corretamente a localização fiscal correta a aplicar à empresa antes da emissão dos primeiros
+    documentos fiscais e contabilísticos.
+
+    Depois de selecionar uma delas e gravar a configuração, não vai poder alterar.
 
 .. seealso::
     :doc:`Veja em detalhe os planos de contas que estão disponíveis com a Localização PT+ <../../applications/accounting/coa>`
