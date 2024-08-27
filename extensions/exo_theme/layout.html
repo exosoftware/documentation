@@ -71,10 +71,10 @@
 
                 </div>
                 -->
+                <a class="btn btn-primary fw_bold ms-auto d-none d-lg-inline-block" href="/{{ lang_code }}/applications/glossary" target="_blank">{{ _('Glossário') }}</a>
                 {# Shown when the JS has properly set all the classes on the TOC elements #}
                 <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden>
                     {%- include "layout_templates/page_toc.html" %}
-                    <a class="btn btn-primary fw_bold ms-auto d-none d-lg-inline-block" href="/{{ lang_code }}/applications/glossary" target="_blank">{{ _('Glossário') }}</a>
                 </aside>
             {%- endif %}
             <div id="o_main_toctree" class="o_main_toc mt-3" hidden>
