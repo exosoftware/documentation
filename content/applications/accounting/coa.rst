@@ -45,11 +45,9 @@ Atualmente a Localização PT+ disponibiliza 2 tipos de planos de contas:
 
 
 .. seealso::::
-    `Legislação do SNC <https://www.cnc.min-financas.pt/snc.html>`_
-
-    `Definição de Micro empresa <https://diariodarepublica.pt/dr/lexionario/termo/micro-empresa>`_
-
-    `Legislação do NCM <https://www.cnc.min-financas.pt/ncm.html>`_
+    - `Legislação do SNC <https://www.cnc.min-financas.pt/snc.html>`_
+    - `Definição de Micro empresa <https://diariodarepublica.pt/dr/lexionario/termo/micro-empresa>`_
+    - `Legislação do NCM <https://www.cnc.min-financas.pt/ncm.html>`_
 
 
 Se depois quiser fazer altereções ao plano de contas pode na app **Faturação / Contabilidade**(dependendo respetivamente
