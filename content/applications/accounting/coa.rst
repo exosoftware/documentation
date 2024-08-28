@@ -43,12 +43,14 @@ Atualmente a Localização PT+ disponibiliza 2 tipos de planos de contas:
 .. image:: coa/v17_fiscalPackage.png
    :align: center
 
+
 .. seealso::::
-    `Legislação do SNC <https://www.cnc.min-financas.pt/snc.html>_`
+    `Legislação do SNC <https://www.cnc.min-financas.pt/snc.html>`_
 
-    `Definição de Micro empresa <https://diariodarepublica.pt/dr/lexionario/termo/micro-empresa>_`
+    `Definição de Micro empresa <https://diariodarepublica.pt/dr/lexionario/termo/micro-empresa>`_
 
-    `Legislação do NCM <https://www.cnc.min-financas.pt/ncm.html>_`
+    `Legislação do NCM <https://www.cnc.min-financas.pt/ncm.html>`_
+
 
 Se depois quiser fazer altereções ao plano de contas pode na app **Faturação / Contabilidade**(dependendo respetivamente
 se tem versão Community ou Enterprise do Odoo) aceder ao menu :menuselection:`Configuração --> Contabilidade --> Plano de Contas`
@@ -69,4 +71,4 @@ ou ao menu :menuselection:`Configuração --> Contabilidade --> Grupos Contabil�
     diversos mapas
 
 .. seealso::
-    `Saiba mais sobre Planos de Contas em Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/accounting/get_started/chart_of_accounts.html>_`
+    `Saiba mais sobre Planos de Contas em Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/accounting/get_started/chart_of_accounts.html>`_
