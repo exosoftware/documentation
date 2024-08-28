@@ -355,7 +355,7 @@ Depois disso siga o processo normal de validação de movimentos de stock e no f
 .. seealso::
     :ref:`O que é uma guia de devolução e como imprimir o documento <fiscal_documents_returnSlip>`
 
-.. FIXME : consignação - Ver com o Pedro e André como fazer
+.. TODO : consignação - Ver com o Pedro e André como fazer
 
 Ajuste de inventário
 ====================

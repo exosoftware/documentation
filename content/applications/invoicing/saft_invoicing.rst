@@ -77,4 +77,4 @@ para o ajudar com as configurações. No entanto uma vez configurado não terá 
 ..
     Importação
     ==========
-    .. FIXME : Ainda não existe a ferramenta mas está no roadmap
+    .. TODO : Ainda não existe a ferramenta mas está no roadmap

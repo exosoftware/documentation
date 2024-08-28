@@ -95,25 +95,25 @@ Contem:
 
 Folha de obra
 -------------
-.. FIXME : Folha de obra - O que é e como se faz?
+.. TODO : Folha de obra - O que é e como se faz?
 
 Documentação em breve
 
 Fatura de consignação
 ---------------------
-.. FIXME : Fatura de consignação - Ver com o Pedro e André o que é e como se faz
+.. TODO : Fatura de consignação - Ver com o Pedro e André o que é e como se faz
 
 Documentação em breve
 
 Crédito de consignação
 ----------------------
-.. FIXME : Crédito de consignação - Ver com o Pedro e André o que é e como se faz
+.. TODO : Crédito de consignação - Ver com o Pedro e André o que é e como se faz
 
 Documentação em breve
 
 Consulta de mesa ou encomenda (POS)
 -----------------------------------
-.. FIXME : Consulta de mesa ou encomenda (POS) - Ver com o André o que é e como se faz
+.. TODO : Consulta de mesa ou encomenda (POS) - Ver com o André o que é e como se faz
 
 Documentação em breve
 
@@ -349,7 +349,7 @@ Para emitir o pdf do recibo basta ir ao menu **Ação** do documento e seleciona
 
 Recibo de IVA de caixa
 ----------------------
-.. FIXME : Recibo de IVA de caixa - O que é e como se faz?
+.. TODO : Recibo de IVA de caixa - O que é e como se faz?
 
 Documentação em breve
 
@@ -443,7 +443,7 @@ Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar 
 
 Guia de consignação
 -------------------
-.. FIXME : Guia de consignação - Ver com o Pedro e André o que é e como se faz
+.. TODO : Guia de consignação - Ver com o Pedro e André o que é e como se faz
 
 Documentação em breve
 
