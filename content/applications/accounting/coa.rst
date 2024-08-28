@@ -50,8 +50,6 @@ Atualmente a Localização PT+ disponibiliza 2 tipos de planos de contas:
 
     `Legislação do NCM <https://www.cnc.min-financas.pt/ncm.html>_`
 
-.. FIXME : imagens e continuar a explicar
-
 Se depois quiser fazer altereções ao plano de contas pode na app **Faturação / Contabilidade**(dependendo respetivamente
 se tem versão Community ou Enterprise do Odoo) aceder ao menu :menuselection:`Configuração --> Contabilidade --> Plano de Contas`
 ou ao menu :menuselection:`Configuração --> Contabilidade --> Grupos Contabilísticos`
