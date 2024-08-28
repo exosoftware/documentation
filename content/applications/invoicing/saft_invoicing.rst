@@ -74,8 +74,7 @@ para o ajudar com as configurações. No entanto uma vez configurado não terá 
 .. seealso::
     Saiba mais sobre o nosso automatismo de criação de SAF-T marcando uma `Formação <https://exosoftware.pt/en/appointment>`_
 
-Importação
-==========
-.. FIXME : Parece que ainda não existe nada mas está no roadmap
-
-Documentação em breve
+..
+    Importação
+    ==========
+    .. FIXME : Ainda não existe a ferramenta mas está no roadmap
