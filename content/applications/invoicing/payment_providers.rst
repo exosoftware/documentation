@@ -28,13 +28,13 @@ Fique a conhecer mais em detalhe cada um dos provedores de pagamentos disponibil
 - `Authorize.Net <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/authorize.html>`_
 - `Adyen <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/adyen.html>`_
 - `SIPS <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/sips.html>`_
-- `AsiaPay <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/asiapay.html>`_
 - `Buckaroo <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/buckaroo.html>`_
-- `Flutterwave <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/flutterwave.html>`_
-- `Mercado Pago <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/mercado_pago.html>`_
 - `Mollie <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/mollie.html>`_
-- `Razorpay <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/razorpay.html>`_
+- `Mercado Pago <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/mercado_pago.html>`_
+- `AsiaPay <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/asiapay.html>`_
 - `Xendit <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/xendit.html>`_
+- `Razorpay <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/razorpay.html>`_
+- `Flutterwave <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/flutterwave.html>`_
 
 .. seealso::
     Ainda dentro das possibilidades nativas Odoo, pode também recorrer ao método de transferência bancária.
@@ -51,7 +51,7 @@ SEPA
 O Odoo permite de forma nativa, a utilização do sistema de ficheiros SEPA para fazer cobranças e pagamentos
 
 .. important::
-    No entanto esta opção apenas está disponível para clientes Odoo Enterprise
+    Esta opção apenas está disponível para clientes Odoo Enterprise
 
 .. seealso::
     `Metodologia SEPA para Débitos Diretos <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/accounting/payments/batch_sdd.html>`_
