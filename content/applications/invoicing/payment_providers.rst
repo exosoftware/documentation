@@ -69,5 +69,5 @@ Plataformas de pagamento Exo Software
 Devido ao seu grande nível de utilização em Portugal a Exo desenvolveu metodologias que lhe permitem receber pagamentos
 através de Multibanco e MBWay. Para que essas metodilogias possam ser usadas deve usar um dos seguintes provedores:
 
-- :doc:`Eupago <../multibanco/eupago>`
+- :doc:`eupago <../multibanco/eupago>`
 - :doc:`Ifthenpay <../multibanco/ifthenpay>`

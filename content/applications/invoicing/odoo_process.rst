@@ -373,6 +373,8 @@ No Processo :menuselection:`Nota de encomenda --> Fatura` pode ver 3 tipos de es
 .. image:: odoo_process/v17_statusNE.png
     :align: center
 
+.. _odoo_process_documents_states:
+
 No processo :menuselection:`Fatura --> Notas de crédito / Notas de débito / Recibos`, dependendo da sua versão do Odoo
 (Community ou Enterprise), pode ter 3 ou 4 tipos de estado respetivamente.
 
