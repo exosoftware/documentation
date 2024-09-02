@@ -30,29 +30,29 @@ Configuração
 .. note::
     No canto superior direito da página aceda à sua conta
 
-    .. image::eupago/eupago_myAccount.png
+    .. image:: eupago/eupago_myAccount.png
         :align: center
 
     Em seguida, vá à aba de **Credenciais**, vai precisar tanto do **Cliente ID** como do **Client Secret**
 
-    .. image::eupago/eupago_credentials.png
+    .. image:: eupago/eupago_credentials.png
         :align: center
 
     Vai também precisar de um canal de comunicação, por definição todas as contas têm um canal mas pode criar mais
     acedendo ao menu de navegação do lado esquerdo da página :menuselection:`Gestão --> Canais --> Adicionar Canal`
 
-    .. image::eupago/eupago_newChannel.png
+    .. image:: eupago/eupago_newChannel.png
         :align: center
 
     Esse canal, vai ter a sua chave de comunicação por API com o serviço da **eupago**. Para aceder à listagem vá ao
     menu de navegação do lado esquerdo da página a :menuselection:`Gestão --> Canais --> Listagem de Canais`
 
-    .. image::eupago/eupago_channels.png
+    .. image:: eupago/eupago_channels.png
         :align: center
 
     Revele a sua chave de API para poder copiar
 
-    .. image::eupago/eupago_APIkey.png
+    .. image:: eupago/eupago_APIkey.png
         :align: center
 
 4. Aceda ao Provedor de Pagamento em Odoo
@@ -73,7 +73,7 @@ Configuração
         ambiente multi-empresa ou ter multiplos canais para a mesma empresa) pode duplicar um dos existentes e mudar o
         nome e/ou empresa associada
 
-    Vai poder ver 2 novos provedores de pagamento associados ao eupago, pode ativar apenas um deles ou ambos
+    Vai poder ver 2 novos provedores de pagamento associados ao eupago, pode ativar apenas um deles, ou ambos
 
     .. image:: eupago/v17_paymentProviders02.png
         :align: center
@@ -130,7 +130,7 @@ Configuração
     - **Mensagem de Ajuda**, que informa o utilizador na utilização da forma de pagamento
     - **Mensagem Pendente**, é a mensagem que o utilizador vai ver quando é gerado o pagamento, note que esta mensagem tem um valor dinâmico que tem de ficar **{time_limit}**, no entanto pode alterar o resto da mensagem
     - **Mensagem de Conclusão**, esta mensagem aparece quando o utilizador concluí o pagamento
-    - **Mensagem de Cancelamento**, esta mensagem é exibida de o pagamento for cancelado
+    - **Mensagem de Cancelamento**, esta mensagem é exibida se o pagamento for cancelado
 
     .. image:: eupago/v17_paymentProviders07.png
         :align: center
@@ -172,16 +172,16 @@ Configuração
     Na aba **Mensagens** pode configurar diversos tipos de informação como:
 
     - **Mensagem de Ajuda**, que informa o utilizador na utilização da forma de pagamento
-    - **Mensagem Pendente**, é a mensagem que o utilizador vai ver quando é gerado o pagamento, note que esta mensagem tem três valores dinâmicos que tem de ficar **{entity}**, **{reference}**, **{amount}**, no entanto pode alterar o resto da mensagem
-    - **Mensagem de Conclusão**, esta mensagem aparece quando o utilizador concluí o pagamento
-    - **Mensagem de Cancelamento**, esta mensagem é exibida de o pagamento for cancelado
+    - **Mensagem Pendente**, é a mensagem que o utilizador vai ver quando é gerado o pagamento, note que esta mensagem tem três valores dinâmicos que têm de ficar **{entity}**, **{reference}**, **{amount}**, no entanto pode alterar o resto da mensagem
+    - **Mensagem de Conclusão**, esta mensagem aparece quando o utilizador conclui o pagamento
+    - **Mensagem de Cancelamento**, esta mensagem é exibida se o pagamento for cancelado
 
     .. image:: eupago/v17_paymentProviders09.png
         :align: center
 
 .. important::
     Na app **Configurações** do Odoo, no separador **Faturação / Contabilidade** (dependendo respetivamente se tem
-    versão Community ou Enterprise do Odoo) tem uma nova opção com valor multi-empresa na secção **Pagamentos de Clientes**
+    versão Community ou Enterprise do Odoo), tem uma nova opção com valor multi-empresa na secção **Pagamentos de Clientes**,
     onde pode definir qual é o Provedor de Pagamento MB padrão.
 
     .. image:: ../../administration/install/initial_configuration/v17_appSettings.png
@@ -194,10 +194,10 @@ Configuração
 
     - **All Customers**, ao criar uma fatura, o campo respetivo vai ser pré-preenchido e ao confirmar a fatura, vai ser gerada de imediato uma referência para pagamento
 
-        - No caso de o cliente ser uma exceção, para esses casos não vai pré-preencher o campo na fatura nem gerar a referência ao confirmar a mesma
-    - **No Customers**, aocriar uma fatura, o campo respetivo não é pre-preenchido e ao confirmar a fatura, não vai acontecer nada a não ser que o cliente seja uma exceção
+        - No caso de o cliente ser uma exceção, não vai pré-preencher o campo na fatura nem gerar a referência ao confirmar a mesma
+    - **No Customers**, ao criar uma fatura, o campo respetivo não é pre-preenchido e ao confirmar a fatura, não vai acontecer nada a não ser que o cliente seja uma exceção
 
-        - No caso de o cliente ser uma exceção, vai usar o Provedor padrão para pré-preencher o campo na fatura gerar uma referência ao confirmar a mesma
+        - No caso de o cliente ser uma exceção, vai usar o provedor padrão para pré-preencher o campo na fatura e gerar uma referência ao confirmar a mesma
 
 Utilização
 ==========
@@ -219,7 +219,7 @@ documento mudar o valor lá inserido
 Independentemente do método escolhido, pode sempre emitir uma referência de pagamento manual no menu **Ação** do
 documento.
 
-Se optar pela opção de **Gerar Link para Pagamento** vai poder enviar o link para o cliente escolher a modalidade que
+Se optar pela opção de **Gerar Link para Pagamento** vai poder enviar o link, para o cliente escolher a modalidade que
 prefere
 
 Se optar pela opção de **Gear Referências Multibanco** vai poder escolher quantos dias essa referência vai ficar ativa.
@@ -241,13 +241,13 @@ Se carregar numa das transações, vai poder ver um resumo da mesma nomeadamente
 Depois de o cliente efetuar o pagamento e este for validado pelo **eupago** e comunicado por Callback de novo ao Odoo,
 vai acontecer uma das seguintes situações:
 
-- Se apenas tiver a app de **Faturação** instalada, a fatura passa logo ao estado de **Pago** como se o recibi tivesse sido emitido
-- Se tiver instalada a app de **Contabilidade**, a fatura passa ao estado de **Em pagamento** como se o recibi tivesse sido emitido, no entanto, com a app de **Contabilidade** ainda falta fazer a `reconciliação bancária <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/accounting/bank/reconciliation.html>`_
+- Se apenas tiver a app de **Faturação** instalada, a fatura passa logo ao estado de **Pago** como se o recibo tivesse sido emitido
+- Se tiver instalada a app de **Contabilidade**, a fatura passa ao estado de **Em pagamento** como se o recibo tivesse sido emitido, no entanto, com a app de **Contabilidade** ainda falta fazer a `reconciliação bancária <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/accounting/bank/reconciliation.html>`_
 
 Esta alteração acontece pela forma como ambas as apps lidam com a reconciliação de documentos
 
 .. seealso::
-    :ref:`Entenda o significado do estados das faturas em Odoo <odoo_process_documents_states>`
+    :ref:`Entenda o significado do estados dos documentos em Odoo <odoo_process_documents_states>`
 
 ..
     Sincronização manual

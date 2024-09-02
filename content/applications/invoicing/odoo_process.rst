@@ -352,6 +352,8 @@ Os restantes campos normalmente já estão preenchidos se seguir este processo. 
 .. seealso::
    :ref:`O que é um recibo <fiscal_documents_receipt>`
 
+.. _odoo_process_documents_states:
+
 Reconciliação de documentos
 ---------------------------
 A reconciliação de documentos é feita de forma automática, desde que siga os processos indicados.
@@ -372,8 +374,6 @@ No Processo :menuselection:`Nota de encomenda --> Fatura` pode ver 3 tipos de es
 
 .. image:: odoo_process/v17_statusNE.png
     :align: center
-
-.. _odoo_process_documents_states:
 
 No processo :menuselection:`Fatura --> Notas de crédito / Notas de débito / Recibos`, dependendo da sua versão do Odoo
 (Community ou Enterprise), pode ter 3 ou 4 tipos de estado respetivamente.
