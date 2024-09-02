@@ -80,9 +80,9 @@ Configuração
 
     Independentemente do método vai poder escolher o **Estado**
 
-    - Desativado, não vai estar disponível para utilização
-    - Ativado, vai estar disponível para utilização
-    - Modo de Teste, vai apenas usar um backend de testes sem fazer envios para os clientes
+    - **Desativado**, não vai estar disponível para utilização
+    - **Ativado**, vai estar disponível para utilização
+    - **Modo de Teste**, vai apenas usar um backend de testes sem fazer envios para os clientes
 
     Também pode escolher a que **Empresa** e **Website** está associado
 
@@ -184,7 +184,7 @@ Configuração
     versão Community ou Enterprise do Odoo) tem uma nova opção com valor multi-empresa na secção **Pagamentos de Clientes**
     onde pode definir qual é o Provedor de Pagamento MB padrão.
 
-    .. image:: ../../install/initial_configuration/v17_appSettings.png
+    .. image:: ../../administration/install/initial_configuration/v17_appSettings.png
         :align: center
 
     .. image:: eupago/v17_defaultMBprovider.png
@@ -192,10 +192,10 @@ Configuração
 
     Além de poder escolher o provedor padrão, também pode escolher qual o seu comportamento padrão:
 
-    - **All Customeres**, ao criar uma fatura, o campo respetivo vai ser pré-preenchido e ao confirmar a fatura, vai ser gerada de imediato uma referência para pagamento
+    - **All Customers**, ao criar uma fatura, o campo respetivo vai ser pré-preenchido e ao confirmar a fatura, vai ser gerada de imediato uma referência para pagamento
 
         - No caso de o cliente ser uma exceção, para esses casos não vai pré-preencher o campo na fatura nem gerar a referência ao confirmar a mesma
-    - **No Custumeres**, aocriar uma fatura, o campo respetivo não é pre-preenchido e ao confirmar a fatura, não vai acontecer nada a não ser que o cliente seja uma exceção
+    - **No Customers**, aocriar uma fatura, o campo respetivo não é pre-preenchido e ao confirmar a fatura, não vai acontecer nada a não ser que o cliente seja uma exceção
 
         - No caso de o cliente ser uma exceção, vai usar o Provedor padrão para pré-preencher o campo na fatura gerar uma referência ao confirmar a mesma
 
@@ -226,6 +226,16 @@ Se optar pela opção de **Gear Referências Multibanco** vai poder escolher qua
 No entanto deve ter em conta que vai ser utilizado o provedor escolhido na fatura.
 
 .. image:: eupago/v17_paymentProviders12.png
+    :align: center
+
+Depois de emitida uma referência para pagamento, pode consultar o estado de cada transação na aba **Transações**
+
+.. image:: eupago/v17_paymentProviders13.png
+    :align: center
+
+Se carregar numa das transações, vai poder ver um resumo da mesma nomeadamente a referência
+
+.. image:: eupago/v17_paymentProviders14.png
     :align: center
 
 Depois de o cliente efetuar o pagamento e este for validado pelo **eupago** e comunicado por Callback de novo ao Odoo,
