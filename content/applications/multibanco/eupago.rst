@@ -3,7 +3,6 @@
 ======
 eupago
 ======
-
 Fique a saber como configurar e utilizar a o nosso conector `eupago <https://www.eupago.pt/>`_
 
 .. raw:: html
@@ -20,7 +19,6 @@ Fique a saber como configurar e utilizar a o nosso conector `eupago <https://www
 
 Configuração
 ============
-
 1. Comece por `criar uma conta <https://www.eupago.com/registo>`_ na plataforma **eupago**
 
 2. Faça `login <https://clientes.eupago.pt/backoffice/login.html>`_ no backoffice da **eupago**
@@ -58,7 +56,7 @@ Configuração
 4. Aceda ao Provedor de Pagamento em Odoo
 
 .. note::
-    Depois de instalado a ativo o conector eupago, aceda à app **Faturação / Contabilidade** (dependendo respetivamente
+    Depois de instalado e ativo o conector eupago, aceda à app **Faturação / Contabilidade** (dependendo respetivamente
     se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separador Pagamentos Online
     selecione a opção **Provedores de Pagamento**.
 
