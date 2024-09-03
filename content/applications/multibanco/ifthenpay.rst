@@ -45,11 +45,8 @@ Configuração
     .. image:: ifthenpay/ifthenpay_credentials3.png
         :align: center
 
-    .. TODO : Forma de recuperar a chave de backoffice no caso de perder acesso ao pdf original
-
-    .. danger::
-        De momento não sabemos de nenhuma maneira de recuperar a sua **Chave de Backoffice** pelo que tenha cuidado e
-        nunca a perca
+    Para reaver a sua **Chave de Backoffice** terá de enviar um email para o `email de suporte do ifthenpay <mailto:suporte@ifthenpay.com>`_
+    com o NIF da empresa à qual pertence a conta.
 
 5. Aceda ao Provedor de Pagamento em Odoo
 
