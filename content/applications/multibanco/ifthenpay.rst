@@ -48,7 +48,7 @@ Configuração
     .. raw:: html
 
         <div>
-            Para reaver a sua **Chave de Backoffice** terá de enviar um email para o <a href="mailto:suporte@ifthenpay.com">email de suporte do ifthenpay</a> com o NIF da empresa à qual pertence a conta.
+            Para reaver a sua <b>Chave de Backoffice</b> terá de enviar um email para o <a href="mailto:suporte@ifthenpay.com">email de suporte do ifthenpay</a> com o NIF da empresa à qual pertence a conta.
         </div>
 
 5. Aceda ao Provedor de Pagamento em Odoo
