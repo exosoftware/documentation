@@ -269,7 +269,7 @@ Se carregar numa das transações, vai poder ver um resumo da mesma nomeadamente
 .. image:: ifthenpay/v17_paymentProviders07.png
     :align: center
 
-Depois de o cliente efetuar o pagamento e este for validado pelo **eupago** e comunicado por Callback de novo ao Odoo,
+Depois de o cliente efetuar o pagamento e este for validado pelo **ifthenpay** e comunicado por Callback de novo ao Odoo,
 vai acontecer uma das seguintes situações:
 
 - Se apenas tiver a app de **Faturação** instalada, a fatura passa logo ao estado de **Pago** como se o recibo tivesse sido emitido
