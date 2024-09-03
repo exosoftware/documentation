@@ -280,7 +280,26 @@ Esta alteração acontece pela forma como ambas as apps lidam com a reconciliaç
 .. seealso::
     :ref:`Entenda o significado do estados dos documentos em Odoo <odoo_process_documents_states>`
 
-..
-    Sincronização manual
+.. tip::
+    **Sincronização manual**
 
-    .. TODO : Ver com o João sincronização manual
+    Se por algum motivo estiver a ter problemas com o seu Callback, ou pretender fazer sincronização de movimentos
+    anteriores, pode fazer sincronização manual no Provedor de Pagamento
+
+    Para o fazer aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou
+    Enterprise do Odoo), vá ao menu de **Configuração** e no separador Pagamentos Online selecione a opção
+    **Provedores de Pagamento**.
+
+    .. image:: ../invoicing/fiscal_documents/v17_appInvoicingAccounting.png
+        :align: center
+
+    .. image:: eupago/v17_paymentProviders01.png
+        :align: center
+
+    No separador **Sincronização** vai ter um botão para o efeito, no final da sincronização a data vai ser guardada
+
+    .. image:: eupago/v17_sincPayments.png
+        :align: center
+
+    .. important::
+        A opção de sincronização manual apenas funciona para o provedor de Multibanco
