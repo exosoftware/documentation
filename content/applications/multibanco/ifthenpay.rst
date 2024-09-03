@@ -1,7 +1,5 @@
 :show-content:
 
-.. |email_link| replace:: `<email de suporte do ifthenpay <mailto:suporte@ifthenpay.com>>`_
-
 =====================
 ifthenpay
 =====================
@@ -47,8 +45,11 @@ Configuração
     .. image:: ifthenpay/ifthenpay_credentials3.png
         :align: center
 
-    Para reaver a sua **Chave de Backoffice** terá de enviar um email para o |email_link| com o NIF da empresa à qual
-    pertence a conta.
+    .. raw:: html
+
+        <div>
+            Para reaver a sua **Chave de Backoffice** terá de enviar um email para o <a href="mailto:suporte@ifthenpay.com">email de suporte do ifthenpay</a> com o NIF da empresa à qual pertence a conta.
+        </div>
 
 5. Aceda ao Provedor de Pagamento em Odoo
 
