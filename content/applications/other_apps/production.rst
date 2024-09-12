@@ -4,7 +4,7 @@
 Produção
 ========
 
-.. _other_Flex_Manufactoring:
+.. _other_Flex_Manufacturing:
 
 Flex Manufacturing
 ==================
