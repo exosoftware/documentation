@@ -23,5 +23,6 @@ impostos pela AT e verificados pela Localização PT+
     Antes da versão 17 do Odoo, eram utilizados outros termos mas as suas localizações são as mesmas
 
     :menuselection:`Tipos de Documentos Fiscais --> Séries Documentais`
+
     :menuselection:`Tipo Doc. Fiscal --> Série Documental`
 
