@@ -3,33 +3,204 @@
 ========
 e-Fatura
 ========
+O e-Fatura é uma funcionalidade da Autoridade Portuguesa usada por todos os negócios, no entanto sendo o Odoo um ERP, o
+controlo de gestão não pode ser esquecido.
 
-Documentação em breve
+Com essa abordagem em mente, a Exo Software desenvolveu uma ferramenta que o ajuda no controlo das suas faturas de
+fornecedores, para que não se esqueça de fazer o devido registo em Odoo e garantir que o Odoo reflete a sua realidade, o
+ajuda no controlo de fluxos financeiros e tomada de decisões.
 
-.. TODO : Fazer manual
+.. raw:: html
 
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
 
+.. note::
+    Esta ferramenta permite-lhe importar ou sincronizar no seu Odoo os dados que os seus fornecedores declaram à AT,
+    dessa forma se for declarado algo que não registou no Odoo, fica logo a saber.
+
+.. important::
+    Esta funcionalidade do **e-Fatura** não está disponível na loja Odoo, para ter acesso terá de pedir aos nossos
+    serviços que façam a sua instalação e ativação na sua base de dados
+
+    Depois pode começar a seguir os passos que se seguem para proceder à configuração e utilização
+
+Configuração do Utilizador
+==========================
+Para poder comunicar com a AT através de Odoo tem de inserir as credênciais de acesso. Para tal terá de aceder ao seu
+utilizador Odoo e inserir os dados na aba **Portugal**
+
+.. image:: ../invoicing/series_registration/v17_ATcredentials.png
+   :align: center
+
+Deve garantir que em Odoo o utilizador tem permissões para fazer a comunicação de séries, mas também o login de acesso
+na AT está atutorizado a fazer essa mesma comunicação.
+
+Insersão da informação do e-Fatura
+==================================
+Para poder iniciar a utilização, aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
+Community ou Enterprise do Odoo), vá ao menu de **Contabilidade** e no separador Gestão selecione a opção **E-Fatura**.
+
+.. image:: ../invoicing/fiscal_documents/v17_appInvoicingAccounting.png
+   :align: center
+
+.. image:: efatura/v17_efaturaMenu.png
+   :align: center
+
+Selecione o botão Importar e na janela que se vai abrir pode definir se vai querer importar ou sincronizar
+
+.. image:: efatura/v17_efaturaImport01.png
+   :align: center
+
+Sincronizar
+-----------
+Para sincronizar deve:
+
+- Preencher o **Diário** do tipo compras, onde estão registados os movimentos
+- **Data Inicial** e **Data Final**, se escolher um **Período** as datas são ajustadas, ou se preferir pode ter datas personalizadas
+- O pisco **Criar/Atualizar Faturas**
+
+    - Se estiver ativo e conseguir encontrar equivalência associa às faturas já existentes
+    - Se estiver ativo e não conseguir cria um documento em rascunho
+    - Se não estiver ativo apenas cria documentos em rascunho
+
+- Carregue no botão **Sincronizar**
+
+.. image:: efatura/v17_efaturaSync01.png
+   :align: center
+
+Ao concluir vai ver um relatório de erros se existir algum, ou um resumo dos movimentos sincronizados, pode selecionar a
+opção **Registar ao Fechar** que vai guardar no seu Odoo uma cópia dos movimentos importados para histórico.
+
+.. image:: efatura/v17_efaturaSync02.png
+   :align: center
+
+.. tip::
+    Esta é a metodologia que aconselhámos para utilização, porque ao sincronizar são inseridas no Odoo linhas diferentes
+    por cada imposto utilizado na fatura original
+
+Importar
+--------
+Para importar deve:
+
+- Fazer o download do ficheiro .csv do portal do e-Fatura para o período respetivo
+
+.. image:: efatura/v17_efaturaImport02.png
+   :align: center
+
+- Preencher o **Diário** do tipo compras, onde estão registados os movimentos
+- Inserir o **Ficheiro** que descarregou do portal do e-Fatura
+- O pisco **Criar/Atualizar Faturas**
+
+    - Se estiver ativo e conseguir encontrar equivalência associa às faturas já existentes
+    - Se estiver ativo e não conseguir cria um documento em rascunho
+    - Se não estiver ativo apenas cria documentos em rascunho
+
+- O botão Sincronizar, muda para **Importar**, carregue nele
+
+.. image:: efatura/v17_efaturaImport03.png
+   :align: center
+
+Ao concluir vai ver um relatório de erros se existir algum, ou um resumo dos movimentos sincronizados, pode selecionar a
+opção **Registar ao Fechar** que vai guardar no seu Odoo uma cópia dos movimentos importados para histórico.
+
+.. image:: efatura/v17_efaturaImport04.png
+   :align: center
+
+.. tip::
+    Este método é menos recomendado porque não traz as diferentes linhas por imposto e o valor de impostos pode não
+    bater certo com uma das taxas de impostos que utiliza, pelo que conseguir a equivalência pode ser mais difícil
+
+Fusão de documentos
+-------------------
+Devido à possibilidade de serem criadas faturas em duplicado porque não conseguiu fazer uma equivalência automática na
+insersão dos dados provenientes do e-Fatura, adicionamos a possibilidade de fundir uma fatura de rascunho com outra que
+já exista em sistema.
+
+Para o fazer basta selecionar as duas faturas que quer fundir, ir ao menu **Ação** e selecionar a opção
+**Fundir Faturas do E-Fatura**
+
+.. image:: efatura/v17_efaturaMerge.png
+   :align: center
+
+Trabalhar a informação em Odoo
+==============================
+Depois dos dados estarem no seu Odoo, chega a hora de os trabahar para que consiga tirar partido da funcionalidade ao
+máximo.
+
+Na vista de lista as diferentes faturas vão estar codificadas por cores:
+
+- **Verde**, se os dados que constam no seu Odoo estiverem corretos
+- **Vermelho**, se os dados que constam no seu Odoo apresentarem uma **Situação Inconsistente**
+
+.. image:: efatura/v17_efatura01.png
+   :align: center
+
+Se abrir o documento com **Situação Inconsistente**, no topo da página vai poder ver o(s) motivo(s) que está(ão) a criar
+essa inconsistência. Corrija esses motivos e a cor muda de vermelho para verde.
+
+.. image:: efatura/v17_efatura02.png
+   :align: center
+
+Caso verifique que a inconsistência não é válida e que o documento em Odoo está correto, e podem existir vários motivos
+para tal, pode desligar o aviso para esse documento. Por motivos de responsabilização, fica gravado no Chatter do Odoo
+a informação de quem desligar o aviso.
+
+.. image:: efatura/v17_efatura03.png
+   :align: center
+
+.. example::
+    Alguns motivos que podem levar a que exista uma diferença entre o declarado no e-Fatura e o que regista em Odoo
+    podem ser:
+
+    - Valores de impostos diferentes, por causa de valores sem direito a dedução, ou com dedução apenas parcial
+    - Já declarou essa despesa noutra app que não Faturação, por exemplo despesas declaradas pelos funcionários
+    - Diferenças de cêntimos, porque a forma de arredondamento que usa pode ser diferente da do seu fornecedor
+    - Fatura está num estado diferente, por exemplo o fornecedor vai cancelar o documento, mas ainda não o declarou à AT, no entanto você já a cancelou em Odoo
+
+O campo que é utilizado para fazer a ligação entre a informação que vem do e-Fatura e a informação que está em Odoo
+é o **Documento**
+
+.. image:: efatura/v17_efatura04.png
+   :align: center
+
+Do lado do documento Odoo a ligação é feita na aba **Outra Informação** no campo E-Fatura
+
+.. image:: efatura/v17_efatura05.png
+   :align: center
+
+.. important::
+    Cada documento de fatura Odoo apenas pode ser ligado a um documento do e-Fatura
+
+    Se existiu um equívoco e depois precisa de mudar a ligação a outro documento, deve primeiro retirar a ligação
+    existente e em seguida ligar ao documento correto
+
+Outra funcionalidade que também o ajuda a gerir a sua vista de documentos é a utilização de formatação condicional
+que pode ver tanto na vista de lista, como no próprio documento.
+
+Esta formatação muda para **Vermelho** os valores que apareçam diferentes em Odoo do que vem no E-Fatura e deixa a
+**Verde** os que estiverem corretos
+
+.. TODO : Confirmar com o Pedro se quer isto assim
 
 ..
-    O e-Fatura é uma funcionalidade da Autoridade Portuguesa usada por todos os negócios, no entanto sendo o Odoo um ERP, o
-    controlo de gestão não pode ser esquecido.
+    Se as situações inconsistentes forem desativadas no e-Fatura, a formatação condicional fica a verde no Odoo
 
-    Com essa abordagem em mente, a Exo Software desenvolveu uma ferramenta que o ajuda no controlo das suas faturas de
-    fornecedores, para que não se esqueça de fazer o devido registo em Odoo e garantir que o Odoo reflite a sua realidade, o
-    ajuda no controlo de fluxos financeiros e tomada de decisões.
+.. image:: efatura/v17_efatura06.png
+   :align: center
 
-    .. raw:: html
+.. image:: efatura/v17_efatura07.png
+   :align: center
 
-        <div style="text-align: center; margin: 20px 0;">
-            ─── ✦ ───
-        </div>
+.. tip::
+    Nos documentos do e-Fatura pode ainda inserir etiquetas para ajudar a agrupar pesquisas, por exemplo nos casos em
+    que em vez de uma fatura de fornecedor foi feita através da app de Despesas para reembolso a um funcionário
 
-    .. note::
-        Esta ferramenta permite-lhe importar ou sincronizar no seu Odoo os dados que os seus fornecedores declaram à AT,
-        dessa forma se for declarado algo que não registou no Odoo, vai ficar logo a saber.
+    .. image:: efatura/v17_efatura08.png
+       :align: center
 
-    .. important::
-        Esta funcionalidade do **e-Fatura** não está disponível na loja Odoo, para ter acesso terá de pedir aos nossos
-        serviços que façam a sua instalação e ativação na sua base de dados
+    .. image:: efatura/v17_efatura09.png
+       :align: center
 
-        Depois pode começar a seguir os passos que se seguem para proceder à configuração e utilização
+.. TODO : Leitura de QR e ATCUD para criar a fatura em Odoo e novas funcionalidades de ligar e-Fatura a Despesas
