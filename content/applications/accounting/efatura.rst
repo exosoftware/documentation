@@ -3,10 +3,10 @@
 ========
 e-Fatura
 ========
-O e-Fatura é uma funcionalidade da Autoridade Portuguesa usada por todos os negócios, no entanto sendo o Odoo um ERP, o
-controlo de gestão não pode ser esquecido.
+O e-Fatura é uma funcionalidade da Autoridade Tributária Portuguesa usada por todos os negócios, no entanto sendo o Odoo
+um ERP, o controlo de gestão não pode ser esquecido.
 
-Com essa abordagem em mente, a Exo Software desenvolveu uma ferramenta que o ajuda no controlo das suas faturas de
+Com essa abordagem em mente, a **Exo Software** desenvolveu uma ferramenta que o ajuda no controlo das suas faturas de
 fornecedores, para que não se esqueça de fazer o devido registo em Odoo e garantir que o Odoo reflete a sua realidade, o
 ajuda no controlo de fluxos financeiros e tomada de decisões.
 
@@ -33,9 +33,6 @@ utilizador Odoo e inserir os dados na aba **Portugal**
 
 .. image:: ../invoicing/series_registration/v17_ATcredentials.png
    :align: center
-
-Deve garantir que em Odoo o utilizador tem permissões para fazer a comunicação de séries, mas também o login de acesso
-na AT está atutorizado a fazer essa mesma comunicação.
 
 Insersão da informação do e-Fatura
 ==================================
@@ -165,7 +162,7 @@ O campo que é utilizado para fazer a ligação entre a informação que vem do 
 .. image:: efatura/v17_efatura04.png
    :align: center
 
-Do lado do documento Odoo a ligação é feita na aba **Outra Informação** no campo E-Fatura
+Do lado do documento Odoo a ligação é feita na aba **Outra Informação** no campo **E-Fatura**
 
 .. image:: efatura/v17_efatura05.png
    :align: center
@@ -175,6 +172,9 @@ Do lado do documento Odoo a ligação é feita na aba **Outra Informação** no 
 
     Se existiu um equívoco e depois precisa de mudar a ligação a outro documento, deve primeiro retirar a ligação
     existente e em seguida ligar ao documento correto
+
+    Esta ligação só pode ser alterada do lado do documento e-Fatura, mas o link do documento Odoo liga diretamente a
+    esse documento
 
 Outra funcionalidade que também o ajuda a gerir a sua vista de documentos é a utilização de formatação condicional
 que pode ver tanto na vista de lista, como no próprio documento.
@@ -192,7 +192,7 @@ Se as situações inconsistentes forem desativadas no e-Fatura, a formatação c
 
 .. tip::
     Nos documentos do e-Fatura pode ainda inserir etiquetas para ajudar a agrupar pesquisas, por exemplo nos casos em
-    que em vez de uma fatura de fornecedor foi feita através da app de Despesas para reembolso a um funcionário
+    que uma fatura de fornecedor, foi feita através da app de Despesas para reembolso a um funcionário
 
     .. image:: efatura/v17_efatura08.png
        :align: center
