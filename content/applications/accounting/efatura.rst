@@ -182,10 +182,7 @@ que pode ver tanto na vista de lista, como no próprio documento.
 Esta formatação muda para **Vermelho** os valores que apareçam diferentes em Odoo do que vem no E-Fatura e deixa a
 **Verde** os que estiverem corretos
 
-.. TODO : Confirmar com o Pedro se quer isto assim
-
-..
-    Se as situações inconsistentes forem desativadas no e-Fatura, a formatação condicional fica a verde no Odoo
+Se as situações inconsistentes forem desativadas no e-Fatura, a formatação condicional fica a verde no Odoo
 
 .. image:: efatura/v17_efatura06.png
    :align: center
