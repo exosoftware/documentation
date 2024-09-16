@@ -26,3 +26,8 @@ impostos pela AT e verificados pela Localização PT+
 
     :menuselection:`Tipo Doc. Fiscal --> Série Documental`
 
+**Situação Inconsistente** - Na funcionalidade do e-Fatura, uma situação inconsistente representa que a informação que
+vem do portal e-Fatura da AT, é diferente da informação que consta no seu Odoo.
+
+Não quer dizer que a situação no Odoo esteja errada, é apenas um alerta para que analise a situação, por isso
+disponibilizamos uma opção para desligar esse aviso documento a documento.

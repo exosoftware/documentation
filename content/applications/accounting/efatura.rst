@@ -1,4 +1,4 @@
-:nosearch:
+:show-content:
 
 ========
 e-Fatura
