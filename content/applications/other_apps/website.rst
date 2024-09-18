@@ -23,24 +23,24 @@ permite controlar em cada utilizador de portal o grau de acesso que o mesmo tem.
 
     Depois pode começar a seguir os passos que se seguem para a utilizar
 
-Nativamente, o Odoo permite que qualquer utilizadr de portal tenha acesso a toda a informação, sua e da empresa a que
+Nativamente, o Odoo permite que qualquer utilizador de portal tenha acesso a toda a informação, sua e da empresa a que
 esteja associado.
 
-Esta app está preparada para que facilmente possa cortar esse acesso utilizador a utilizador, de forma muito simples em
-várias temáticas como:
+Esta app está preparada para que facilmente possa cortar esse acesso **utilizador a utilizador**, de forma muito simples
+em várias temáticas como:
 
 - Faturas, Notas de Crédito/Débito
-- Tickets de Helpdesk (Apoio ao cliente)
+- Tickets de Apoio ao cliente
 - Tarefas de Projetos
 - Orçamentos e Notas de Encomenda
-- Timesheets (Registo de Horas)
+- Registo de Horas
 
 Configurar
 ==========
 Na app de **Configurações** aceda à opção **Manage Users** e selecione o utilizador que vai fazer esta gestão. Em
 seguida navegue para a aba **Permissões de Acesso** e ative a opção **Acesso Gestão de Portal**
 
-.. image:: ../../install/initial_configuration/v17_appSettings.png
+.. image:: ../../administration/install/initial_configuration/v17_appSettings.png
    :align: center
 
 .. image:: website/v17_manageUsers.png
