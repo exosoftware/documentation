@@ -11,11 +11,8 @@ Explore mais sobre o nosso add-on de Salários
         ─── ✦ ───
     </div>
 
-Documentação em breve
-
 .. toctree::
     :titlesonly:
-    :hidden:
 
     payroll/recibos_derclaracoes
     payroll/abonos_descontos
