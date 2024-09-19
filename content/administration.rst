@@ -3,9 +3,9 @@
 :hide-page-toc:
 :show-toc:
 
-===================
+=============
 Administração
-===================
+=============
 
 Estas páginas fornecem instruções e documentação técnica sobre instalação, manutenção e atualização de sistemas Odoo com as apps Exo.
 
@@ -24,7 +24,7 @@ São destinadas a programadores e administradores de sistemas.
 .. _install/editions:
 
 Edições
-========
+=======
 
 Há duas edições diferentes do Odoo.
 
@@ -34,7 +34,10 @@ Há duas edições diferentes do Odoo.
 **Odoo Enterprise** é a versão *shared source* do software, que fornece mais funcionalidades, incluindo suporte funcional, atualizações e hosting.
 Os `preços <https://www.odoo.com/pricing-plan>`_ a partir de uma app grátis.
 
-As apps Exo são compatíveis com ambas as edições. Em alguns casos, diferentes módulos deverão ser instalados para se obter funcionalidades semelhantes em cada edição.
+**As apps Exo são compatíveis com ambas as edições**.
+
+.. important::
+    Em alguns casos, diferentes módulos deverão ser instalados para se obter funcionalidades semelhantes em cada edição.
 
 
 .. toctree::
