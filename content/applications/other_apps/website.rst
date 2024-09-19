@@ -79,6 +79,7 @@ a(s) temática(s) em causa
 
 .. note::
     Um visto **ativo**, significa que o acesso é **restrito**
+
     Sem visto, significa que o acesso é global
 
 .. tip::
