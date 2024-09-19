@@ -1,5 +1,4 @@
 :nosearch:
-:hide-page-toc:
 
 ========
 Salários
@@ -16,6 +15,7 @@ Documentação em breve
 
 .. toctree::
     :titlesonly:
+    :hidden:
 
     payroll/recibos_derclaracoes
     payroll/abonos_descontos
