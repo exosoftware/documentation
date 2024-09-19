@@ -1,8 +1,16 @@
 :nosearch:
+:hide-page-toc:
 
 ========
 Salários
 ========
+Explore mais sobre o nosso add-on de Salários
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
 
 Documentação em breve
 

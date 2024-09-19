@@ -3,6 +3,13 @@
 ========================
 Outras Apps Exo Software
 ========================
+Explore mais sobre os nossos add-ons de diferentes temáticas não centrais da nossa Localização PT+
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
 
 .. toctree::
     :titlesonly:
