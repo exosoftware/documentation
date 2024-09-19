@@ -117,13 +117,12 @@ natureza gratuita, a opção SSH é a mais comum.
 
                Indisponível
 
-.. FIXME :  bloco abaixo não está traduzido, é para ficar em inglês?
 .. note::
-   **The Enterprise git repository does not contain the full Odoo source code**. It is only a
-   collection of extra add-ons. The main server code is in the Community edition. Running the
-   Enterprise version means running the server from the Community version with the `addons-path`
-   option set to the folder with the Enterprise edition. It is required to clone both the Community
-   and Enterprise repositories to have a working Odoo Enterprise installation.
+    **O repositório Git Enterprise não contem acesso total ao código do Odoo**. É apenas uma coleção de add-ons extra.
+    O código principal do servidor está na versão Community. Correr a versão Enterprise significa correr o servidor
+    a partir da versão Community com a opção `addons-path` definida para para o diretório com a versão Enterprise. É
+    obrigatório clonar tanto os repositórios da versão Community como o da versão Enterprise, para ter uma instalação
+    Odoo Enterprise a funcionar.
 
 Escolher o *branch*
 -------------------
