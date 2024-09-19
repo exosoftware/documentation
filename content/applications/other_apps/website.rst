@@ -40,8 +40,8 @@ simples em várias temáticas como:
     documentos/registos em todas as temáticas acima referidas.
 
     Esta decisão foi tomada, de forma a prevenir esquecimentos em contactos já existentes. A motivação da decisão foi
-    que o interesse numa app deste género, demonstra interesse em prevenção, pelo queé preferível bloquear todos, do que
-    alguém ter acesso indevido a dados/informação que não devia.
+    que o interesse numa app deste género, demonstra interesse em prevenção, pelo que é preferível restringir todos, do
+    que alguém ter acesso indevido a dados/informação que não devia.
 
     No entanto, como vai poder ver mais adiante, pode retornar ao visionamento padrão, temática a temática em cada
     utilizador.
