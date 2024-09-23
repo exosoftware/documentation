@@ -49,8 +49,8 @@ Na secção **Armazém** ative as opções:
 .. image:: manufacturing/v16_inventorySettings02.png
    :align: center
 
-Faça a configuração do seu armazém, pode fazê-lo seguinte logo a opção **Definir Rotas de Armazém** e abra o armazém, em
-seguida mude a opção de produção pelo menos para 2 passos
+Faça a configuração do seu armazém, pode fazê-lo seguindo a opção **Definir Rotas de Armazém** e abra o armazém, em
+seguida mude a opção de **Produção** pelo menos para 2 passos
 
 .. image:: manufacturing/v16_inventorySettings03.png
    :align: center
@@ -59,10 +59,10 @@ seguida mude a opção de produção pelo menos para 2 passos
    :align: center
 
 .. tip::
-    Se a sua recolha interna o permitir legalmente, cancele o documento fiscal nesta fase
+    Se a sua recolha de componentes o permitir legalmente, cancele o documento fiscal nesta fase
 
-Faça a configuração das suas localizações, pode fazê-lo seguinte logo a opção **Localizações** crie uma nova com a
-configuração abaixo
+Faça a configuração das suas localizações, pode fazê-lo seguindo a opção **Localizações** e crie uma nova com a
+configuração abaixo (o nome pode ser o que desejar)
 
 .. image:: manufacturing/v16_inventorySettings05.png
    :align: center
@@ -123,12 +123,12 @@ trabalho internos que precisa e, um para cada um dos fornecedores de subcontrata
    :align: center
 
 .. important::
-    Na confifuração dos centros de trabalho internos precisa de ter a etiqueta **Internal**
+    Na confifuração dos **centros de trabalho internos** precisa de ter a etiqueta **Internal**
 
     .. image:: manufacturing/v16_manufacturingSettings06.png
         :align: center
 
-    Na confifuração dos centros de trabalho externos precisa de ter a etiqueta **External**
+    Na confifuração dos **centros de trabalho externos** precisa de ter a etiqueta **External**
 
     .. image:: manufacturing/v16_manufacturingSettings07.png
         :align: center
@@ -145,8 +145,8 @@ Na app de **Inventário** vá ao menu de **Configuração** e selecione a opçã
    :align: center
 
 .. important::
-    Edite as Operações de subcontratação para utilizarem a localização de **Em Subcontratação** criada anteriormente,
-    coloque a opção inversa no **Tipo de Retorno**
+    Edite as Operações de subcontratação para utilizarem a localização de **Em Subcontratação** (ou com o nome que
+    escolheu dar)criada anteriormente, coloque também a opção inversa no **Tipo de Retorno**
 
     **Operação de Envios de Subcontratação**
 
@@ -176,16 +176,16 @@ sua **Lista de Materiais** e artigos componentes verifique as seguintes situaç�
 .. image:: manufacturing/v16_BoM01.png
    :align: center
 
-- Nas operações da Lista de Materiais têm de:
+- Nas operações da Lista de Materiais tem de:
 
     - Atribuir ao Centro de Trabalho do Subcontratado principal, mas só porque o Odoo obriga a preencher este campo
     - Ativar a opção **Subcontratação** da aba Subcontratação
-    - Adicionar os Fornecedores da Subcontratação cpm respetivos centros de trabalho, artigo de serviço e custo Unitário
+    - Adicionar os Fornecedores da Subcontratação com respetivos centros de trabalho, artigo de serviço e custo Unitário
 
     .. image:: manufacturing/v16_BoM02.png
        :align: center
 
-    - Ter sempre uma operação interna para finalização que deve estar bloqueada pela conclusão das outras
+    - Ter sempre uma operação interna para finalização, que deve estar bloqueada pela conclusão das outras
 
     .. image:: manufacturing/v16_BoM03.png
        :align: center
@@ -204,6 +204,7 @@ Crie uma nova Ordem de Produção, baseada na Lista de Materiais que criou e car
 
 Como a escolha dos passos de produção tem pelo menos 2 passos, a **Recolha Componentes** é obrigatória, complete-a para
 poder avançar com o processo
+
 Depois de completa a recolha dos componentes, vão estar disponíveis as opções de subcontratar ou produzir, conforme as
 opções de bloqueio de operações que escolheu na Lista de Materiais
 
@@ -214,7 +215,7 @@ opções de bloqueio de operações que escolheu na Lista de Materiais
     Desde que essas ações estejam disponíveis ao mesmo tempo pode optar por subcontratar operações pela ordem que
     preferir
 
-    Como estas operações são subcontratadas e não feitas internamente a vista de tablet/chão de fábrica foi ocultada
+    Como estas operações são subcontratadas e não feitas internamente, a vista de tablet/chão de fábrica foi ocultada
 
 .. tip::
     Se na operação tiver inserido também um centro de trabalho interno na lista de fornecedores, pode mudar uma
@@ -266,14 +267,14 @@ A seguir carregue no botão **MARCAR COMO A FAZER**
    :align: center
 
 Por motivos de rastreabilidade, implementamos uma verificação manual da disponibilidade de componentes que estavam
-reservados para produção e que agora vão de lá sair para ir para subcontratação.
+reservados para produção e que agora vão para subcontratação.
 
 Para o fazer:
 
-- Carregue no gráfico de disponibilidade da Procura
+- Carregue no gráfico de disponibilidade da **Procura**
 - Remova a reserva da ordem de produção
-- Retorne à ordem de envio e verifique disponibilidade
-- Carregue em **SET QUANTITIES** e **VALIDAR** o envio
+- Retorne à ordem de envio e carregue em **VERIFICAR DISPONIBILIDADE**
+- Carregue em **SET QUANTITIES** e **VALIDAR** para confirmar o envio
 
 .. image:: manufacturing/v16_FM06.png
    :align: center
@@ -287,19 +288,25 @@ Para o fazer:
 .. image:: manufacturing/v16_FM09.png
    :align: center
 
-Este processo vai colocar os componentes no armazém de **Em Subcontratação**, até que esteja pronto para os receber
+Este processo vai colocar os componentes no armazém de **Em Subcontratação** (ou o nome que escolher dar), até que
+esteja pronto para os receber
 
 Ao confirmar o envio dos componentes para subcontratação, vai ser gerada a guia para o recebimento dos mesmos, com uma
 tarefa para o comprador para validar os dados, nomeadamente data esperada do recebimento, conforme acordado com o
-fornecedor quando a tiver atualizado carregue em **MARCAR COMO A FAZER**
+fornecedor
+
+Quando a tiver atualizado carregue em **MARCAR COMO A FAZER**
 
 .. image:: manufacturing/v16_FM10.png
    :align: center
 
-Carregue em **SET QUANTITIES** e **VALIDAR** o recebimento. Aloque os componentes recebidos à OP original e em seguida,
-volte à OP para concluir o processo de subcontratação
+Carregue em **SET QUANTITIES** e **VALIDAR** confirmar o recebimento. Aloque os componentes recebidos à OP original e em
+seguida, volte à OP para concluir o processo de subcontratação
 
 .. image:: manufacturing/v16_FM11.png
+   :align: center
+
+.. image:: manufacturing/v16_FM17.png
    :align: center
 
 .. image:: manufacturing/v16_FM12.png
