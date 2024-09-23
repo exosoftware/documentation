@@ -9,4 +9,4 @@ Outras Apps Exo Software
 
     other_apps/website
     other_apps/project
-    other_apps/production
+    other_apps/manufacturing
