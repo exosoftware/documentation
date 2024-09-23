@@ -3,9 +3,13 @@
 ====
 FAQs
 ====
-
 Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
 
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
 
 .. toctree::
     :titlesonly:

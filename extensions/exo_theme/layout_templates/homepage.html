@@ -5,10 +5,15 @@
     <section>
         <div class="row gx-lg-5">
             <div class="col-lg-6">
-                <h2><a href="{{ pathto('documentos_utilizador') }}">{{ _("Documentação para Utilizadores") }}</a></h2>
+                <h2><a href="{{ pathto('applications') }}">{{ _("Documentação para Utilizadores") }}</a></h2>
                 <p class="text-dark">{{ _("Descubra os nossos guias de utilização do Odoo PT+ e muito mais.") }}</p>
                 <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Temáticas") }}</h5>
                 <ul class="list-unstyled">
+                    <li>
+                        <a href="{{ pathto('applications/essentials') }}" class="stretched-link">
+                            {{ _("Essencial") }}
+                        </a>
+                    </li>
                     <li>
                         <a href="{{ pathto('applications/invoicing') }}" class="stretched-link">
                             {{ _("Faturação, Pagamentos e Stock") }}
@@ -20,7 +25,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('appications/payroll') }}" class="stretched-link">
+                        <a href="{{ pathto('applications/payroll') }}" class="stretched-link">
                             {{ _("Salários") }}
                         </a>
                     </li>
@@ -30,8 +35,8 @@
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('applications/other') }}" class="stretched-link">
-                            {{ _("Outros") }}
+                        <a href="{{ pathto('applications/other_apps') }}" class="stretched-link">
+                            {{ _("Outras Apps Exo Software") }}
                         </a>
                     </li>
                     <li>
@@ -39,68 +44,26 @@
                             {{ _("FAQ") }}
                         </a>
                     </li>
+                    <li>
+                        <a href="{{ pathto('applications/glossary') }}" class="stretched-link">
+                            {{ _("Glossário") }}
+                        </a>
+                    </li>
                 </ul>
             </div>
-<!--            <div class="col-lg-6">-->
-<!--                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('applications/faq') }}">{{ _("FAQs") }}</a></h2>-->
-<!--                <p class="text-dark">{{ _("Explore os nossos guias rápidos de resolução de problemas comuns") }}</p>-->
-<!--                <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>-->
-<!--                <ul class="list-unstyled">-->
-<!--                    <li>-->
-<!--                        <a href=" {{ pathto('applications/faq/configuracao') }} " class="stretched-link">-->
-<!--                            {{ _("Configuração") }}-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ pathto('applications/faq/permissoes') }}" class="stretched-link">-->
-<!--                            {{ _("Permissões") }}-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ pathto('applications/faq/saft_errors') }}" class="stretched-link">-->
-<!--                            {{ _("Ficheiro SAF-T PT") }}-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ pathto('applications/faq/comunicacao_series') }}" class="stretched-link">-->
-<!--                            {{ _("Comunicação de Séries") }}-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ pathto('applications/faq/assinatura_digital_pdf') }}" class="stretched-link">-->
-<!--                            {{ _("Assinatura digital de PDFs") }}-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ pathto('applications/faq/invoice') }}" class="stretched-link">-->
-<!--                            {{ _("Fatura") }}-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ pathto('applications/faq/faturacao_eletronica') }}" class="stretched-link">-->
-<!--                            {{ _("Faturação eletrónica") }}-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ pathto('applications/faq/configuracao_pos') }}" class="stretched-link">-->
-<!--                            {{ _("Coonfiguração POS") }}-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                    <li>-->
-<!--                        <a href="{{ pathto('applications/faq/documentos_transporte') }}" class="stretched-link">-->
-<!--                            {{ _("Documentos de transporte") }}-->
-<!--                        </a>-->
-<!--                    </li>-->
-<!--                </ul>-->
-<!--            </div>-->
             <div class="col-lg-6">
-                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('administration') }}">{{ _("Administração") }}</a></h2>
+                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('administration') }}">{{ _("Administração (para developers)") }}</a></h2>
                 <p class="text-dark">{{ _("Documentação técnica sobre instalação, manutenção e atualização de sistemas Odoo PT+ e outros.") }}</p>
                 <h5 class="text-dark pt-3 text-uppercase fw_bold">{{ _("Tópicos") }}</h5>
                 <ul class="list-unstyled">
                     <li>
                         <a href=" {{ pathto('administration/install') }} " class="stretched-link">
-                            {{ _("Instalação e Configuração") }}
+                            {{ _("Instalação e Configuração inicial") }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ pathto('administration/neutralized_database') }}" class="stretched-link">
+                            {{ _("Base de dados neutralizada") }}
                         </a>
                     </li>
                     <li>
@@ -108,11 +71,11 @@
                             {{ _("Versões suportadas") }}
                         </a>
                     </li>
-                    <li>
-                        <a href="{{ pathto('administration/upgrade') }}" class="stretched-link">
-                            {{ _("Upgrade de versões") }}
-                        </a>
-                    </li>
+<!--                    <li>-->
+<!--                        <a href="{{ pathto('administration/upgrade') }}" class="stretched-link">-->
+<!--                            {{ _("Upgrade de versões") }}-->
+<!--                        </a>-->
+<!--                    </li>-->
                     <li>
                         <a href="{{ pathto('administration/faq') }}" class="stretched-link">
                             {{ _("FAQ") }}
