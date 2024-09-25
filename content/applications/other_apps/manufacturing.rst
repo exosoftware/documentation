@@ -18,7 +18,7 @@ assim gasta menos tempo em configurações constante e mais tempo a servir os se
 
 .. important::
     Esta app apesar de funcionar como uma só, está dividida em 2 módulos para que tanto os clientes Community como
-    Enterprise possam, usufruir da sua funcionalidade
+    Enterprise, possam usufruir da sua funcionalidade
 
     O módulo **Flex Manufacturing - Accounting** obriga à existência do módulo de **Contabilidade** do Odoo, pelo que
     só está disponível para clientes Enterprise
@@ -163,7 +163,7 @@ Na app de **Inventário** vá ao menu de **Configuração** e selecione a opçã
         pela comunicação e possível emissão das guias de transporte de ativos em ambas as direções
 
     .. seealso::
-        :ref:`Guias de ativos próprios <fiscal_documents_transportationDocs>`
+        :ref:`Guias de transporte <fiscal_documents_transportationDocs>`
 
         :doc:`Registo de Séries Documentais <../invoicing/series_registration>`
 
@@ -215,13 +215,13 @@ opções de bloqueio de operações que escolheu na Lista de Materiais
     Desde que essas ações estejam disponíveis ao mesmo tempo pode optar por subcontratar operações pela ordem que
     preferir
 
-    Como estas operações são subcontratadas e não feitas internamente, a vista de tablet/chão de fábrica foi ocultada
+    Como estas operações são subcontratadas e não feitas internamente, a vista de tablet/chão de fábrica fica oculta
 
 .. tip::
     Se na operação tiver inserido também um centro de trabalho interno na lista de fornecedores, pode mudar uma
     subcontratação para produção interna
 
-    Se numa operação que inicialmente era de produção interna ativar e configurar um fornecedor externo com centro de
+    Se numa operação que inicialmente era de produção interna, ativar e configurar um fornecedor externo com centro de
     trabalho externo, pode passar uma operação interna para externa e subcontratar
 
     .. image:: manufacturing/v16_FMie01.png
@@ -230,8 +230,8 @@ opções de bloqueio de operações que escolheu na Lista de Materiais
     .. image:: manufacturing/v16_FMie02.png
        :align: center
 
-    Esta funcionalidade foi inserida para que se existirem necessidades imediatas de alteração não tenha de anular a OP
-    e refazer todo o processo, mas possa modificar em tempo real o processo de produção para fazer face às necessidades
+    Esta funcionalidade foi inserida para que, se existirem necessidades imediatas de alteração, não tenha de anular a OP
+    e refazer todo o processo. Podendo antes modificar em tempo real o processo de produção e face às necessidades
 
 Ao carregar no botão de subcontratação é feita uma verificação se existe uma compra em rascunho ao fornecedor:
 
@@ -255,8 +255,8 @@ Ao mesmo tempo é criado um envio de subcontratação em rascunho com os artigos
 
 Ao confirmar a compra, vai ser criada no movimento de inventário que estava em rascunho, uma tarefa para o comprador
 
-O objetivo desta tarefa é que o comprador como responsável pelo acordo com o fornecedor dê as indicações de quando deve
-ser feito o envio dos materiais para que o responsável do inventário esteja informado de quando fazer esse envio
+O objetivo desta tarefa é que o comprador como responsável pelo acordo com o fornecedor, dê as indicações de quando deve
+ser feito o envio dos materiais, para que o responsável do inventário esteja informado de quando fazer esse envio
 
 A seguir carregue no botão **MARCAR COMO A FAZER**
 
@@ -300,8 +300,8 @@ Quando a tiver atualizado carregue em **MARCAR COMO A FAZER**
 .. image:: manufacturing/v16_FM10.png
    :align: center
 
-Carregue em **SET QUANTITIES** e **VALIDAR** confirmar o recebimento. Aloque os componentes recebidos à OP original e em
-seguida, volte à OP para concluir o processo de subcontratação
+Carregue em **SET QUANTITIES** e **VALIDAR** para confirmar o recebimento. Aloque os componentes recebidos à OP original
+e em seguida, volte à OP para concluir o processo de subcontratação
 
 .. image:: manufacturing/v16_FM11.png
    :align: center
@@ -312,8 +312,12 @@ seguida, volte à OP para concluir o processo de subcontratação
 .. image:: manufacturing/v16_FM12.png
    :align: center
 
-Complete a OP normalmente com a operação interna e dê os consumos dos componentes utilizados. Quando concluir a OP é
-gerado o relatório de **Avaliação**, bem como a **Análise de Custos** se tiver a app **Contabilidade** instalada
+**Repita os passos anteriores sempre que tenha uma operação de subcontratação**
+
+Complete a OP normalmente com a operação interna e dê os consumos dos componentes utilizados.
+
+Quando concluir a OP é gerado o relatório de **Avaliação**, bem como a **Análise de Custos** se tiver a app
+**Contabilidade** instalada
 
 **Avaliação**
 
