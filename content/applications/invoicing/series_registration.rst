@@ -49,7 +49,7 @@ Dentro de cada série pode inserir diversas informações, como:
    - **Empresa** da base de dados a que esse tipo de documentos está associado, esta opção é mais útil nos casos de empresas com ambiente multi empresa para que cada uma das suas empresas tenham séries e sequências diferentes
    - **Método de Origem**, método de comunicação em SAF-T
 
-      - **Aplicação**, significa que vai ser O Odoo a emitir os documentos e o responsável por os comunicar em SAF-T
+      - **Aplicação**, significa que vai ser o Odoo a emitir os documentos e o responsável por os comunicar em SAF-T
       - **Integração**, significa que este tipo de documentos foi emitido por outro sistema e só está a ser utilizado para inserir os dados em Odoo (por exemplo sistema POS externo) logo a comunicação em SAF-T é da responsabilidade do sistema emissor
       - **Manual/Reposição**, significa que os documentos já foram emitidos e comunicados anteriormente em SAF-T, mas por algum motivo (por exemplo avaria do servidor externo) não se encontram atualmente inseridos em Odoo, pelo que precisam de ser reinseridos. Não vai existir nova comunicação em SAF-T e os movimentos são só para reproduzir algo que já deveria de existir
    - **Sequência**, nome da sequência que está associada à série, é recomendado que a sequência tenha o mesmo nome da série, podendo acrescer o período para distinção
