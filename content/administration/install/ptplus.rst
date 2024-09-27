@@ -175,6 +175,7 @@ dependências necessárias para cada módulo:
      - Grupo
      - Módulo
      - Dependências Python
+     - Dependências SO
      - Módulos Extra
    * -
      - pt-plus
@@ -182,16 +183,19 @@ dependências necessárias para cada módulo:
      - ptplus
      - git+https://github.com/OCA/openupgradelib.git@master, unicodecsv, xmlschema==2.4.0, zeep
      -
+     -
    * -
      - pt-plus
      - Faturação
      - ptplus_credit_note
+     -
      -
      - `account_invoice_refund_link <https://github.com/OCA/account-invoicing/tree/17.0/account_invoice_refund_link>`_
    * -
      - pt-plus
      - Faturação
      - ptplus_stock
+     -
      -
      - `stock_picking_invoice_link <https://github.com/OCA/stock-logistics-workflow/tree/17.0/stock_picking_invoice_link>`_
    * -
@@ -200,10 +204,12 @@ dependências necessárias para cada módulo:
      - ptplus_backend_exo
      - cryptography
      -
+     -
    * -
      - pt-plus
      - Contabilidade
      - ptplus_accounting_asset_management
+     -
      -
      - | `account_asset_management <https://github.com/OCA/account-financial-tools/tree/17.0/account_asset_management>`_
        | `report_xlsx_helper <https://github.com/OCA/reporting-engine/tree/17.0/report_xlsx_helper>`_
@@ -213,12 +219,14 @@ dependências necessárias para cada módulo:
      - pt-plus
      - Contabilidade
      - ptplus_accounting_efatura
-     - bs4, requests_html
+     - bs4, requests_html, pymupdf, pyzbar
+     - zbar-tools
      -
    * -
      - pt-plus
      - Contabilidade
      - ptplus_accounting_mis_report
+     -
      -
      - | `mis_builder <https://github.com/OCA/mis-builder/tree/17.0/mis_builder>`_
        | `report_xlsx <https://github.com/OCA/reporting-engine/tree/17.0/report_xlsx>`_
@@ -227,6 +235,7 @@ dependências necessárias para cada módulo:
      - pt-payroll
      - Salários
      - ptplus_payroll_ce
+     -
      -
      - | `payroll <https://github.com/OCA/payroll/tree/16.0/payroll>`_
        | `payroll_account <https://github.com/OCA/payroll/tree/16.0/payroll_account>`_
