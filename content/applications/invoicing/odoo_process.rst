@@ -64,6 +64,36 @@ Depois deve preencher os campos necessários e selecionar a série documental a 
        Se cobra mensalmente durante 2 anos por um serviço, o plano de recorrência deve
        ser mensal mas com uma data de término 2 anos no futuro
 
+.. tip::
+    Pode aplicar descontos no processo de **Venda** utilizando o botão **Desconto** existente para o efeito
+
+    .. image:: odoo_process/v17_discount01.png
+       :align: center
+
+    Este botão vai disponibilizar 3 opções:
+
+    - **Em todas as linhas de venda**, aplica um desconto percentual a cada linha do documento
+    - **Desconto global**, aplica uma nova linha com um desconto percentual no final do documento (utiliza o artigo Odoo **Desconto**)
+    - **Valor Fixo**, aplica uma nova linha com um desconto nominal no final do documento (utiliza o artigo Odoo **Desconto**)
+
+    .. image:: odoo_process/v17_discount02.png
+       :align: center
+
+    .. image:: odoo_process/v17_discount03.png
+       :align: center
+
+    .. important::
+        As linhas de **Desconto global** e **Valor Fixo** também estão sujeitas a aplicação de impostos
+
+        Se o imposto utilizado for igual para todos os artigos, pode usar esse imposto no artigo **Desconto**
+
+        Se o imposto utilizado variar entre artigos, deve apenas usar um desconto de linha para cada artigo
+
+    Este é o aspeto na impressão do documento
+
+    .. image:: odoo_process/v17_discount04.png
+       :align: center
+
 Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será gerada uma **Nota de encomenda**
 
 .. image:: odoo_process/v17_confirmQuote.png
@@ -126,7 +156,7 @@ O processo de emissão da fatura deve então ser iniciado na **Nota de encomenda
 
 Na janela que abre decida o tipo de fatura que pretende criar de entre as opções:
 
-    - Fatura real
+    - Fatura regular
     - Fatura de adiantamento
 
         - Percentagem do valor total da encomenda
@@ -165,6 +195,25 @@ A maioria dos campos já vão estar preenchidos pois são herdados da Nota de en
 
     Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a
     criar um orçamento.
+
+.. tip::
+    Pode aplicar descontos diretamente no processo de **Faturação** adicionando uma nova linha com o artigo Odoo
+    **Desconto** existente para o efeito
+
+    .. image:: odoo_process/v17_discount03.png
+       :align: center
+
+    .. important::
+        As linhas de **Desconto** também estão sujeitas a aplicação de impostos
+
+        Se o imposto utilizado for igual para todos os artigos, pode usar esse imposto no artigo **Desconto**
+
+        Se o imposto utilizado variar entre artigos, deve apenas usar um desconto de linha para cada artigo
+
+    Este é o aspeto na impressão do documento
+
+    .. image:: odoo_process/v17_discount04.png
+       :align: center
 
 Em seguida confirme a fatura
 
