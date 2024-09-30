@@ -16,4 +16,5 @@ Explore mais sobre os nossos add-ons de diferentes temáticas não centrais da n
 
     other_apps/website
     other_apps/project
+    other_apps/sales
     other_apps/manufacturing
