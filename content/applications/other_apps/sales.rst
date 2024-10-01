@@ -8,5 +8,71 @@ Vendas
 
 Hide SO Line Timesheet
 ======================
+Apesar de o Odoo fazer um excelente trabalho na escolha de que linha de uma Nota de Encomenda, é utilizada para registo
+de horas em diversas apps, com o passar do tempo, começam a existir cada vez mais opções de selecção que podem confundir
+o utilizador.
 
-Documentação em breve
+Com o objetivo de simplificar a vida ao utilizador, desenvolvemos esta solução, que lhe permite ocultar qualquer linha
+de Nota de Encomenda de artigos do tipo **Serviço** das possibilidades de escolha, quando já não tem uso para a mesma
+
+Também acrescentamos algumas ferramentas de controlo e aconselhamento, para facilitar a sua utilização de registo de
+horas
+
+.. important::
+    Esta app apesar de funcionar como uma só, está dividida em 2 módulos dependendo se tem a app de **Apoio ao Cliente**
+    instalada, ou não
+
+    A decisão foi tomada porque sempre que utiliza registo de horas está obrigado a utilizar a app **Projetos**.
+    No entanto, pode utilizar a app **Projeto** mas não utilizar a app de **Apoio ao Cliente** pelo que essa vertente
+    foi colocada num módulo próprio.
+
+    Por outro lado, se optar por usar o módulo de **Apoio ao Cliente** terá de instalar ambos
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
+
+Configuração
+------------
+Em qualquer artigo onde o **Tipo de Artigo**, seja da **Serviço**, vai ter disponível um novo campo **Ocultar**
+
+Esta opção define qual o comportamento por defeito a aplicar ao produto quando este é usado numa linha de Nota de
+Encomenda:
+
+- Ativo, não vai aparecer como opção nos registos de horas
+- Inativo, vai aparecer como opção nos registos de horas
+
+.. image:: sales/v17_solConfiguration01.png
+   :align: center
+
+.. image:: sales/v17_solConfiguration02.png
+   :align: center
+
+Para que funcione em **Apoio ao Cliete** tem de ativar duas opções nas definições da equipa:
+
+- **Registos de Horas**, vai permitir registar horas em tickets
+- **Cobrança de Tempo**, vai permitir ligar esses registos de horas a linhas de notas de encomenda para faturação
+
+.. image:: sales/v17_solConfiguration03.png
+   :align: center
+
+Utilização
+----------
+Nos registos de horas vai poder selecionar, ou não, a linha de nota de encomenda dependendo se, a opção está **inativa**
+ou **ativa** respetivamente
+
+**Se a opção de ocultar estiver inativa**
+
+.. image:: sales/v17_solHowTo01.png
+   :align: center
+
+**Se a opção de ocultar estiver ativa**
+
+.. image:: sales/v17_solHowTo02.png
+   :align: center
+
+.. tip::
+    Ocultar ou não uma linha de nota de encomenda, é algo que pode fazer mesmo depois do documento estar confirmado e
+    faturado, pois não tem impacto fiscal
