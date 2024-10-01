@@ -378,7 +378,7 @@ Apesar de não ser propriamente um relatório funciona como tal pois permite-nos
 
 - ver as necessidades de inventário
 - selecionar as rotas a utilizar para satisfazer essas necessidades
-- estabelecer regras de automatismo uasndo quantidades mínimas e máximas
+- estabelecer regras de automatismo usando quantidades mínimas e máximas
 - dar ordem de reabastecimento às necessidades de inventário
 
 Para ter acesso basta aceder ao menu :menuselection:`Operações --> Aprovisionamento --> Reabastecimento` a partir da app
@@ -387,10 +387,10 @@ de **Inventário**
 .. image:: stock/v17_stock_products07.png
     :align: center
 
-.. image:: stock/v17_reports1.png
+.. image:: stock/v17_reports01.png
     :align: center
 
-.. image:: stock/v17_reports2.png
+.. image:: stock/v17_reports02.png
     :align: center
 
 .. seealso::
@@ -406,10 +406,10 @@ Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Stock` a pa
 .. image:: stock/v17_stock_products07.png
     :align: center
 
-.. image:: stock/v17_reports3.png
+.. image:: stock/v17_reports03.png
     :align: center
 
-.. image:: stock/v17_reports4.png
+.. image:: stock/v17_reports04.png
     :align: center
 
 .. seealso::
@@ -425,10 +425,16 @@ Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Valorizaç�
 .. image:: stock/v17_stock_products07.png
     :align: center
 
-.. image:: stock/v17_reports5.png
+.. image:: stock/v17_reports05.png
     :align: center
 
-.. image:: stock/v17_reports6.png
+.. image:: stock/v17_reports06.png
+    :align: center
+
+Pode ainda fazer uma valorização numa data e hora específica que pretenda, para tal carregue no botão
+**Valotização à Data** e preencha o requisito
+
+.. image:: stock/v17_reports10.png
     :align: center
 
 .. seealso::
@@ -444,17 +450,17 @@ Community ou Enterprise do Odoo), vá ao menu :menuselection:`Relatórios --> Po
 .. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
 
-.. image:: stock/v17_reports7.png
+.. image:: stock/v17_reports07.png
    :align: center
 
 Na janela que se abre selecione o ano Fiscal, pode alterar as datas se precisar de algo diferente das definições padrão
 e carregue em **Exportar XML**
 
-.. image:: stock/v17_reports8.png
+.. image:: stock/v17_reports08.png
    :align: center
 
 Em seguida vai ver um resumo da informação que possa causar erros e terá acesso ao ao download do ficheiro,
 depois é só submeter no site da AT e fechar a janela
 
-.. image:: stock/v17_reports8.png
+.. image:: stock/v17_reports09.png
    :align: center
