@@ -432,7 +432,7 @@ Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Valorizaç�
     :align: center
 
 Pode ainda fazer uma valorização numa data e hora específica que pretenda, para tal carregue no botão
-**Valotização à Data** e preencha o requisito
+**Valorização à Data** e preencha o requisito
 
 .. image:: stock/v17_reports10.png
     :align: center
