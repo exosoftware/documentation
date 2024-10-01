@@ -99,6 +99,8 @@ materiais, carregue no botão dedicado para o efeito:
 .. image:: project/v17_piiHowTo04.png
    :align: center
 
+.. FIXME : Desta imagem para baixo não mostra mais nenhuma ???????
+
 .. image:: project/v17_piiHowTo05.png
    :align:
 
@@ -144,7 +146,6 @@ Quando for verificar as **Atualizações do Projeto**, vai poder ver os custos d
 
 .. image:: project/v17_piiHowTo09.png
    :align:
-
 
 .. TODO : Falta André corrigir erros de JS nas Atualizações do Projeto e acabar o Dashboard que tinha erros
 
