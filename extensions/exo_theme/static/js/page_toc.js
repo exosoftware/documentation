@@ -69,7 +69,7 @@
                     // auto-documented modules generate ids containing a '.' which would make the
                     // search fail.
                     const section = document.querySelector(`section[id="${sectionId}"]`);
-                    if (window.pageYOffset >= section.offsetTop) {
+                    if (section && window.pageYOffset >= section.offsetTop) {
                         // The focused section is the last one with a smaller offset from top than
                         // the current user scrolling offset.
                         activeHeadingRef = headingRef;

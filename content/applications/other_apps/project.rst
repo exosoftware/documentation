@@ -99,10 +99,8 @@ materiais, carregue no botão dedicado para o efeito:
 .. image:: project/v17_piiHowTo04.png
    :align: center
 
-.. FIXME : Desta imagem para baixo não mostra mais nenhuma ???????
-
 .. image:: project/v17_piiHowTo05.png
-   :align:
+   :align: center
 
 Quando uma tarefa passa para uma etapa configurada como **consumo efetivo** de artigos, vai ter acesso a mais 4 botões:
 
@@ -114,14 +112,14 @@ Quando uma tarefa passa para uma etapa configurada como **consumo efetivo** de a
 Carregue no botão **Transferir Materiais** e efetive o consumo dos artigos que constam na aba **Informação de Inventário**
 
 .. image:: project/v17_piiHowTo06.png
-   :align:
+   :align: center
 
 Neste momento também ganha acesso a novos smart buttons **Fatura** e **Movimentos de Produtos**
 
 Dependendo se é **Não Faturável** ou **Faturável** tem acesso a 1 ou aos 2 smart buttons respetivamente
 
 .. image:: project/v17_piiHowTo07.png
-   :align:
+   :align: center
 
 .. note::
     Se o pisco **Não Faturável** não estiver ativo, é neste momento que é criada uma fatura em rascunho
@@ -142,12 +140,10 @@ Quando for verificar as **Atualizações do Projeto**, vai poder ver os custos d
 **Faturável** e **Não Faturável**
 
 .. image:: project/v17_piiHowTo08.png
-   :align:
+   :align: center
 
 .. image:: project/v17_piiHowTo09.png
-   :align:
-
-.. TODO : Falta André corrigir erros de JS nas Atualizações do Projeto e acabar o Dashboard que tinha erros
+   :align: center
 
 .. _otherApps_Project_Helpdesk_Integrator:
 
