@@ -70,6 +70,7 @@
                     // search fail.
                     const section = document.querySelector(`section[id="${sectionId}"]`);
                     if (window.pageYOffset >= section.offsetTop) {
+                        console.log("1111111111111")
                         // The focused section is the last one with a smaller offset from top than
                         // the current user scrolling offset.
                         activeHeadingRef = headingRef;
