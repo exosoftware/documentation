@@ -145,6 +145,8 @@ Quando for verificar as **Atualizações do Projeto**, vai poder ver os custos d
 .. image:: project/v17_piiHowTo09.png
    :align: center
 
+.. TODO : correções JS ao ver Atualizações do Projeto e fazer o Dashboard que está com o Eduardo
+
 .. _otherApps_Project_Helpdesk_Integrator:
 
 Project Helpdesk Integrator
