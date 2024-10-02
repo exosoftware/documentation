@@ -19,14 +19,20 @@ Também acrescentamos algumas ferramentas de controlo e aconselhamento, para fac
 horas
 
 .. important::
-    Esta app apesar de funcionar como uma só, está dividida em 2 módulos dependendo se tem a app de **Apoio ao Cliente**
-    instalada, ou não
+    A app apesar de funcionar como uma só, está dividida em 3 módulos independentes, conforme seja o caso de ter as apps
+    de **Apoio ao Cliente** ou **Field Service/Serviço de Campo** instaladas, ou não
 
     A decisão foi tomada porque sempre que utiliza registo de horas está obrigado a utilizar a app **Projetos**.
-    No entanto, pode utilizar a app **Projeto** mas não utilizar a app de **Apoio ao Cliente** pelo que essa vertente
-    foi colocada num módulo próprio.
+    No entanto:
 
-    Por outro lado, se optar por usar o módulo de **Apoio ao Cliente** terá de instalar ambos
+    - a app de **Field Service** altera a app de projeto, pelo que para funcionar corretamente é preciso um add-on
+    - pode utilizar a app **Projeto** sem utilizar a app de **Apoio ao Cliente**, pelo que essa vertente foi colocada num módulo próprio
+
+    Se optar por:
+
+    - usar a app de **Field Service** terá de instalar 2 módulos
+    - usar a app de **Apoio ao Cliente** terá de instalar 2 módulos
+    - usar as apps **Apoio ao Cliente** e **Field Service** vai ter de instalar os 3 módulos
 
 .. raw:: html
 
