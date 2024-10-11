@@ -171,6 +171,14 @@ Na janela que abre decida o tipo de fatura que pretende criar de entre as opçõ
     .. image:: odoo_process/v17_createInvoice3.png
         :align: center
 
+.. _odoo_process_downpayment:
+
+Lidar com Faturas de adiantamento
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Documentação em breve
+
+.. TODO : Documentar o processo para faturar quando existem adiantamentos
+
 Depois de ter a fatura em modo de rascunho, deve preencher os campos necessários e escolher a série documental de
 fatura que pretende.
 
