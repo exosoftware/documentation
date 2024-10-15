@@ -253,7 +253,7 @@ Pode fazê-lo de duas formas:
 .. image:: efatura/v17_efaturaScan01.png
    :align: center
 
-- Numa nova fatura, faça o **Upload do ficheiro**, e carregue no botão **Scam QR**
+- Numa nova fatura, faça o **Upload do ficheiro**, e carregue no botão **Scan QR**
 
 .. image:: efatura/v17_efaturaScan02.png
    :align: center
