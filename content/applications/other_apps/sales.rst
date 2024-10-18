@@ -97,17 +97,25 @@ Na app de **Vendas** tem acesso a uma nova funcionalidade em :menuselection:`Rel
 Esta vista já vem com um filtro aplicado para lhe mostrar apenas as Linhas de Notas de Encomenda Ativas para uso em
 Registo de Horas, e com isso ajudar ao seu controlo
 
+.. note::
+    - Tem um resumo rápido de horas encomendadas, entregues e restantes
+    - As horas restantes têm uma formação condicional quando esgotadas ou ultrapassadas
+    - Barra de progresso para ajuda visual no controlo
+    - Pode ocultar as linhas gastas diretamente deste relatório
+    - Tem um resumo rápido de horas faturadas e por faturar
+    - As horas a faturar têm uma formatação condicional quando disponíveis, para que não se esqueça
+
 .. image:: sales/v17_solReport02.png
    :align: center
 
 Nas apps que lidam com registos de horas (**Projeto**, **Field Service**, **Apoio ao Ciente**), vai ter acesso a um novo
 Smart Button para acesso direto às linhas de notas de encomenda do cliente em questão
 
+.. image:: sales/v17_solSmartButton01.png
+   :align: center
+
 .. important::
     Lembre-se que a política do Odoo para faturação de Registos de Horas:
 
     - Se a linha com o Item de Nota de Encomenda estiver **preenchido**, **é para faturar**
     - Se a linha com o Item de Nota de Encomenda estiver **vazio**, **não é para faturar**
-
-    .. image:: sales/v17_solSmartButton01.png
-       :align: center
