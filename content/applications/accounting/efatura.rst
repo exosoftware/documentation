@@ -49,7 +49,7 @@ ao menu :menuselection:`Configuração --> Configurações`
 .. image:: efatura/v17_efaturaConfig01.png
    :align: center
 
-Procurar a secção **Portugal**, Configure os campos relativos ao eFatura:
+Procure a secção **Portugal** e configure os campos relativos ao eFatura:
 
 - Diário de compras que criou
 - Produto do eFatura que criou
