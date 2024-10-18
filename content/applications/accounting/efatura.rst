@@ -34,6 +34,42 @@ utilizador Odoo e inserir os dados na aba **Portugal**
 .. image:: ../invoicing/series_registration/v17_ATcredentials.png
    :align: center
 
+Configurações
+=============
+Tenha já criado um **diário** do tipo **Compras**, um **artigo*** para ser utilizado no processo de importação de
+documentos (este artigo deve poder ser comprado) bem como **todos os impostos base** necessários através da escolha de
+um plano de contas
+
+Aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá
+ao menu :menuselection:`Configuração --> Configurações`
+
+.. image:: ../invoicing/fiscal_documents/v17_appInvoicingAccounting.png
+   :align: center
+
+.. image:: efatura/v17_efaturaConfig01.png
+   :align: center
+
+Procurar a secção **Portugal**, Configure os campos relativos ao eFatura:
+
+- Diário de compras que criou
+- Produto do eFatura que criou
+- Taxas Normal, Intermédia, Reduzida e Isenta inseridas com o plano de contas
+
+.. image:: efatura/v17_efaturaConfig02.png
+   :align: center
+
+Ative a opção E-Fatura Scan que lhe vai permitir fazer scan dos códigos QR das faturas e criar as mesmas
+
+.. image:: efatura/v17_efaturaConfig03.png
+   :align: center
+
+.. important::
+    Verifique que configurações tem para o OCR Odoo, o nosso leitor de código QR **Scan QR** é gratuíto, no entanto o OCR
+    do Odoo **Digitalizar Documento** não o é e cobra um créditos por utilização
+
+    Na eventualidade de ter os 2 ativos, primeiro é usado o OCR do Odoo e só em seguida o leitor de código QR da Exo
+    Software.
+
 Insersão da informação do e-Fatura
 ==================================
 Para poder iniciar a utilização, aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
@@ -49,6 +85,11 @@ Selecione o botão Importar e na janela que se vai abrir pode definir se vai que
 
 .. image:: efatura/v17_efaturaImport01.png
    :align: center
+
+.. important::
+    O site do eFatura da AT tem uma limitação de 300 movimentos, atualmente não podemos fazer nada quanto a esta
+    situação, pelo que deve restringir as datas dos movimentos para garantir que não ultrapassa os 300 registos de uma
+    só vez.
 
 Sincronizar
 -----------
@@ -200,4 +241,34 @@ Se as situações inconsistentes forem desativadas no e-Fatura, a formatação c
     .. image:: efatura/v17_efatura09.png
        :align: center
 
-.. TODO : Leitura de QR e ATCUD para criar a fatura em Odoo e novas funcionalidades de ligar e-Fatura a Despesas
+Scan Código QR
+==============
+Para aqueles que não querem esperar pelo report do eFatura, podem ir inserindo as faturas em Odoo, com base no scan do
+código QR que as mesmas são obrigadas a ter em Portugal.
+
+Pode fazê-lo de duas formas:
+
+- Na lista das Faturas de Fornecedor, carregue no botão **Carregar**, selecione o ficheiro e aguarde o preenchimento
+
+.. image:: efatura/v17_efaturaScan01.png
+   :align: center
+
+- Numa nova fatura, faça o **Upload do ficheiro**, e carregue no botão **Scan QR**
+
+.. image:: efatura/v17_efaturaScan02.png
+   :align: center
+
+.. image:: efatura/v17_efaturaScan03.png
+   :align: center
+
+.. note::
+    Qualquer um dos processos cria uma **Fatura de Fornecedor** em **Rascunho**, mas também cria uma **Linha na tabela do eFatura**
+    no estado **Pendente**. Isto porque fica a aguardar validação com o portal através de sincronização ou importação.
+
+    .. image:: efatura/v17_efaturaScan04.png
+      :align: center
+
+    Quando essa validação é feita, o estado passa de **Pendente** para **Registada**
+
+    .. image:: efatura/v17_efaturaScan05.png
+      :align: center
