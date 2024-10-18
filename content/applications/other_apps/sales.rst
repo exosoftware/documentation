@@ -42,7 +42,7 @@ horas
 
 Configuração
 ------------
-Em qualquer artigo onde o **Tipo de Artigo**, seja da **Serviço**, vai ter disponível um novo campo **Ocultar**
+Em qualquer artigo onde o **Tipo de Artigo** seja **Serviço**, vai ter disponível um novo campo **Ocultar**
 
 Esta opção define qual o comportamento por defeito a aplicar ao produto quando este é usado numa linha de Nota de
 Encomenda:
@@ -56,9 +56,15 @@ Encomenda:
 .. image:: sales/v17_solConfiguration02.png
    :align: center
 
-Para que funcione em **Apoio ao Cliete** tem de ativar duas opções nas definições da equipa:
+.. tip::
+    É altamente aconselhado que a **Unidade de Medida** para os artigos a utilizar em Registo de Horas seja **Horas**,
+    apesar de o Odoo conseguir internamente fazer a conversão de tempos desde que pertença à mesma Categoria de Unidade
+    de Medida, essa conversão não aparece visivél em todas as vistas
 
-- **Registos de Horas**, vai permitir registar horas em tickets
+Para que funcione em **Apoio ao Cliete** tem de ativar duas opções nas definições da equipa e para funcionar em
+**Projetos** ou **Field Service** tem de ativar as mesmas definições nas configurações do projeto:
+
+- **Registos de Horas**, vai permitir registar horas em tickets ou tarefas
 - **Cobrança de Tempo**, vai permitir ligar esses registos de horas a linhas de notas de encomenda para faturação
 
 .. image:: sales/v17_solConfiguration03.png
@@ -69,16 +75,39 @@ Utilização
 Nos registos de horas vai poder selecionar, ou não, a linha de nota de encomenda dependendo se, a opção está **inativa**
 ou **ativa** respetivamente
 
-**Se a opção de ocultar estiver inativa**
+Se a opção de ocultar estiver **inativa**
 
 .. image:: sales/v17_solHowTo01.png
    :align: center
 
-**Se a opção de ocultar estiver ativa**
+Se a opção de ocultar estiver **ativa**
 
 .. image:: sales/v17_solHowTo02.png
    :align: center
 
 .. tip::
     Ocultar ou não uma linha de nota de encomenda, é algo que pode fazer mesmo depois do documento estar confirmado e
-    faturado, pois não tem impacto fiscal
+    faturado, pois não tem impacto fiscal, é apenas uma melhoria operacional
+
+Na app de **Vendas** tem acesso a uma nova funcionalidade em :menuselection:`Relatórios --> Controlo Registo Horas`
+
+.. image:: sales/v17_solReport01.png
+   :align: center
+
+Esta vista já vem com um filtro aplicado para lhe mostrar apenas as Linhas de Notas de Encomenda Ativas para uso em
+Registo de Horas, e com isso ajudar ao seu controlo
+
+.. image:: sales/v17_solReport02.png
+   :align: center
+
+Nas apps que lidam com registos de horas (**Projeto**, **Field Service**, **Apoio ao Ciente**), vai ter acesso a um novo
+Smart Button para acesso direto às linhas de notas de encomenda do cliente em questão
+
+.. important::
+    Lembre-se que a política do Odoo para faturação de Registos de Horas:
+
+    - Se a linha com o Item de Nota de Encomenda estiver **preenchido**, **é para faturar**
+    - Se a linha com o Item de Nota de Encomenda estiver **vazio**, **não é para faturar**
+
+    .. image:: sales/v17_solSmartButton01.png
+       :align: center
