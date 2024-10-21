@@ -56,7 +56,7 @@ extensões que lhe permitirão assinar a quantidade necessária de documentos, q
 Após a aquisição dos certificados, ser-lhe-á solicitado um conjunto de dados que permitirão à entidade
 certificadora identificar a empresa detentora do certificado, bem como atestar a legitimidade do seu
 representante. Poderá consultar mais detalhes sobre este processo na nossa página de
-`FAQ para Assinatura Digital de PDFs <../faq/pdf_digital_signature>`_.
+:doc:`FAQ para Assinatura Digital de PDFs <../faq/pdf_digital_signature>`.
 
 Concluído este processo, poderá avançar para a configuração da app no Odoo ou pedir-nos para que a
 façamos por si.
