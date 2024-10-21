@@ -121,6 +121,9 @@ Na configuração pardão os documentos já configurados são as **Faturas** e *
 .. image:: pdf_signing/v17_pdfSignConfiguration12.png
    :align: center
 
+.. seealso::
+    :doc:`Consulte o nosso FAQ para Assinatura Digital de PDFs <../faq/pdf_digital_signature>`
+
 Utilização
 ==========
 Sempre que emita um documento daqueles que estão configurados, o mesmo vai ser devidamente assinado usando o certificado

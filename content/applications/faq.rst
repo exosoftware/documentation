@@ -21,5 +21,5 @@ Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
     faq/transportation_docs
     faq/configuracao_pos
     faq/saft_errors
-    faq/assinatura_digital_pdf
+    faq/pdf_digital_signature
     faq/permissions
