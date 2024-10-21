@@ -236,9 +236,9 @@ Com esta app instalada passa a ter à sua disponibilidade mais uma opção **Pro
 
     .. raw:: html
 
-    <div>
-        <a href="https://documentation.exosoftware.pt/pt_PT/applications/other_apps/sales#hide-so-line-timesheet" target="_blank">Consulte a nossa app <b>Hide SO Line Timesheet</b> se quiser ainda mais funcionalidades</a>
-    <div>
+        <div>
+            <a href="https://documentation.exosoftware.pt/pt_PT/applications/other_apps/sales#hide-so-line-timesheet" target="_blank">Consulte a nossa app <b>Hide SO Line Timesheet</b> se quiser ainda mais funcionalidades</a>
+        <div>
 
 Utilização
 ----------
