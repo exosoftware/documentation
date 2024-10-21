@@ -233,7 +233,7 @@ Com esta app instalada passa a ter à sua disponibilidade mais uma opção **Pro
        :align: center
 
 .. seealso::
-    `Consulte a nossa app **Hide SO Line Timesheet** se quiser ainda mais funcionalidades <otherApps_Hide_SO_Line_Timesheet>`_
+    `Consulte a nossa app <b>Hide SO Line Timesheet</b> se quiser ainda mais funcionalidades <otherApps_Hide_SO_Line_Timesheet>`_
 
 Utilização
 ----------
