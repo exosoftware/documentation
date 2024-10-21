@@ -119,3 +119,12 @@ Smart Button para acesso direto às linhas de notas de encomenda do cliente em q
 
     - Se a linha com o Item de Nota de Encomenda estiver **preenchido**, **é para faturar**
     - Se a linha com o Item de Nota de Encomenda estiver **vazio**, **não é para faturar**
+
+Acrescentamos também uma nova coluna em todos os registos de horas para que possa diferenciar os tipos de linhas:
+
+- **Faturável**, tal como a regra Odoo estes registos já têm linha de NE associada
+- **Não Faturável**, tal como na regra Odoo estes registos não têm linha de NE associada porque efetivamente não são para associar
+- **Para Faturar**, não têm linha de NE associada porque a mesma está gasta ou ainda não existe mas queremos efetivamente vir a faturar este registo
+
+.. image:: sales/v17_solHowTo03.png
+   :align: center
