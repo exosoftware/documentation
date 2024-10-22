@@ -3,6 +3,9 @@
 ==========================
 Assinatura digital de PDFs
 ==========================
+.. seealso::
+    :doc: `Consulte o nosso manual sobre assinatura digital de PDFs <../invoicing/pdf_signing>`
+
 
 Que elementos são necessários para solicitar um certificado?
 ============================================================
