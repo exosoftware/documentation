@@ -60,3 +60,9 @@ Digital ou Cartão de Cidadão
 
 Após receção de um PDF, imprimir, preencher e assinar manuscritamente. Fazer reconhecimento por notário ou advogado e
 enviar por correio físico para a Digitalsign
+
+Verificação das assinaturas
+===========================
+Se quiser validar que os seus documentos estão a ser devidamente assinados pode utilizar este `validador <https://validador.digitalsign.pt/verify>`_
+
+Arraste o documento para a página e verifique o estado das assinaturas

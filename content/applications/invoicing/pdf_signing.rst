@@ -11,11 +11,6 @@ Posto de forma simples, a lei exige que documentos transmitidos digitalmente, po
 via, sejam previamente assinados, de acordo com um conjunto de especificações técnicas. As faturas impressas e o
 respetivo envio por serviço postal mantêm a sua validade.
 
-Para adicionar assinaturas digitais de forma gratuita, os utilizadores podem descarregar os ficheiros PDF, um a um,
-para o seu computador e usar um dos vários métodos disponíveis para os assinar (p. ex. a aplicação Autenticação.gov).
-Ou podem, através da app da Exo, configurar o seu Odoo para assinar, enviar e arquivar, **de forma automática**, os seus
-documentos digitais. É deste último processo que trata esta documentação.
-
 .. important::
     **Ainda não é obrigatório**.
 
@@ -28,13 +23,26 @@ documentos digitais. É deste último processo que trata esta documentação.
     Por esse motivo, a Exo Software, para garantir a conformidade com as normas nacionais, desenvolveu a sua própria
     solução de assinatura digital de PDFs recorrendo aos serviços da `DigitalSign <https://www.digitalsign.pt/ds>`_
 
+.. _invoicing_PDF_Digital_Signature_Manual_Method:
+
+Para adicionar assinaturas digitais de forma gratuita, os utilizadores podem descarregar os ficheiros PDF, um a um,
+para o seu computador e usar um dos vários métodos disponíveis para os assinar:
+
+- **Chave Móvel Digital**
+- **Cartão do Cidadão**
+- alicação **Autenticação.gov**
+
+Em seguida têm de enviar esses documentos assinados aos seus parceiros
+
+.. tip::
+    Ou podem, através da app da Exo, configurar o seu Odoo para assinar, enviar e arquivar, **de forma automática**, os
+    seus documentos digitais. É deste último processo que trata esta documentação.
+
 .. raw:: html
 
     <div style="text-align: center; margin: 20px 0;">
         ─── ✦ ───
     </div>
-
-.. TODO : questão do preçário, forma de disponibilização e configuração do certificado
 
 .. important::
     Esta app não está disponível na loja Odoo. Para ter acesso à mesma, terá que solicitar a sua
@@ -55,8 +63,10 @@ extensões que lhe permitirão assinar a quantidade necessária de documentos, q
 
 Após a aquisição dos certificados, ser-lhe-á solicitado um conjunto de dados que permitirão à entidade
 certificadora identificar a empresa detentora do certificado, bem como atestar a legitimidade do seu
-representante. Poderá consultar mais detalhes sobre este processo na nossa página de
-:doc:`FAQ para Assinatura Digital de PDFs <../faq/pdf_digital_signature>`.
+representante.
+
+.. seealso::
+    Poderá consultar mais detalhes sobre este processo na nossa página de :doc:`FAQ para Assinatura Digital de PDFs <../faq/pdf_digital_signature>`.
 
 Concluído este processo, poderá avançar para a configuração da app no Odoo ou pedir-nos para que a
 façamos por si.
@@ -79,7 +89,7 @@ Procure a secção **Portugal**, ative a **Assinatura Eletrónica de PDFs** e pr
 .. image:: pdf_signing/v17_pdfSignConfiguration01.png
    :align: center
 
-.. TODO : verificar ordem de preenchimento dos campos e como ter a informação disponível
+.. TODO : verificar ordem de preenchimento dos campos e como ter a informação disponível, verificar se é URI ou URL
 
 - **ID Cliente** e **Segredo do Cliente**, são facultados pela DigitalSign na aquisição do certificado
 
@@ -147,22 +157,18 @@ Na configuração padrão, os documentos já configurados são as **Faturas** e 
 .. image:: pdf_signing/v17_pdfSignConfiguration12.png
    :align: center
 
-.. seealso::
-    :doc:`Consulte o nosso FAQ para Assinatura Digital de PDFs <../faq/pdf_digital_signature>`
-
 Utilização
 ==========
 
 Uma vez terminada a configuração, o processo é automático: sempre que mandar imprimir ou enviar por
 e-mail um documento do tipo dos que estiverem configurados para serem assinados, obterá um PDF assinado.
 
-Caso o documento esteja configurado para ser adicionado aos anexos Odoo, este não mais será assinado,
-apresentando sempre a assinatura original. Se pretender nova assinatura, porque houve alterações no
-documento ou qualquer outro motivo, basta eliminar o respetivo anexo. Na impressão seguinte, será feita
-nova assinatura.
+.. important::
+    Caso o documento esteja configurado para ser adicionado aos anexos Odoo, este não mais será assinado,
+    apresentando sempre a assinatura original. Se pretender nova assinatura, porque houve alterações no
+    documento ou qualquer outro motivo, basta eliminar o respetivo anexo. Na impressão seguinte, será feita
+    nova assinatura.
 
 .. tip::
-    Uma forma fácil e gratuita, embora muito fastidiosa, de cumprir o requisito legal, é descarregar os
-    documentos que quiser enviar por email, assiná-los individualmente com **Chave Móvel Digital** ou com
-    **Cartão do Cidadão** através da aplicação **Autenticação.gov** e, em seguida, enviá-los manualmente por
-    e-mail.
+    Caso pretenda um processo gratuíto ou ainda não tenha completamente configurado o processo automático, pode cumprir
+    o requisito legal, consultando a informação no topo da página sobre o :ref:`processo manual <invoicing_PDF_Digital_Signature_Manual_Method>`
