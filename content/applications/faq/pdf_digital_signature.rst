@@ -78,6 +78,8 @@ Arraste o documento para a página e verifique o estado das assinaturas
 
 Este serviço é uma implementação do webservice da União Europeia para validação de assinaturas digitais
 
+.. TODO : verificar se é mesmo um webservice
+
 Quantidade de assinaturas disponíveis
 =====================================
 Dependendo do tipo de certificado que adquira, vai ter um número fixo de assinaturas disponíveis e uma validade para
@@ -103,4 +105,5 @@ Se quiser fazer **Arquivo digital** precisa de assinar com certificado qualifica
 - Todos os documentos que emite
 - Garantir que os documentos que recebe também estão assinados
 - Todos os documentos que sustentam os documentos que envia
+
         - Para guardar uma Fatura também terá de ter arquivado o Orçamento, Notas de Encomenda, Guias de Remessa, etc.
