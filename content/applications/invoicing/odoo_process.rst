@@ -175,9 +175,20 @@ Na janela que abre decida o tipo de fatura que pretende criar de entre as opçõ
 
 Lidar com Faturas de adiantamento
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Documentação em breve
 
-.. TODO : Documentar o processo para faturar quando existem adiantamentos
+.. important::
+    Quando recebe o valor do seu cliente
+    - Criar uma Fatura de Adiantamento
+    - Criar Recibo a partir da Fatura de Adiantamento
+    - Reconciliar o Recibo com o movimento do banco
+
+    Quando emite a fatura final
+    - Desconciliar o Recibo da Fatura de Adiantamento
+    - Emitir Nota de Crédito a partir da Fatura de Adiantamento para a anular
+    - Emitir nova Fatura pelo total
+    - Na nova Fatura associar o Recibo original
+
+    Com este processo a sua fatura final sai com o valor total, mas o montante a pagar sai apenas com o valor em falta
 
 Depois de ter a fatura em modo de rascunho, deve preencher os campos necessários e escolher a série documental de
 fatura que pretende.
