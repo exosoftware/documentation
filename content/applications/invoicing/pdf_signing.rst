@@ -89,8 +89,6 @@ Procure a secção **Portugal**, ative a **Assinatura Eletrónica de PDFs** e pr
 .. image:: pdf_signing/v17_pdfSignConfiguration01.png
    :align: center
 
-.. TODO : verificar ordem de preenchimento dos campos e como ter a informação disponível, verificar se é URI ou URL
-
 - **ID Cliente** e **Segredo do Cliente**, são facultados pela DigitalSign na aquisição do certificado
 
 .. image:: pdf_signing/v17_pdfSignConfiguration02.png

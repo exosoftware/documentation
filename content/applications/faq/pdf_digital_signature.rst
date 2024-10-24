@@ -7,6 +7,11 @@ Assinatura digital de PDFs
 .. seealso::
     :doc:`Consulte o nosso Guia sobre assinatura digital de PDFs <../invoicing/pdf_signing>`
 
+Quantos certificados precisa?
+=============================
+Pelas regras da DigitalSign cada empresa emissora precisa de ter um certificado próprio, ou seja,
+**cada NIF precisa do seu próprio certificado**, não pode ter apenas um certificado para um grupo de empresas.
+
 Que elementos são necessários para solicitar um certificado?
 ============================================================
 Para solicitar um certificado digital, deve fornecer os seguintes elementos:
