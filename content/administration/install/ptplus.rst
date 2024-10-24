@@ -187,18 +187,10 @@ dependências necessárias para cada módulo:
    * -
      - pt-plus
      - Faturação
-     - ptplus_account_credit_note
+     - ptplus_credit_note
      -
      -
-     - .. TODO : inserir a dependência necessária à espera da informação
-
-   * -
-     - pt-plus
-     - Faturação
-     - ptplus_account_debit_note
-     -
-     -
-     - `account_debit_note <https://github.com/OCA/account-invoicing/tree/17.0/account_invoice_refund_link>`_
+     - `account_invoice_refund_link <https://github.com/OCA/account-invoicing/tree/17.0/account_invoice_refund_link>`_
    * -
      - pt-plus
      - Faturação
