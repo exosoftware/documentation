@@ -280,6 +280,8 @@ Esta alteração acontece pela forma como ambas as apps lidam com a reconciliaç
 .. seealso::
     :ref:`Entenda o significado do estados dos documentos em Odoo <odoo_process_documents_states>`
 
+    :ref:`Como reconciliar os movimentos de provedores de pagamentos com o seu banco <odoo_process_payment_provider_journals>`
+
 .. tip::
     **Sincronização manual**
 

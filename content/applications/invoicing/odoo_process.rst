@@ -473,6 +473,27 @@ Na versão Enterprise terá 4 tipos de estado nas faturas:
 
 Os tipos de documento que podem servir para liquidar valores da fatura são as notas de crédito e os recibos
 
+.. _odoo_process_payment_provider_journals:
+
+Reconciliar Provedores de Pagamentos
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. TODO : aprimorar com melhor informação e imagens do processo
+
+Para que o seu processo seja devidamente registado deve ter em consideração a seguinte informação:
+
+- O seu provedor de pagamento vai receber a totalidade da fatura do seu cliente
+- Por esse motivo, é o recibo criado pelo provedor que deve ser reconciliado com a fatura do cliente e dando a mesma como paga
+- Para que isso seja devidamente feito deve **criar um Diário do tipo Banco** para receber os movimentos do provedor de pagamentos
+- Quando o provedor efetuar a transferência para o seu banco deve seguir o seguinte processo:
+
+    - Fazer um lançamento manual no diário do provedor
+
+        - Transferência de valor a receber para o diário do banco
+        - Reconhecimento do custo cobrado pelo serviço com um movimento para conta da classe 6
+        - Contrapartida pela soma das duas verbas anteriores na própria conta do diário do provedor
+
+    - Reconciliar o movimento de entrada do banco com o movimento manual do diário do provedor
+
 Mais informação
 ---------------
 .. seealso::

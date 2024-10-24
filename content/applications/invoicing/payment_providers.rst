@@ -41,6 +41,8 @@ Fique a conhecer mais em detalhe cada um dos provedores de pagamentos disponibil
 
     `Veja como configurar <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/wire_transfer.html>`_
 
+    :ref:`Como reconciliar os movimentos de provedores de pagamentos com o seu banco <odoo_process_payment_provider_journals>`
+
 .. tip::
     Além destes métodos pode ainda usar o `Provedor de Demonstração Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/payment_providers/demo.html>`_,
     que lhe permite testar os seus fluxos de transações online, sem ter de se comprometer com nenhum provedor, enquanto
@@ -71,3 +73,6 @@ através de Multibanco e MBWay. Para que essas metodilogias possam ser usadas de
 
 - :doc:`eupago <../multibanco/eupago>`
 - :doc:`Ifthenpay <../multibanco/ifthenpay>`
+
+.. seealso::
+    :ref:`Como reconciliar os movimentos de provedores de pagamentos com o seu banco <odoo_process_payment_provider_journals>`
