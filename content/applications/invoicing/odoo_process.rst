@@ -477,22 +477,55 @@ Os tipos de documento que podem servir para liquidar valores da fatura são as n
 
 Reconciliar Provedores de Pagamentos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. TODO : aprimorar com melhor informação e imagens do processo
 
-Para que o seu processo seja devidamente registado deve ter em consideração a seguinte informação:
+.. important::
+    O seu Provedor de Pagamento vai receber a totalidade da fatura do seu cliente
 
-- O seu provedor de pagamento vai receber a totalidade da fatura do seu cliente
-- Por esse motivo, é o recibo criado pelo provedor que deve ser reconciliado com a fatura do cliente e dando a mesma como paga
-- Para que isso seja devidamente feito deve **criar um Diário do tipo Banco** para receber os movimentos do provedor de pagamentos
-- Quando o provedor efetuar a transferência para o seu banco deve seguir o seguinte processo:
+    É o recibo criado pelo Provedor de Pagamento que deve ser reconciliado com a Fatura do cliente
 
-    - Fazer um lançamento manual no diário do provedor
+    Dependendo se tem Odoo Community ou Enterprise o estado da fatura vai ser **Pago** ou **Em Pagamento**
+    respetivamente, ficando no segundo caso a aguardar a reconciliação
 
-        - Transferência de valor a receber para o diário do banco
-        - Reconhecimento do custo cobrado pelo serviço com um movimento para conta da classe 6
-        - Contrapartida pela soma das duas verbas anteriores na própria conta do diário do provedor
+**Crie um diário do Tipo Banco para receber os movimentos do Provedor de Pagamentos**, como se de um banco se tratasse
 
-    - Reconciliar o movimento de entrada do banco com o movimento manual do diário do provedor
+.. note::
+    Será nesse diário que serão registados:
+
+    - os recibos das faturas de clientes pelo valor da venda
+    - os recibos das faturas de fornecedores pelo valor das comissões que paga ao provedor de pagamento
+
+.. important::
+    Deve tratar este diário do Provedor de Pagamentos como se fosse um diário de banco normal, pelo que deve fazer uma
+    importação de extrato ou sincronização de movimentos
+
+.. tip::
+    Não se esqueça de registar as faturas de fornecedores para registar as comissões pagas e de as levar a uma conta
+    da classe 6
+
+    Deve imitir o recibo de pagamento desta fatura.
+
+    No entanto, se não fizer a fatura, deve na reconciliação do extrato do Provedor de Pagamentos, fazer um movimento
+    manual que leve o valor das comissões a uma conta da classe 6
+
+Quando o Provedor de Pagamentos efetuar a transferência para o seu banco, deve fazer uma transferência interna de saldos
+de um diário para o outro
+
+Para tal vá ao **menu do diário do Provedor de Pagamentos** e selecione a opção **Pagamento de Fornecedor**
+
+.. image:: odoo_process/v17_reconcilePaymentProvider01.png
+    :align: center
+
+- Ative a opção **Transferência Interna**
+- Preencha o **Valor** a transitar de saldo
+- Preencha a **Data** e **Memorando** com a informação que consta no extrado do seu banco
+- Preencha no **Diario de Destino** o diário do seu banco
+- Confirme o movimento
+
+.. image:: odoo_process/v17_reconcilePaymentProvider02.png
+    :align: center
+
+Com este movimento confirmado o saldo que até aqui estava no diário do Provedor de Pagamento, passa a estar
+disponível no seu diário de Banco, a aguardar a reconciliação com o extrato bancário ou sincronização da conta
 
 Mais informação
 ---------------
