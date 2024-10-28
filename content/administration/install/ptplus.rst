@@ -207,6 +207,13 @@ dependências necessárias para cada módulo:
      -
    * -
      - pt-plus
+     - Faturação
+     - ptplus_partner
+     - suds-py3
+     -
+     -
+   * -
+     - pt-plus
      - Contabilidade
      - ptplus_accounting_asset_management
      -
