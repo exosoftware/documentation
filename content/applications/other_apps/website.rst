@@ -47,7 +47,7 @@ simples em várias temáticas como:
     utilizador.
 
 Configurar
-==========
+----------
 Na app de **Configurações** aceda à opção **Manage Users** e selecione o utilizador que vai fazer esta gestão. Em
 seguida navegue para a aba **Permissões de Acesso** e ative a opção **Acesso Gestão de Portal**
 
@@ -64,7 +64,7 @@ seguida navegue para a aba **Permissões de Acesso** e ative a opção **Acesso 
    :align: center
 
 Utilizar
-========
+--------
 Se pretender restituir o comportamento padrão do Odoo para alguma temática em específico, vá à app de **Contactos**
 selecione um dos seus contactos, na aba **Portal** remova o visto a uma vou várias das opções que pretende restituir
 
