@@ -239,6 +239,13 @@ dependências necessárias para cada módulo:
        | `report_xlsx <https://github.com/OCA/reporting-engine/tree/17.0/report_xlsx>`_
        | `date_range <https://github.com/OCA/server-ux/tree/17.0/date_range>`_
    * -
+     - pt-plus
+     - Contabilidade
+     - ptplus_pdf_sign
+     - pyotp, asn1crypto, pyhanko, cryptography==35.0.0
+     -
+     -
+   * -
      - pt-payroll
      - Salários
      - ptplus_payroll_ce
