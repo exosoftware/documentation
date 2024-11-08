@@ -214,6 +214,13 @@ dependências necessárias para cada módulo:
      -
    * -
      - pt-plus
+     - Faturação
+     - ptplus_pdf_sign
+     - pyotp, asn1crypto, pyhanko, cryptography==35.0.0
+     -
+     -
+   * -
+     - pt-plus
      - Contabilidade
      - ptplus_accounting_asset_management
      -
@@ -238,13 +245,6 @@ dependências necessárias para cada módulo:
      - | `mis_builder <https://github.com/OCA/mis-builder/tree/17.0/mis_builder>`_
        | `report_xlsx <https://github.com/OCA/reporting-engine/tree/17.0/report_xlsx>`_
        | `date_range <https://github.com/OCA/server-ux/tree/17.0/date_range>`_
-   * -
-     - pt-plus
-     - Contabilidade
-     - ptplus_pdf_sign
-     - pyotp, asn1crypto, pyhanko, cryptography==35.0.0
-     -
-     -
    * -
      - pt-payroll
      - Salários
