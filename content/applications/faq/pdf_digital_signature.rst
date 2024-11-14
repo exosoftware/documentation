@@ -26,9 +26,9 @@ Para solicitar um certificado digital, deve fornecer os seguintes elementos:
 **Dados da Organização**
 
 - **Nome Organização** conforme Certidão Permanente
-- **Código Certidão Permanente**
-- **NIF**
-- **Morada**
+- **Nº Certidão Permanente**
+- **NIF / NIPC**
+- **Morada da Sede**
 - **Nº Porta / Andar**
 - **Código Postal**
 - **Localidade**
@@ -37,8 +37,12 @@ Para solicitar um certificado digital, deve fornecer os seguintes elementos:
 
 **Dados do Representante Legal**
 
-- **Nome Completo**, conforme documento de identificação
-- **Nº CC**
+- **Primeiro(s) nome(s)**, conforme documento de identificação
+- **Último(s) nome(s)**, conforme documento de identificação
+- **Tipo de Documento**, pode ser Cartão de Identificação (ex. CC) ou Passaporte
+- **País do Documento**, que país emitiu o documento do representante legal
+- **Nº Documento**
+- **Documento Representação**, Documento que evidencie os poderes de representação. Ex. Procuração emitida pela Empresa ou Registo na Conservatória de Registo Comercial
 
 
 .. _faqs_pdf_digital_signature_company_validation_methods:
@@ -52,16 +56,16 @@ Para o efeito, há 3 métodos possíveis:
 
 1. **PDF assinado com Certificado Qualificado (CMD, CC ou app)**
 
-.. TODO : verificar como é recebido o PDF original
+Após receber por parte da Exo Software um email que contém o PDF do seu pedido, assine de forma digital, usando um
+Certificado Qualificado da Empresa, Chave Móvel Digital ou Cartão de Cidadão
 
-Após receção de um PDF, preencher e assinar de forma digital, usando um Certificado Qualificado da Empresa, Chave Móvel
-Digital ou Cartão de Cidadão
-
-Esta assinatura tem de ser feito com um perfil profissional ativo
+Esta assinatura deve de ser feita com um perfil profissional ativo e o documento enviado novamente à Exo Software
 
 2. **Vídeochamada com Representante Legal** que foi associado ao certificado
 
 Vai ter de enviar uma cópia do Cartão do Cidadão para validação
+
+.. TODO : parece ter mudado validar quando tivermos pedidos para isto
 
 Para selecionar esta modalidade, é necessário indicar **Sim** na opção **Validação de Identificação por Videochamada**
 
@@ -70,10 +74,10 @@ Para selecionar esta modalidade, é necessário indicar **Sim** na opção **Val
 
 3. **Formulário por Correio**
 
-.. TODO : verificar como é recebido o PDF original
+Após receber por parte da Exo Software um email que contém o PDF do seu pedido, imprimir e assinar manuscritamente.
+Fazer reconhecimento por notário ou advogado e enviar por correio físico para a Digitalsign
 
-Após receção de um PDF, imprimir, preencher e assinar manuscritamente. Fazer reconhecimento por notário ou advogado e
-enviar por correio físico para a Digitalsign
+.. TODO : Validar morada de envio quando alguém solicitar esta modalidade
 
 Verificação das assinaturas
 ===========================

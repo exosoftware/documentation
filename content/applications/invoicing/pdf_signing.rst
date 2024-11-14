@@ -17,11 +17,17 @@ respetivo envio por serviço postal mantêm a sua validade.
     A **data prevista** para entrada em vigor desta obrigatoriedade é **1 janeiro 2025**.
 
 .. danger::
-    Apesar de bastante útil e legal em vários países, a app **Sign** do Odoo não cumpre os requisitos legais impostos
-    pela legislação portuguesa. Pelo que **assinaturas usando a app Sign não são válidas em território nacional**
+    Apesar de bastante útil e vinculativa em vários países, a app **Sign** do Odoo não cumpre todos os requisitos legais
+    impostos pela legislação portuguesa.
 
-    Por esse motivo, a Exo Software, para garantir a conformidade com as normas nacionais, desenvolveu a sua própria
-    solução de assinatura digital de PDFs recorrendo aos serviços da `DigitalSign <https://www.digitalsign.pt/ds>`_
+    Existem 3 níveis de validação de assinaturas digitais, A app **Sign** é considerada de nível 1, enquanto que uma
+    assinatura qualificada é de nível 3.
+
+    Por esse motivo, **assinaturas usando a app Sign não são válidas em território nacional** para envio de faturas a
+    clientes, apesar de poderem ser suficientes para outros tipos de documentos de arquivo digital
+
+    Para garantir a conformidade com as normas nacionais, a Exo Software desenvolveu a sua própria solução de
+    assinatura digital de PDFs, recorrendo aos serviços da `DigitalSign <https://www.digitalsign.pt/ds>`_
 
 .. _invoicing_PDF_Digital_Signature_Manual_Method:
 
@@ -57,7 +63,7 @@ nossa `loja online <https://exosoftware.pt/shop>`_ ou contactando os nossos serv
 alternativa, poderá fazê-lo diretamente junto da `DigitalSign <https://www.digitalsign.pt/ds>`_,
 procurando por Selos Qualificados de Documentos e Faturação Eletrónica.
 
-Em qualquer dos casos, há 3 packs iniciais, válidos por 3 anos, que diferem apenas no preço e no
+Em qualquer dos casos, há 4 packs iniciais, válidos por 3 anos, que diferem apenas no preço e no
 número de assinaturas anuais incluídas. Posteriormente, caso esgote o plafond anual, poderá adquirir
 extensões que lhe permitirão assinar a quantidade necessária de documentos, qualquer que esta seja.
 
