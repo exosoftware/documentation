@@ -79,8 +79,6 @@ façamos por si.
 
 Configuração
 ============
-.. TODO : como criar conta com a DigitalSign
-
 Aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá
 ao menu :menuselection:`Configuração --> Configurações`
 
