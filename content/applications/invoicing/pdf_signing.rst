@@ -95,7 +95,7 @@ Procure a secção **Portugal**, ative a **Assinatura Eletrónica de PDFs** e pr
 .. image:: pdf_signing/v17_pdfSignConfiguration01.png
    :align: center
 
-- **ID Cliente** e **Segredo do Cliente**, são facultados pela DigitalSign na aquisição do certificado
+- **ID Cliente** e **Segredo do Cliente**, são facultados pela DigitalSign quando `regista o primeiro autenticador <gapi.digitalsign.pt/>`_
 
 .. image:: pdf_signing/v17_pdfSignConfiguration02.png
    :align: center
@@ -107,11 +107,6 @@ Procure a secção **Portugal**, ative a **Assinatura Eletrónica de PDFs** e pr
 
 .. important::
     Este URI tem de ser comunicado à DigitalSign para que seja devidamente registado nos servidores deles
-
-- **Access Token**, com os dados anteriores preenchidos carregue no botão **Obter Access Token** para o receber, vai precisar de fazer login para confirmar a sua identidade
-
-.. image:: pdf_signing/v17_pdfSignConfiguration04.png
-   :align: center
 
 - **ID Autorizador** e **Segredo do Autorizador**, estes dados podem ser obtidos no `seu backend DigitalSign <https://gapi.digitalsign.pt/login>`_
 
@@ -143,6 +138,11 @@ Procure a secção **Portugal**, ative a **Assinatura Eletrónica de PDFs** e pr
 
     .. image:: pdf_signing/v17_pdfSignConfiguration10.png
        :align: center
+
+- **Access Token**, com os dados anteriores preenchidos carregue no botão **Obter Access Token** para o receber, vai precisar de fazer login para confirmar a sua identidade
+
+.. image:: pdf_signing/v17_pdfSignConfiguration04.png
+   :align: center
 
 Concluído este processo, siga a opção **Relatórios a assinar** onde vai poder definir que documentos serão
 automaticamente assinados no momento de criação do PDF.
