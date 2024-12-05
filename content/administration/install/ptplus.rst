@@ -216,7 +216,7 @@ dependências necessárias para cada módulo:
      - pt-plus
      - Faturação
      - ptplus_pdf_sign
-     - pyotp, asn1crypto, pyhanko, cryptography==35.0.0
+     - pyotp, asn1crypto, pyhanko
      -
      -
    * -
