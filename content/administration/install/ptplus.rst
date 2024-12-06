@@ -181,7 +181,7 @@ dependências necessárias para cada módulo:
      - pt-plus
      - Faturação
      - ptplus
-     - git+https://github.com/OCA/openupgradelib.git@master, pyopenssl==22.1.0, unicodecsv, xmlschema==2.4.0, zeep
+     - git+https://github.com/OCA/openupgradelib.git@master, pyopenssl==22.1.0, unicodecsv, xmlschema==3.4.3, zeep
      -
      -
    * -
