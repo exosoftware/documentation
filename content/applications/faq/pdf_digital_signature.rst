@@ -63,14 +63,7 @@ Esta assinatura deve de ser feita com um perfil profissional ativo e o documento
 
 2. **Vídeochamada com Representante Legal** que foi associado ao certificado
 
-Vai ter de enviar uma cópia do Cartão do Cidadão para validação
-
-.. TODO : parece ter mudado validar quando tivermos pedidos para isto
-
-Para selecionar esta modalidade, é necessário indicar **Sim** na opção **Validação de Identificação por Videochamada**
-
-.. image:: pdf_digital_signature/assinatura.png
-   :align: center
+Terá de anexar uma cópia do Cartão do Cidadão para validação aoa preencher o formulário do pedido
 
 3. **Formulário por Correio**
 
