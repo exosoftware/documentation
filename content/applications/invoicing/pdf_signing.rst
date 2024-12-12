@@ -117,7 +117,7 @@ Procure a secção **Portugal**, ative a **Assinatura Eletrónica de PDFs** e pr
     .. image:: pdf_signing/v17_pdfSignConfiguration03.png
        :align: center
 
-    .. important::
+    .. danger::
         Este URI tem de ser comunicado à DigitalSign para que seja devidamente registado nos servidores deles
 
 O processo a partir deste ponto é comum
