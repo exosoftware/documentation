@@ -94,6 +94,9 @@ Depois deve preencher os campos necessários e selecionar a série documental a 
     .. image:: odoo_process/v17_discount04.png
        :align: center
 
+    .. important::
+        O texto que aparece na tabela resumo, é o texto que está na descrição do artigo **Desconto**
+
 Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será gerada uma **Nota de encomenda**
 
 .. image:: odoo_process/v17_confirmQuote.png
@@ -233,6 +236,9 @@ A maioria dos campos já vão estar preenchidos pois são herdados da Nota de en
 
     .. image:: odoo_process/v17_discount04.png
        :align: center
+
+    .. important::
+        O texto que aparece na tabela resumo, é o texto que está na descrição do artigo **Desconto**
 
 Em seguida confirme a fatura
 
