@@ -64,6 +64,9 @@ Depois deve preencher os campos necessários e selecionar a série documental a 
        Se cobra mensalmente durante 2 anos por um serviço, o plano de recorrência deve
        ser mensal mas com uma data de término 2 anos no futuro
 
+Descontos nos Orçamentos
+^^^^^^^^^^^^^^^^^^^^^^^^
+
 .. tip::
     Pode aplicar descontos no processo de **Venda** utilizando o botão **Desconto** existente para o efeito
 
@@ -218,9 +221,12 @@ A maioria dos campos já vão estar preenchidos pois são herdados da Nota de en
     Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a
     criar um orçamento.
 
+Descontos nas Faturas
+^^^^^^^^^^^^^^^^^^^^^
+
 .. tip::
     Pode aplicar descontos diretamente no processo de **Faturação** adicionando uma nova linha com o artigo Odoo
-    **Desconto** existente para o efeito
+    **Desconto** existente para o efeito e o valor a negativo
 
     .. image:: odoo_process/v17_discount03.png
        :align: center
