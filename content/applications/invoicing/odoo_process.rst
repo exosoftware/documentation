@@ -85,6 +85,9 @@ Descontos nos Orçamentos
     .. image:: odoo_process/v17_discount03.png
        :align: center
 
+    .. note::
+        O artigo **Desconto** é criado de forma automática da primeira vez que aplicar um Desconto Global ou de Valor Fixo na app de Vendas
+
     .. important::
         As linhas de **Desconto global** e **Valor Fixo** também estão sujeitas a aplicação de impostos
 
@@ -230,6 +233,9 @@ Descontos nas Faturas
 
     .. image:: odoo_process/v17_discount03.png
        :align: center
+
+    .. note::
+        O artigo **Desconto** é criado de forma automática da primeira vez que aplicar um Desconto Global ou de Valor Fixo na app de Vendas
 
     .. important::
         As linhas de **Desconto** também estão sujeitas a aplicação de impostos
