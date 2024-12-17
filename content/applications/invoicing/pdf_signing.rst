@@ -14,7 +14,9 @@ respetivo envio por serviço postal mantêm a sua validade.
 .. important::
     **Ainda não é obrigatório**.
 
-    A **data prevista** para entrada em vigor desta obrigatoriedade é **1 janeiro 2025**.
+    A **data prevista** para entrada em vigor desta obrigatoriedade é **1 janeiro 2026**.
+
+    `Ofício AT sobre **Admissibilidade das faturas em PDF** <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio_circulado_25043_2024.pdf>`_
 
 .. danger::
     Apesar de bastante útil e vinculativa em vários países, a app **Sign** do Odoo não cumpre todos os requisitos legais
