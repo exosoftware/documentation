@@ -127,34 +127,11 @@ natureza gratuita, a opção SSH é a mais comum.
 Escolher o *branch*
 -------------------
 .. important::
-    Devido ao ofuscamento de código, é necessário um passo adicional no momento de escolher o *branch*.
-
-    Dado que é feita uma ofuscação para cada versão Python, os branches são combinações de
-    versões Odoo com versões Python.
+    Deve escolher o *branch* relativo à sua versão do Odoo
 
     .. example::
-        Em vez de 17.0 podemos ter 17.0-py3.12
+        17.0
 
-Antes de continuar, é portanto necessário determinar a versão do Python no seu sistema Odoo. Uma
-forma fácil é através do comando:
-
-    .. code-block:: console
-
-        $ python3 --version
-
-Do resultado, considere apenas a versão principal e a subversão.
-
-.. example::
-    Se for 3.10.2, a versão Python é 3.10
-
-Pode agora calcular o *branch* que pretende com a fórmula <ODOO_VERSION>**-py**<PYTHON_VERSION>
-
-.. example::
-    Odoo 15.0 e Python 3.8: branch 15.0-py3.8
-    Odoo 17.0 e Python 3.10: branch 16.0-py3.10
-
-.. note::
-   As versões Python suportadas são: 3.8, 3.9, 3.10, 3.11 e 3.12.
 
 .. _ptplus_dependencies:
 
@@ -181,7 +158,7 @@ dependências necessárias para cada módulo:
      - pt-plus
      - Faturação
      - ptplus
-     - git+https://github.com/OCA/openupgradelib.git@master, pyopenssl==22.1.0, unicodecsv, xmlschema==3.4.3, zeep
+     - git+https://github.com/OCA/openupgradelib.git@master, git+https://github.com/exosoftware/runpack.git, pyopenssl==22.1.0, unicodecsv, xmlschema==3.4.3, zeep
      -
      -
    * -
