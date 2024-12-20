@@ -14,7 +14,9 @@ respetivo envio por serviço postal mantêm a sua validade.
 .. important::
     **Ainda não é obrigatório**.
 
-    A **data prevista** para entrada em vigor desta obrigatoriedade é **1 janeiro 2025**.
+    A **data prevista** para entrada em vigor desta obrigatoriedade é **1 janeiro 2026**.
+
+    `Ofício da AT sobre Admissibilidade das faturas em PDF <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/legislacao/instrucoes_administrativas/Documents/Oficio_circulado_25043_2024.pdf>`_
 
 .. danger::
     Apesar de bastante útil e vinculativa em vários países, a app **Sign** do Odoo não cumpre todos os requisitos legais
@@ -80,6 +82,8 @@ façamos por si.
 Configuração
 ============
 
+.. TODO : Verificar cobrança de tempos
+
 ..
     .. important::
         Pode fazer a configuração na sua base de dados, ou se preferir que seja a Exo Software a fazer serão consumidos
@@ -101,18 +105,24 @@ Procure a secção **Portugal**, ative a **Assinatura Eletrónica de PDFs** e pr
 .. image:: pdf_signing/v17_pdfSignConfiguration01.png
    :align: center
 
-- **ID Cliente** e **Segredo do Cliente**, são facultados pela DigitalSign quando `regista o primeiro autenticador <gapi.digitalsign.pt/>`_
-
-.. image:: pdf_signing/v17_pdfSignConfiguration02.png
-   :align: center
-
-- **URI de Redirecionamento**, é o seu **endereço do servidor** acrescido de **/digitalsign** por exemplo *https://exosoftware.pt/digitalsign*
-
-.. image:: pdf_signing/v17_pdfSignConfiguration03.png
-   :align: center
-
 .. important::
-    Este URI tem de ser comunicado à DigitalSign para que seja devidamente registado nos servidores deles
+    Se não fez a compra do seu certificado pela Exo Software tem de selecionar o campo **Use My Own Credentials** e
+    inserir a informação que recebeu para os seguintes campos
+
+    - **ID Cliente** e **Segredo do Cliente**, são facultados pela DigitalSign quando `regista o primeiro autenticador <gapi.digitalsign.pt/>`_
+
+    .. image:: pdf_signing/v17_pdfSignConfiguration02.png
+       :align: center
+
+    - **URI de Redirecionamento**, é o seu **endereço do servidor** acrescido de **/digitalsign** por exemplo *https://exosoftware.pt/digitalsign*
+
+    .. image:: pdf_signing/v17_pdfSignConfiguration03.png
+       :align: center
+
+    .. danger::
+        Este URI tem de ser comunicado à DigitalSign para que seja devidamente registado nos servidores deles
+
+O processo a partir deste ponto é comum
 
 - **ID Autorizador** e **Segredo do Autorizador**, estes dados podem ser obtidos no `seu backend DigitalSign <https://gapi.digitalsign.pt/login>`_
 
