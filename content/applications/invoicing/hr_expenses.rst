@@ -103,4 +103,5 @@ Depois de aprovada tem acesso ao documento de compensação por deslocações in
 
 .. seealso::
     `Consulte a documentação Odoo sobre Despesas <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/expenses.html>`_
+
     `Se pretender formação adicional sobre despesas faça a sua marcação <https://exosoftware.pt/appointment>`_
