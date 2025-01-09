@@ -133,7 +133,7 @@ de comunicação.
 
 Vai aparecer uma nova janela onde deve indicar a **Data de Início Esperada**, tenha em atenção que:
 
-   - Só vai poder emitir documentos com data posterior à constante neste campo
+   - Pode emitir documentos com data anterior à constante neste campo mas deve de o evitar
    - A data inserida não pode ser anterior ao dia atual em que está a fazer a comunicação
 
 Clique no botão **Comunicar**.
