@@ -85,8 +85,19 @@ Na app de **Despesas** crie uma nova despesa e na Categoria selecione **Despesas
 Algumas coisas vão acontecer:
 
 - O campo **Matrícula** vai ser preenchido com a matrícula do **Funcionário**
-- O campo **Preço Unitário** vai ser preenchido com o valor do mapa de KMs estipulado para a distância
+- O campo **Preço Unitário** vai ser preenchido com o valor por KM estipulado no artigo
 - O campo **Quantidade** vai ser preenchido com a distância do **Parceiro**
+
+.. tip::
+    O campo **Quantidade** usa este mecanismo para automatismo. No entanto, em cada despesa pode alterar o valor para
+    o que pretender e assim cobrir diversas outras situações como:
+
+    - Deslocações de funcionários em regime remoto à empresa
+    - Deslocações a parceiros que sejam mais do que uma viagem à sua sede ou o ponto de partida seja diferente
+    - Outro tipo de deslocações em viatura própria de funcionários
+
+    Como esse tipo de alterações não pode ser previsto antecipadamente antes do seu acontecimento, terá de fazer a
+    alteração manual no momento em que regista a despesa
 
 .. image:: hr_expenses/v17_Expenses03.png
    :align: center
