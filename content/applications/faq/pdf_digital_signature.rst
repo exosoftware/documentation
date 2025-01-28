@@ -70,7 +70,12 @@ Terá de anexar uma cópia do Cartão do Cidadão para validação aoa preencher
 Após receber por parte da Exo Software um email que contém o PDF do seu pedido, imprimir e assinar manuscritamente.
 Fazer reconhecimento por notário ou advogado e enviar por correio físico para a Digitalsign
 
-.. TODO : Validar morada de envio quando alguém solicitar esta modalidade
+.. note::
+    Irá receber por parte da DigitalSign um email com informações para onde devolver o formulário mas a morada de envio
+    é a seguinte:
+
+    Digitalsign S.A Largo Pe. Bernardino Ribeiro Fernandes
+    26 4835-489 Nespereira - Guimarães
 
 Verificação das assinaturas
 ===========================
