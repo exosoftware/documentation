@@ -162,40 +162,33 @@ A partir desde momento a série está comunicada e pode começar a emitir docume
 
 Manter Série
 ------------
-Preencha o campo Sequência com o nome que quer dar à sequência e selecione Criar e Editar.
+Estabeleça a relação com a série já existente na AT. Para isso Garanta que o campo **Sequência** está vaio e preencha o
+campo **Código de Validação** com o código que está disponível na AT, o botão **Registar** muda para **Sincronizar**,
+clique nele para poder continuar a utilizar a sua série anterior.
 
 .. image:: series_registration/v17_keepSerie1.png
    :align: center
 
-Vai abrir uma nova janela:
-
-  - Deve ter a **Implementação** como **Sem lacunas**
-  - Pode selecionar o **Prefixo** que pretende usar, na legenda pode ver algumas configurações tradicionais para inserir certos dados como ano (2 ou 4 dígitos), mês e dia
-
-    .. tip::
-        Não precisa de se preocupar com o Prefixo obrigatório da série que esse já é inserido de forma automática pela
-        Localização PT+ Exo
-
-    .. example::
-        - Nas faturas é necessário ter FT, a localização já insere 'FT '
-        - Nas notas de encomenda é necessário ter NE, a localização já insere 'NE '
-        - etc.
-
-  - Pode no **Tamanho da Sequência** inserir o **nº mínimo de dígitos** que pretende que a sequência tenha (se eventualmente tiver mais, aumenta de forma automática)
-  - O **Próximo Número** na sequência deve ser 1
-
-Guarde as alterações.
+Pode utilizar o **Método** de sincronização Online, para que o software vá às informações no servidor da AT para
+e traga a informação necessária, em seguida carregue no botão **Comunicar**
 
 .. image:: series_registration/v17_keepSerie2.png
    :align: center
 
-Isto vai configurar a sua sequência no Odoo, mas ainda não está completo pois falta estabelecer a relação com a séria na AT.
-
-Para isso preencha o campo **Código de Validação** com o código que está disponível na AT, o botão **Registar** muda
-para **Sincronizar**, clique nele para poder continuar a utilizar a sua série anterior.
+Pode utilizar o **Método** de sincronização Offline e inserir o **Identificador da Série**, para que o software crie a
+série sem comunicar com o servidor, em seguida carregue no botão **Validar**
 
 .. image:: series_registration/v17_keepSerie3.png
    :align: center
+
+.. important::
+    Terá depois de entrar na sequência criada e editar o campo **Próximo Número**
+
+    .. image:: series_registration/v17_keepSerie4.png
+       :align: center
+
+    .. image:: series_registration/v17_keepSerie5.png
+       :align: center
 
 .. important::
     No caso das **séries documentais relativas a transporte de bens** existe um passo extra.
