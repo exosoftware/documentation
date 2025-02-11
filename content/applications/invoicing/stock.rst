@@ -471,7 +471,7 @@ e carregue em **Exportar XML**
     - **Data Final**, que data vai ser reportada no documento
     - **À Data**, até que momento devem ser contabilizados os movimentos para o cálculo do stock existente. Neste caso o que conta é a data de criação do ficheiro
 
-    .. exemple::
+    .. example::
         Pode ainda no dia 5 janeiro estar a fazer movimentos de regularização do inventário do ano anterior e até lá
         não deve estar a fazer movimentos do novo ano
 
