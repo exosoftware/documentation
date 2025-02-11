@@ -459,6 +459,29 @@ e carregue em **Exportar XML**
 .. image:: stock/v17_reports08.png
    :align: center
 
+.. important::
+    O Odoo funciona de forma diferente à maioria dos softwares no que diz respeito a inventário. Para o Odoo quando se
+    verifica o inventário numa determinada data, o que é feito é um cálculo de todos os movimentos existentes desde o
+    início da operação, até aquelo momento.
+
+    Como tal e para garantir que está a tirar o ficheiro com os dados corretos, tenha em atenção os seguintes campos e
+    seu significado no preenchimento do assistente
+
+    - **Ano Fiscal**, que ano vai ser reportado no documento
+    - **Data Final**, que data vai ser reportada no documento
+    - **À Data**, até que momento devem ser contabilizados os movimentos para o cálculo do stock existente. Neste caso o que conta é a data de criação do ficheiro
+
+    .. exemple::
+        Pode ainda no dia 5 janeiro estar a fazer movimentos de regularização do inventário do ano anterior e até lá
+        não deve estar a fazer movimentos do novo ano
+
+    .. danger::
+        Este é o principal motivo pelo qual o Odoo é tão preocupado em garantir a facilidade de operação e o
+        registo em tempo real dos movimentos tal como eles acontecem no dia-a-dia
+
+        Por este mesmo motivo, também aconselhamos a que seja bem pensada a operação em Odoo antes de implementar na
+        sua organização, porque a atitude de fazer já e corrigir depois acarreta bastantes riscos e custos adicionais
+
 Em seguida vai ver um resumo da informação que possa causar erros e terá acesso ao ao download do ficheiro,
 depois é só submeter no site da AT e fechar a janela
 
