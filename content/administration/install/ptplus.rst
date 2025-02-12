@@ -138,9 +138,9 @@ Dependências
 ~~~~~~~~~~~~
 
 .. important::
-    Devem atualizar o **pip** para a versão mais recente, só será compatível com a localização PT+ a partir da versão 25.0
+    Devem atualizar o **pip** para a versão mais recente, só será compatível com a localização PT+ a partir da **versão 25.0**
 
-    pip install --upgrade pip
+    ``pip install --upgrade pip``
 
 Os módulos da localização PT+ dependem de algumas *libraries* Python, bem como de alguns módulos
 da `Odoo Community Association <https://odoo-community.org/>`_, em função das
