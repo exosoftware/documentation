@@ -62,7 +62,6 @@ Obter o código
 Para clonar um repositório, escolha entre o método HTTPS ou SSH (ver secção anterior). Dada a sua
 natureza gratuita, a opção SSH é a mais comum.
 
-.. FIXME : O problema aqui deve ser JS, na documentação Odoo ao mudar a tab do sistema operativo ele muda todas as tabs da página de sistema operativo
 .. tabs::
 
    .. group-tab:: Linux
@@ -137,6 +136,11 @@ Escolher o *branch*
 
 Dependências
 ~~~~~~~~~~~~
+
+.. important::
+    Devem atualizar o **pip** para a versão mais recente, só será compatível com a localização PT+ a partir da versão 25.0
+
+    pip install --upgrade pip
 
 Os módulos da localização PT+ dependem de algumas *libraries* Python, bem como de alguns módulos
 da `Odoo Community Association <https://odoo-community.org/>`_, em função das
