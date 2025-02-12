@@ -186,12 +186,14 @@ Lidar com Faturas de adiantamento
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 .. important::
-    Quando recebe o valor do seu cliente
+    **Quando recebe o valor do seu cliente**
+
     - Criar uma Fatura de Adiantamento
     - Criar Recibo a partir da Fatura de Adiantamento
     - Reconciliar o Recibo com o movimento do banco
 
-    Quando emite a fatura final
+    **Quando emite a fatura final**
+
     - Desconciliar o Recibo da Fatura de Adiantamento
     - Emitir Nota de Crédito a partir da Fatura de Adiantamento para a anular
     - Emitir nova Fatura pelo total
