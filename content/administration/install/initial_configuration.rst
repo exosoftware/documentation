@@ -67,6 +67,41 @@ Na janela que se abre pode fazer as alterações que achar convenientes em rela�
 .. image:: initial_configuration/v17_documentLayoutWizard.png
    :align: center
 
+Visibilidade de Conta Bancária nos documentos
+=============================================
+.. note::
+    Para que exista uma **Conta Bancária** em Odoo, é obrigatório esta ter um **Titular da Conta** associado.
+
+    .. image:: initial_configuration/v17_bankAccount1.png
+        :align: center
+
+    Se a empresa em que está a trabalhar for titular de pelo menos uma conta, o Odoo vai de forma automática preencher
+    todas as faturas a clientes com essa conta. Caso tenha várias vai predefinir a primeira conta da listagem que cumpra
+    o requisito, mas pode documento a documento mudar essa conta no campo **Banco beneficiário** do separador
+    **Outra Informação**
+
+    .. image:: initial_configuration/v17_bankAccount2.png
+        :align: center
+
+    Caso este campo esteja preenchido a informação vai aparecer na fatura
+
+    .. image:: initial_configuration/v17_bankAccount3.png
+        :align: center
+
+Alguns clientes não querem que esta informação apareça nas suas faturas (de todo ou nesta posição) pelo que
+desenvolvemos uma solução que lhe permite (para cada empresa da sua base de dados) ocultar a linha com o IBAN, mesmo que
+o campo **Banco beneficiário** esteja preenchido.
+
+.. important::
+    Esta funcionalidade não está nativamente disponível com a nossa oferta, mas pode pedir a sua instalação
+
+Ainda na secção **Empresas**, é acrescentado um campo extra **Imprimir IBAN nas faturas**, o seu valor padrão vai ser
+ativo para que apareça a mensagem como é comportamento nativo do Odoo. No entanto, se retirar o visto da opção essa
+linha vai ser ocultada.
+
+.. image:: initial_configuration/v17_bankAccount4.png
+    :align: center
+
 Como ativar a Localização PT+
 =============================
 A nossa localização está dividida em vários módulos para que seja o mais conveniente possível de utilizar, pelo que nos
@@ -116,38 +151,6 @@ as alterações.
 
 .. image:: initial_configuration/v17_invoiceDetails.png
    :align: center
-
-Uma última opção que tem para esta configuração de **Detalhes da Fatura** é escolher se quer ou não que o IBAN esteja
-inserido na fatura.
-
-.. note::
-    Para que exista uma **Conta Bancária** em Odoo, é obrigatório esta ter um **Titular da Conta** associado.
-
-    .. image:: initial_configuration/v17_bankAccount1.png
-        :align: center
-
-    Se a empresa em que está a trabalhar for titular de pelo menos uma conta, o Odoo vai de forma automática preencher
-    todas as faturas a clientes com essa conta. Caso tenha várias vai predefinir a primeira conta da listagem que cumpra
-    o requisito, mas pode documento a documento mudar essa conta no campo **Banco beneficiário** do separador
-    **Outra Informação**
-
-    .. image:: initial_configuration/v17_bankAccount2.png
-        :align: center
-
-    Caso este campo esteja preenchido a informação vão aparecer na fatura
-
-    .. image:: initial_configuration/v17_bankAccount3.png
-        :align: center
-
-Alguns clientes não querem que esta informação apareça nas suas faturas (de todo ou nesta posição) pelo que
-desenvolvemos uma solução que lhe permite (para cada empresa da sua base de dados) ocultar a linha com o IBAN, mesmo que
-o campo **Banco beneficiário** esteja preenchido.
-
-Em **Detalhes da Fatura**, por defeito a opção **Imprimir IBAN nas faturas** vai estar ativa para que apareça a mensagem
-como é comportamento nativo do Odoo. No entanto, se retirar o visto da opção essa linha vai ser ocultada.
-
-.. image:: initial_configuration/v17_bankAccount4.png
-    :align: center
 
 .. seealso::
     :doc:`Consulte as nossas FAQs sobre configuração <../../applications/faq/configuration>`
