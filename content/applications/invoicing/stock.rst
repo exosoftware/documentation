@@ -398,7 +398,7 @@ de **Inventário**
 
 Relatório de Stock
 ------------------
-Permite ver a quantidade de inventário (Em Mão, não reservado, entradas esperadas para entrar e sair) e filtrar por
+Permite ver a quantidade de inventário (Em Mão, Não Reservado, Forecast esperado de entradas e saídas) e filtrar por
 localizações e categorias de produtos
 
 Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Stock` a partir da app de **Inventário**
@@ -462,7 +462,7 @@ e carregue em **Exportar XML**
 .. important::
     O Odoo funciona de forma diferente à maioria dos softwares no que diz respeito a inventário. Para o Odoo quando se
     verifica o inventário numa determinada data, o que é feito é um cálculo de todos os movimentos existentes desde o
-    início da operação, até aquelo momento.
+    início da operação, até aquele momento.
 
     Como tal e para garantir que está a tirar o ficheiro com os dados corretos, tenha em atenção os seguintes campos e
     seu significado no preenchimento do assistente
