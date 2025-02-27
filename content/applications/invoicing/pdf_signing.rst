@@ -82,14 +82,9 @@ façamos por si.
 Configuração
 ============
 
-.. TODO : Verificar cobrança de tempos
-
-..
-    .. important::
-        Pode fazer a configuração na sua base de dados, ou se preferir que seja a Exo Software a fazer serão consumidos
-        tempos do seu pacote de suporte, ou os mesmos serão cobrados avulso no final do processo
-
-
+.. important::
+    Pode fazer a configuração na sua base de dados, ou se preferir que seja a Exo Software a fazer serão consumidos
+    tempos do seu pacote de suporte, ou os mesmos serão cobrados avulso no final do processo
 
 Aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá
 ao menu :menuselection:`Configuração --> Configurações`
