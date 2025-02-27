@@ -111,11 +111,20 @@ Crédito de consignação
 
 Documentação em breve
 
+.. _fiscal_documents_POSbill:
+
 Consulta de mesa (POS Restaurante)
 -----------------------------------
-.. TODO : Consulta de mesa(POS Restaurante) - Ver com o André o que é e como se faz
+Uma Consulta de Mesa, é um documento fiscal utilizado para apresentar ao cliente um comprovativo de consumos antes da
+emissão da fatura, com o intuíto de este a confirmar e validar
 
-Documentação em breve
+Caso existam alterações a fazer, deve-se fazer o cancelamento do documento original e duplicar para depois fazer as
+alterações necessárias e emitir a fatura do cliente
+
+Para emitir devemos na vista da mesa em POS Restaurante carregar no botão **Consulta de Mesa**
+
+.. image:: fiscal_documents/v17_printBill.png
+   :align: center
 
 .. _fiscal_documents_invoice:
 

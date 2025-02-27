@@ -4,7 +4,8 @@
 POS
 ===
 A ferramenta de POS agiliza a venda em loja ou restaurante e permite uma utilização mais intuitiva através de um
-interface mais gráfico para o operador, permitindo maior facilidade com as ferramentas existentes no backend
+interface mais gráfico para o operador, permitindo interagir de forma mais simples com as ferramentas existentes no
+backend
 
 .. raw:: html
 
@@ -54,6 +55,11 @@ Caso pretenda mudar o estilo posteriormente, pode fazê-lo nas configurações d
     .. image:: pos/v17_posConfiguration06.png
        :align: center
 
+    Terá também de configurar a Série Documental para as Consultas de Mesa
+
+    .. image:: pos/v17_posConfiguration10.png
+       :align: center
+
 Na secção de **Contabilidade** deve fazer o correto preenchimento das respetivas configurações
 
 - **Imposto de Vendas Predefinido**, só é aplicado a novos produtos inseridos no catálogo, normalmente aplica o imposto já definido no produto
@@ -64,15 +70,18 @@ Na secção de **Contabilidade** deve fazer o correto preenchimento das respetiv
     - **Faturas**, diário do tipo **Vendas**
 - **Tipo Doc. para Faturas**, Série Documental utilizada para emissão das faturas da loja
 - **Tipo Doc. Para Notas de Crédito**, Série Documental utilizada para emissão de notas de crédito da loja
+- **Norma Regularização IVA Predefinida**, defina que norma de regularização de IVA é usada nas notas de crédito, pode depois alterar no backend
 - **Cliente Predefinido**, no caso de não existir um contacto associado este será usado, sugerimos ter Consumidor Final
+
+.. TODO: Alterar imagem abaixo quando estiver implementado a norma de regularização do IVA
 
 .. image:: pos/v17_posConfiguration05.png
    :align: center
 
-Para finalizar garanta que tem as definições de **Gestão de Inventário** corretas, nomeadamente:
+Para finalizar garanta que tem a opção de **Gestão de Inventário** correta:
 
 - **No final da sessão**, quando fechar a sessão vai ser feito um movimento agregado de todos os movimentos
-- **Em tempo real**, a cada operação que faz vai ser feito o respetivo movimento de inventário
+- **Em tempo real**, a cada operação que faz é feito o respetivo movimento de inventário
 
 .. image:: pos/v17_posConfiguration07.png
    :align: center
@@ -146,7 +155,7 @@ Notas de Crédito em POS
 -----------------------
 
 .. important::
-    Para fazer uma nota de crédito de uma fatura do POS tem de fazer a mesma dentro da app POS enquanto que a sessão
+    Para fazer uma nota de crédito de uma fatura do POS, tem de fazer a mesma dentro da app POS enquanto que a sessão
     está aberta, caso contrário não conseguirá fechar a sessão
 
     Depois da sessão fechada, então sim já poderá fazer notas de crédito no backend do Odoo
@@ -165,16 +174,25 @@ Quando estiver satisfeito carregue no botão Reembolso
 .. image:: pos/v17_ncPOS03.png
    :align: center
 
+Este passo vai concluir a Nota de Crédito e fazer a sua emissão
+
+.. important::
+    A norma de regularização predefinida vai ser usada, mas pode, após encerrar a sessão, fazer correções desta norma no
+    próprio documento se achar que no caso específico outra deveria ser utilizada
+
+    Esta decisão foi tomada por 2 motivos:
+
+    - simplificar a utilização do operador e o mesmo não ter de conhecer todas as normas existentes
+    - apesar de ser um campo de preenchimento obrigatório o mesmo não é exibido no documento e é usado para motivos contabilísticos
+
 Em seguida deve voltar a carregar no botão pagamento para efetuar a devolução do dinheiro ao cliente, se for caso disso
 
 .. image:: pos/v17_ncPOS04.png
    :align: center
 
-.. TODO: Decidir como lidar com a situação da Norma de regularização do IVA
-
 Fechar sessão no POS
 --------------------
-Para fechar a sessão do POS basta ir ao menu geral no cnto superior direito e selecionar a opção para o fazer
+Para fechar a sessão do POS basta ir ao menu geral no canto superior direito e selecionar a opção para o fazer
 
 .. important::
     Não pode abrir nova sessão do POS sem concluir a sessão anterior
@@ -193,11 +211,15 @@ optar por escolher o botão de contagem de dinheiro para depois ser feito o tota
 
 POS Bar/Restaurante
 -------------------
-Documentação em breve
+O funcionamento é muito similar ao de uma loja, mas com alguns acrescentos:
 
-.. TODO : Documentar POS Restaurante
+- Botão **Ordem** para fazer o pedido para a cozinha
+- Botão **Consulta de Mesa** para gerar um resumo da mesa antes da emissão da fatura
+- Notão **Pagamento** está mais pequeno
 
 .. seealso::
+    :ref:`O que é uma Consulta de mesa <fiscal_documents_POSbill>`
+
     `Consulte a documentação Odoo sobre POS <https://www.odoo.com/documentation/17.0/pt_BR/applications/sales/point_of_sale.html>`_
 
     `Se pretender formação adicional sobre POS faça a sua marcação <https://exosoftware.pt/appointment>`_
