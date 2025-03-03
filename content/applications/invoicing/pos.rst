@@ -70,10 +70,7 @@ Na secção de **Contabilidade** deve fazer o correto preenchimento das respetiv
     - **Faturas**, diário do tipo **Vendas**
 - **Tipo Doc. para Faturas**, Série Documental utilizada para emissão das faturas da loja
 - **Tipo Doc. Para Notas de Crédito**, Série Documental utilizada para emissão de notas de crédito da loja
-- **Norma Regularização IVA Predefinida**, defina que norma de regularização de IVA é usada nas notas de crédito, pode depois alterar no backend
 - **Cliente Predefinido**, no caso de não existir um contacto associado este será usado, sugerimos ter Consumidor Final
-
-.. TODO: Alterar imagem abaixo quando estiver implementado a norma de regularização do IVA
 
 .. image:: pos/v17_posConfiguration05.png
    :align: center
@@ -177,13 +174,14 @@ Quando estiver satisfeito carregue no botão Reembolso
 Este passo vai concluir a Nota de Crédito e fazer a sua emissão
 
 .. important::
-    A norma de regularização predefinida vai ser usada, mas pode, após encerrar a sessão, fazer correções desta norma no
-    próprio documento se achar que no caso específico outra deveria ser utilizada
+    A norma de regularização do IVA não é de preenchimento obrigatório pelo que, após encerrar a sessão, pode fazer o
+    seu preenchimento no próprio documento diretamente no backend Odoo
 
-    Esta decisão foi tomada por 2 motivos:
+    Esta decisão foi tomada por 3 motivos:
 
     - simplificar a utilização do operador e o mesmo não ter de conhecer todas as normas existentes
-    - apesar de ser um campo de preenchimento obrigatório o mesmo não é exibido no documento e é usado para motivos contabilísticos
+    - apenas é obrigatório para a Declaração de IVA, não é exibido no documento e só existe para clientes com Contabilidade em Odoo
+    - ao tentar emitir a Declaração de IVA os documentos sem esta norma preenchida irão retornar um aviso a alertar para o seu preenchimento
 
 Em seguida deve voltar a carregar no botão pagamento para efetuar a devolução do dinheiro ao cliente, se for caso disso
 
