@@ -10,7 +10,7 @@ Política de Qualidade e Segurança
 =================================
 Fomentar a entrega de serviços e sistemas competentes, adequados, estáveis, seguros e em conformidade legal e normativa.
 
-:doc:`Mais recente <quality_security_policy>`
+:doc:`Mais recente <policies/quality_security_policy>`
 
 .. list-table::
    :header-rows: 1
@@ -30,7 +30,7 @@ Política de Utilização Aceitável
 Destinada a ajudar a proteger e garantir a disponibilidade dos sistemas e serviços, bem como proteger os dados dos
 clientes.
 
-:doc:`Mais recente <acceptable_use>`
+:doc:`Mais recente <policies/acceptable_use>`
 
 .. list-table::
    :header-rows: 1
@@ -53,7 +53,7 @@ Política de Privacidade
 =======================
 O nosso compromisso na proteção da sua privacidade quando visita o nosso website e sempre que usa os nossos serviços.
 
-:doc:`Mais recente <privacy>`
+:doc:`Mais recente <policies/privacy>`
 
 .. list-table::
    :header-rows: 1
@@ -72,7 +72,7 @@ Política de Segurança
 =====================
 Destinada a assegurar, sem reservas e a cada um dos nossos clientes, que os nossos serviços são seguros.
 
-:doc:`Mais recente <security>`
+:doc:`Mais recente <policies/security>`
 
 .. list-table::
    :header-rows: 1
@@ -95,7 +95,7 @@ Condições Gerais de Serviço
 ===========================
 ???
 
-:doc:`Mais recente <PlaceHolder>`
+:doc:`Mais recente <policies/general_terms>`
 
 .. list-table::
    :header-rows: 1
@@ -118,7 +118,7 @@ Condições Particulares SLA
 ==========================
 ???
 
-:doc:`Mais recente <PlaceHolder>`
+:doc:`Mais recente <policies/helpdesk_sla>`
 
 .. list-table::
    :header-rows: 1

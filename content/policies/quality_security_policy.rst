@@ -7,7 +7,8 @@ Política de Qualidade e Segurança
 .. note::
     **[Rev. 1]**   1/10/2024
 
-Conscientes de que:
+**Conscientes de que:**
+
 - a garantia da conformidade dos serviços que prestamos com os requisitos especificados e as exigências legais/regulamentares é a base para a satisfação dos nossos clientes;
 - a conceção e implementação de um sistema de gestão ajuda a melhorar o nosso desempenho e promove o processo de melhoria da nossa organização;
 - a digitalização de processos e atividades contribui para o sucesso das organizações, assim como contribui para a sua eficácia, eficiência e desenvolvimento sustentável;
@@ -15,7 +16,8 @@ Conscientes de que:
 - não é possível garantir a total segurança de um serviço ou processos e
 - que os incidentes comprometem a confiança dos clientes e que os serviços prestados também se baseiam em tecnologias de terceiros, com atuação em “dependência”.
 
-Comprometemo-nos a:
+**Comprometemo-nos a:**
+
 - satisfazer os requisitos aplicáveis dos referenciais **NP EN ISO9001:2015** e **ISO/IEC 27001:2022**;
 - melhorar continuamente o nosso sistema de gestão integrado da qualidade e segurança;
 - atender às necessidades e expectativas das partes relevantes com as quais interagimos, promovendo, sempre que enquadrável, crescimento conjunto;
