@@ -5,9 +5,7 @@ Política de Qualidade e Segurança
 =================================
 
 .. note::
-    Rev.1
-
-    Última atualização: 1 de Outubro de 2024
+    **[Rev. 1]**   1/10/2024
 
 Conscientes de que:
 - a garantia da conformidade dos serviços que prestamos com os requisitos especificados e as exigências legais/regulamentares é a base para a satisfação dos nossos clientes;

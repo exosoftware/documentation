@@ -5,9 +5,7 @@ Política de Segurança
 =====================
 
 .. note::
-    Rev.1
-
-    Última atualização: 2 de Janeiro de 2019
+    **[Rev. 1.1]**   1/3/2025
 
 A segurança dos serviços online da Exo Software é MUITO importante. Trabalhamos todos os dias para obter os melhores
 níveis possíveis de segurança e resiliência de dados que a operação de um serviço desta natureza exige. O objetivo é

@@ -82,6 +82,48 @@ Destinada a assegurar, sem reservas e a cada um dos nossos clientes, que os noss
      - 02/01/2019
      - 28/02/2025
 
+Condições Gerais de Serviço
+===========================
+???
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * -
+     - Revisão
+     - Data Início
+     - Data Fim
+   * -
+     - `2 <https://exosoftware.pt/general-terms>`_
+     - 01/03/2025
+     -
+   * -
+     - `1 <https://exosoftware.pt/terms-helpdesk>`_
+     - 01/01/2024
+     - 28/02/2025
+
+Condições Particulares SLA
+==========================
+???
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * -
+     - Revisão
+     - Data Início
+     - Data Fim
+   * -
+     - `2 <https://exosoftware.pt/helpdesk-sla>`_
+     - 01/03/2025
+     -
+   * -
+     - `1 <https://exosoftware.pt/terms-helpdesk>`_
+     - 01/01/2024
+     - 28/02/2025
+
 .. toctree::
     :hidden:
 

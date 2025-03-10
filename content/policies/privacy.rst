@@ -5,9 +5,7 @@ Política de Privacidade
 =======================
 
 .. note::
-    Rev.1
-
-    Última atualização: 2 de Janeiro de 2019
+    **[Rev. 1]**   2/1/2019
 
 Este é o nosso compromisso na proteção da sua privacidade quando visita ou usa o nosso website e sempre que usa os
 nossos serviços.

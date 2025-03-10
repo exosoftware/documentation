@@ -5,10 +5,7 @@ Política de Utilização Aceitável
 ================================
 
 .. note::
-    Rev.2.1
-
-    Última atualização: 1 de Março de 2025
-
+    **[Rev. 2.1]**   1/3/2025
 
 A Política de Utilização Aceitável (PUA) destina-se a ajudar a proteger e garantir a disponibilidade dos sistemas e
 serviços da Exo Software e dos seus clientes.
