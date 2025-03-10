@@ -52,8 +52,6 @@ Bases de dados
 - Os dados dos clientes são guardados em bases de dados próprias, pelo que não há partilha de dados na mesma BD.
 - Os controlo de acessos limitam cada utilizador a uma base de dados específica, o que elimina o risco de acessos indevidos de umas bases de dados para outras.
 
-.. não sei se o que a Growfactor está a fazer não viola esta política
-
 Cartões de Crédito
 ==================
 A Exo Software não guarda informação sobre os cartões de crédito dos seus clientes. Em qualquer circunstância, esta é
@@ -61,7 +59,6 @@ apenas transmitida, de forma segura, entre o cliente e o acquirer de pagamentos 
 
 Cópias de Segurança e Recuperação
 =================================
-.. são mesmo feitas diáriamente???
 - São feitas diariamente cópias de segurança entre as 03:00 e as 07:00.
 - As cópias são mantidas durante um período de 10 dias e replicadas para diferentes centros de dados.
 - Pode ser solicitada, a qualquer momento, uma cópia de segurança manual. De igual forma, pode ser pedida, a qualquer momento, a reposição dos dados de uma cópia de segurança.
