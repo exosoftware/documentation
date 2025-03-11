@@ -78,7 +78,7 @@ versão Community ou Enterprise do Odoo), no menu :menuselection:`Configuração
     Neste campo são registadas as **etiquetas de impostos** que vão permitir o mapeamento nos diversos modelos de
     declarações fiscais
 
-    :ref: `Saiba mais sobre as nossas etiquetas de impostos <taxes_tags>`
+    Saiba mais sobre  :ref: `etiquetas de impostos <taxes_tags>`
 
 .. tip::
     **Grupo de Imposto**
@@ -149,10 +149,11 @@ Motivos de isenção de IVA
     Estes são os motivos aceites pela AT para isenção de IVA
         :download:`Motivos de isenção de IVA <taxes/motivos_isencao_iva.pdf>`
 
-Etiquetas de Impostos
-=====================
 
 .. _taxes_tags:
+
+Etiquetas de Impostos
+=====================
 
 A **Exo Software** disponibiliza muitos impostos pré-configurados, no entanto, cada cliente é um caso particular e como
 tal deve juntamente com o seu contabilista garantir o correto preenchimento das etiquetas de impostos para a sua
