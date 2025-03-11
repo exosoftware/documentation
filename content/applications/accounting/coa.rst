@@ -27,7 +27,7 @@ oferecer
     documentos fiscais e contabilísticos.
 
 Para selecionar o pacote de **Localização Fiscal** que pretende utilizar aceda à app **Faturação / Contabilidade**
-(dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração** e selecione a
+ (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu de **Configuração** e selecione a
 opção **Configurações**.
 
 .. image:: ../invoicing/fiscal_documents/v17_appInvoicingAccounting.png
@@ -59,7 +59,7 @@ ou ao menu :menuselection:`Configuração --> Contabilidade --> Grupos Contabil�
 .. image:: coa/v17_editCOA1.png
    :align: center
 
-.. image:: coa/v17_v17_editCOA2.png
+.. image:: coa/v17_editCOA2.png
    :align: center
 
 .. tip::
@@ -72,3 +72,17 @@ ou ao menu :menuselection:`Configuração --> Contabilidade --> Grupos Contabil�
 
 .. seealso::
     `Saiba mais sobre Planos de Contas em Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/accounting/get_started/chart_of_accounts.html>`_
+
+É recomendado que para os cliente com **Contabilidade** corra o nosso Assistente de Taxonomias de forma a fazer um
+preenchimento prévio das taxonomias de cada conta
+
+Para tal vá ao Plano de Contas, selecione todas as contas e no menu **Ação** selecione o assistente
+
+.. image:: coa/v17_taxonomy01.png
+   :align: center
+
+O assistente vai preencher as taxonomias para as contas onde só existe uma opção, nas restantes pode preencher de forma
+manual exibindo a coluna de Taxonomias
+
+.. image:: coa/v17_taxonomy02.png
+   :align: center

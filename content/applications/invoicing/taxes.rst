@@ -66,6 +66,22 @@ versão Community ou Enterprise do Odoo), no menu :menuselection:`Configuração
   :align: center
 
 .. tip::
+    **Conta**
+
+    Neste campo definimos a conta do SNC onde vai ser registado o movimento
+
+    Se ficar vazio vai ser aplicada a conta definida no artigo ou na sua caregoria
+
+.. tip::
+    **Grelha de Imposto**
+
+    Neste campo são registadas as **etiquetas de impostos** que vão permitir o mapeamento nos diversos modelos de
+    declarações fiscais
+
+    .. seealso::
+        :ref: `Saiba mais sobre as nossas etiquetas de impostos <taxes_tags>`
+
+.. tip::
     **Grupo de Imposto**
 
     Porque existem diversas contas contabilísticas no Plano de Contas que registam secções diferentes de impostos, é
@@ -76,12 +92,6 @@ versão Community ou Enterprise do Odoo), no menu :menuselection:`Configuração
     Pode ver-se essa informação na aba **Opções Avançadas** do imposto no campo **Grupo de Imposto**
 
     O imposto vai herdar o **Género** do **Grupo de Imposto** e em seguida permitir completar o resto dos campos
-
-.. tip::
-    **Grelha de Imposto**
-
-    Neste campo são registadas as **etiquetas de impostos** que vão permitir o mapeamento nos diversos modelos de
-    declarações fiscais
 
 .. tip::
     **Opções Avançadas**
@@ -139,3 +149,62 @@ Motivos de isenção de IVA
 .. seealso::
     Estes são os motivos aceites pela AT para isenção de IVA
         :download:`Motivos de isenção de IVA <taxes/motivos_isencao_iva.pdf>`
+
+Etiquetas de Impostos
+=====================
+
+.. _taxes_tags:
+
+A **Exo Software** disponibiliza muitos impostos pré-configurados, no entanto, cada cliente é um caso particular e como
+tal deve juntamente com o seu contabilista garantir o correto preenchimento das etiquetas de impostos para a sua
+realidade
+
+Para facilitar esse objetivo, explicamos a nossa nomenclaruta de etiquetas de impostos para que fique mais tranquilo no
+manusamento do seu Odoo e garanta que todas as suas declarações saiam com os valores corretos
+
+.. important::
+    Apesar de poder criar as suas próprias etiquetas, as mesmas não vão ser utilizadas pelas nossas metodologias de
+    preenchimento de declarações pelo que não explicaremos o processo
+
+    Apenas sugerimos que utilize as que já estão disponíveis, e se precisar de mais faça um pedido aos nossos serviços
+
+    Também informamos que só deve ter uma linha para a base, mas pode ter várias linhas para impostos desde que a soma
+    das percentagens não ultrapasse os 100%
+
+IVA
+---
+As etiquetas mais comuns são as de IVA e a nossa nomenclatura segue 3 exemplos:
+
+- **IVA DP [##]** por exemplo **IVA DP [20]**
+
+    - **IVA** mostra que é uma etiqueta para declarações de IVA
+    - **DP [20]** mostra que vai aparecer no campo 20 da declaração períódica, dentro dos **[ ]** pode aparecer mais informação mas a lógica é a mesma de identificação do campo, em alguns casos vai ver **V** ou **C** que representam **Vendas** e **Compras** respetivamente, com o objetivo de dar o sinal exato na conta do campo
+- **IVA DP N/A** aplicado a linhas onde o imposto/base não se aplicam em qualquer das declarações
+- **IVA AL [Q##-L##]** por exemplo **IVA AL [Q06-L45]**
+
+    - **IVA** mostra que é uma etiqueta para declarações de IVA
+    - **AL [Q06-L45]** mostra que vai aparecer na linha 45, do quadro 6, do Anexo L
+
+Retenção na Fonte
+-----------------
+Para as retenções na fonte usamos nomenclatura que segue 3 princípios:
+
+- **RF DM CD ###** por exemplo **RF DM CD 210**
+
+    - **RF** mostra que é uma etiqueta para declarações de Retenção na Fonte
+    - **DM CD 210** mostra que vai aparecer no campo relativo ao código 210 da declaração mensal
+- **RF M10 [##] ##** por exemplo **RF M10 [05] 04 G**
+
+    - **RF** mostra que é uma etiqueta para declarações de Retenção na Fonte
+    - **M10 [05] 04 G** mostra que vai aparecer no campo 4 do quadro 5 do Modelo 10 a informação seguinte diz respeito ao código específico para o campo
+- **RF M30 [##] ##** por exemplo **RF M30 [35] 17**
+
+    - **RF** mostra que é uma etiqueta para declarações de Retenção na Fonte
+    - **M30 [35] 17** mostra que vai aparecer no campo 35 do Modelo 30 a informação seguinte diz respeito ao código específico para o campo
+
+Imposto Selo
+------------
+Nestes casos as nossas etiquetas seguem o formato **IS DC ###** por exemplo **IS CD 301**
+
+**IS** mostra que é uma etiqueta para imposto de selo
+**CD 301** mostra que vai aparecer no campo relativo ao código 301
