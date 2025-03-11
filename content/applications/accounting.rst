@@ -15,11 +15,11 @@ Explore mais sobre o nosso add-on de Contabilidade
     :titlesonly:
 
     accounting/coa
-    accounting/saft
-    accounting/efatura
+    accounting/vat_statements
     accounting/balance_transfer
-    accounting/assets
+    accounting/efatura
     accounting/cashflow
-    accounting/tax_statements
+    accounting/assets
     accounting/accounting_statements
     accounting/other_statements
+    accounting/saft_accounting
