@@ -76,13 +76,13 @@ ou ao menu :menuselection:`Configuração --> Contabilidade --> Grupos Contabil�
 É recomendado que para os cliente com **Contabilidade** corra o nosso Assistente de Taxonomias de forma a fazer um
 preenchimento prévio das taxonomias de cada conta
 
-Para tal vá ao Plano de Contas, selecione todas as contas e no menu **Ação** selecione o assistente
+Para tal vá ao **Plano de Contas**, selecione todas as contas e no menu **Ação** selecione o **Assistente Configuração Taxonomias**
 
 .. image:: coa/v17_taxonomy01.png
    :align: center
 
 O assistente vai preencher as taxonomias para as contas onde só existe uma opção, nas restantes pode preencher de forma
-manual exibindo a coluna de Taxonomias
+manual exibindo a coluna de **Taxonomias** e alterando na própria conta
 
 .. image:: coa/v17_taxonomy02.png
    :align: center

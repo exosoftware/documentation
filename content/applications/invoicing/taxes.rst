@@ -78,8 +78,7 @@ versão Community ou Enterprise do Odoo), no menu :menuselection:`Configuração
     Neste campo são registadas as **etiquetas de impostos** que vão permitir o mapeamento nos diversos modelos de
     declarações fiscais
 
-    .. seealso::
-        :ref: `Saiba mais sobre as nossas etiquetas de impostos <taxes_tags>`
+    :ref: `Saiba mais sobre as nossas etiquetas de impostos <taxes_tags>`
 
 .. tip::
     **Grupo de Imposto**
@@ -178,33 +177,33 @@ As etiquetas mais comuns são as de IVA e a nossa nomenclatura segue 3 exemplos:
 - **IVA DP [##]** por exemplo **IVA DP [20]**
 
     - **IVA** mostra que é uma etiqueta para declarações de IVA
-    - **DP [20]** mostra que vai aparecer no campo 20 da declaração períódica, dentro dos **[ ]** pode aparecer mais informação mas a lógica é a mesma de identificação do campo, em alguns casos vai ver **V** ou **C** que representam **Vendas** e **Compras** respetivamente, com o objetivo de dar o sinal exato na conta do campo
+    - **DP [20]** mostra que vai aparecer no **campo 20** da **Declaração Períódica**, dentro dos **[ ]** pode aparecer mais informação mas a lógica é a mesma de identificação do campo, em alguns casos vai ver **V** ou **C** que representam **Vendas** e **Compras** respetivamente, com o objetivo de dar o sinal exato na conta do campo
 - **IVA DP N/A** aplicado a linhas onde o imposto/base não se aplicam em qualquer das declarações
 - **IVA AL [Q##-L##]** por exemplo **IVA AL [Q06-L45]**
 
     - **IVA** mostra que é uma etiqueta para declarações de IVA
-    - **AL [Q06-L45]** mostra que vai aparecer na linha 45, do quadro 6, do Anexo L
+    - **AL [Q06-L45]** mostra que vai aparecer na **Linha 45**, do **Quadro 6**, do **Anexo L**
 
 Retenção na Fonte
 -----------------
-Para as retenções na fonte usamos nomenclatura que segue 3 princípios:
+Para as retenções na fonte também usamos nomenclatura que segue 3 princípios:
 
 - **RF DM CD ###** por exemplo **RF DM CD 210**
 
     - **RF** mostra que é uma etiqueta para declarações de Retenção na Fonte
-    - **DM CD 210** mostra que vai aparecer no campo relativo ao código 210 da declaração mensal
+    - **DM CD 210** mostra que vai aparecer no campo relativo ao **Código 210** da **Declaração Mensal**
 - **RF M10 [##] ##** por exemplo **RF M10 [05] 04 G**
 
     - **RF** mostra que é uma etiqueta para declarações de Retenção na Fonte
-    - **M10 [05] 04 G** mostra que vai aparecer no campo 4 do quadro 5 do Modelo 10 a informação seguinte diz respeito ao código específico para o campo
+    - **M10 [05] 04 G** mostra que vai aparecer no **Campo 4** do **Quadro 5** do **Modelo 10**, a informação seguinte diz respeito ao **Código** específico para o campo
 - **RF M30 [##] ##** por exemplo **RF M30 [35] 17**
 
     - **RF** mostra que é uma etiqueta para declarações de Retenção na Fonte
-    - **M30 [35] 17** mostra que vai aparecer no campo 35 do Modelo 30 a informação seguinte diz respeito ao código específico para o campo
+    - **M30 [35] 17** mostra que vai aparecer no **Campo 35** do **Modelo 30**, a informação seguinte diz respeito ao *Código** específico para o campo
 
 Imposto Selo
 ------------
 Nestes casos as nossas etiquetas seguem o formato **IS DC ###** por exemplo **IS CD 301**
 
-**IS** mostra que é uma etiqueta para imposto de selo
-**CD 301** mostra que vai aparecer no campo relativo ao código 301
+- **IS** mostra que é uma etiqueta para Imposto de Selo
+- **CD 301** mostra que vai aparecer no campo relativo ao **Código 301**
