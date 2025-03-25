@@ -171,40 +171,18 @@ manusamento do seu Odoo e garanta que todas as suas declarações saiam com os v
     Também informamos que só deve ter uma linha para a base, mas pode ter várias linhas para impostos desde que a soma
     das percentagens não ultrapasse os 100%
 
-IVA
----
-As etiquetas mais comuns são as de IVA e a nossa nomenclatura segue 3 exemplos:
+As nossas etiquetas seguem sempre a seguinte nomenclatura
 
-- **IVA DP [##]** por exemplo **IVA DP [20]**
+**Texto 1 [Texto 2] Texto 3**, onde cada um dos textos tem a seguinte informação
 
-    - **IVA** mostra que é uma etiqueta para declarações de IVA
-    - **DP [20]** mostra que vai aparecer no **campo 20** da **Declaração Períódica**, dentro dos **[ ]** pode aparecer mais informação mas a lógica é a mesma de identificação do campo, em alguns casos vai ver **V** ou **C** que representam **Vendas** e **Compras** respetivamente, com o objetivo de dar o sinal exato na conta do campo
-- **IVA DP N/A** aplicado a linhas onde o imposto/base não se aplicam em qualquer das declarações
-- **IVA AL [Q##-L##]** por exemplo **IVA AL [Q06-L45]**
+- **Texto 1** identifica a declaração a que diz respeito a etiqueta
+- **Texto 2** encontra-se sempre dentro dos parênteses retos e mostra as coordenadas específicas dentro da declaração para o qual o valor vai ser utilizado
 
-    - **IVA** mostra que é uma etiqueta para declarações de IVA
-    - **AL [Q06-L45]** mostra que vai aparecer na **Linha 45**, do **Quadro 6**, do **Anexo L**
-
-Retenção na Fonte
------------------
-Para as retenções na fonte também usamos nomenclatura que segue 3 princípios:
-
-- **RF DM CD ###** por exemplo **RF DM CD 210**
-
-    - **RF** mostra que é uma etiqueta para declarações de Retenção na Fonte
-    - **DM CD 210** mostra que vai aparecer no campo relativo ao **Código 210** da **Declaração Mensal**
-- **RF M10 [##] ##** por exemplo **RF M10 [05] 04 G**
-
-    - **RF** mostra que é uma etiqueta para declarações de Retenção na Fonte
-    - **M10 [05] 04 G** mostra que vai aparecer no **Campo 4** do **Quadro 5** do **Modelo 10**, a informação seguinte diz respeito ao **Código** específico para o campo
-- **RF M30 [##] ##** por exemplo **RF M30 [35] 17**
-
-    - **RF** mostra que é uma etiqueta para declarações de Retenção na Fonte
-    - **M30 [35] 17** mostra que vai aparecer no **Campo 35** do **Modelo 30**, a informação seguinte diz respeito ao *Código** específico para o campo
-
-Imposto Selo
-------------
-Nestes casos as nossas etiquetas seguem o formato **IS DC ###** por exemplo **IS CD 301**
-
-- **IS** mostra que é uma etiqueta para Imposto de Selo
-- **CD 301** mostra que vai aparecer no campo relativo ao **Código 301**
+    - Para ajudar na identificação utilizados algumas letras e simbolos
+    - **Q** significa que é um **quadro**
+    - **L** significa que é uma **linha**
+    - **C** significa que é um **campo**
+    - Por vezes pode existir um **CMP** ou **VND** após o número de um campo, isto significa que o mesmo é usado em cálculos intermédios de **Compras** e **Vendas** respetivamente
+    - Um **-** representa que estamos a seguir um caminho entre coordenadas, por exemplo, Q03-L01 seria quadro 3 > linha 1
+    - Um **|** representa que o valor usado para 2 campos, por exemplo, Q08-C35|C37 seria quadro 8 > campo 35 e também quadro 8 > campo 37
+- **Texto 3** nem sempre existe, mas quando existe representa um código (**CD**) do campo relativo à coordenada a ser preenchido
