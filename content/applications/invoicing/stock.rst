@@ -437,6 +437,10 @@ Pode ainda fazer uma valorização numa data e hora específica que pretenda, pa
 .. image:: stock/v17_reports10.png
     :align: center
 
+.. danger::
+    Em Odoo a valorização é sempre vista na data em que é registada em sistema, por esse motivo não é viável fazer
+    correções de períodos anteriores mas só do atual e futuro valor do inventário
+
 .. seealso::
     `Saiba mais sobre realtórios de valorização Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.html#inventory-valuation-report>`_
 
