@@ -3,8 +3,8 @@
 ========================
 Transferências de Saldos
 ========================
-A **Exo Software** tem como parte da sua oferta de Localização uma ferramenta de Transferência de Saldos que complementa
-a sua oferta de declarações
+A **Exo Software** tem como parte da sua oferta de Localização, uma ferramenta de Transferência de Saldos que
+complementa a sua oferta de declarações
 
 No entanto a mesma pode também ser usada para criar os seus próprios modelos para outros fins, desde que devidamente
 configurada
@@ -22,7 +22,7 @@ A ferramenta está dividida em duas partes:
 
 Modelos de Transferência de Saldos
 ==================================
-Como parte da sua oferta a **Exo Software** oferece dois tipos de modelos para utilização, para ter acesso aos mesmos
+Como parte da sua oferta, a **Exo Software** oferece dois tipos de modelos para utilização, para ter acesso aos mesmos
 aceda à app de **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo),
 vá ao menu :menuselection:`Configuração --> Contabilidade --> Modelos de Transferência de Saldos`
 
@@ -41,15 +41,15 @@ das diversas contas de IVA para as contas de **IVA - A pagar** ou **IVA - A recu
    :align: center
 
 .. note::
-    A conta **2437** não faz parte dos **Prefixos das Contas Origem**, porque apenas está movimentar saldos de um
+    A conta **2437** não faz parte dos **Prefixos das Contas Origem**, porque apenas está a movimentar saldos de um
     determinado período e não dos períodos anteriores
 
     Se pretender movimentar essa conta, pode fazer um movimento manual quando necessário, ou acrescentar os seus
     próprios modelos posteriores a este
 
 .. tip::
-    Pode utilizar um diário específico para este tipo de movimentos e os manter separados de outros, ou pode usar o seu
-    diário geral de Operações diversas
+    Pode utilizar um diário específico para este tipo de movimentos mantendo-os separados de outros, ou pode usar o seu
+    diário geral de Operações Diversas
 
     Configurações recomendadas:
 
@@ -62,7 +62,7 @@ das diversas contas de IVA para as contas de **IVA - A pagar** ou **IVA - A recu
 
 Apuramento de Resultados
 ------------------------
-No fecho de ano, pode usar este modelo para fazer a transferência de saldos das contas de Proveitos e Custos para as
+No fecho de ano, pode usar este modelo para fazer a transferência de saldos das contas de Proveitos e Custos, para as
 contas de Resultados
 
 .. image:: balance_transfer/v17_configTransferModels04.png
@@ -80,8 +80,8 @@ contas de Resultados
 
 Modelos Personalizados
 ----------------------
-Além da oferta **Exo Software** pode usar esta ferramenta para criar os seus próprios modelos de transferências de
-saldos, mas para uma correta utilização tenha em atenção às configurações
+Além da oferta **Exo Software**, pode usar esta ferramenta para criar os seus próprios modelos de transferências de
+saldos, mas para uma correta utilização tenha em atenção as configurações
 
 **Prefixos das Contas Origem**, todas as contas que se iniciem por estes dígitos serão contabilizadas, no caso de serem
 vários prefixos os mesmos devem ser separados por vírgula
@@ -90,11 +90,11 @@ vários prefixos os mesmos devem ser separados por vírgula
 questão, esse saldo dependendo da natureza é depois levado à conta que aqui ficar definida. É seguida a seguinte lógica:
 
 - cada conta abrangida pelos prefixos, vai ter o seu saldo do período analisado e gerar uma linha no movimento
-- será criada uma linha de contrapartida pelo valor agregado de débitos e créditos na conta de destino correta pelo saldo de todas as contas analisadas
+- será criada uma linha de contrapartida, pelo valor agregado de débitos e créditos na conta de destino correta, pelo saldo de todas as contas analisadas
 
 **Encadeado**, quando esta opção estiver selecionada, em vez de utilizar os valores efetivamente registados nas contas
 para o período em questão, serão utilizados os saldos calculados nas linhas anteriores. Se a opção não estiver
-selecionada serão novamente calculados os valores com base nos movimentos do período
+selecionada, serão novamente calculados os valores com base nos movimentos do período
 
 Como Utilizar
 =============
@@ -111,17 +111,18 @@ e carregar no botão **Novo**
 - Selecione o **Modelo** que pretende usar
 - No campo **Descrição** é recomendado que acrescente o período da transferência
 - **Data do Movimento** será a data em que este movimento vai ser registado na contabilidade
-- **Criar Mov. Manual**, apenas deve selecionar esta opção se quiser que um movimento vazio seja criado para poder fazer o lançamento manual que pretender
-- **Data Inicial** e **Data Final**, todos os movimentos registados nas contas dentro deste período serão contabilizados para o efeito
+- **Criar Mov. Manual**, apenas deve selecionar esta opção, se quiser que um movimento vazio seja criado, podendo fazer o lançamento manual que desejar
+- **Data Inicial** e **Data Final**, todos os movimentos registados nas contas dentro deste período, serão contabilizados para o efeito
 
 .. image:: balance_transfer/v17_useTransferModels02.png
    :align: center
 
-Carregue no botão **Executar** para ser criado um lançamento em rascunho com os movimentos configurados no modelo para o
-período escolhido
+Carregue no botão **Executar** para ser criado um lançamento em rascunho, com os movimentos configurados no modelo para
+o período escolhido
 
-Se pretender verificar os dados do lançamento, siga mesmo
-Se pretender apenas publicar carregue no botão confirmar
+Se pretender verificar os dados do lançamento, siga o mesmo
+
+Se pretender apenas publicar o lançamento carregue no botão **Confirmar**
 
 .. image:: balance_transfer/v17_useTransferModels03.png
    :align: center
