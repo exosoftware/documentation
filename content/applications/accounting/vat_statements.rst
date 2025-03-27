@@ -1,4 +1,4 @@
-:nosearch:vat_statements
+:show-content:
 
 ==================
 Declarações de IVA
@@ -95,13 +95,15 @@ Existem 2 processos para fazer este processo:
 .. image:: vat_statements/v17_vat_dpIVA09.png
    :align: center
 
-- Utilizar a ferramenta do Odoo de **Transferências de Saldos**
+- Utilizar a ferramenta da Exo Software de **Transferências de Saldos**
 
 .. image:: vat_statements/v17_vat_dpIVA10.png
    :align: center
 
 .. seealso::
-    Se pretender saber mais sobre esta ferramenta peça `formação <https://exosoftware.pt/appointment>`_
+    Conheça a ferramenta de :doc:`Transferências de Saldos <balance_transfer>`
+
+    `Se pretender formação sobre a ferramenta solicite <https://exosoftware.pt/appointment>`_
 
 Fecho do período
 ----------------
@@ -160,7 +162,7 @@ possibilidade de o guardar em Dataport, o que recomendamos para poder ser utiliz
 .. _vat_anex_r:
 
 Anexo R
-==================
+=======
 O Anexo R da Declaração Periódica IVA é um anexo que permite às entidades declarar transações com outras regiões do
 território nacional, que se divide em 3 regiões:
 
