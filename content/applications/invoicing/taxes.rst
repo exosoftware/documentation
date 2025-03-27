@@ -182,7 +182,9 @@ As nossas etiquetas seguem sempre a seguinte nomenclatura
     - **Q** significa que é um **quadro**
     - **L** significa que é uma **linha**
     - **C** significa que é um **campo**
-    - Por vezes pode existir um **CMP** ou **VND** após o número de um campo, isto significa que o mesmo é usado em cálculos intermédios de **Compras** e **Vendas** respetivamente
     - Um **-** representa que estamos a seguir um caminho entre coordenadas, por exemplo, Q03-L01 seria quadro 3 > linha 1
     - Um **|** representa que o valor usado para 2 campos, por exemplo, Q08-C35|C37 seria quadro 8 > campo 35 e também quadro 8 > campo 37
-- **Texto 3** nem sempre existe, mas quando existe representa um código (**CD**) do campo relativo à coordenada a ser preenchido
+- **Texto 3** nem sempre existe, mas quando existe pode representar duas coisas
+
+    - Um código ou valor do campo relativo à coordenada a ser preenchido respeitante às condições de preenchimento da declaração
+    - É uma etiqueta intermédio usada na computação de um campo da declaração, nestes casos, pode ver um **CMP** ou **VND** que representam **Compras** ou **Vendas** respetivamente
