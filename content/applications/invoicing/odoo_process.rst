@@ -113,6 +113,7 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
     impressão do documento o mesmo sairá invalidado.
 
 .. TODO : a metodologia abaixo é sobre como partilhar orçamentos não confirmados, não é para divulgar aos clientes até que seja confirmado pela AT a sua possibilidade, por isso está comentada
+.. TODO : temos uma ferramenta alternativa para uso mas que ainda tem vários bugs e não está concluída
 
 ..
     .. tip::

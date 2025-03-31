@@ -3,7 +3,7 @@
 ========================
 Despesas de Funcionários
 ========================
-.. TODO : Despesas de Funcionários - Ver com André e Tiago o que é e como fazer
+.. TODO : Despesas de Funcionários - Ver com André e Tiago outros tipos de despesas
 
 .. Documentação em breve
 
