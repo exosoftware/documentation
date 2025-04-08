@@ -4,6 +4,32 @@
 Vendas
 ======
 
+.. _odoo_process_quotation_revisions:
+
+Portugal - Sale Order Revisions
+===============================
+Por limitações impostas pela AT não é possível utilizar a ferramenta nativa do Odoo de edição de documentos fiscais já
+confirmados
+
+Por esse motivo, e usando como base uma app OCA, a Exo Software fez os ajustes para que a funcionalidade se integre nas
+regras portuguesas
+
+.. important::
+    Esta app não está disponível na loja Odoo, para ter acesso à mesma terá de pedir aos nossos serviços que façam a sua
+    instalação e ativação na sua base de dados
+
+.. seealso::
+    Conheça a app OCA que serve de base a esta funcionalidade `Sale Order Revisions <https://github.com/OCA/sale-workflow/tree/17.0/sale_order_revision>`_
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
+
+Documentação em breve
+
+
 .. _otherApps_Hide_SO_Line_Timesheet:
 
 Hide SO Line Timesheet

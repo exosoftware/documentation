@@ -112,32 +112,14 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
     A legislação portuguesa proíbe a emissão de documentos não confirmados e comunicados, pelo que se tentarem fazer
     impressão do documento o mesmo sairá invalidado.
 
-.. TODO : a metodologia abaixo é sobre como partilhar orçamentos não confirmados, não é para divulgar aos clientes até que seja confirmado pela AT a sua possibilidade, por isso está comentada
-.. TODO : temos uma ferramenta alternativa para uso mas que ainda tem vários bugs e não está concluída
+Revisões de Orçamentos
+^^^^^^^^^^^^^^^^^^^^^^
+A AT não permite alterar documentos já emitidos. No entanto, existe uma necessidade real de se alterar documentos já
+enviados a clientes, pelo que fizemos uma adaptação de um módulo OCA às regras portuguesas, de forma a poder ter uma
+funcionalidade semelhante a versões de orçamentos, mas cumprindo os requisitos legais da AT
 
-..
-    .. tip::
-        No entanto, o Odoo permite partilhar documentos no portal com o vosso cliente.
-
-        Basta ir ao menu :menuselection:`Ação --> Partilhar` e vai abrir uma nova janela onde pode inserir o contacto
-        do parceiro
-
-        .. image:: odoo_process/v17_shareQuote1.png
-            :align: center
-        .. image:: odoo_process/v17_shareQuote2.png
-            :align: center
-
-        Em seguida o parceiro pode aceder ao link do orçamento para verificar o mesmo e deixar algum comentário que
-        será adicionado ao chatter do Odoo. Também tem acesso a outras funcionalidades. Esta é a vista do lado do parceiro
-
-        .. image:: odoo_process/v17_shareQuote3.png
-            :align: center
-
-        Toda a informação do envio e visionamento fica registada no chatter do próprio documento.
-
-        .. image:: odoo_process/v17_shareQuote4.png
-            :align: center
-
+.. seealso::
+    :ref:`Saiba mais sobre o módulo Portugal - Sale Order Revisions <odoo_process_quotation_revisions>`
 
 .. seealso::
    :ref:`O que é um orçamento e suas variantes <fiscal_documents_quote>`
