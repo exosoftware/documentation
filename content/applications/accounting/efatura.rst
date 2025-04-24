@@ -36,7 +36,7 @@ utilizador Odoo e inserir os dados na aba **Portugal**
 
 Configurações
 =============
-Tenha já criado um **diário** do tipo **Compras**, um **artigo*** para ser utilizado no processo de importação de
+Tenha já criado um **diário** do tipo **Compras**, um **artigo** para ser utilizado no processo de importação de
 documentos (este artigo deve poder ser comprado) bem como **todos os impostos base** necessários através da escolha de
 um plano de contas
 
