@@ -178,7 +178,7 @@ Lidar com Faturas de adiantamento
     **Quando emite a fatura final**
 
     - Emitir Nota de Crédito a partir da Fatura de Adiantamento para a anular
-    - Emitir nova Fatura a partir da venda pelo valor totaltotal
+    - Emitir nova Fatura a partir da venda pelo valor total
     - Na nova Fatura associar a Nota de Crédito da Fatura de Adiantamento
 
     Com este processo a sua fatura final sai com o valor total, mas o montante a pagar sai apenas com o valor em falta
