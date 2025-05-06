@@ -48,8 +48,8 @@ da normalidade.
 .. important::
     De notar que existe uma grande diferença entre **Tipo de Artigo** e **Categoria Fiscal**:
 
-    - **Tipo de Artigo**, é a designação que o Odoo usa para saber se vai o não controlar o stock para os artigos
-    - **Categoria Fiscal** é a classificação que é atribuída em Portugal aos tipos de bens
+    - **Tipo de Artigo**, é a designação que o Odoo usa para saber que tipo de artigo se trata
+    - **Categoria Fiscal** classificação incluída pela **Localização PT+** da **Exo Software** que é atribuída em Portugal aos tipos de bens e usada na Comunicação de Inventário à AT
 
     .. image:: stock/v17_stock_products03.png
         :align: center
