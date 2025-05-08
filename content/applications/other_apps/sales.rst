@@ -27,7 +27,59 @@ regras portuguesas
         ─── ✦ ───
     </div>
 
+Configuração
+------------
+Esta app usa a sequência original do Odoo para Orçamentos, como tal para que possa ser devidamente utilizada, deve
+configurar essa sequência para o formato que pretende utilizar
+
+Na app **Configurações** garanta que tem o **Modo de Programador** ativo
+
+.. image:: ../../install/initial_configuration/v17_appSettings.png
+   :align: center
+
+.. image:: sales/v17_developerMode.png
+   :align: center
+
+Em seguida vá ao menu :menuselection:`Técnico --> Sequências & Identificadores --> Sequências`
+
+.. image:: sales/v17_sequences.png
+   :align: center
+
+Procure o **Código da Sequência** *sale.order* e entre no mesmo para o configurar
+
+.. image:: sales/v17_saleOrderSequence.png
+   :align: center
+
+Como esta sequência não é comunicada à AT, tem mais liberdade do que normal para a sua configuração, podendo usar um
+Prefixo com os códigos que vè na secção de Legenda
+
+No entanto, sugerimos que seja coerente e use apenas um Prefixo simples e que este seja diferente do usado para
+Orçamentos e Notas Encomenda.
+
+Lembramos que não serão acrescentados os Prefixos exigidos pela AT nesta sequência pelo que se deseja incluí-los terá
+de os colocar aqui
+
+.. danger::
+    Não utilize um sufixo, pois a app vai acrescentar um sufixo baseado na versão do Orçamento
+
+Utilização
+----------
 Documentação em breve
+
+..
+    Com a instalação desta app os seus orçamentos passarão a ter um novo aspeto, onde vai ser a numeração da sequência que configurou bem como um novo campo com a numeração oficial do documento comunicado à AT
+
+    A utilização desta app é bastante simples, num determinado Orçamento carregue no botão de nova Revisão
+
+    Pode escolher se quer duplicar o chatter do documento original para o novo documento
+
+    .. important::
+        Esta funcionalidade é apenas uma adaptação para as regras portuguesas da app da OCA
+
+        Por esse motivo não alteramos o seu comportamento nativo de cancelar e arquivar as revisões antigas e só ter
+        disponível o documento mais recente
+
+        Caso surjam erros em emissão de SAF-T não se esqueça de verificar os documentos arquivados
 
 
 .. _otherApps_Hide_SO_Line_Timesheet:
