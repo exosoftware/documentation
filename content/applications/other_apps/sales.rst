@@ -51,7 +51,7 @@ Procure o **Código da Sequência** *sale.order* e entre no mesmo para o configu
    :align: center
 
 Como esta sequência não é comunicada à AT, tem mais liberdade do que normal para a sua configuração, podendo usar um
-Prefixo com os códigos que vè na secção de Legenda
+Prefixo com os códigos que vê na secção de Legenda
 
 No entanto, sugerimos que seja coerente e use apenas um Prefixo simples e que este seja diferente do usado para
 Orçamentos e Notas Encomenda.
