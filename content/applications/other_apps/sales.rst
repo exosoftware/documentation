@@ -34,7 +34,7 @@ configurar essa sequência para o formato que pretende utilizar
 
 Na app **Configurações** garanta que tem o **Modo de Programador** ativo
 
-.. image:: ../../install/initial_configuration/v17_appSettings.png
+.. image:: ../../administration/install/initial_configuration/v17_appSettings.png
    :align: center
 
 .. image:: sales/v17_developerMode.png
