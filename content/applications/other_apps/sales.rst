@@ -64,23 +64,52 @@ de os colocar aqui
 
 Utilização
 ----------
-Documentação em breve
+.. info::
+    Com a instalação desta app os seus orçamentos passarão a ter um novo aspeto, onde vai ver a numeração da sequência
+    que configurou em maior destaque, bem como um novo campo com a numeração oficial do documento comunicado à AT
 
-..
-    Com a instalação desta app os seus orçamentos passarão a ter um novo aspeto, onde vai ser a numeração da sequência que configurou bem como um novo campo com a numeração oficial do documento comunicado à AT
+    .. image:: sales/v17_saleOrderRevision01.png
+       :align: center
 
-    A utilização desta app é bastante simples, num determinado Orçamento carregue no botão de nova Revisão
+A utilização desta app é bastante simples, num determinado Orçamento carregue no botão **Nova Revisão de Orçamento**
 
-    Pode escolher se quer duplicar o chatter do documento original para o novo documento
+.. image:: sales/v17_saleOrderRevision02.png
+   :align: center
 
-    .. important::
-        Esta funcionalidade é apenas uma adaptação para as regras portuguesas da app da OCA
+Vai poder escolher se quer duplicar o chatter do documento original para o novo documento, ou não
 
-        Por esse motivo não alteramos o seu comportamento nativo de cancelar e arquivar as revisões antigas e só ter
-        disponível o documento mais recente
+.. image:: sales/v17_saleOrderRevision03.png
+   :align: center
 
-        Caso surjam erros em emissão de SAF-T não se esqueça de verificar os documentos arquivados
+Será criado um novo orçamento igual ao anterior em Rascunho, que poderá editar
 
+.. important::
+    Esta funcionalidade é apenas uma adaptação para as regras portuguesas da app da OCA
+
+    Por esse motivo não alteramos o seu comportamento nativo de cancelar e arquivar as revisões antigas e só ter
+    disponível o documento mais recente
+
+    Nos documentos arquivados tem sempre acesso à revisão mais recente, na aba **Outra Informação**
+
+    .. image:: sales/v17_saleOrderRevision04.png
+       :align: center
+
+    Caso surjam erros em emissão de SAF-T não se esqueça de verificar os documentos arquivados
+
+    .. image:: sales/v17_saleOrderRevision05.png
+       :align: center
+
+Na nova versão, passa a ter acesso a um smart button para acesso às versões anteriores
+
+O nome do documento fica igual, mas acresce um sufixo com a versão
+
+.. image:: sales/v17_saleOrderRevision06.png
+   :align: center
+
+No PDF, a versão do orçamento é atualizada, bem como o documento AT, mas sempre dando a informar o processo ao cliente
+
+.. image:: sales/v17_saleOrderRevision07.png
+   :align: center
 
 .. _otherApps_Hide_SO_Line_Timesheet:
 
