@@ -26,7 +26,7 @@ utilizador Odoo e inserir os dados na aba **Portugal**
    :align: center
 
 Deve garantir que em Odoo o utilizador tem permissões para fazer a comunicação de séries, mas também o login de acesso
-na AT está atutorizado a fazer essa mesma comunicação.
+na AT está autorizado a fazer essa mesma comunicação.
 
 Séries
 ======
