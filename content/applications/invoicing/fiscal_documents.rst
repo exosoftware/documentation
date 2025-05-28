@@ -130,7 +130,7 @@ Para emitir devemos na vista da mesa em POS Restaurante carregar no botão **Con
 
 Fatura
 ======
-Documento que deve ser emitido sempre que se adquire um bem ou serviço sujeito a IVA
+A fatura deverá ser emitida sempre que se realiza uma transação comercial de bens ou se presta um serviço.
 
 Contem:
 

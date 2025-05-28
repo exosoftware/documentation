@@ -31,7 +31,7 @@ associadas ao mesmo tema
 
 **Recomendamos que leia toda a informação relativa ao assunto que pretende esclarecer**
 
-Os blocos de informação padrão são os seguintes
+Os blocos de informação padrão são os seguintes:
 
 .. note::
     Pequenas notas que pretendem ajudar a aproveitar ao maximo o sistema Odoo
@@ -40,7 +40,7 @@ Os blocos de informação padrão são os seguintes
     Algumas dicas sobre como solucionar problemas simples
 
 .. example::
-    Exemplos de situações concretas que pode usar, adpatando à sua realidade
+    Exemplos de situações concretas que pode usar, adaptando à sua realidade
 
 .. seealso::
     Informações adicionais sobre o tema que está a ver no momento
