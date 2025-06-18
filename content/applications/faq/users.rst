@@ -8,7 +8,7 @@ Contagem de Utilizadores
 ========================
 Em Odoo, a contagem de utilizadores é feita pelo nº de utilizadores internos ativos
 
-Pode consultar esta informação na app de **Configurações** acedendo ao menu :menuselection:`Imprimir --> Utilizadores e Empresas / Utilizadores`
+Pode consultar esta informação na app de **Configurações** acedendo ao menu :menuselection:`Utilizadores e Empresas --> Utilizadores`
 e em seguida filtrar por utilizadores internos
 
 .. image:: ../../administration/install/initial_configuration/v17_appSettings.png
