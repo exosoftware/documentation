@@ -15,6 +15,7 @@ Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
     :titlesonly:
 
     faq/configuration
+    faq/users
     faq/series_communication
     faq/invoice
     faq/e-invoicing_errors
