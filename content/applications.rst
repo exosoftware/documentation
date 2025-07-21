@@ -25,6 +25,7 @@ Vai poder consultar diversas temáticas sobre a utilização do seu Odoo, melhor
     applications/accounting
     applications/payroll
     applications/multibanco
+    applications/standards
     applications/other_apps
     applications/faq
     applications/glossary
