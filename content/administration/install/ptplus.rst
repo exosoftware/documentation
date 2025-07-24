@@ -214,7 +214,7 @@ dependências necessárias para cada módulo:
      - pt-plus
      - Contabilidade
      - ptplus_accounting_efatura
-     - bs4, requests_html, pymupdf==1.24.10, pyzbar
+     - bs4, requests_html, pymupdf==1.24.10, pyzbar, html5lib
      - zbar-tools
      -
    * -
