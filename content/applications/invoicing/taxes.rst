@@ -188,3 +188,33 @@ As nossas etiquetas seguem sempre a seguinte nomenclatura
 
     - Um código ou valor do campo relativo à coordenada a ser preenchido respeitante às condições de preenchimento da declaração
     - É uma etiqueta intermédio usada na computação de um campo da declaração, nestes casos, pode ver um **CMP** ou **VND** que representam **Compras** ou **Vendas** respetivamente
+
+Ecovalor e IEC
+==============
+Tanto para as taxas de **Ecovalor** como para as taxas de **Imposto Especial de Consumo** deve ser criado um novo
+imposto, na aba **Opções Avançadas** deve escolher para o grupo de imposto uma das seguintes opções:
+
+    - Ecovalor
+    - IEC
+
+Grupos com esta característica irão disponibilizar mais informação para preenchimento no imposto
+
+.. note::
+    Caso o Grupo de Imposto associado não exista, pode criá-lo
+
+    O objetivo dos grupos de imposto é agregar nos totalizadores no final do documento, enquanto que para IVA é
+    obrigatório ser por percentagem (%), para outros impostos como nestes casos fica a critério do utilizador
+
+.. image:: taxes/v17_ecovalue.png
+  :align: center
+
+.. image:: taxes/v17_sct.png
+  :align: center
+
+.. note::
+    A configuração específica do imposto deve ser a que considerar mais adquada
+
+    O nosso SAF-T irá adaptar-se às suas escolhas no momento de ser gerado
+
+.. important::
+    Todo o reporte relativo a este tipo de impostos fica a cargo do utilizador e não da Exo Software
