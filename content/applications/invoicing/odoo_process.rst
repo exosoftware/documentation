@@ -65,7 +65,7 @@ Depois deve preencher os campos necessários e selecionar a série documental a 
        ser mensal mas com uma data de término 2 anos no futuro
 
 Descontos nos Orçamentos
-^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. tip::
     Pode aplicar descontos no processo de **Venda** utilizando o botão **Desconto** existente para o efeito
@@ -113,7 +113,7 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
     impressão do documento o mesmo sairá invalidado.
 
 Revisões de Orçamentos
-^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~
 A AT não permite alterar documentos já emitidos. No entanto, existe uma necessidade real de se alterar documentos já
 enviados a clientes, pelo que fizemos uma adaptação de um módulo OCA às regras portuguesas, de forma a poder ter uma
 funcionalidade semelhante a versões de orçamentos, mas cumprindo os requisitos legais da AT
@@ -165,23 +165,46 @@ Na janela que abre decida o tipo de fatura que pretende criar de entre as opçõ
 
 .. _odoo_process_downpayment:
 
-Lidar com Faturas de adiantamento
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Faturas de adiantamento
+~~~~~~~~~~~~~~~~~~~~~~~
 
-.. important::
-    **Quando recebe o valor do seu cliente**
+Clientes
+^^^^^^^^
 
-    - Criar uma Fatura de Adiantamento
-    - Criar Recibo a partir da Fatura de Adiantamento
-    - Reconciliar o Recibo com o movimento do banco
+Processo iniciado em Odoo
+"""""""""""""""""""""""""
+Documentação detalhada brevemento, de momento utilizar o processo como se tivesse iniciado fora do Odoo
 
-    **Quando emite a fatura final**
+Processo iniciado fora do Odoo
+""""""""""""""""""""""""""""""
+Este é o processo correto usando a Nota Crédito como regularizador, quando não tem a venda feita em Odoo
 
-    - Emitir Nota de Crédito
-    - Emitir nova Fatura a partir da venda pelo valor total
-    - Na nova Fatura associar a Nota de Crédito da Fatura de Adiantamento
+**Ainda não emitiu a Fatura de Adiantamento**
 
-    Com este processo a sua fatura final sai com o valor total, mas o montante a pagar sai apenas com o valor em falta
+- Criar uma Fatura de Adiantamento
+- Criar Recibo a partir da Fatura de Adiantamento
+- Reconciliar o Recibo com o movimento do banco
+
+**Já emitiu a Fatura de Adiantamento, mas não a Fatura final**
+
+- Emitir Fatura final pelo valor total dos artigos
+- Emitir Nota de Crédito para regularizar o Adiantamento
+- Garantindo que a Nota de Crédito está associada à Fatura emitir o PDF e respetivo Recibo
+- Reconciliar o Recibo com o movimento do banco
+
+**Já emitiu a Fatura final**
+- Emitir Nota de Crédito para regularizar o Adiantamento
+- Decida se vai devolver o dinheiro, ou se vai usar para regularizar pagamento futuro
+- Proceda respetivamente com devolução o dinheiro e reconciliando no banco, ou deixando a NC pendente em sistema
+
+Com este processo a sua fatura final sai com o valor total, mas o montante a pagar sai apenas com o valor em falta
+
+Fornecedores
+^^^^^^^^^^^^
+Documentação em breve
+
+.. seealso::
+    Se tiver dúvidas pode sempre `pedir um esclarecimento aos nossos consultores <https://exosoftware.pt/en/appointment>`_
 
 Depois de ter a fatura em modo de rascunho, deve preencher os campos necessários e escolher a série documental de
 fatura que pretende.
@@ -209,7 +232,7 @@ A maioria dos campos já vão estar preenchidos pois são herdados da Nota de en
     criar um orçamento.
 
 Descontos nas Faturas
-^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~
 
 .. tip::
     Pode aplicar descontos diretamente no processo de **Faturação** adicionando uma nova linha com o artigo Odoo
@@ -250,7 +273,7 @@ Correções
 .. _odoo_process_create_creditNote:
 
 Notas de crédito
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 .. important::
     Segundo as regras da AT as notas de crédito têm de estar ligadas ao documento de fatura a que dizem respeito e devem
     mencionar o mesmo.
@@ -321,7 +344,7 @@ Em seguida confirme a nota de crédito.
 .. _odoo_process_create_debitNote:
 
 Notas de débito
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~
 .. important::
     Segundo as regras da AT as notas de débito têm de estar ligadas ao documento de fatura a que dizem respeito e devem
     mencionar o mesmo.
@@ -449,7 +472,7 @@ No processo :menuselection:`Fatura --> Notas de crédito / Notas de débito / Re
 (Community ou Enterprise), pode ter 3 ou 4 tipos de estado respetivamente.
 
 Community
-^^^^^^^^^
+~~~~~~~~~
 Na versão Community terá 3 tipos de estado nas faturas:
 
     - **Não Paga** - Ainda não existe qualquer documento a liquidar o valor da fatura
@@ -462,7 +485,7 @@ Na versão Community terá 3 tipos de estado nas faturas:
 Os tipos de documento que podem servir para liquidar valores da fatura são as notas de crédito e os recibos
 
 Enterprise
-^^^^^^^^^^
+~~~~~~~~~~
 Na versão Enterprise terá 4 tipos de estado nas faturas:
 
     - **Não Paga** - Ainda não existe qualquer documento a liquidar o valor da fatura
@@ -478,7 +501,7 @@ Os tipos de documento que podem servir para liquidar valores da fatura são as n
 .. _odoo_process_payment_provider_journals:
 
 Reconciliar Provedores de Pagamentos
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. important::
     O seu Provedor de Pagamento vai receber a totalidade da fatura do seu cliente
