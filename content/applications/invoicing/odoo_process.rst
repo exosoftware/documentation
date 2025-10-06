@@ -557,6 +557,56 @@ Mais informação
 .. seealso::
     Se pretender formação mais detalhada sobre o processo Odoo contacte a `Exo Software <https://exosoftware.pt/appointment/2>`_.
 
+Documentos de Importação
+========================
+No caso de ter documentos que sejam inseridos por importação deve seguir a seguinte configuração
+
+- Ativar a funcionalidade de escolha do **Método de Origem** nas **Definições** da app **Contabilidade**
+
+.. image:: odoo_process/v17_changeSourceBilling01.png
+    :align: center
+
+- Criar as séries documentais de importação
+- No documento em questão, mudar o **Método de Origem** para **Integração**, isto fará com que possa escolher a série documental de Importação para o tipo de documento
+
+.. image:: odoo_process/v17_changeSourceBilling02.png
+    :align: center
+
+- Preencha os campos obrigatórios na nova aba **Informação Integração**:
+
+    - Data/Hora da Validação do Documento
+    - Nº Documento Integrado
+
+.. image:: odoo_process/v17_changeSourceBilling03.png
+    :align: center
+
+- Se o seu documento foi emitido por software certificado deve ainda preencher na mesma aba:
+
+    - Assinatura Digital, o *Hash* do documento original
+    - Versão da chave privada, que tem o formato *aaaa.b*, onde *aaaa* representa o certificado emissor e *b* a versão estes dados estão associados ao software anterior
+
+.. image:: odoo_process/v17_changeSourceBilling04.png
+    :align: center
+
+- Crie o documento em Odoo com a mesma informação do software de origem
+
+.. important::
+    Não esqueça de verificar que a **Data da Fatura** e **Data de Vencimento** estão em conformidade
+
+.. note::
+    Aconselhamos à criação de um template de importação para importação de documentos em massa
+
+.. important::
+    É aconselhado que ao inserir documentos em Odoo, também anexe o PDF original ao documento Odoo, em alguns casos e
+    por restrições da AT, não poderá imprimir uma nova via do documento
+
+    Essa situação acontece quando não insere os dados da validação do seu software certificado de onde importa
+
+Caso tudo esteja devidamente preenchido, poderá gerar um novo documento no sistema que terá o seguinte aspeto
+
+.. image:: odoo_process/v17_changeSourceBilling05.png
+    :align: center
+
 Comunicação por API
 ===================
 É possível fazer a comunicação de documentos através de API em vez de serem gerados pelo utilizador no Odoo.

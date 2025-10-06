@@ -131,6 +131,13 @@ de comunicação.
 .. image:: series_registration/v17_newSerie3.png
    :align: center
 
+.. important::
+    O botão **Registar** estará oculto no caso de ser uma série do tipo **Integração**, estas séries devem apenas ser
+    ativadas
+
+    .. image:: series_registration/v17_activeSeries.png
+       :align: center
+
 Vai aparecer uma nova janela onde deve indicar a **Data de Início Esperada**, tenha em atenção que:
 
    - Pode emitir documentos com data anterior à constante neste campo mas deve de o evitar
