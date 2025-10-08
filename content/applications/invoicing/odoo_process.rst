@@ -173,7 +173,7 @@ Clientes
 
 Processo iniciado em Odoo
 """""""""""""""""""""""""
-Documentação detalhada brevemento, de momento utilizar o processo como se tivesse iniciado fora do Odoo
+Documentação detalhada em breve, de momento deve proceder como se o processo tivesse iniciado fora do Odoo
 
 Processo iniciado fora do Odoo
 """"""""""""""""""""""""""""""
@@ -193,8 +193,9 @@ Este é o processo correto usando a Nota Crédito como regularizador, quando nã
 - Reconciliar o Recibo com o movimento do banco
 
 **Já emitiu a Fatura final**
+
 - Emitir Nota de Crédito para regularizar o Adiantamento
-- Decida se vai devolver o dinheiro, ou se vai usar para regularizar pagamento futuro
+- Decida se vai devolver o dinheiro, ou se vai usar a NC para regularizar pagamento futuro
 - Proceda respetivamente com devolução o dinheiro e reconciliando no banco, ou deixando a NC pendente em sistema
 
 Com este processo a sua fatura final sai com o valor total, mas o montante a pagar sai apenas com o valor em falta
