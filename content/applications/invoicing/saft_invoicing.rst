@@ -28,7 +28,7 @@ Para poder exportar o ficheiro SAF-T de Faturação que tem de submeter à Autor
 Vai abrir uma janela que predefine o **Período** como Mês Passado, mas pode selecionar o período como lhe for mais
 conveniente, mudando o **Período** ou alterando a **Data Inicial** e/ou **Data Final**.
 
-É recomendadoque mantenha o visto na opção **Validar** para fazer uma verificação do ficheiro, no entanto se espera que
+É recomendado que mantenha o visto na opção **Validar** para fazer uma verificação do ficheiro, no entanto se espera que
 o ficheiro seja muito grande pode optar por não fazer esta verificação.
 
 Carregue em **Exportar XML**.
@@ -36,8 +36,15 @@ Carregue em **Exportar XML**.
 .. image:: saft_invoicing/v17_exportSAFT2.png
    :align: center
 
+.. note::
+    Caso tenha os nossos módulos de contabilidade instalados, terá um campo extra para selecionar o tipo de SAF-T
+    escolha a opção **Faturação**
+
+    .. image:: saft_invoicing/v17_exportSAFT6.png
+        :align: center
+
 Vai ser gerada uma nova janela com um resumo de possíveis erros que existam nos documentos para que seja mais fácil ver
-necesidade de correção de erros
+necessidade de correção de erros
 
 No campo **Motivo** pode encontrar uma descrição do que está a causar o erro
 
@@ -66,7 +73,7 @@ Submeta o ficheiro à AT, depois de submeter o ficheiro pode fechar esta janela.
 
 Automatismo (Cron)
 ==================
-A nossa **Localização PT+** possuí uma ferramenta excessional para emissão automática dos ficheiros SAFT
+A nossa **Localização PT+** possuí uma ferramenta excepcional para emissão automática dos ficheiros SAFT
 
 Esse automatismo carece de configuração específica às suas necessidades, pelo que pode solicitar os nossos serviços
 para o ajudar com as configurações. No entanto uma vez configurado não terá de se preocupar mais.
