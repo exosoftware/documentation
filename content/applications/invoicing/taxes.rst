@@ -34,6 +34,20 @@ cumpram as regras base da legislação portuguesa e seja feita a devida ligaçã
     Para que fiquem disponíveis:
 
     - Deve começar por ver se o imposto em causa já existe e apenas está **Inativo/Arquivado**. Neste caso, basta ativar para ficar disponível.
+
+    .. important::
+        Existem algumas siglas que a Exo usa nos impostos e que deve conferir:
+
+        - **AAA**, Transmissões isentas de imóveis
+        - **CDD**, Com direito a dedução
+        - **SDD**, Sem direito a dedução
+        - **DRS**, Desperdícios Resíduos e Sucata
+        - **CCV**, Serviços de Construção Civil
+        - **EGE**, Emissão de Gases com efeito de estufa
+        - **VTA**, Aquisição de Viaturas de Turismo
+        - **VTT**, Transmissão de Viaturas de Turismo
+        - **PRT**, Regime de pequeno retalhista
+
     - Se ainda não existir, basta duplicar o imposto base mais parecido, aplicar a exceção e gravar com um nome mais detalhado para mais fácil procura na utilização.
 
     .. example::
