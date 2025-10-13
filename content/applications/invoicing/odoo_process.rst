@@ -175,6 +175,39 @@ Processo iniciado em Odoo
 """""""""""""""""""""""""
 Documentação detalhada em breve, de momento deve proceder como se o processo tivesse iniciado fora do Odoo
 
+..
+    .. important::
+        Garanta que tem um artigo com a seguinte configuração
+
+            .. image:: odoo_process/v17_downPayment01.png
+                :align: center
+
+        Em seguida complete as configurações de **Vendas** do Odoo com o respetivo artigo e impostos
+
+            .. image:: odoo_process/v17_downPayment02.png
+                :align: center
+
+            .. image:: odoo_process/v17_downPayment03.png
+                :align: center
+
+        Esta configuração vai garantir que, na contabilidade, é usada a conta correta para adiantamentos, bem como o imposto
+        aplicado e respetivos mapeamentos, também são os corretos
+
+    **Adiantamentos Nacionais ou Extracomunitários**
+
+
+
+    **Adiantamentos Intracomunitários**
+
+    .. note::
+        Nestes casos não deve usar a fatura de adiantamento, pelo que sugerimos a utilização da app da OCA
+        `sale_advance_payment <https://github.com/OCA/sale-workflow/tree/17.0/sale_advance_payment>`_ no entanto, esta app
+        não está preparada para as especificidades das regras portuguesas, pelo que precisará de uma app complementar que
+        estamos a desenvolver para o efeito
+
+    De momento e visto que a nossa app complementar ainda não estar desenvolvida, sugerimos que usem o mesmo método como se
+    estivesse a fazer para um cliente Nacional ou Extracomunitário
+
 Processo iniciado fora do Odoo
 """"""""""""""""""""""""""""""
 Este é o processo correto usando a Nota Crédito como regularizador, quando não tem a venda feita em Odoo
