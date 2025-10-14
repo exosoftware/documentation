@@ -163,83 +163,6 @@ Na janela que abre decida o tipo de fatura que pretende criar de entre as opçõ
     .. image:: odoo_process/v17_createInvoice3.png
         :align: center
 
-.. _odoo_process_downpayment:
-
-Faturas de adiantamento
-~~~~~~~~~~~~~~~~~~~~~~~
-
-Clientes
-^^^^^^^^
-
-Processo iniciado em Odoo
-"""""""""""""""""""""""""
-Documentação detalhada em breve, de momento deve proceder como se o processo tivesse iniciado fora do Odoo
-
-..
-    .. important::
-        Garanta que tem um artigo com a seguinte configuração
-
-            .. image:: odoo_process/v17_downPayment01.png
-                :align: center
-
-        Em seguida complete as configurações de **Vendas** do Odoo com o respetivo artigo e impostos
-
-            .. image:: odoo_process/v17_downPayment02.png
-                :align: center
-
-            .. image:: odoo_process/v17_downPayment03.png
-                :align: center
-
-        Esta configuração vai garantir que, na contabilidade, é usada a conta correta para adiantamentos, bem como o imposto
-        aplicado e respetivos mapeamentos, também são os corretos
-
-    **Adiantamentos Nacionais ou Extracomunitários**
-
-
-
-    **Adiantamentos Intracomunitários**
-
-    .. note::
-        Nestes casos não deve usar a fatura de adiantamento, pelo que sugerimos a utilização da app da OCA
-        `sale_advance_payment <https://github.com/OCA/sale-workflow/tree/17.0/sale_advance_payment>`_ no entanto, esta app
-        não está preparada para as especificidades das regras portuguesas, pelo que precisará de uma app complementar que
-        estamos a desenvolver para o efeito
-
-    De momento e visto que a nossa app complementar ainda não estar desenvolvida, sugerimos que usem o mesmo método como se
-    estivesse a fazer para um cliente Nacional ou Extracomunitário
-
-Processo iniciado fora do Odoo
-""""""""""""""""""""""""""""""
-Este é o processo correto usando a Nota Crédito como regularizador, quando não tem a venda feita em Odoo
-
-**Ainda não emitiu a Fatura de Adiantamento**
-
-- Criar uma Fatura de Adiantamento
-- Criar Recibo a partir da Fatura de Adiantamento
-- Reconciliar o Recibo com o movimento do banco
-
-**Já emitiu a Fatura de Adiantamento, mas não a Fatura final**
-
-- Emitir Fatura final pelo valor total dos artigos
-- Emitir Nota de Crédito para regularizar o Adiantamento
-- Garantindo que a Nota de Crédito está associada à Fatura emitir o PDF e respetivo Recibo
-- Reconciliar o Recibo com o movimento do banco
-
-**Já emitiu a Fatura final**
-
-- Emitir Nota de Crédito para regularizar o Adiantamento
-- Decida se vai devolver o dinheiro, ou se vai usar a NC para regularizar pagamento futuro
-- Proceda respetivamente com devolução o dinheiro e reconciliando no banco, ou deixando a NC pendente em sistema
-
-Com este processo a sua fatura final sai com o valor total, mas o montante a pagar sai apenas com o valor em falta
-
-Fornecedores
-^^^^^^^^^^^^
-Documentação em breve
-
-.. seealso::
-    Se tiver dúvidas pode sempre `pedir um esclarecimento aos nossos consultores <https://exosoftware.pt/en/appointment>`_
-
 Depois de ter a fatura em modo de rascunho, deve preencher os campos necessários e escolher a série documental de
 fatura que pretende.
 
@@ -300,6 +223,118 @@ Em seguida confirme a fatura
 
 .. seealso::
    :ref:`O que é uma fatura e suas variantes <fiscal_documents_invoice>`
+
+.. _odoo_process_downpayment:
+
+Faturas de adiantamento
+~~~~~~~~~~~~~~~~~~~~~~~
+
+Clientes
+^^^^^^^^
+
+Processo iniciado em Odoo
+"""""""""""""""""""""""""
+.. important::
+    Garanta que tem um artigo com a seguinte configuração
+
+        .. image:: odoo_process/v17_downPayment01.png
+            :align: center
+
+    Em seguida complete as configurações de **Vendas** do Odoo com o respetivo artigo e impostos
+
+        .. image:: odoo_process/v17_downPayment02.png
+            :align: center
+
+        .. image:: odoo_process/v17_downPayment03.png
+            :align: center
+
+    Esta configuração vai garantir que, na contabilidade, é usada a conta correta para adiantamentos, bem como o imposto
+    aplicado e respetivos mapeamentos, também são os corretos
+
+**Adiantamentos Nacionais, Intracomunitários B2C ou Extracomunitários**
+
+A partir de uma Nota Encomenda (NE) gere a fatura do adiantamento, defina se é por valor percentual ou nominal e a
+respetiva percentagem ou valor absoluto recebido, criando em seguida o rascunho da fatura de adiantamento
+
+.. image:: odoo_process/v17_downPayment04.png
+    :align: center
+
+.. note::
+    Serão geradas tantas linhas de adiantamento quantos impostos existam na NE
+
+    Esses impostos serão mapeados para o imposto **OBS (Adiantamento)** respetivo da configuração que fez na app Vendas
+
+Confirme a Fatura e emita o respetivo Recibo para formalizar o recebimento
+
+.. note::
+    Após a emissão do recibo, na sua contabilidade ficará com o saldo nas respetivas contas:
+
+    - Crédito na 218, pelo valor do adiantamento
+    - Crédito na 2433, pelo valor do IVA
+    - Débito na conta tesouraria do recibo, pelo recebimento do dinheiro
+
+Quando for emitir a Fatura final, deve seguir o procedimento padrão, o adiantamento será regularizado na própria fatura
+
+.. image:: odoo_process/v17_downPayment05.png
+    :align: center
+
+A fatura final fará menção da(s) fatura(s) do(s) adiantamento(s) que foram regularizados, bem como do subtotal dos
+adiantamentos
+
+.. image:: odoo_process/v17_downPayment06.png
+    :align: center
+
+A partir deste ponto o processo é o normal para a emissão do recibo da fatura final
+
+.. note::
+    Contabilisticamente, são regularizadas as contas de impostos e adiantamentos como esperado
+
+**Adiantamentos Intracomunitários B2B**
+
+.. note::
+    Nestes casos não deve usar a fatura de adiantamento, pelo que sugerimos a utilização da app da OCA
+    `Sale Advance Payment (sale_advance_payment) <https://github.com/OCA/sale-workflow/tree/17.0/sale_advance_payment>`_
+    no entanto, esta app não está preparada para as especificidades das regras portuguesas, pelo que precisará de uma
+    app complementar que estamos a desenvolver para o efeito
+
+.. important::
+    De momento e visto que a nossa app complementar ainda não está desenvolvida, sugerimos que usem o mesmo método como
+    se estivesse a fazer para um cliente Nacional
+
+    Isto porque apesar de não ser o recomendado pela AT, não é um impeditivo usar a fatura de adiantamento para estes
+    casos
+
+Processo iniciado fora do Odoo
+""""""""""""""""""""""""""""""
+Este é o processo correto usando a Nota Crédito como regularizador, quando não tem a venda feita em Odoo
+
+**Ainda não emitiu a Fatura de Adiantamento**
+
+- Criar uma Fatura de Adiantamento
+- Criar Recibo a partir da Fatura de Adiantamento
+- Reconciliar o Recibo com o movimento do banco
+
+**Já emitiu a Fatura de Adiantamento, mas não a Fatura final**
+
+- Emitir Fatura final pelo valor total dos artigos
+- Emitir Nota de Crédito para regularizar o Adiantamento
+- Garantindo que a Nota de Crédito está associada à Fatura emitir o PDF e respetivo Recibo
+- Reconciliar o Recibo com o movimento do banco
+
+**Já emitiu a Fatura final**
+
+- Emitir Nota de Crédito para regularizar o Adiantamento
+- Decida se vai devolver o dinheiro, ou se vai usar a NC para regularizar pagamento futuro
+- Proceda respetivamente com devolução o dinheiro e reconciliando no banco, ou deixando a NC pendente em sistema
+
+Com este processo a sua fatura final sai com o valor total, mas o montante a pagar sai apenas com o valor em falta
+
+Fornecedores
+^^^^^^^^^^^^
+Documentação em breve
+
+.. seealso::
+    Se tiver dúvidas pode sempre `pedir um esclarecimento aos nossos consultores <https://exosoftware.pt/en/appointment>`_
 
 Correções
 ---------
