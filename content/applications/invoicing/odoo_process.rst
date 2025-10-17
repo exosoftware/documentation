@@ -248,8 +248,14 @@ Processo iniciado em Odoo
         .. image:: odoo_process/v17_downPayment03.png
             :align: center
 
-    Esta configuração vai garantir que, na contabilidade, é usada a conta correta para adiantamentos, bem como o imposto
-    aplicado e respetivos mapeamentos, também são os corretos
+    Esta configuração vai garantir que é usada a conta correta para adiantamentos na contabilidade
+
+    Também aplicará o imposto correto no movimento, dependendo:
+
+    - Do **Tipo de Taxa de IVA** do imposto original, caso seja cliente Nacional
+    - Da **Posição Fiscal** no documento, ou na sua inexistência, com com base no **País** do cliente, para os Intracomunitários ou Extracomunitários
+
+    Caso não exista Posição Fiscal no documento, ou País no cliente, o mesmo será tratado como cliente Nacional
 
 **Adiantamentos Nacionais, Intracomunitários B2C ou Extracomunitários**
 
@@ -278,7 +284,7 @@ Quando for emitir a Fatura final, deve seguir o procedimento padrão, o adiantam
 .. image:: odoo_process/v17_downPayment05.png
     :align: center
 
-A fatura final fará menção da(s) fatura(s) do(s) adiantamento(s) que foram regularizados, bem como do subtotal dos
+A fatura final fará menção da(s) fatura(s) do(s) adiantamento(s) que foi(ram) regularizada(s), bem como do subtotal dos
 adiantamentos
 
 .. image:: odoo_process/v17_downPayment06.png
@@ -334,6 +340,8 @@ Fornecedores
 Documentação em breve
 
 .. seealso::
+    :doc:`Consulte a nossa FAQ sobre Faturas Adiantamento <../faq/downpayment_invoices>`
+
     Se tiver dúvidas pode sempre `pedir um esclarecimento aos nossos consultores <https://exosoftware.pt/en/appointment>`_
 
 Correções

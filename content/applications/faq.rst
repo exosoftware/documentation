@@ -18,6 +18,7 @@ Explore os nossos guias rápidos de resolução de problemas comuns (FAQs)
     faq/users
     faq/series_communication
     faq/invoice
+    faq/downpayment_invoices
     faq/e-invoicing_errors
     faq/transportation_docs
     faq/configuracao_pos
