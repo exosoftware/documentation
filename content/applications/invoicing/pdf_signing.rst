@@ -172,6 +172,10 @@ Na configuração padrão, os documentos já configurados são as **Faturas** e 
 .. image:: pdf_signing/v17_pdfSignConfiguration12.png
    :align: center
 
+.. seealso::
+    Para não estar a gastar assinaturas desnecessariamente do seu saldo, sugerimos consulta das nossas
+    :ref:`FAQ <change_report_print_behavior>` para saber como não estar sempre a reimprimir o mesmo documento
+
 Utilização
 ==========
 

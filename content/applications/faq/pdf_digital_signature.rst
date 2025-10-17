@@ -99,6 +99,36 @@ Se quiser assinar mais do que o nº fixo de documentos, pode adquirir pacotes ad
 
 .. TODO : como controlar nº de assinaturas e quem fica com o prejuízo se ultrapassar? vai continuar a assinar?
 
+.. _change_report_print_behavior:
+
+Garantir que documentos não são assinados múltiplas vezes
+=========================================================
+Em Odoo alguns relatórios são reimpressos cada vez que os tenta imprimir, isto porque podem ter existido alterações
+
+No entanto, e visto que se estão a fazer assinaturas nesses documentos, de cada vez que imprime vai voltar a assinar
+os seus documentos, gastando desnecessariamente o seu saldo de assinaturas
+
+Para mudar esse comportamento, siga os seguintes passos
+
+Na app de **Configurações** aceda ao menu **Técnico** (para aceder a este menu precisa de ter o **Modo programador**
+ativo) e na secção de Ações escolha a opção **Relatórios**
+
+.. image:: ../../applications/install/initial_configuration/v17_appSettings.png
+    :align: center
+
+.. image:: downpayment_invoices/v17_report_menu.png
+    :align: center
+
+
+Selecione o modelo do relatório para o qual pretende alterar o comportamento e na aba **Propriedades Avançadas**
+selecione a opção **Recarregar a partir do Anexo**
+
+.. image:: downpayment_invoices/v17_NE_report_attachment.png
+    :align: center
+
+Com esta configuração, desde que tenha o documento original nos anexos do Chatter, terá sempre acesso à versão original
+e respetiva assinatura, em vez de imprimir um novo relatório e voltar a assinar
+
 Obrigatoriedade legal vs Arquivo digital
 ========================================
 Para que cumpra com a **Obrigatoriedade legal** apenas precisa de assinar com certificado qualificado:
