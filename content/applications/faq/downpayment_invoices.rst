@@ -28,7 +28,7 @@ relatório
 Na app de **Configurações** aceda ao menu **Técnico** (para aceder a este menu precisa de ter o **Modo programador**
 ativo) e na secção de Ações escolha a opção **Relatórios** e no modelo **sale.order** escolha a opção **Orçamento PDF**
 
-.. image:: ../../applications/install/initial_configuration/v17_appSettings.png
+.. image:: ../../administration/install/initial_configuration/v17_appSettings.png
     :align: center
 
 .. image:: downpayment_invoices/v17_report_menu.png
