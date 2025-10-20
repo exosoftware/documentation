@@ -235,15 +235,16 @@ Clientes
 Processo iniciado em Odoo
 """""""""""""""""""""""""
 .. important::
-    Garanta que tem um artigo com a seguinte configuração
+    Ao contrário de versões anteriores, a partir da v18 a configuração de adiantamentos é feita na **Categoria de Artigos**
+    e não no Artigo em si
 
-        .. image:: odoo_process/v17_downPayment01.png
+        .. image:: odoo_process/v18_downPayment01.png
             :align: center
 
-    Em seguida complete as configurações de **Vendas** do Odoo com o respetivo artigo e impostos
+    Para este caso em concreto e ao contrário de outras contas nas categorias, é preciso que configure a **Conta de Adiantamentos**
+    em todas as categorias, pois a mesma não é herdada de categorias ascendentes no caso de não estar preenchida
 
-        .. image:: odoo_process/v17_downPayment02.png
-            :align: center
+    Em seguida complete as configurações de **Vendas** do Odoo com os respetivos impostos
 
         .. image:: odoo_process/v17_downPayment03.png
             :align: center
