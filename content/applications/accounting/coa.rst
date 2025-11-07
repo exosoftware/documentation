@@ -71,7 +71,7 @@ ou ao menu :menuselection:`Configuração --> Contabilidade --> Grupos Contabil�
     diversos mapas
 
 .. seealso::
-    `Saiba mais sobre Planos de Contas em Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/accounting/get_started/chart_of_accounts.html>`_
+    `Saiba mais sobre Planos de Contas em Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/finance/accounting/get_started/chart_of_accounts.html>`_
 
 É recomendado que para os cliente com **Contabilidade** corra o nosso Assistente de Taxonomias de forma a fazer um
 preenchimento prévio das taxonomias de cada conta

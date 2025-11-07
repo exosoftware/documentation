@@ -218,6 +218,6 @@ O funcionamento é muito similar ao de uma loja, mas com alguns acrescentos:
 .. seealso::
     :ref:`O que é uma Consulta de mesa <fiscal_documents_POSbill>`
 
-    `Consulte a documentação Odoo sobre POS <https://www.odoo.com/documentation/17.0/pt_BR/applications/sales/point_of_sale.html>`_
+    `Consulte a documentação Odoo sobre POS <https://www.odoo.com/documentation/18.0/pt_BR/applications/sales/point_of_sale.html>`_
 
     `Se pretender formação adicional sobre POS faça a sua marcação <https://exosoftware.pt/appointment>`_

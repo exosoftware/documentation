@@ -62,9 +62,9 @@ A secção de :doc:`Administração <../administration>` está mais orientada pa
 pelo que é mais vocacionada para o departamento de TI da sua organização.
 
 Além da informação que pertence à **Exo Software** também aconselhá-mos que consulte a secção **Noções básicas sobre o Odoo**
-para que se familiarize com algumas ferramentas comuns do Odoo como o `Chatter <https://www.odoo.com/documentation/17.0/pt_BR/applications/productivity/discuss/chatter.html>`_,
-`Atividades <https://www.odoo.com/documentation/17.0/pt_BR/applications/essentials/activities.html>`_,
-`Contactos <https://www.odoo.com/documentation/17.0/pt_BR/applications/essentials/contacts.html>`_
-e `Artigos <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory.html>`_.
+para que se familiarize com algumas ferramentas comuns do Odoo como o `Chatter <https://www.odoo.com/documentation/18.0/pt_BR/applications/productivity/discuss/chatter.html>`_,
+`Atividades <https://www.odoo.com/documentation/18.0/pt_BR/applications/essentials/activities.html>`_,
+`Contactos <https://www.odoo.com/documentation/18.0/pt_BR/applications/essentials/contacts.html>`_
+e `Artigos <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/product_management/configure.html>`_.
 
 Estas 4 ferramentas são a base de quase tudo em Odoo. Se as dominar a sua experiência vai melhorar significativamente.

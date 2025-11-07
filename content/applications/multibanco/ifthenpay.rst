@@ -273,7 +273,7 @@ Depois de o cliente efetuar o pagamento e este for validado pelo **ifthenpay** e
 vai acontecer uma das seguintes situações:
 
 - Se apenas tiver a app de **Faturação** instalada, a fatura passa logo ao estado de **Pago** como se o recibo tivesse sido emitido
-- Se tiver instalada a app de **Contabilidade**, a fatura passa ao estado de **Em pagamento** como se o recibo tivesse sido emitido, no entanto, com a app de **Contabilidade** ainda falta fazer a `reconciliação bancária <https://www.odoo.com/documentation/17.0/pt_BR/applications/finance/accounting/bank/reconciliation.html>`_
+- Se tiver instalada a app de **Contabilidade**, a fatura passa ao estado de **Em pagamento** como se o recibo tivesse sido emitido, no entanto, com a app de **Contabilidade** ainda falta fazer a `reconciliação bancária <https://www.odoo.com/documentation/18.0/pt_BR/applications/finance/accounting/bank/reconciliation.html>`_
 
 Esta alteração acontece pela forma como ambas as apps lidam com a reconciliação de documentos
 

@@ -30,7 +30,7 @@ Introduz-se o código fornecido pela Odoo SA e pronto, sistema ativado.
    - Clicar em **Renovar a Subscrição** e introduzir o código de subscrição. A base de dados fica ativada e a data de expiração é alterada para a que consta na Odoo SA
 
 
-Pode consultar mais detalhes na `página oficial Odoo <https://www.odoo.com/documentation/17.0/pt_BR/administration/on_premise.html>`_.
+Pode consultar mais detalhes na `página oficial Odoo <https://www.odoo.com/documentation/18.0/pt_BR/administration/on_premise.html>`_.
 
 
 Formato de morada errado

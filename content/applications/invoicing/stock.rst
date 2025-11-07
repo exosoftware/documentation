@@ -388,7 +388,7 @@ de **Inventário**
     :align: center
 
 .. seealso::
-    `Saiba mais sobre a metodologia de reabastecimento Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.html>`_
+    `Saiba mais sobre a metodologia de reabastecimento Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.html>`_
 
 Relatório de Stock
 ------------------
@@ -407,7 +407,7 @@ Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Stock` a pa
     :align: center
 
 .. seealso::
-    `Saiba mais sobre realtórios de inventário Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.html>`_
+    `Saiba mais sobre realtórios de inventário Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.html>`_
 
 Relatório de valorização
 ------------------------
@@ -436,7 +436,7 @@ Pode ainda fazer uma valorização numa data e hora específica que pretenda, pa
     correções de períodos anteriores mas só do atual e futuro valor do inventário
 
 .. seealso::
-    `Saiba mais sobre realtórios de valorização Odoo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.html#inventory-valuation-report>`_
+    `Saiba mais sobre realtórios de valorização Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.html#inventory-valuation-report>`_
 
 Comunicação de inventário
 -------------------------

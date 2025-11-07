@@ -167,7 +167,7 @@ Na app de **Inventário** vá ao menu de **Configuração** e selecione a opçã
 
         :doc:`Registo de Séries Documentais <../invoicing/series_registration>`
 
-Na criação do `artigo <https://www.odoo.com/documentation/17.0/pt_BR/applications/inventory_and_mrp/inventory.html>`_,
+Na criação do `artigo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/product_management/configure.html>`_,
 sua **Lista de Materiais** e artigos componentes verifique as seguintes situações:
 
 - Os componentes que são subcontratação têm de ser **Serviços**
