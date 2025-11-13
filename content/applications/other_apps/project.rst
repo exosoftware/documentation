@@ -9,12 +9,26 @@ Projeto
 Project Inventory Integrator
 ============================
 
-Embora o Odoo já tenha uma integração nativa de inventário em projetos, essa integração obriga a tentativa de faturação
-desses artigos.
+O Odoo tem duas integrações nativas de inventário em projetos,
+
+**Uma delas obriga a tentativa de faturação dos artigos**
 
 Ou seja, não permite consumo de artigos numa substituição de outros **Em Garantia**, ou de componentes gastos como parte
 de um serviço prestado. Pelo que, na vista agregadora do projeto, não é feita a distinção dos custos destes cenários, o
 que é essencial para diversos negócios.
+
+Além disso o processo utilizado viola as regras da AT relativamente à alteração de documentos confirmados
+
+Por estes 2 motivos desaconselhámos o uso dessa funcionalidade para empresas portuguesas
+
+**A outra permite movimentações de inventário de forma manual associadas a um projeto**
+
+É com base nesta segunda integração que a Exo decidiu acrescentar funcionalidades e algumas melhorias para ser mais
+intuitivo para o utilizador de entre as quais:
+
+- Associar as movimentações de stock a tarefas específicas e não apenas ao projeto
+- Automatizar o preenchimento de alguns campos nos movimentos de inventário
+- Permitir movimentos **Em Garantia** e **Fora Garantia** com respetivo reporte ao projeto
 
 .. raw:: html
 
@@ -35,13 +49,27 @@ Configuração
     Depois pode começar a seguir os passos que se seguem para a utilizar
 
 
+.. important::
+    Garanta que na Operação que vai utilizar para Consumo Interno, tem ativa a opção **Custos Analíticos**
+
+    .. image:: project/v18_piiConfiguration01.png
+       :align: center
+
+    Se esta opção não estiver ativa, os movimentos analíticos não serão feitos, logo não vai ter retorno na vista
+    agregadora do projeto
+
 Nas configurações do projeto deve preencher os campos associados a **Inventário**, sugerimos as seguintes configurações:
 
+- Na **Morada** use uma das moradas do contacto (ele próprio, moradas de entrega, outras moradas)
 - No **Tipo de Operação** use a operação de **Consumo Interno** ensinada pela Exo Software, se estiver bem configurada as próximas duas devem preencher corretamente
-- Na **Localização de Origem** use a sua localização normal de **Stock**
+
+.. note::
+    Caso não surjam operações, garanta que o projeto tem uma empresa preenchida, o filtro das operações é feito pelas que pertencem à mesma empresa do projeto
+
+- Na **Localização de Origem** use a sua localização onde estarão armazenados os artigos antes do consumo, normalmente **Stock**
 - Na **Localização de Entrega** use a localização de **Consumo Interno** ensinada pela Exo Software
 
-.. image:: project/v17_piiConfiguration01.png
+.. image:: project/v18_piiConfiguration02.png
    :align: center
 
 .. important::
@@ -49,19 +77,6 @@ Nas configurações do projeto deve preencher os campos associados a **Inventár
 
     .. image:: project/v17_piiConfiguration02.png
        :align: center
-
-Edite as etapas do projeto, ou garanta que o projeto tem acesso a etapas já configuradas, para habilitar **registo de consumo**
-e **consumo efetivo** de artigos em tarefas
-
-- Nas etapas em que deseja fazer **registo de consumo** de artigos ative a opção **Usar Movimentos de Inventário**
-
-.. image:: project/v17_piiConfiguration03.png
-   :align: center
-
-- Nas etapas em que deseja fazer **consumo efetivo** de artigos ative a opção **Usar Movimentos de Inventário** seguida de **Fazer Movimentos de Inventário**
-
-.. image:: project/v17_piiConfiguration04.png
-   :align: center
 
 Utilização
 ----------
@@ -82,41 +97,27 @@ seguintes opções:
     .. image:: project/v17_piiHowTo02.png
         :align: center
 
-Também vai reparar que sempre que uma tarefa chega a uma etapa onde é possível fazer **registo de consumos**, vai ter
-acesso a uma nova aba **Informação de Inventário**
+A partir do Odoo v18 passa a ser possível inserir movimentos de stock diretamente no projeto, para tal ative a **Barra Superior**
+e na mesma ative os campos que precisa:
 
-Nesta aba vai poder registar os consumos internos a decorrer nesta tarefa
+- **From WH**, é para movimentos de envio de artigos
+- **To WH**, é para movimentos de entrada de artigos
+- **Movimentos de Inventário**, mostra todos os movimentos entrada e saída
 
-.. image:: project/v17_piiHowTo03.png
+.. image:: project/v18_piiHowTo03.png
    :align: center
 
-Quando insere produtos e quantidades a consumir, a linha fica a vermelho à espera que confirme a disponibilidade de
-materiais, carregue no botão dedicado para o efeito:
+No entanto, este processo é de preenchimento manual e apenas permite a ligação ao projeto e não a tarefas específicas
 
-- Se existir stock para satisfazer esse consumo a linha fica a verde e o botão desaparece, confirmando a reserva
-- Se não existir stock suficiente, a linha mantém-se a vermelho
+Dentro de uma tarefa existe agora um smartbutton que permite criar estes movimentos e ligar à tarefa com alguns dos
+campos já preenchidos com os dados configurados nas Configurações do Projeto
 
-.. image:: project/v17_piiHowTo04.png
+.. image:: project/v18_piiHowTo04.png
    :align: center
 
-.. image:: project/v17_piiHowTo05.png
-   :align: center
+Se a tarefa estiver definida como **Faturável** irá ter acesso a um outro smartbuttom com as faturas
 
-Quando uma tarefa passa para uma etapa configurada como **consumo efetivo** de artigos, vai ter acesso a mais 4 botões:
-
-- **Refugo**, para dar quebras de artigos
-- **Cancelar Materiais**, cancela o movimento de materiais
-- **Transferir Materiais**, para dar o consumo efetivo dos artigos
-- **Desbloquear** ou **Bloquear**, permite ou não alterações ao movimento de stock
-
-Carregue no botão **Transferir Materiais** e efetive o consumo dos artigos que constam na aba **Informação de Inventário**
-
-.. image:: project/v17_piiHowTo06.png
-   :align: center
-
-Neste momento também ganha acesso a novos smart buttons **Fatura** e **Movimentos de Produtos**
-
-Dependendo se é **Não Faturável** ou **Faturável** tem acesso a 1 ou aos 2 smart buttons respetivamente
+.. TODO : falta esta imagem não está a funcionar a parte de gerar a fatura
 
 .. image:: project/v17_piiHowTo07.png
    :align: center
@@ -125,16 +126,11 @@ Dependendo se é **Não Faturável** ou **Faturável** tem acesso a 1 ou aos 2 s
     Se o pisco **Não Faturável** não estiver ativo, é neste momento que é criada uma fatura em rascunho
 
 .. tip::
-    É ainda possível fazer alterações aos consumos enquanto a fatura não for confirmada
+    A partir do momento em que seja emitida a fatura em rascunho, os documentos associados à tarefa são marcados como já
+    faturados
 
-    Para o fazer mude a tarefa para uma etapa de **registo de consumo**
-
-.. danger::
-    Depois de confirmada a fatura, já não pode fazer alterações aos consumos para cumprir com as normativas da AT em
-    Portugal
-
-    Nestes casos se quiser acrescentar mais consumos terá de fazer uma nova tarefa, se quiser diminuir consumos terá de
-    fazer uma nota de crédito com a respetiva devolução
+    Um movimento concluído enquanto que a fatura está em rascunho irá adicionar esses artigos à fatura, se a fatura já
+    estiver confirmada, os movimentos seguintes darão origem a uma nova fatura em rascunho
 
 Quando for verificar as **Atualizações do Projeto**, vai poder ver os custos devidamente divididos pelas rubricas,
 **Faturável** e **Não Faturável**
