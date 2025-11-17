@@ -635,16 +635,16 @@ Mais informação
 .. seealso::
     Se pretender formação mais detalhada sobre o processo Odoo contacte a `Exo Software <https://exosoftware.pt/appointment/2>`_.
 
-Documentos de Importação
+Documentos de Integração
 ========================
 No caso de ter documentos que sejam inseridos por importação deve seguir a seguinte configuração
 
-- Ativar a funcionalidade de escolha do **Método de Origem** nas **Definições** da app **Contabilidade**
+- Ativar a funcionalidade de escolha do **Método de Origem** nas **Permissões** do **Utilizador** atribuindo ao mesmo o grupo técnico **Mostrar Métodos de Origem em documentos fiscais**
 
 .. image:: odoo_process/v17_changeSourceBilling01.png
     :align: center
 
-- Criar as séries documentais de importação
+- Criar as séries documentais de integração
 - No documento em questão, mudar o **Método de Origem** para **Integração**, isto fará com que possa escolher a série documental de Importação para o tipo de documento
 
 .. image:: odoo_process/v17_changeSourceBilling02.png
