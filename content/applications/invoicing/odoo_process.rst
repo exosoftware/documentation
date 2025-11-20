@@ -644,6 +644,10 @@ No caso de ter documentos que sejam inseridos por importação deve seguir a seg
     :align: center
 
 - Criar as séries documentais de integração
+
+.. seealso::
+    Consulte a especificidade necessária para configurar uma :ref:`série de integração <invoicing_series_registration_integration>`
+
 - No documento em questão, mudar o **Método de Origem** para **Integração**, isto fará com que possa escolher a série documental de Importação para o tipo de documento
 
 .. image:: odoo_process/v17_changeSourceBilling02.png

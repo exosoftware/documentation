@@ -167,7 +167,7 @@ A partir desde momento a série está comunicada e pode começar a emitir docume
 
 Manter Série
 ------------
-Estabeleça a relação com a série já existente na AT. Para isso Garanta que o campo **Sequência** está vaio e preencha o
+Estabeleça a relação com a série já existente na AT. Para isso Garanta que o campo **Sequência** está vazio e preencha o
 campo **Código de Validação** com o código que está disponível na AT, o botão **Registar** muda para **Sincronizar**,
 clique nele para poder continuar a utilizar a sua série anterior.
 
@@ -194,6 +194,22 @@ série sem comunicar com o servidor, em seguida carregue no botão **Validar**
 
     .. image:: series_registration/v17_keepSerie5.png
        :align: center
+
+.. _invoicing_series_registration_integration:
+
+Séries Integrtação
+------------------
+As séries de integração não são registadas na AT pelo que devem ser criadas como se fosse uma :ref:`série nova <invoicing_series_registration_new>`
+com as seguintes alterações:
+
+- **Método de Origem**, deve ser **Integração**
+- O botão de **Registar** não está disponível, mas está disponível um novo botão para colocar **Em Curso**
+
+.. image:: series_registration/v17_integrationSeries1.png
+   :align: center
+
+Alertas
+=======
 
 .. important::
     No caso das **séries documentais relativas a transporte de bens** existe um passo extra.
