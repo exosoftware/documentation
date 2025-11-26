@@ -100,26 +100,7 @@ Procure a secção **Portugal**, ative a **Assinatura Eletrónica de PDFs** e pr
 .. image:: pdf_signing/v17_pdfSignConfiguration01.png
    :align: center
 
-.. important::
-    Se não fez a compra do seu certificado pela Exo Software tem de selecionar o campo **Use My Own Credentials** e
-    inserir a informação que recebeu para os seguintes campos
-
-    - **ID Cliente** e **Segredo do Cliente**, são facultados pela DigitalSign quando `regista o primeiro autenticador <gapi.digitalsign.pt/>`_
-
-    .. image:: pdf_signing/v17_pdfSignConfiguration02.png
-       :align: center
-
-    - **URI de Redirecionamento**, é o seu **endereço do servidor** acrescido de **/digitalsign** por exemplo *https://exosoftware.pt/digitalsign*
-
-    .. image:: pdf_signing/v17_pdfSignConfiguration03.png
-       :align: center
-
-    .. danger::
-        Este URI tem de ser comunicado à DigitalSign para que seja devidamente registado nos servidores deles
-
-O processo a partir deste ponto é comum
-
-- **ID Autorizador** e **Segredo do Autorizador**, estes dados podem ser obtidos no `seu backend DigitalSign <https://gapi.digitalsign.pt/login>`_
+Insira o **ID Autorizador** e **Segredo do Autorizador**, estes dados podem ser obtidos no `seu backend DigitalSign <https://gapi.digitalsign.pt/login>`_
 
 .. note::
     Aceda ao menu **Certificates** e carregue no botão **Edit** da sua conta
@@ -150,7 +131,7 @@ O processo a partir deste ponto é comum
     .. image:: pdf_signing/v17_pdfSignConfiguration10.png
        :align: center
 
-- **Access Token**, com os dados anteriores preenchidos carregue no botão **Obter Access Token** para o receber, vai precisar de fazer login para confirmar a sua identidade
+Insira o **Access Token**, com os dados anteriores preenchidos carregue no botão **Obter Access Token** para o receber, vai precisar de fazer login para confirmar a sua identidade
 
 .. image:: pdf_signing/v17_pdfSignConfiguration04.png
    :align: center
