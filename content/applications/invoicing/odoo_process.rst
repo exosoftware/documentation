@@ -301,11 +301,48 @@ A partir deste ponto o processo é o normal para a emissão do recibo da fatura 
     Nestes casos não deve usar a fatura de adiantamento, pelo que sugerimos a utilização da app da OCA
     `Sale Advance Payment (sale_advance_payment) <https://github.com/OCA/sale-workflow/tree/17.0/sale_advance_payment>`_
     no entanto, esta app não está preparada para as especificidades das regras portuguesas, pelo que precisará de uma
-    app complementar que estamos a desenvolver para o efeito
+    app complementar desenvolvida pela **Exo Software** ptplus_sale_advance_payment, pelo que deve solicitar a instalação
+
+A partir de uma Nota Encomenda (NE) gere o **Recebimento Adiantado**, selecione o **Método Pagamento** e o **Valor Adiantamento**
+
+Carregue no botão para gerar o recebimento adiantado
+
+.. image:: odoo_process/v17_downPayment07.png
+    :align: center
+
+.. image:: odoo_process/v17_downPayment08.png
+    :align: center
+
+A partir deste momento passa a ter uma aba extra com todos os recebimentos adiantados feitos na NE
+
+.. image:: odoo_process/v17_downPayment09.png
+    :align: center
+
+.. note::
+    Com a nossa app instalada, o movimento do adiantamento passa a ir à conta de adiantamentos e não à conta de clientes
+
+    .. image:: odoo_process/v17_downPayment10.png
+        :align: center
+
+Quando gerar a fatura final, vão acontecer 2 coisas:
+
+- É feito um lançamento contabilístico adicional que regulariza o adiantamento para a conta de clientes
+
+.. image:: odoo_process/v17_downPayment11.png
+    :align: center
+
+- Esse adiantamento é logo associado à fatura final como método de pagamento
+
+.. image:: odoo_process/v17_downPayment12.png
+    :align: center
 
 .. important::
-    De momento e visto que a nossa app complementar ainda não está desenvolvida, sugerimos que usem o mesmo método como
-    se estivesse a fazer para um cliente Nacional
+    Se utilizar o recibo de adiantamento para regularizar outro pagamento o cálculo do Valor Residual vai estar errado,
+    pois deixou de estar disponível para pagar aquela venda
+
+.. tip::
+    Não está obrigado a fazer pelo método descrito acima, pode na mesma utilizar o método como se estivesse a fazer para
+    um cliente Nacional
 
     Isto porque apesar de não ser o recomendado pela AT, não é um impeditivo usar a fatura de adiantamento para estes
     casos
