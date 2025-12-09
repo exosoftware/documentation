@@ -85,7 +85,7 @@ Nas tarefas dos projetos, vai reparar num novo campo **Não Faturável**, este c
 seguintes opções:
 
 - **Ativo**, o consumo de componentes não vai ser cobrado ao cliente e apenas se vai fazer o registo do custo no projeto
-- **Inativo**, vai ser registado custo do consumo de componentes no projeto e vai ser criada uma fatura ao cliente
+- **Inativo**, vai ser registado custo do consumo de componentes no projeto e vai poder criar uma fatura ao cliente
 
 .. image:: project/v17_piiHowTo01.png
    :align: center
@@ -109,21 +109,22 @@ e na mesma ative os campos que precisa:
 
 No entanto, este processo é de preenchimento manual e apenas permite a ligação ao projeto e não a tarefas específicas
 
-Dentro de uma tarefa existe agora um smartbutton que permite criar estes movimentos e ligar à tarefa com alguns dos
+Dentro de uma tarefa existe agora um smart button que permite criar estes movimentos e ligar à tarefa com alguns dos
 campos já preenchidos com os dados configurados nas Configurações do Projeto
 
 .. image:: project/v18_piiHowTo04.png
    :align: center
 
-Se a tarefa estiver definida como **Faturável** irá ter acesso a um outro smartbuttom com as faturas
+Se a tarefa estiver definida como **Faturável** e no estado **Concluído** irá ter acesso a um botão para criar a fatura
 
-.. TODO : falta esta imagem não está a funcionar a parte de gerar a fatura
-
-.. image:: project/v17_piiHowTo07.png
+.. image:: project/v18_piiHowTo05.png
    :align: center
 
-.. note::
-    Se o pisco **Não Faturável** não estiver ativo, é neste momento que é criada uma fatura em rascunho
+Também tem agora acesso a um novo smart button para aceder às faturas associadas a cada tarefa em particular, além do já
+existente na vista geral de tarefas do projeto
+
+.. image:: project/v18_piiHowTo06.png
+   :align: center
 
 .. tip::
     A partir do momento em que seja emitida a fatura em rascunho, os documentos associados à tarefa são marcados como já
@@ -141,7 +142,25 @@ Quando for verificar as **Atualizações do Projeto**, vai poder ver os custos d
 .. image:: project/v17_piiHowTo09.png
    :align: center
 
-.. TODO : correções JS ao ver Atualizações do Projeto e fazer o Dashboard que está com o Eduardo
+Quando está na vista do **From WH** e seleciona movimentos de stock que estão ligados a tarefas que cumprem os
+requisitos para poderem ser faturadas, surge um novo botão **Invoice Material**
+
+.. image:: project/v18_piiHowTo07.png
+   :align: center
+
+Carregando no mesmo abre um assistente com todos os artigos de stock disponíveis para faturação e apresentando algumas
+possibilidades de escolha
+
+
+- **Agrupar Produtos**, permite que os artigos iguais sejam agrupados numa só linha
+- **Mostrar Tarefa**, irá criar uma secção na fatura para cada tarefa
+- **Quantidade a Faturar**, permite editar manualmente a quantidade a faturar caso pretenda apenas faturar parcialmente
+
+.. image:: project/v18_piiHowTo10.png
+   :align: center
+
+.. note::
+    Se não fizer qualquer agrupamento, todas as linhas de movimento irão gerar linhas de fatura
 
 .. _otherApps_Project_Helpdesk_Integrator:
 
