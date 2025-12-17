@@ -167,6 +167,13 @@ A partir desde momento a série está comunicada e pode começar a emitir docume
 
 Manter Série
 ------------
+.. danger::
+    Só pode manter séries documentais se estiver a transitar de uma base de dados Odoo da Exo Software, para outra
+
+    As séries são ligadas ao certificado da localização
+
+    Se vem de outro fornecedor de software, deve sempre criar séries novas
+
 Estabeleça a relação com a série já existente na AT. Para isso Garanta que o campo **Sequência** está vazio e preencha o
 campo **Código de Validação** com o código que está disponível na AT, o botão **Registar** muda para **Sincronizar**,
 clique nele para poder continuar a utilizar a sua série anterior.
@@ -197,8 +204,8 @@ série sem comunicar com o servidor, em seguida carregue no botão **Validar**
 
 .. _invoicing_series_registration_integration:
 
-Séries Integrtação
-------------------
+Séries Integração
+-----------------
 As séries de integração não são registadas na AT pelo que devem ser criadas como se fosse uma :ref:`série nova <invoicing_series_registration_new>`
 com as seguintes alterações:
 
