@@ -7,7 +7,7 @@ Versões suportadas
 ==================
 
 A Exo fornece suporte e *bug fixing*, relativamente às suas apps e serviços de
-alojamento, **para as 3 últimas versões** do Odoo. A calendarização é
+alojamento, **para as 5 últimas versões** do Odoo. A calendarização é
 alinhada com o ciclo de lançamento de versões do Odoo, com acréscimo de
 3 meses para testes e estabilização.
 
@@ -29,24 +29,30 @@ A seguinte matriz mostra o estado do suporte de cada versão das apps Exo:
      - On-Premise
      - Release date
      - End of support
+   * - Odoo 19.0
+     - |green|
+     - |green|
+     - |green|
+     - Janeiro 2026
+     - Dezembro 2030 (planeado)
    * - Odoo 18.0
      - |green|
      - |green|
      - |green|
      - Janeiro 2025
-     - Dezembro 2027 (planeado)
+     - Dezembro 2029 (planeado)
    * - Odoo 17.0
      - |green|
      - |green|
      - |green|
      - Março 2024
-     - Dezembro 2026 (planeado)
+     - Dezembro 2028 (planeado)
    * - Odoo 16.0
      - |green|
      - |green|
      - |green|
      - October 2022
-     - Dezembro 2025
+     - Dezembro 2027 *
    * - Odoo 15.0
      - |red|
      - |red|
@@ -77,6 +83,9 @@ A seguinte matriz mostra o estado do suporte de cada versão das apps Exo:
     |green| Versões suportadas
 
     |red| Fim de suporte
+
+    * apesar de existir um suporte a 5 anos, os 2 últimos anos de cada versão serão em suporte prolongado,
+    com um aumento de custo de 25%
 
 .. important::
    Deve solicitar um *upgrade* da sua base de dados ao seu parceiro Odoo com,
