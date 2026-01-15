@@ -84,8 +84,7 @@ A seguinte matriz mostra o estado do suporte de cada versão das apps Exo:
 
     |red| Fim de suporte
 
-    |orange| apesar de existir um suporte a 5 anos, os 2 últimos anos de cada versão serão em suporte prolongado,
-    com um aumento de custo de 25%
+    |orange| apesar de existir um suporte a 5 anos, os 2 últimos anos de cada versão serão em suporte prolongado, com um aumento de custo de 25%
 
 .. important::
    Deve solicitar um *upgrade* da sua base de dados ao seu parceiro Odoo com,
