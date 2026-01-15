@@ -16,51 +16,33 @@ de repositórios Git. Há um total de 4 repositórios, contendo módulos de dife
      - Tipo de Módulos
    * -
      - pt-plus
-     - Privado; Ofuscado
+     - Público; Ofuscado
      - Faturação e Contabilidade
    * -
      - pt-payment
-     - Privado; Ofuscado
+     - Público; Ofuscado
      - Pagamentos Multibanco e MBWay
    * -
      - pt-payroll
-     - Privado; Ofuscado
+     - Público; Ofuscado
      - Processamento de Salários
    * -
      - portugal-plus-extra
      - Público
      - Utilitários e ligação com módulos de terceiros
 
-
-Acesso aos repositórios
------------------------
-
-.. important::
-   O acesso aos repositórios privados é concedido mediante subscrição e estará disponível enquanto
-   esta estiver ativa.
-
-Há 2 tipos de acesso possíveis:
-
-- Chaves SSH: o cliente fornece à Exo uma chave SSH exclusiva para cada para cada repositório a
-  que pretende aceder. O acesso é gratuito mas apenas pode clonar o repositório por SSH.
-- Utilizador Github: A Exo adiciona um ou mais utilizadores à sua equipa Github como colaboradores
-  externos. Este acesso tem um custo de 4€/mês/utilizador e permite acesso de leitura
-  completamente funcional a todos os repositórios compatíveis com a subscrição, incluindo clonagem
-  HTTPS e SSH.
-
 Obter o código
 --------------
 
 .. important::
-   O único sistema operativo suportado é **Linux**. Outros, nomeadamente o Windows, poderão também
+   Os sistemas operativos suportados são **Linux** e **Windows**. Outros, nomeadamente o Mac, poderão também
    ser adicionados quando (e se) a procura o justificar.
 
 .. important::
-   O código dos repositórios privados está ofuscado por motivos legais. Embora o seu comportamento
-   funcional seja idêntico ao código não ofuscado.
+   O código dos repositórios públicos está ofuscado por motivos legais. Embora o seu comportamento funcional seja
+   idêntico ao código não ofuscado.
 
-Para clonar um repositório, escolha entre o método HTTPS ou SSH (ver secção anterior). Dada a sua
-natureza gratuita, a opção SSH é a mais comum.
+Para clonar um repositório, escolha entre o método HTTPS ou SSH. Dada a sua natureza gratuita, a opção SSH é a mais comum.
 
 .. tabs::
 
@@ -92,11 +74,15 @@ natureza gratuita, a opção SSH é a mais comum.
 
             .. code-block:: doscon
 
+               .. TODO : Inserir informação visto que passou a ser suportado
+
                Indisponível
 
          .. tab:: Clonar com SSH
 
             .. code-block:: doscon
+
+               .. TODO : Inserir informação visto que passou a ser suportado
 
                Indisponível
 
