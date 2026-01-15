@@ -52,7 +52,7 @@ A seguinte matriz mostra o estado do suporte de cada versão das apps Exo:
      - |green|
      - |green|
      - October 2022
-     - Dezembro 2027 *
+     - Dezembro 2027 |orange|
    * - Odoo 15.0
      - |red|
      - |red|
@@ -98,3 +98,7 @@ A seguinte matriz mostra o estado do suporte de cada versão das apps Exo:
 .. |red| raw:: html
 
    <span class="text-danger" style="font-size: 32px; line-height: 0.5">●</span>
+
+.. |orange| raw:: html
+
+   <span class="text-warning" style="font-size: 32px; line-height: 0.5">●</span>
