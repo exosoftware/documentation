@@ -3,7 +3,7 @@ Localização PT+
 ===============
 
 O código dos módulos da localização PT+ da Exo Software é disponibilizado exclusivamente através
-de repositórios Git. Há um total de 4 repositórios, contendo módulos de diferentes naturezas:
+de `repositórios Git <https://github.com/exosoftware>`_. Há um total de 4 repositórios, contendo módulos de diferentes naturezas:
 
 
 .. list-table::
