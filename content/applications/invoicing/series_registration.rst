@@ -92,6 +92,19 @@ Selecione o tipo de série que quer criar/importar e siga um dos métodos seguin
 
 Nova Série
 ----------
+.. important::
+    Para que possa completar este processo precisa de ter permissões de acesso de :menuselection:`Administração --> Configurações`
+
+    .. image:: series_registration/v17_AccessLevel.png
+        :align: center
+
+    Esta obrigatoriedade deve-se ao facto de as sequências usadas neste processo serem um modelo **ir.sequence** de nível técnico
+
+    Pode também editar a Permissão de Acesso **ir_sequence group_system** e acrescentar outros grupos de permissão para ultrapassar esta restrição
+
+    .. image:: series_registration/v17_AccessRight.png
+        :align: center
+
 Preencha o campo **Sequência** com o nome que quer dar à sequência e selecione **Criar e Editar**.
 
 .. image:: series_registration/v17_newSerie1.png
