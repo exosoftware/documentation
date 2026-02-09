@@ -39,7 +39,7 @@ da normalidade.
     Existem muitos **Tipos de Artigos** disponíveis em Odoo, no entanto só existem 3 principais:
 
     - **Serviço**
-    - **Consumível**, não é feito controlo de stock
+    - **Consumível**, não é feito controlo de stock e é sempre tratado como existindo stock disponível do mesmo
     - **Artigo Armazenável**, é feito controlo de stock
 
     .. image:: stock/v17_stock_products02.png
@@ -49,7 +49,7 @@ da normalidade.
     De notar que existe uma grande diferença entre **Tipo de Artigo** e **Categoria Fiscal**:
 
     - **Tipo de Artigo**, é a designação que o Odoo usa para saber que tipo de artigo se trata
-    - **Categoria Fiscal** classificação incluída pela **Localização PT+** da **Exo Software** que é atribuída em Portugal aos tipos de bens e usada na Comunicação de Inventário à AT
+    - **Categoria Fiscal**, é a classificação incluída pela **Localização PT+** da **Exo Software**, atribuída em Portugal aos tipos de bens e usada na Comunicação de Inventário à AT
 
     .. image:: stock/v17_stock_products03.png
         :align: center
@@ -81,18 +81,19 @@ da normalidade.
             :align: center
 
     .. important::
-        Ao confirmar a Nota de Encomenda (NE), a política de faturação do artigo vai ficar assossiada à linha da NE por
-        motivos de rastreabilidade de documentos.
+        Ao inserir um artigo num documento, a política de faturação do artigo naquele momento, vai ficar associada ao
+        mesmo por motivos de rastreabilidade de documentos.
 
-        Por esse motivo, depois de confirmada a NE já não pode mudar a política de faturação do artigo para essa NE, mas
-        pode mudar para NEs seguintes.
+        Por esse motivo, não pode mudar a política de faturação do artigo para esse documento a não ser removendo a
+        linha do mesmo e voltando a inserir, o que nem sempre é possível. Mas pode mudar para documentos seguintes.
 
-        No entanto isto pode gerar erros de faturação, pelo que é altamente recomendado classificar muito bem este
+        No entanto, isto pode gerar erros de faturação, pelo que é altamente recomendado classificar muito bem este
         aspeto do artigo antes de prosseguir com a sua utilização.
 
 .. tip::
     A categoria do artigo é uma funcionalidade Odoo que permite que o artigo herde características na eventualidade de
-    um determinado campo não estar preenchido, nomeadamente no que diz respeito a questões contabilísticas.
+    um determinado campo não estar preenchido na ficha do artigo, nomeadamente no que diz respeito a questões
+    contabilísticas.
 
     Também é nestas categorias que vai poder inserir a estratégia de remoção de artigos do inventário, bem como a
     política de valorização do inventário para o artigo
@@ -102,6 +103,9 @@ da normalidade.
 
     .. image:: stock/v17_stock_products06.png
         :align: center
+
+    A **Exo Software** aconselha sempre a partir de uma árvore de categorias contabilística e depois a diversificar
+    conforme as suas necessidades
 
 .. tip::
     Se pretender ter rastreabilidade nos seus artigos é fundamental que a mesma esteja devidamente configurada, para tal
@@ -134,8 +138,11 @@ da normalidade.
 Armazéns e Localizações
 =======================
 Em Odoo um **Armazém** é um local físico separado de outros. Uma **Localização** é uma zona dentro de um armazém, pelo
-que cada armazém pode ter diversas localizações (e sublocalizações), mas uma localização só pode pertencer a um
+que cada armazém pode ter diversas localizações (e sub localizações), mas uma localização só pode pertencer a um
 armazém.
+
+Perante a AT, sempre que tenha de atravessar a via pública deve ter um armazém diferente para que as moradas estejam
+corretas nos documentos. Se não precisar de o fazer, pode tratar vários edifícios como sendo o mesmo armazém.
 
 .. note::
     Pode conjugar estes conceitos para melhor reproduzir o seu fluxo em Odoo
@@ -194,7 +201,7 @@ estar visíveis no menu **Visão Geral** da app **Inventário**
     Se existir alguma Operação que não vá utilizar, pode arquivar a mesma para que não esteja disponível aos
     utilizadores
 
-Pode configurar as Operações para que se adquem ao seu fluxo e âs suas necessidades, para isso aceda à app de
+Pode configurar as Operações para que se adequem ao seu fluxo e âs suas necessidades, para isso aceda à app de
 **Inventário** e vá ao menu :menuselection:`Configuração --> Gestão de armazém --> Tipos de Operações` e selecione a
 operação a modificar
 
@@ -205,8 +212,8 @@ Dependendo do tipo de operação, as informações que pode alterar são ligeira
 atenção para:
 
 - **Desativar Doc. Fiscal**, para as operações que não o exijam, pode desativar a obrigatoriedade de associar uma série documental a esta operação
-- **Desativar Auto-emissão de Guias** não sendo obrigatório pode cancelar a emissão automática de guias para certas operações, no entanto mantém a possibilidade de fazer a emissão manual das mesmas em qualquer momento
-- **Localizações**, nestes campos pode estipular as localizações poe defeito a usar quando esta operação é selecionada, no entanto pode movimento a movimento alterar as mesmas
+- **Desativar Auto-emissão de Guias** não sendo obrigatório pode cancelar a emissão automática de guias para certas operações, no entanto, mantém a possibilidade de fazer a emissão manual das mesmas em qualquer momento
+- **Localizações**, nestes campos pode estipular as localizações por defeito a usar quando esta operação é selecionada, podendo no entanto, movimento a movimento, alterar as mesmas
 
 .. image:: stock/v17_stock_operations03.png
     :align: center
@@ -214,8 +221,8 @@ atenção para:
 Consumo Interno em Odoo
 -----------------------
 **É suportado nativamente pelo Odoo**, no entanto o consumo interno de artigos que foram comprados para stock, não é
-intuitivo de se reproduzir, por esse motivo a Exo Software desenvolveu uma metodologia para simplificar este processo,
-bem como a possibilidade de reportar esses mesmos custos a projetos específicos.
+intuitivo de se reproduzir, por esse motivo a **Exo Software** desenvolveu uma metodologia para simplificar este
+processo, bem como a possibilidade de reportar esses mesmos custos a projetos específicos.
 
 .. seealso::
     `Aprenda como e marque uma formação com os nossos consultores <https://exosoftware.pt/en/appointment>`_
@@ -224,7 +231,7 @@ bem como a possibilidade de reportar esses mesmos custos a projetos específicos
 
 Como gerar as guias
 ===================
-Existem dua formas de emitir guias em Odoo:
+Existem duas formas de emitir guias em Odoo:
 
 - diretamente do documento de Compra/Venda
 - a partir da operação correspondente
@@ -232,7 +239,7 @@ Existem dua formas de emitir guias em Odoo:
 No documento de Compra/Venda
 ----------------------------
 Ao gerar um documento de Compra/Venda que inclua artigos físicos (consumíveis ou artigos armazenáveis) é gerado de forma
-automática um smartbutton no topo da página com o icon de um camião. Esse smartbutton agrupa todos os documentos de
+automática um smart button no topo da página com o icon de um camião. Esse smart button agrupa todos os documentos de
 Recebimento/Entrega associados ao processo, clique no mesmo
 
 .. image:: stock/v17_slips01.png
@@ -272,7 +279,7 @@ Ao validar o documento as guias vão ser comunicadas e passar a estar disponíve
 
 Na operação correspondente
 --------------------------
-Caso pretenda gerar movimentos de artigos que não estão associadoss a Compras/Vendas deve ir à Operação correspondente
+Caso pretenda gerar movimentos de artigos que não estão associados a Compras/Vendas deve ir à Operação correspondente
 e fazer **Novo**
 
 .. image:: stock/v17_stock_products07.png
@@ -284,8 +291,10 @@ e fazer **Novo**
 .. image::  stock/v17_slips04.png
     :align: center
 
-Em seguida preencha o documento de transferência, quando estiver satisfeito pressione em **Marcar como a Fazer** este
-passo vai tornar o movimento disponível para execussão.
+Em seguida preencha o documento de transferência, isto inclui indicar qual a **Série Documental** a usar no documento,
+para os casos em que uma seja obrigatória.
+
+Quando estiver satisfeito pressione em **Marcar como a Fazer** este passo vai tornar o movimento disponível para execução.
 
 .. image::  stock/v17_slips05.png
     :align: center
@@ -304,7 +313,7 @@ Ao validar o documento as guias vão ser comunicadas e passar a estar disponíve
     Se optar por o fazer, vai gerar um novo documento de transporte, associado à sua Compra/Venda
 
 .. note::
-    Só é obrigado a comunicar à AT (e emitir guia no caso de desejar) a entidade que envia os produtos
+    Só é obrigado a comunicar à AT (e emitir guia no caso de desejar) a entidade proprietária dos produtos
 
 .. important::
     No caso de a comunicação ter falhado vai surgir uma mensagem de erro com hipótese de voltar a tentar a comunicação
@@ -319,7 +328,7 @@ Ao validar o documento as guias vão ser comunicadas e passar a estar disponíve
 
 Guias de Devolução
 ------------------
-As guias de devolução devem ser feitas a partir do documento origial que lhes deu origem para que se mantenha o
+As guias de devolução devem ser feitas a partir do documento original que lhes deu origem para que se mantenha o
 rastreamento do processo. Por esse motivo, em Odoo nos documentos de Recebimento/Entrega tem rápido acesso ao botão
 **Devolução**
 
@@ -338,8 +347,8 @@ localização de destino especificada
 .. image::  stock/v17_slips08.png
     :align: center
 
-Em seguida deve escolher a série documental dedicada para devoluções ou a série correta de movimento de transporte que
-normalmente usa, dependendo se quer ter séries dedicadas ou não.
+Em seguida deve escolher a Série Documental correta para o tipo de movimento de transporte que em causa, caso uma se
+aplique.
 
 Depois disso siga o processo normal de validação de movimentos de stock e no fim valide.
 
@@ -359,7 +368,7 @@ ou a :menuselection:`Operações --> Ajustes --> Quebras`, dependendo do que pre
 .. image:: stock/v17_stock_products07.png
     :align: center
 
-.. image:: stock/v17_ajustments.png
+.. image:: stock/v17_adjustments.png
     :align: center
 
 Relatórios de Stock
@@ -442,8 +451,19 @@ Comunicação de inventário
 -------------------------
 A **Localização PT+** da **Exo** ainda acrescenta a todas estas funcionalidades o reporte à AT do inventário
 
-Para aceder a esta funcionalidade aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão
-Community ou Enterprise do Odoo), vá ao menu :menuselection:`Relatórios --> Portugal --> Comunicação de Inventário`
+Deve definir nas definições de **Inventário** se pretende que os bens em transformação são comunicados
+
+Por defeito estes artigos serão comunicados
+
+.. image:: stock/v17_stock_products07.png
+    :align: center
+
+.. image:: stock/v17_reports11.png
+    :align: center
+
+Para aceder à funcionalidade de comunicação de inventário, aceda à app **Faturação / Contabilidade** (dependendo
+respetivamente se tem versão Community ou Enterprise do Odoo), vá ao
+menu :menuselection:`Relatórios --> Portugal --> Comunicação de Inventário`
 
 .. image:: fiscal_documents/v17_appInvoicingAccounting.png
    :align: center
@@ -480,8 +500,24 @@ e carregue em **Exportar XML**
         Por este mesmo motivo, também aconselhamos a que seja bem pensada a operação em Odoo antes de implementar na
         sua organização, porque a atitude de fazer já e corrigir depois acarreta bastantes riscos e custos adicionais
 
-Em seguida vai ver um resumo da informação que possa causar erros e terá acesso ao ao download do ficheiro,
+    De relembrar os seguintes pontos a considerar:
+
+    - Produtos com dono não serão comunicados, pois a sua posse pertence a terceiros, logo é responsabilidade do terceiro de fazer a comunicação dos mesmos
+    - Serão comunicadas nas Categorias Fiscais os valores que estiverem definidos nos artigos
+    - Se os mesmos estiverem vazios, serão usados os valores da categoria do artigo
+    - Se a categoria estiver vazia, será seguida a árvore de categorias até que um valor seja encontrado
+    - Independentemente desta configuração, artigos que já foram enviados como componentes para produção, serão sempre considerados como Matérias-primas, subsidiárias e de consumo
+    - Se decidiu comunicar os bens em transformação, os produtos esperados como saída da produção serão comunicados como Produtos e trabalhos em curso
+
+Em seguida vai ver um resumo da informação que possa causar erros e terá acesso ao download do ficheiro,
 depois é só submeter no site da AT e fechar a janela
 
 .. image:: stock/v17_reports09.png
    :align: center
+
+Para auditar estes valores, pode fazer uma consulta na app de **Inventário** no menu :menuselection:`Relatórios --> Histórico Movimentos`
+
+.. image:: stock/v17_reports12.png
+   :align: center
+
+Ajuste os filtros com base nas datas e pontos considerados anteriormente e faça os agrupamentos que achar necessários
