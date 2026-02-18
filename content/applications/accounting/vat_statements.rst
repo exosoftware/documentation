@@ -12,7 +12,7 @@ fiscais estão salvaguardados
         ─── ✦ ───
     </div>
 
-Declaração Períódica IVA
+Declaração Periódica IVA
 ========================
 A Declaração de IVA serve para apuramento de imposto a entregar ou receber, resultante da diferença entre impostos
 liquidados e impostos dedutíveis para um determinado período
@@ -41,7 +41,7 @@ manualmente **Data Inicial** e **Data Final**
 
 A **Localização da Sede** é selecionada com base na morada que consta da morada da Empresa
 
-Caso exista Declarações Períodica do Período Anterior para regularizar deve incluir a mesma, ou apenas o valor a acrescentar
+Caso exista Declarações Periódica do Período Anterior para regularizar deve incluir a mesma, ou apenas o valor a acrescentar
 
 .. image:: vat_statements/v17_vat_dpIVA02.png
    :align: center
@@ -67,14 +67,14 @@ Caso esteja a submeter uma declaração **Fora de Prazo** selecione o campo corr
 .. image:: vat_statements/v17_vat_dpIVA06.png
    :align: center
 
-Depois de validar os valores esperados pode Exportar um PDF da decladação para guardar e Eeportar o ficheiro respetivo
+Depois de validar os valores esperados pode Exportar um PDF da declaração para guardar e Exportar o ficheiro respetivo
 para submissão na AT
 
 .. image:: vat_statements/v17_vat_dpIVA07.png
    :align: center
 
 Verá um resumo dos valores constantes na declaração e terá um link para fazer o download do ficheiro e a possibilidade
-de o guardar em Dataport, o que recomendamos para poder ser utilizada na Declaração Períodica IVA seguinte
+de o guardar em Dataport, o que recomendamos para poder ser utilizada na Declaração Periódica IVA seguinte
 
 .. image:: vat_statements/v17_vat_dpIVA08.png
    :align: center
@@ -107,7 +107,7 @@ Existem 2 processos para fazer este processo:
 
 Fecho do período
 ----------------
-Terminados os movimentos relativos ao período e feitos os movimentos de tranferência de saldos deve fechar o período
+Terminados os movimentos relativos ao período e feitos os movimentos de transferência de saldos deve fechar o período
 para garantir que nenhum utilizador não autorizado altera os valores que estão para trás impedindo registos não
 autorizados pela contabilidade
 
@@ -129,7 +129,7 @@ No assistente que se abre preencha o campo **Data de Bloqueio da Declaração Fi
 
 Declaração Recapitulativa IVA
 =============================
-A Declaração recapitulativa é enviada sempre que se efetuem tranmissões intracomunitárias e os valores resultantes da
+A Declaração recapitulativa é enviada sempre que se efetuem transmissões intra comunitárias e os valores resultantes da
 mesma são usados para o preenchimento da Declaração Periódica IVA
 
 Para a retirarem deve na app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou
@@ -148,13 +148,13 @@ Carregue em Exportar XML
 .. image:: vat_statements/v17_vat_recapitulative02.png
    :align: center
 
-Nos casos em que queira fazer uma declaração de **Substituíção** assinale o campo próprio para o efeito
+Nos casos em que queira fazer uma declaração de **Substituição** assinale o campo próprio para o efeito
 
 .. image:: vat_statements/v17_vat_recapitulative03.png
    :align: center
 
 Vai ter acesso a um resumo dos cálculos contidos no documento, terá um link para fazer o download do ficheiro e a
-possibilidade de o guardar em Dataport, o que recomendamos para poder ser utilizada na Declaração Períodica IVA
+possibilidade de o guardar em Dataport, o que recomendamos para poder ser utilizada na Declaração Periódica IVA
 
 .. image:: vat_statements/v17_vat_recapitulative04.png
    :align: center
@@ -201,7 +201,7 @@ Exporte o ficheiro
    :align: center
 
 Terá um link para fazer o download do ficheiro e a possibilidade de o guardar em Dataport, o que recomendamos para poder
-ser utilizada na Declaração Períodica IVA
+ser utilizada na Declaração Periódica IVA
 
 .. image:: vat_statements/v17_vat_anexR01.png
    :align: center
