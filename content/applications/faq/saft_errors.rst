@@ -126,3 +126,60 @@ No exemplo acima o texto **MNBBR** significa que existem múltiplos produtos com
 
     .. image:: saft_errors/v17_internalReferenceField.png
         :align: center
+
+Erro: Diferença entre Total declarado e Total calculado
+=======================================================
+Por vezes ao submeter um SAF-T na AT pode acontecer de surgir a seguinte mensagem de erro:
+
+.. image:: saft_errors/v17_totalsError_01.png
+   :align: center
+
+O mesmo significa que o total declarado no documento é diferente do total que a AT calculou com base nos documentos
+
+A causa principal para este erro é o documento em Odoo estar numa fase diferente da que é declarada no campo próprio.
+Regra geral acontece com documentos que foram cancelados e que posteriormente se alterou o estado em Odoo
+
+.. important::
+    A localização da **Exo Software** calcula o total dos documentos a declarar com base no estado do documento em Odoo.
+
+    No entanto, existe um segundo campo que tem a letra que é declarada à AT sobre o estado do documento. Se o fluxo
+    esperado não for seguido, pode existir uma discrepância entre estes valores que irão resultar no erro acima
+
+Cada uma das linhas tem uma equivalência entre os documentos declarados e a respetiva secção de SAF-T, assim como o tipo
+de documentos usado para o cálculo em cada um:
+
+- :menuselection:`Documentos de faturação --> <SalesInvoices> --> qualquer documento do tipo Fatura, Nota crédito e Nota débito`
+- :menuselection:`Documentos de conferência --> <WorkingDocuments> --> qualquer documento do tipo Orçamento e Nota Encomenda`
+- :menuselection:`Recibos --> <Payments> --> qualquer documento do tipo recibo`
+
+Em cada uma das secções são indicados os totais para as mesmas
+
+.. image:: saft_errors/v17_totalsError_02.png
+   :align: center
+
+.. image:: saft_errors/v17_totalsError_03.png
+   :align: center
+
+.. image:: saft_errors/v17_totalsError_04.png
+   :align: center
+
+Para descobrir qual o documento que pode estar errado deve procurar na secção em causa o campo <InvoiceStatus>,
+<WorkStatus> ou <PaymentStatus> respetivamente e comparar o nº de documentos com os que existem em Odoo para cada tipo
+
+- **N**, significa que o documento está publicado
+- **A**, significa que o documento está cancelado
+
+.. example::
+    No exemplo acima, consultando o SAF-T, podemos ver que o nº de documentos declarados como cancelados é 4
+
+    .. image:: saft_errors/v17_totalsError_05.png
+        :align: center
+
+    No entanto, em Odoo, o nº de documentos no estado Cancelado é 3
+
+    .. image:: saft_errors/v17_totalsError_06.png
+        :align: center
+
+Consultando documento a documento, pode descobrir qual o documento que tem o estado errado e fazer a sua devida correção
+
+Após a correção, pode extrair novamente o SAF-T e voltar a submeter
