@@ -17,6 +17,7 @@ Explore mais sobre o nosso add-on de Contabilidade
     accounting/coa
     accounting/vat_statements
     accounting/balance_transfer
+    accounting/ies_statements
     accounting/efatura
     accounting/cashflow
     accounting/assets
