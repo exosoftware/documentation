@@ -503,4 +503,4 @@ As opções disponíveis são:
 Alertas
 =======
 .. important::
-    :download:`Obrigatoriedade de comunicação de documentos em SAF-T <fiscal_documents/comunicacao_orcamentos.pdf>`
+    :download:`Obrigatoriedade de comunicação de documentos fiscalmente relevantes <fiscal_documents/comunicacao_working_documents.pdf>`
