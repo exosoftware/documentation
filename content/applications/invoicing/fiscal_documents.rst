@@ -499,3 +499,8 @@ As opções disponíveis são:
    :align: center
 .. image:: fiscal_documents/v17_ATCUD_QRcode.png
    :align: center
+
+Alertas
+=======
+.. important::
+    :download:`Obrigatoriedade de comunicação de documentos em SAF-T <fiscal_documents/comunicacao_orcamentos.pdf>`
