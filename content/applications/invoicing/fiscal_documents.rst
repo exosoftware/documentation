@@ -249,7 +249,7 @@ Para poder utilizar a autofaturação deve garantir as seguintes condições:
     - Utilização de uma série única com numeração sequencial
 
         - Para os fornecedores que sejam sujeitos passivos, tem de utilizar uma série única para cada um
-        - Para os foenecedores que não forem sujeitos passivos, pode utilizar uma série para todos eles
+        - Para os fornecedores que não forem sujeitos passivos, pode utilizar uma série para todos eles
 
 .. seealso::
     :doc:`Saiba mais... <self-billing>`
