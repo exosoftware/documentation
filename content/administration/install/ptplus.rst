@@ -189,6 +189,13 @@ dependências necessárias para cada módulo:
    * -
      - pt-plus
      - Contabilidade
+     - ptplus_accounting
+     - pycountry >= 16.11.8
+     -
+     -
+   * -
+     - pt-plus
+     - Contabilidade
      - ptplus_accounting_asset_management
      -
      -
