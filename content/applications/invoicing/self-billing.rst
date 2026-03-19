@@ -1,8 +1,8 @@
 :nosearch:
 
-=============
-Autofaturação
-=============
+==============
+Auto-faturação
+==============
 Este processo permite que o cliente emita faturas em nome do fornecedor, está obrigado a cumprir diversos critérios
 e é útil nos casos em que o fornecedor possa não ter infraestrutura para lidar com a burocracia, enquanto que o cliente
 já possui essa infraestrutura.
@@ -17,7 +17,7 @@ Veja como operacionalizar este processo em Odoo com a **Localização PT+**
 
 Configuração
 ============
-Como para diversas outras situações é preciso primeiro instalar o nosso módulo dedicado, neste caso para autofaturação
+Como para diversas outras situações é preciso primeiro instalar o nosso módulo dedicado, neste caso para auto-faturação
 chamado Portugal - Self-billing.
 
 .. important::
@@ -25,7 +25,7 @@ chamado Portugal - Self-billing.
 
 Com o módulo instalado vai passar a ter acesso a novos campos na ficha de contacto do parceiro.
 
-Navegue para a ficha de contacto de um parceiro com o qual pretende iniciar o processo de autofaturação, na aba
+Navegue para a ficha de contacto de um parceiro com o qual pretende iniciar o processo de auto-faturação, na aba
 **Compras & Vendas** ative a opção de Auto-Faturação
 
 .. image:: self-billing/v17_activateSelfBilling.png
@@ -98,7 +98,7 @@ de um contrato válido entre as duas partes.
 Faturação
 =========
 Concluídas as configurações, está agora em condições de começar a emitir faturas e notas de créditos em regime de
-autofaturação
+auto-faturação
 
 Aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá
 ao menu :menuselection:`Fornecedores --> Faturas de Fornecedores` e selecione a opção **Novo**.
@@ -109,17 +109,17 @@ ao menu :menuselection:`Fornecedores --> Faturas de Fornecedores` e selecione a 
 .. image:: self-billing/v17_selfBillingInvoice1.png
    :align: center
 
-O processo de preenchimento da autofatura é semelhante ao :ref:`processo normal de emissão de fatura <odoo_process_creat_invoice>`
+O processo de preenchimento da auto-fatura é semelhante ao :ref:`processo normal de emissão de fatura <odoo_process_creat_invoice>`
 
-As únicas diferenças estão centradas no facto de ter de escolher um fornecedor que tenha o processo de autofaturação
-ativo nas suas definições de contacto, tem de especificar que a fatura é de autofaturação e tem de selecionar a Série
-Documental correta para autofaturação a esse fornecedor
+As únicas diferenças estão centradas no facto de ter de escolher um fornecedor que tenha o processo de auto-faturação
+ativo nas suas definições de contacto, tem de especificar que a fatura é de auto-faturação e tem de selecionar a Série
+Documental correta para auto-faturação a esse fornecedor
 
 .. image:: self-billing/v17_selfBillingInvoice2.png
    :align: center
 
-O processo de criação de nota de crédito também é identico ao :ref:`processo normal de emissão de nota de crédito <odoo_process_create_creditNote>`,
-com os mesmos acrescentos mencionados acima para as faturas de autofaturação
+O processo de criação de nota de crédito também é idêntico ao :ref:`processo normal de emissão de nota de crédito <odoo_process_create_creditNote>`,
+com os mesmos acrescentos mencionados acima para as faturas de auto-faturação
 
 Emissão de SAF-T
 ================
@@ -130,7 +130,7 @@ Existem 3 formas de poder fazer este processo de emissão:
 - Manual individual
 
 .. tip::
-    Para utilizar o nosso automatismo de gerar e enviar o(s) seu(s) SAF-T de autofaturação ao(s) parceiro(s) consulte
+    Para utilizar o nosso automatismo de gerar e enviar o(s) seu(s) SAF-T de auto-faturação ao(s) parceiro(s) consulte
     :ref:`o nosso serviço <invoice_saft_invoice_cron>`
 
 Além do nosso automatismo pode optar por periodicamente fazer o processo de forma mais manual, para isso aceda à app
@@ -146,7 +146,7 @@ Além do nosso automatismo pode optar por periodicamente fazer o processo de for
 Vai abrir uma nova janela onde pode definir a **Data Inicial** e **Data Final** do período a que se refere o SAF-T,
 a opção **Enviar Faturas** vai permitir anexar ao email o PDF com as faturas que foram emitidas em nome do parceiro.
 
-A listagem **Parceiro** é dinâmica e vai auto-preencher com os parceiros que tiveram documentos de autofaturação
+A listagem **Parceiro** é dinâmica e vai auto-preencher com os parceiros que tiveram documentos de auto-faturação
 emitidos no período em questão
 
 .. image:: self-billing/v17_selfBillingSaft2.png

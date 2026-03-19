@@ -201,7 +201,7 @@ estar visíveis no menu **Visão Geral** da app **Inventário**
     Se existir alguma Operação que não vá utilizar, pode arquivar a mesma para que não esteja disponível aos
     utilizadores
 
-Pode configurar as Operações para que se adequem ao seu fluxo e âs suas necessidades, para isso aceda à app de
+Pode configurar as Operações para que se adequem ao seu fluxo e às suas necessidades, para isso aceda à app de
 **Inventário** e vá ao menu :menuselection:`Configuração --> Gestão de armazém --> Tipos de Operações` e selecione a
 operação a modificar
 

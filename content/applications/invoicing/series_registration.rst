@@ -135,7 +135,7 @@ Guarde as alterações.
 Isto vai configurar a sua sequência no Odoo, mas ainda falta comunicar a séria na AT.
 
 .. important::
-    No caso de estar a registar série documental de autofaturação, deve parar o processo neste ponto e concluir outras
+    No caso de estar a registar série documental de auto-faturação, deve parar o processo neste ponto e concluir outras
     configurações antes de prosseguir
 
 Para isso garanta que o campo **Código de Validação** está vazio e clique no botão **Registar** para iniciar o processo
@@ -172,7 +172,7 @@ A partir desde momento a série está comunicada e pode começar a emitir docume
     .. seealso::
        :ref:`Saiba mais sobre operações de inventário <stock_operations>`
 
-    Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai coneguir ver a
+    Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai conseguir ver a
     série documental quando for tentar gerar o documento.
 
     .. image:: series_registration/v17_operations.png
@@ -240,7 +240,7 @@ Alertas
     .. seealso::
        :ref:`Saiba mais sobre operações de inventário <stock_operations>`
 
-    Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai coneguir ver a
+    Coloque as Operações que mais fizerem sentido para o tipo de documento, caso não o faça não vai conseguir ver a
     série documental quando for tentar gerar o documento.
 
     .. image:: series_registration/v17_operations.png

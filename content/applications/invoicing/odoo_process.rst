@@ -58,7 +58,9 @@ Depois deve preencher os campos necessários e selecionar a série documental a 
     .. example::
        Se cobra uma vez a um cliente por um serviço de 2 anos, o Plano de Recorrência
        deve ser de 2 anos e quantidade do serviço 1, não deve ser Plano de Recorrência
-       anual mas quantidade a 2
+       anual com quantidade a 2
+
+        No segundo cenário isso significaria que está a cobra 2 planos com um ano de duração
 
     .. example::
        Se cobra mensalmente durante 2 anos por um serviço, o plano de recorrência deve
@@ -172,7 +174,7 @@ A maioria dos campos já vão estar preenchidos pois são herdados da Nota de en
     :align: center
 
 .. tip::
-    O processo de criação de farura sem ligação a Nota de encomenda é bastante parecido, exceto em 2 pontos:
+    O processo de criação de fatura sem ligação a Nota de encomenda é bastante parecido, exceto em 2 pontos:
 
         - Onde se inicia o processo
         - A necessidade de preencher quase todos os campos de raíz
@@ -254,7 +256,7 @@ Processo iniciado em Odoo
     Também aplicará o imposto correto no movimento, dependendo:
 
     - Do **Tipo de Taxa de IVA** do imposto original, caso seja cliente Nacional
-    - Da **Posição Fiscal** no documento, ou na sua inexistência, com com base no **País** do cliente, para os Intracomunitários ou Extracomunitários
+    - Da **Posição Fiscal** no documento, ou na sua inexistência, com base no **País** do cliente, para os Intracomunitários ou Extracomunitários
 
     Caso não exista Posição Fiscal no documento, ou País no cliente, o mesmo será tratado como cliente Nacional
 
@@ -474,7 +476,7 @@ Não se esqueça de mencionar o motivo para a criação da nota de débito, bem 
 associada à nota de débito. Em seguida selecione **Criar Nota de Débito**
 
 .. tip::
-    Não se esqueça de mencionar o diário onde vão ser registaddos os movimentos da nota de débito
+    Não se esqueça de mencionar o diário onde vão ser registados os movimentos da nota de débito
 
     Pode adicionar as linhas da fatura à nota de débito se, as alterações a efetuar forem em todas as linhas da fatura, selecionando a opção **Copiar linhas**
 
@@ -657,7 +659,7 @@ Para tal vá ao **menu do diário do Provedor de Pagamentos** e selecione a opç
 
 - Ative a opção **Transferência Interna**
 - Preencha o **Valor** a transitar de saldo
-- Preencha a **Data** e **Memorando** com a informação que consta no extrado do seu banco
+- Preencha a **Data** e **Memorando** com a informação que consta no extrato do seu banco
 - Preencha no **Diario de Destino** o diário do seu banco
 - Confirme o movimento
 

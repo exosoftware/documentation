@@ -50,7 +50,7 @@ Para emitir o pdf do orçamento basta ir ao menu **Ação** do documento e selec
 Fatura pró-forma
 ----------------
 
-Documento informativo frequentemente utilizado na cotação de produtos e na justificação da transacção internacional de produtos.
+Documento informativo frequentemente utilizado na cotação de produtos e na justificação da transação internacional de produtos.
 Após aprovação do cliente pode ser convertida em nota de encomenda.
 
 Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Orçamento / Encomenda`
@@ -237,15 +237,15 @@ e na secção **Portugal** ative a opção **Faturação Eletrónica**.
 
 .. _fiscal_documents_self-billing:
 
-Autofaturação
+Auto-faturação
 -------------
-No processo de autofaturação o cliente substitiu-se ao fornecedor na emissão e comunicação dos documentos fiscais.
+No processo de auto-faturação o cliente substitiu-se ao fornecedor na emissão e comunicação dos documentos fiscais.
 
-Para poder utilizar a autofaturação deve garantir as seguintes condições:
+Para poder utilizar a auto-faturação deve garantir as seguintes condições:
 
     - Existência de **acordo prévio** entre cliente e fornecedor, que tem de ser registado no portal da AT
     - Provar que o fornecedor tomou conhecimento da emissão dos documentos
-    - O documento tem de mencionar o termo autofaturação
+    - O documento tem de mencionar o termo auto-faturação
     - Utilização de uma série única com numeração sequencial
 
         - Para os fornecedores que sejam sujeitos passivos, tem de utilizar uma série única para cada um
@@ -369,7 +369,7 @@ Documentação em breve
 
 Guia de remessa / Guia de transporte
 ====================================
-A **Guia de Remessa** representa o envio de mercadoria, por seu lado a **Guia de Transpote** é o documento que acompanha
+A **Guia de Remessa** representa o envio de mercadoria, por seu lado a **Guia de Transporte** é o documento que acompanha
 a mercadoria durante o seu transporte. Os documentos possuem a mesma estrutura e têm o mesmo valor jurídico, pelo que
 pode usar um ou outro para acompanhar as mercadorias que envia.
 
@@ -404,7 +404,7 @@ Informação obrigatória nas guias segundo `art 4º Regime de bens em circulaç
 
     - Nome ou denominação social
     - Morada
-    - NIF (se for sujeito pssivo de IVA)
+    - NIF (se for sujeito passivo de IVA)
 - Bens e suas quantidades
 - Locais de carga e descarga
 - Data e hora em que se inicia o transporte
