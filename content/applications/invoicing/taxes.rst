@@ -23,7 +23,7 @@ Criar impostos
 Ao selecionar o país da empresa em Odoo um plano de impostos base já é instalado. É recomendado instalar uma localização
 na app **Apps** e procurar módulos de impostos associados ao país.
 
-No caso de se instalar a **Localizção PT+ Exo**, muitos mais impostos e grupos de impostos, são instalados para que se
+No caso de se instalar a **Localização PT+ Exo**, muitos mais impostos e grupos de impostos, são instalados para que se
 cumpram as regras base da legislação portuguesa e seja feita a devida ligação aos modelos de documentos da localização.
 
 .. note::
@@ -173,8 +173,8 @@ A **Exo Software** disponibiliza muitos impostos pré-configurados, no entanto, 
 tal deve juntamente com o seu contabilista garantir o correto preenchimento das etiquetas de impostos para a sua
 realidade
 
-Para facilitar esse objetivo, explicamos a nossa nomenclaruta de etiquetas de impostos para que fique mais tranquilo no
-manusamento do seu Odoo e garanta que todas as suas declarações saiam com os valores corretos
+Para facilitar esse objetivo, explicamos a nossa nomenclatura de etiquetas de impostos para que fique mais tranquilo no
+manuseamento do seu Odoo e garanta que todas as suas declarações saiam com os valores corretos
 
 .. important::
     Apesar de poder criar as suas próprias etiquetas, as mesmas não vão ser utilizadas pelas nossas metodologias de
@@ -192,7 +192,7 @@ As nossas etiquetas seguem sempre a seguinte nomenclatura
 - **Texto 1** identifica a declaração a que diz respeito a etiqueta
 - **Texto 2** encontra-se sempre dentro dos parênteses retos e mostra as coordenadas específicas dentro da declaração para o qual o valor vai ser utilizado
 
-    - Para ajudar na identificação utilizados algumas letras e simbolos
+    - Para ajudar na identificação utilizamos algumas letras e simbolos
     - **Q** significa que é um **quadro**
     - **L** significa que é uma **linha**
     - **C** significa que é um **campo**
@@ -226,7 +226,7 @@ Grupos com esta característica irão disponibilizar mais informação para pree
   :align: center
 
 .. note::
-    A configuração específica do imposto deve ser a que considerar mais adquada
+    A configuração específica do imposto deve ser a que considerar mais adequada
 
     O nosso SAF-T irá adaptar-se às suas escolhas no momento de ser gerado
 
