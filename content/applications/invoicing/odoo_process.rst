@@ -302,7 +302,8 @@ A partir deste ponto o processo é o normal para a emissão do recibo da fatura 
 .. note::
     Nestes casos não deve usar a fatura de adiantamento, pelo que sugerimos a utilização da app da OCA
     `Sale Advance Payment (sale_advance_payment) <https://github.com/OCA/sale-workflow/tree/17.0/sale_advance_payment>`_
-    no entanto, esta app não está preparada para as especificidades das regras portuguesas, pelo que precisará de uma
+
+    No entanto, esta app não está preparada para as especificidades das regras portuguesas, pelo que precisará de uma
     app complementar desenvolvida pela **Exo Software** ptplus_sale_advance_payment, pelo que deve solicitar a instalação
 
 A partir de uma Nota Encomenda (NE) gere o **Recebimento Adiantado**, selecione o **Método Pagamento** e o **Valor Adiantamento**
