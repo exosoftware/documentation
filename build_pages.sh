@@ -45,6 +45,9 @@ echo "==> Installing dependencies (requirements.txt)..."
 python3 --version
 python3 -m pip install --upgrade pip >/dev/null
 python3 -m pip install -r requirements.txt
+# Sphinx 4.3.2 imports `pkg_resources`, which setuptools >= 81 removed. The
+# Cloudflare base image ships a newer setuptools, so pin one that still has it.
+python3 -m pip install "setuptools<81"
 
 # ---------------------------------------------------------------------------
 # 2. Cleanup and preparation
