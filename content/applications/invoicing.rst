@@ -19,6 +19,7 @@ Explore mais sobre os nossos add-ons de Faturação, Pagamentos e Stock
     invoicing/taxes
     invoicing/odoo_process
     invoicing/e-invoicing
+    invoicing/fsp
     invoicing/self-billing
     invoicing/pos
     invoicing/saft_invoicing
