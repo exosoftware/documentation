@@ -22,24 +22,22 @@ estiver, envia o PDF automaticamente. Clientes não inscritos são ignorados sem
     Esta funcionalidade não está disponível na loja Odoo. Para ter acesso à mesma, terá de solicitar
     a sua instalação e ativação à **Exo Software**.
 
-    Antes de iniciar a configuração, a Exo Software fornecerá os seguintes elementos necessários:
+    O certificado digital e os identificadores do software junto da AMA são fornecidos e
+    configurados pela **Exo Software** — não há nada a introduzir manualmente nesta secção.
 
-    - Certificado digital (`.p7b`) e chave privada correspondente, em formato PEM
-    - **SW Instance UUID** — identificador da instância de software registado pela Exo junto da AMA
-    - **SW Provider NIPC** — NIF da Exo Software enquanto fornecedor do software
-
-    A empresa deve ter também um **NIPC válido** (9 dígitos) configurado no Odoo.
+    A empresa deve ter um **NIPC válido** (9 dígitos) configurado no Odoo e indicar um
+    **email de seller** para receber as notificações do portal FSP.
 
 Configuração inicial
 ====================
 
 .. tip::
-    Em ambiente de **pré-produção** (o modo padrão), o certificado é carregado automaticamente
-    no momento da instalação do módulo — não é necessário qualquer configuração de certificado
-    para testar. As faturas de teste são enviadas para o portal de pré-produção da AMA.
+    O certificado é carregado automaticamente aquando da instalação do módulo — não é necessária
+    qualquer configuração de certificado por parte do utilizador.
 
-    Em **produção**, será necessário inserir manualmente o certificado e a chave privada fornecidos
-    pela Exo Software.
+    Em ambiente de **pré-produção** (o modo padrão), as faturas de teste são enviadas para o portal
+    de pré-produção da AMA. A passagem a **produção** é tratada pela **Exo Software**, que configura
+    o certificado de produção fornecido pela AMA.
 
 O bloco de configuração FSP só é visível para utilizadores com o grupo de segurança **FSP Manager**.
 
@@ -52,28 +50,17 @@ do Odoo), vá ao menu :menuselection:`Configuração --> Configurações` e proc
 
 .. _fsp_certificate:
 
-Certificado e chave privada
----------------------------
+Validação do certificado
+------------------------
 
-Em modo de produção, cole o conteúdo do ficheiro de certificado no campo **Production Certificate**
-e o conteúdo da chave privada no campo **Production Private Key** (ambos em formato PEM).
+O certificado e a chave privada são geridos pela **Exo Software** e carregados automaticamente
+para o ambiente ativo — não existem campos para os introduzir manualmente nesta secção.
 
-Em seguida, clique em **Validate** para confirmar que o par certificado/chave é válido:
+No campo **Certificate**, clique em **Validate** para confirmar que o par certificado/chave é válido:
 
 - Mensagem verde → o certificado é válido e pode avançar para o passo seguinte
-- Mensagem vermelha → verifique se colou os ficheiros corretos e se não há caracteres extra no início ou fim
-
-.. note::
-    O ambiente (pré-produção ou produção) é controlado pelo campo ``l10n_pt_cert_service_backend``
-    da empresa, configurado no módulo **ptplus** e não nesta secção.
-
-Dados do software
------------------
-
-Preencha os seguintes campos com os valores fornecidos pela Exo Software:
-
-- **SW Provider NIPC** — NIPC da Exo Software (fornecedor do software)
-- **SW Instance UUID** — UUID da instância de software registado junto da AMA
+- Mensagem vermelha → contacte a **Exo Software**, pois o certificado do ambiente ativo não está
+  corretamente configurado
 
 Dados do seller
 ---------------
@@ -92,8 +79,9 @@ O Odoo autenticar-se-á junto da AMA usando o certificado. O estado do badge pas
 **SW Authenticated** (amarelo).
 
 .. important::
-    Se a autenticação falhar, verifique o certificado, o NIPC e o UUID. Confirme também que
-    está a usar o certificado adequado ao ambiente (pré-produção ou produção).
+    Se a autenticação falhar, valide novamente o certificado (botão **Validate**) e confirme que
+    o ambiente ativo está corretamente configurado. Se o problema persistir, contacte a
+    **Exo Software**.
 
 Registo do seller
 -----------------
@@ -184,8 +172,6 @@ Após o registo, as seguintes ações ficam disponíveis na secção FSP das def
 .. image:: fsp/v19_fsp_settings_block.png
    :align: center
 
-Após o registo, as seguintes ações ficam disponíveis na secção FSP das definições:
-
 - **Update Seller** — atualiza o nome comercial e/ou email do seller no portal FSP
 - **Unregister** — cancela permanentemente o registo desta empresa no FSP; os envios futuros
   falharão até que seja efetuado um novo registo
@@ -227,11 +213,11 @@ aderiu ao serviço. A fatura deve ser enviada por outro meio (email normal).
 Erro na validação do certificado
 ---------------------------------
 
-O certificado ou a chave privada não estão corretos. Verifique:
+O certificado do ambiente ativo não está corretamente configurado. Como o certificado é gerido
+pela **Exo Software**, contacte-a para confirmar que:
 
-- Se está em produção, que colou o certificado de produção (não o de pré-produção)
-- Que o certificado e a chave privada correspondem (são um par)
-- Que não há espaços ou caracteres extra no início ou fim dos campos
+- O certificado correto para o ambiente em uso (pré-produção ou produção) está carregado
+- O certificado e a chave privada correspondem (são um par) e estão dentro da validade
 
 O PDF chega encriptado ao cliente
 ----------------------------------
