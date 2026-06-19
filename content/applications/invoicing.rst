@@ -23,6 +23,7 @@ Explore mais sobre os nossos add-ons de Faturação, Pagamentos e Stock
     invoicing/self-billing
     invoicing/pos
     invoicing/saft_invoicing
+    invoicing/sdr
     invoicing/pdf_signing
     invoicing/hr_expenses
     invoicing/stock
