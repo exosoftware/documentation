@@ -10,5 +10,8 @@ _build/
 public/
 _pages_src/
 
+# Local test virtualenvs
+test_venv/
+
 # Dependencies
 odoo

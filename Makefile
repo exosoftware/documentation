@@ -22,7 +22,11 @@ SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSIO
                  -A plausible_script=$(PLAUSIBLE_SCRIPT) \
                  -A plausible_domain=$(PLAUSIBLE_DOMAIN) \
 				 -j $(WORKERS)
-SOURCE_DIR     = content
+# Each version is a self-contained tree under versions/<V>/. Overridable so
+# build_pages.sh / preview.sh can pick which version to build; defaults to 17.0.
+ifndef SOURCE_DIR
+  SOURCE_DIR   = versions/18.0
+endif
 
 HTML_BUILD_DIR = $(BUILD_DIR)/html
 ifdef VERSIONS

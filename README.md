@@ -1,36 +1,97 @@
-# Odoo documentation
+# Documentação Exo
 
-## Build the documentation locally
+Documentação de utilizador da Exo Software, construída com Sphinx e publicada
+no Cloudflare Pages em https://documentation.exosoftware.pt.
 
-### Requirements
+## Estrutura (uma só branch, várias versões)
 
-- Git
-- Python 3.6, 3.7, or 3.8
-- Python dependencies listed in the file `requirements.txt`.
-- Make
-- A local copy of the [odoo/odoo repository](https://github.com/odoo/odoo) (optional)
+Toda a documentação vive numa **única branch** (`multi-version`). As versões de
+Odoo são **pastas**, não branches — assim não há cherry-pick entre branches e
+qualquer push reconstrói todas as versões.
 
-### Instructions
+Cada versão é uma árvore **completa e independente**, com todos os seus
+ficheiros e imagens:
 
-1. In a terminal, navigate to the root directory of the documentation and build it `make`.
-   Additional commands are available with `make help`.
-2. Open the file `documentation/_build/html/index.html` in your web browser.
-3. See [this guide](https://www.odoo.com/documentation/latest/contributing/documentation.html)
-   for more detailed instructions.
+```
+versions/
+├── 17.0/         ← documentação COMPLETA do Odoo 17.0
+│   ├── index.rst
+│   └── applications/ ...
+└── 18.0/         ← documentação COMPLETA do Odoo 18.0
+    ├── index.rst
+    └── applications/ ...
+```
 
-Optional: place your local copy of the `odoo/odoo` repository in the parent directory or in the root
-directory of the documentation to build the latter with the documented Python docstrings.
+Não há base partilhada: cada versão tem a sua própria cópia de tudo.
 
-## Contribute to the documentation
+> ℹ️ Como as versões são independentes, uma correção que se aplique a várias
+> versões tem de ser feita em **cada** pasta `versions/<versão>/`.
 
-For contributions to the content of the documentation, please refer to the
-[Introduction Guide](https://www.odoo.com/documentation/latest/contributing/documentation.html).
+## Construir localmente
 
-To **report a content issue**, **request new content** or **ask a question**, use the
-[repository's issue tracker](https://github.com/odoo/documentation/issues).
+### Requisitos (uma só vez)
 
-## Learn More
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+pip install "setuptools<81"     # Sphinx 4.3.2 ainda importa pkg_resources
+```
 
-To learn more about Odoo, in addition to the documentation, have a look at
-[the official eLearning](https://odoo.com/slides) and
-[Scale-up, The Business Game](https://www.odoo.com/page/scale-up-business-game).
+> O `.venv/` é ignorado pelo git. Python 3.12 funciona; se o `pip install`
+> falhar no ambiente de build, baixar a versão de Python (ver nota no
+> `build_pages.sh`).
+
+### Ver uma versão (rápido)
+
+```bash
+./preview.sh 18.0          # versão (omisso: 17.0)
+./preview.sh 18.0 en       # versão + língua (omisso: pt_PT)
+```
+
+Abrir depois `_build/html/pt_PT/index.html` no browser.
+(O `preview.sh` mostra só o conteúdo; o seletor de versões não aparece.)
+
+### Ver as duas versões com o seletor a funcionar (como em produção)
+
+```bash
+ROOT_URL=http://localhost:8000 bash build_pages.sh
+python3 -m http.server 8000 --directory public
+```
+
+Abrir:
+- http://localhost:8000/18.0/pt_PT/
+- http://localhost:8000/17.0/pt_PT/
+
+Passar `ROOT_URL=http://localhost:8000` faz o seletor de versões trocar entre as
+versões localmente em vez de apontar para produção.
+
+## Publicação (Cloudflare Pages)
+
+O `build_pages.sh` é o comando de build no Cloudflare Pages. Configuração do projeto:
+
+| Definição | Valor |
+|---|---|
+| Build command | `bash build_pages.sh` |
+| Build output directory | `public` |
+| Production branch | `multi-version` (única branch; contém todas as versões) |
+| Variável de ambiente | `PYTHON_VERSION = 3.12` |
+
+Como tudo está numa só branch, **cada push para a `multi-version` reconstrói
+todas as versões** — não é preciso trigger separado por versão.
+
+A versão canónica/predefinida (para onde a raiz redireciona) é a `18.0`,
+configurável via `CANONICAL_VERSION` no `build_pages.sh`.
+
+## Adicionar uma nova versão (ex.: 19.0)
+
+1. Criar `versions/19.0/` com a árvore completa dessa versão (copiar a versão
+   mais próxima e ajustar o que muda).
+2. No `build_pages.sh`, acrescentar `19.0` à variável `VERSIONS` (e, se for a
+   mais recente, atualizar `CANONICAL_VERSION`).
+3. No `conf.py`, acrescentar `'19.0': "Odoo 19",` ao dicionário `versions_names`.
+
+## Origem
+
+Projeto derivado da [documentação oficial do Odoo](https://github.com/odoo/documentation).
+Para saber mais sobre Odoo, ver também o [eLearning oficial](https://odoo.com/slides).

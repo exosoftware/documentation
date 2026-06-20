@@ -22,7 +22,10 @@ copyright = 'Exo Software, Lda.'
 # `version` is the version info for the project being documented, acts as replacement for |version|,
 # also used in various other places throughout the built documents.
 # `release` is the full version, including alpha/beta/rc tags. Acts as replacement for |release|.
-version = release = '17.0'
+# All versions live in this single branch, each as a self-contained tree under
+# versions/<V>/ (built by build_pages.sh / preview.sh). The version being built
+# is selected via the DOC_VERSION env var (defaults to the latest, 18.0).
+version = release = os.environ.get('DOC_VERSION', '18.0')
 
 # `current_branch` is the technical name of the current branch.
 # E.g., saas-15.4 -> saas-15.4; 12.0 -> 12.0, master -> master (*).
@@ -217,6 +220,7 @@ sphinx.transforms.i18n.docname_to_domain = (
 versions_names = {
     # 'master': "Master",
     # 'saas-17.1': "Odoo Online",
+    '18.0': "Odoo 18",
     '17.0': "Odoo 17",
     # 'saas-16.4': "Odoo Online",
     # 'saas-16.3': "Odoo Online",
@@ -515,4 +519,6 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
 
 
 # conf.py
-html_extra_path = ['content/applications/invoicing/taxes']
+# Extra files copied verbatim into the output, taken from the version being built
+# (each version is a self-contained tree under versions/<V>/).
+html_extra_path = [f'versions/{version}/applications/invoicing/taxes']
