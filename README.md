@@ -17,7 +17,10 @@ versions/
 ├── 17.0/         ← documentação COMPLETA do Odoo 17.0
 │   ├── index.rst
 │   └── applications/ ...
-└── 18.0/         ← documentação COMPLETA do Odoo 18.0
+├── 18.0/         ← documentação COMPLETA do Odoo 18.0
+│   ├── index.rst
+│   └── applications/ ...
+└── 19.0/         ← documentação COMPLETA do Odoo 19.0
     ├── index.rst
     └── applications/ ...
 ```
@@ -45,26 +48,28 @@ pip install "setuptools<81"     # Sphinx 4.3.2 ainda importa pkg_resources
 ### Ver uma versão (rápido)
 
 ```bash
-./preview.sh 18.0          # versão (omisso: 17.0)
-./preview.sh 18.0 en       # versão + língua (omisso: pt_PT)
+./preview.sh 19.0          # versão (omisso: 17.0)
+./preview.sh 19.0 en       # versão + língua (omisso: pt_PT)
 ```
 
 Abrir depois `_build/html/pt_PT/index.html` no browser.
 (O `preview.sh` mostra só o conteúdo; o seletor de versões não aparece.)
 
-### Ver as duas versões com o seletor a funcionar (como em produção)
+### Ver todas as versões com o seletor a funcionar (como em produção)
 
 ```bash
 ROOT_URL=http://localhost:8000 bash build_pages.sh
 python3 -m http.server 8000 --directory public
 ```
 
-Abrir:
+Abrir uma das versões publicadas:
+- http://localhost:8000/19.0/pt_PT/
 - http://localhost:8000/18.0/pt_PT/
 - http://localhost:8000/17.0/pt_PT/
 
 Passar `ROOT_URL=http://localhost:8000` faz o seletor de versões trocar entre as
-versões localmente em vez de apontar para produção.
+versões localmente em vez de apontar para produção. A raiz
+(http://localhost:8000/) redireciona para a versão canónica.
 
 ## Publicação (Cloudflare Pages)
 
@@ -80,16 +85,31 @@ O `build_pages.sh` é o comando de build no Cloudflare Pages. Configuração do 
 Como tudo está numa só branch, **cada push para a `multi-version` reconstrói
 todas as versões** — não é preciso trigger separado por versão.
 
-A versão canónica/predefinida (para onde a raiz redireciona) é a `18.0`,
+A versão canónica/predefinida (para onde a raiz redireciona) é a `19.0`,
 configurável via `CANONICAL_VERSION` no `build_pages.sh`.
 
-## Adicionar uma nova versão (ex.: 19.0)
+## Adicionar uma nova versão (ex.: 20.0)
 
-1. Criar `versions/19.0/` com a árvore completa dessa versão (copiar a versão
-   mais próxima e ajustar o que muda).
-2. No `build_pages.sh`, acrescentar `19.0` à variável `VERSIONS` (e, se for a
+1. Criar `versions/20.0/` com a árvore completa dessa versão. Duas opções:
+   - **Copiar a versão mais próxima** e ajustar o que muda:
+     ```bash
+     cp -r versions/19.0 versions/20.0
+     ```
+   - **Trazer de uma branch de versão** (se o conteúdo for mantido numa branch
+     homónima `20.0`, onde vive sob `content/`):
+     ```bash
+     git checkout 20.0 -- content     # traz content/ da branch da versão
+     git mv content versions/20.0     # coloca-a sob versions/
+     ```
+2. No `build_pages.sh`, acrescentar `20.0` à variável `VERSIONS` (e, se for a
    mais recente, atualizar `CANONICAL_VERSION`).
-3. No `conf.py`, acrescentar `'19.0': "Odoo 19",` ao dicionário `versions_names`.
+3. No `conf.py`, acrescentar `'20.0': "Odoo 20",` ao dicionário `versions_names`
+   (e, se for a mais recente, atualizar o `DOC_VERSION` predefinido).
+4. Atualizar o diagrama da árvore neste README.
+5. Compilar localmente para validar antes de publicar:
+   ```bash
+   ./preview.sh 20.0
+   ```
 
 ## Origem
 
