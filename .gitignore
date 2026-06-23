@@ -2,6 +2,7 @@
 *.mo
 .*
 !.gitattributes
+!.github/
 
 # Sphinx build files
 _build/
