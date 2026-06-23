@@ -1,0 +1,81 @@
+name: Sync version into multi-version
+
+# Whenever a push lands on a version branch (17.0 / 18.0 / 19.0), this workflow
+# copies that branch's content (which lives under content/) into
+# versions/<version>/ on the multi-version branch and commits/pushes it. The
+# push to multi-version then triggers the Cloudflare Pages rebuild, which
+# rebuilds every version.
+#
+# NOTE: for a "push" trigger, GitHub uses the workflow definition from the
+# branch that received the push, so this file must exist on EVERY version
+# branch (17.0, 18.0, 19.0).
+
+on:
+  push:
+    branches:
+      - "17.0"
+      - "18.0"
+      - "19.0"
+
+# Allow at most one sync in flight per version; new pushes wait for the previous
+# run instead of racing it (avoids push conflicts).
+concurrency:
+  group: sync-versions-${{ github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout the multi-version branch
+        uses: actions/checkout@v4
+        with:
+          ref: multi-version
+          fetch-depth: 0
+
+      - name: Copy content/ from ${{ github.ref_name }} into versions/${{ github.ref_name }}/
+        run: |
+          set -euo pipefail
+          VERSION="${{ github.ref_name }}"
+          echo "==> Syncing versions/$VERSION from branch $VERSION ($GITHUB_SHA)"
+
+          # Make sure we have the exact commit that triggered the push.
+          git fetch --depth=1 origin "$GITHUB_SHA"
+
+          # Fully replace the version tree with the branch's content/.
+          rm -rf "versions/$VERSION"
+          mkdir -p "versions/$VERSION"
+          git archive "$GITHUB_SHA":content | tar -x -C "versions/$VERSION"
+
+      - name: Commit and push to multi-version
+        run: |
+          set -euo pipefail
+          VERSION="${{ github.ref_name }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add "versions/$VERSION"
+          if git diff --cached --quiet; then
+            echo "==> No changes in versions/$VERSION; nothing to do."
+            exit 0
+          fi
+
+          git commit -m "Sync versions/$VERSION from $VERSION@${GITHUB_SHA:0:7}"
+
+          # Push with retry: if another version pushed in the meantime, rebase
+          # and try again (each version touches a different folder, so there is
+          # no real conflict).
+          for attempt in 1 2 3 4 5; do
+            if git push origin HEAD:multi-version; then
+              echo "==> Push succeeded (attempt $attempt)."
+              exit 0
+            fi
+            echo "==> Push rejected; rebasing onto origin/multi-version (attempt $attempt)..."
+            git fetch origin multi-version
+            git rebase origin/multi-version
+          done
+
+          echo "ERROR: could not push after several attempts." >&2
+          exit 1
