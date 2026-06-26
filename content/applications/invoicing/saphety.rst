@@ -30,15 +30,15 @@ Ativar o Broker e Configurar Credenciais
 -----------------------------------------
 
 Aceda à app **Faturação / Contabilidade**, vá ao menu
-:menuselection:`Configuração --> Configurações` e pesquise por **Saphety** na barra
-de pesquisa.
+:menuselection:`Configuração --> Configurações` e clique em **Financeiro** no menu
+lateral. Localize a opção **Broker EDI Saphety** na secção Portugal.
 
 .. image:: saphety/v19_saphety_settings.png
    :align: center
 
-Na secção **Portugal**, ative a opção **Broker EDI Saphety** e, após a ativação,
-preencha o **Nome de utilizador** e a **Palavra-passe** da conta Saphety da sua
-empresa. Guarde as definições.
+Ative a opção **Broker EDI Saphety** e, após a ativação, preencha o
+**Nome de Utilizador** e a **Palavra-passe** da conta Saphety da sua empresa.
+Guarde as definições.
 
 Verificar a Conectividade com a Plataforma Saphety
 ----------------------------------------------------
