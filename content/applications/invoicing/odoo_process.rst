@@ -272,6 +272,11 @@ respetiva percentagem ou valor absoluto recebido, criando em seguida o rascunho 
 
     Esses impostos serão mapeados para o imposto **OBS (Adiantamento)** respetivo da configuração que fez na app Vendas
 
+.. danger::
+    Se precisa de fazer correção às linhas do adiantamento, nomeadamente por motivos de valor, corrija nas linhas criadas
+
+    Eliminar as linhas e inserir novas, quebra a ligação à NE, o que depois impossibilita a regularização na fatura final
+
 Confirme a Fatura e emita o respetivo Recibo para formalizar o recebimento
 
 .. note::
