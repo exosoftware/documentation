@@ -529,7 +529,8 @@ encontrar as seguintes informações
 
 Vai buscar as entradas, subtraídas das saídas e dos componentes em operação de produção
 
-.. code-block::
+.. code-block:: python
+
     [
         "&",
         "&",
@@ -556,7 +557,8 @@ Vai buscar as entradas, subtraídas das saídas e dos componentes em operação 
 
 **Componentes em operação de produção**
 
-.. code-block::
+.. code-block:: python
+
     [
         ("product_id.is_storable", "=", True),
         ("owner_id", "=", False),
@@ -568,7 +570,8 @@ Vai buscar as entradas, subtraídas das saídas e dos componentes em operação 
 
 **Artigos em Transformação**
 
-.. code-block::
+.. code-block:: python
+
     [
         ("product_id.is_storable", "=", True),
         ("owner_id", "=", False),
