@@ -27,22 +27,25 @@ da normalidade.
 .. tip::
     Logo no topo da página, por baixo do nome pode encontrar a funcionalidade do artigo:
 
-    - **Pode ser Vendido**, vai estar disponível para vender
-    - **Pode ser Comprado**, vai estar disponível para compras
-    - **Recorrente**, vai estar disponível para subscrições permitindo ter períodos de recorrência
-    - **Pode ser Gasto**, vai estar disponível para utilização na app de Despesas
+    - **Vendas**, vai estar disponível na app Vendas
+    - **Compras**, vai estar disponível na app Compras
+    - **Subscrições**, vai estar disponível na app Subscrições permitindo ter períodos de recorrência
+    - **Despesas**, vai estar disponível na app Despesas
 
-    .. image:: stock/v17_stock_products01.png
+    .. image:: stock/v18_stock_products01.png
         :align: center
 
 .. tip::
     Existem muitos **Tipos de Artigos** disponíveis em Odoo, no entanto só existem 3 principais:
 
     - **Serviço**
-    - **Consumível**, não é feito controlo de stock e é sempre tratado como existindo stock disponível do mesmo
-    - **Artigo Armazenável**, é feito controlo de stock
+    - **Bens**
 
-    .. image:: stock/v17_stock_products02.png
+        - Sem controlo de Inventário, não é feito controlo de stock e é sempre tratado como existindo stock disponível do mesmo
+        - Com controlo de Inventário, é feito controlo de stock de uma de 3 maneiras (:ref:`Saiba mais <odoo_process_quotation_revisions>`)
+    - **Combo**, artigo que permite a combinação de outros existentes
+
+    .. image:: stock/v18_stock_products02.png
         :align: center
 
 .. important::
@@ -53,11 +56,6 @@ da normalidade.
 
     .. image:: stock/v17_stock_products03.png
         :align: center
-
-    .. example::
-        Pode ter um artigo onde o Tipo de Artigo seja Consumível, mas a Categoria Fiscal seja Mercadorias, ou seja,
-        perante a lógica portuguesa é uma mercadoria, mas perante o Odoo é um consumível porque não quer controlar o
-        stock deste artigo.
 
 .. tip::
     Existem 2 tipos de **Política de Faturação** que depois se subdividem mediante o que são:
@@ -89,6 +87,8 @@ da normalidade.
 
         No entanto, isto pode gerar erros de faturação, pelo que é altamente recomendado classificar muito bem este
         aspeto do artigo antes de prosseguir com a sua utilização.
+
+.. _tracebility_of_products:
 
 .. tip::
     A categoria do artigo é uma funcionalidade Odoo que permite que o artigo herde características na eventualidade de
@@ -125,11 +125,11 @@ da normalidade.
 
     Em seguida deve ir ao artigo e na aba do **Inventário** escolher qual a política a associar ao produto:
 
-    - **Sem rastreio**
-    - **Por lotes**, vai permitir consumos parciais das quantidades
+    - **Quantidade** apenas controla a quantidade em stock permitindo consumos parciais sem informação adicional
+    - **Por lotes**, vai permitir consumos parciais das quantidades, mas obriga a inserir dados extra
     - **Por número de série único**, vai obrigar a consumo de uma e uma só unidade
 
-    .. image:: stock/v17_stock_products10.png
+    .. image:: stock/v18_stock_products10.png
         :align: center
 
     .. danger::
@@ -238,9 +238,9 @@ Existem duas formas de emitir guias em Odoo:
 
 No documento de Compra/Venda
 ----------------------------
-Ao gerar um documento de Compra/Venda que inclua artigos físicos (consumíveis ou artigos armazenáveis) é gerado de forma
-automática um smart button no topo da página com o icon de um camião. Esse smart button agrupa todos os documentos de
-Recebimento/Entrega associados ao processo, clique no mesmo
+Ao gerar um documento de Compra/Venda que inclua Bens é gerado de forma automática um smart button no topo da página com
+o icon de um camião. Esse smart button agrupa todos os documentos de Recebimento/Entrega associados ao processo, clique
+no mesmo
 
 .. image:: stock/v17_slips01.png
     :align: center
