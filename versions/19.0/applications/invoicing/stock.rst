@@ -27,22 +27,25 @@ da normalidade.
 .. tip::
     Logo no topo da página, por baixo do nome pode encontrar a funcionalidade do artigo:
 
-    - **Pode ser Vendido**, vai estar disponível para vender
-    - **Pode ser Comprado**, vai estar disponível para compras
-    - **Recorrente**, vai estar disponível para subscrições permitindo ter períodos de recorrência
-    - **Pode ser Gasto**, vai estar disponível para utilização na app de Despesas
+    - **Vendas**, vai estar disponível na app Vendas
+    - **Compras**, vai estar disponível na app Compras
+    - **Subscrições**, vai estar disponível na app Subscrições permitindo ter períodos de recorrência
+    - **Despesas**, vai estar disponível na app Despesas
 
-    .. image:: stock/v17_stock_products01.png
+    .. image:: stock/v18_stock_products01.png
         :align: center
 
 .. tip::
     Existem muitos **Tipos de Artigos** disponíveis em Odoo, no entanto só existem 3 principais:
 
     - **Serviço**
-    - **Consumível**, não é feito controlo de stock e é sempre tratado como existindo stock disponível do mesmo
-    - **Artigo Armazenável**, é feito controlo de stock
+    - **Bens**
 
-    .. image:: stock/v17_stock_products02.png
+        - Sem controlo de Inventário, não é feito controlo de stock e é sempre tratado como existindo stock disponível do mesmo
+        - Com controlo de Inventário, é feito controlo de stock de uma de 3 maneiras (:ref:`Saiba mais <traceability_of_products>`)
+    - **Combo**, artigo que permite a combinação de outros existentes
+
+    .. image:: stock/v18_stock_products02.png
         :align: center
 
 .. important::
@@ -53,11 +56,6 @@ da normalidade.
 
     .. image:: stock/v17_stock_products03.png
         :align: center
-
-    .. example::
-        Pode ter um artigo onde o Tipo de Artigo seja Consumível, mas a Categoria Fiscal seja Mercadorias, ou seja,
-        perante a lógica portuguesa é uma mercadoria, mas perante o Odoo é um consumível porque não quer controlar o
-        stock deste artigo.
 
 .. tip::
     Existem 2 tipos de **Política de Faturação** que depois se subdividem mediante o que são:
@@ -89,6 +87,8 @@ da normalidade.
 
         No entanto, isto pode gerar erros de faturação, pelo que é altamente recomendado classificar muito bem este
         aspeto do artigo antes de prosseguir com a sua utilização.
+
+.. _traceability_of_products:
 
 .. tip::
     A categoria do artigo é uma funcionalidade Odoo que permite que o artigo herde características na eventualidade de
@@ -125,11 +125,11 @@ da normalidade.
 
     Em seguida deve ir ao artigo e na aba do **Inventário** escolher qual a política a associar ao produto:
 
-    - **Sem rastreio**
-    - **Por lotes**, vai permitir consumos parciais das quantidades
+    - **Quantidade** apenas controla a quantidade em stock permitindo consumos parciais sem informação adicional
+    - **Por lotes**, vai permitir consumos parciais das quantidades, mas obriga a inserir dados extra
     - **Por número de série único**, vai obrigar a consumo de uma e uma só unidade
 
-    .. image:: stock/v17_stock_products10.png
+    .. image:: stock/v18_stock_products10.png
         :align: center
 
     .. danger::
@@ -238,9 +238,9 @@ Existem duas formas de emitir guias em Odoo:
 
 No documento de Compra/Venda
 ----------------------------
-Ao gerar um documento de Compra/Venda que inclua artigos físicos (consumíveis ou artigos armazenáveis) é gerado de forma
-automática um smart button no topo da página com o icon de um camião. Esse smart button agrupa todos os documentos de
-Recebimento/Entrega associados ao processo, clique no mesmo
+Ao gerar um documento de Compra/Venda que inclua Bens é gerado de forma automática um smart button no topo da página com
+o icon de um camião. Esse smart button agrupa todos os documentos de Recebimento/Entrega associados ao processo, clique
+no mesmo
 
 .. image:: stock/v17_slips01.png
     :align: center
@@ -397,7 +397,7 @@ de **Inventário**
     :align: center
 
 .. seealso::
-    `Saiba mais sobre a metodologia de reabastecimento Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.html>`_
+    `Saiba mais sobre a metodologia de reabastecimento Odoo <https://www.odoo.com/documentation/19.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.html>`_
 
 Relatório de Stock
 ------------------
@@ -416,36 +416,43 @@ Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Stock` a pa
     :align: center
 
 .. seealso::
-    `Saiba mais sobre realtórios de inventário Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.html>`_
+    `Saiba mais sobre relatórios de inventário Odoo <https://www.odoo.com/documentation/19.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.html>`_
 
-Relatório de valorização
-------------------------
+Valorização de Inventário
+-------------------------
+.. note::
+    A partir da versão 19 o relatório de Valorização foi fundido com o relatório de Análise de Movimentação
+
+    A melhor forma de aceder à valorização é selecionar este relatório e mudar para a vista de Lista
+
 Neste relatório vai poder ver um agregado de todos os movimentos de inventário, com possibilidade de o filtrar e agrupar
 de diversas formas para que obtenha a informação que precisa
 
-Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Valorização` a partir da app de **Inventário**
+Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Análise de movimentação` a partir da app de **Inventário**
 
 .. image:: stock/v17_stock_products07.png
     :align: center
 
-.. image:: stock/v17_reports05.png
+.. image:: stock/v19_reports05.png
     :align: center
 
-.. image:: stock/v17_reports06.png
+.. image:: stock/v19_reports06.png
     :align: center
 
-Pode ainda fazer uma valorização numa data e hora específica que pretenda, para tal carregue no botão
-**Valorização à Data** e preencha o requisito
+Pode ainda fazer uma valorização e análise de inventário numa data e hora específica que pretenda, para tal carregue no
+botão **Valorização à Data** do mapa **Relatório de Stock** e preencha o requisito
 
-.. image:: stock/v17_reports10.png
+.. image:: stock/v19_reports10.png
     :align: center
 
-.. danger::
-    Em Odoo a valorização é sempre vista na data em que é registada em sistema, por esse motivo não é viável fazer
-    correções de períodos anteriores mas só do atual e futuro valor do inventário
+.. tip::
+    A partir da versão 19, já pode editar a data de um movimento de stock
+
+    - num documento de receção de mercadoria, mudando a Data Efetiva
+    - numa contagem mudando a Data Contagem
 
 .. seealso::
-    `Saiba mais sobre realtórios de valorização Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.html#inventory-valuation-report>`_
+    `Saiba mais sobre relatórios de valorização Odoo <https://www.odoo.com/documentation/19.0/pt_BR/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.html>`_
 
 Comunicação de inventário
 -------------------------
@@ -521,3 +528,61 @@ Para auditar estes valores, pode fazer uma consulta na app de **Inventário** no
    :align: center
 
 Ajuste os filtros com base nas datas e pontos considerados anteriormente e faça os agrupamentos que achar necessários
+
+Sugerimos um agrupamento pelo menos por produto e quanto aos filtros podem usar os seguintes filtros personalizados para
+encontrar as seguintes informações
+
+**Stocks**
+
+Vai buscar as entradas, subtraídas das saídas e dos componentes em operação de produção
+
+.. code:: python
+
+    [
+        "&",
+        "&",
+        ("product_id.is_storable", "=", True),
+        ("owner_id", "=", False),
+        "|",
+        "&",
+        ("state", "=", "done"),
+        "|",
+        "&",
+        ("location_usage", "not in", ["internal", "transit"]),
+        ("location_dest_usage", "in", ["internal", "transit"]),
+        "&",
+        ("location_usage", "in", ["internal", "transit"]),
+        ("location_dest_usage", "not in", ["internal", "transit"]),
+        "&",
+        "&",
+        ("state", "=", "assigned"),
+        ("picking_type_id.code", "=", "mrp_operation"),
+        "&",
+        ("location_usage", "in", ["internal", "transit"]),
+        ("location_dest_usage", "not in", ["internal", "transit"]),
+    ]
+
+**Componentes em operação de produção**
+
+.. code:: python
+
+    [
+        ("product_id.is_storable", "=", True),
+        ("owner_id", "=", False),
+        ("state", "=", "assigned"),
+        ("picking_type_id.code", "=", "mrp_operation"),
+        ("location_usage", "in", ["internal", "transit"]),
+        ("location_dest_usage", "not in", ["internal", "transit"]),
+    ]
+
+**Artigos em Transformação**
+
+.. code:: python
+
+    [
+        ("product_id.is_storable", "=", True),
+        ("owner_id", "=", False),
+        ("state", "=", "assigned"),
+        ("location_usage", "not in", ["internal", "transit"]),
+        ("location_dest_usage", "in", ["internal", "transit"]),
+    ]
