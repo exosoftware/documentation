@@ -42,7 +42,7 @@ da normalidade.
     - **Bens**
 
         - Sem controlo de Inventário, não é feito controlo de stock e é sempre tratado como existindo stock disponível do mesmo
-        - Com controlo de Inventário, é feito controlo de stock de uma de 3 maneiras (:ref:`Saiba mais <odoo_process_quotation_revisions>`)
+        - Com controlo de Inventário, é feito controlo de stock de uma de 3 maneiras (:ref:`Saiba mais <traceability_of_products>`)
     - **Combo**, artigo que permite a combinação de outros existentes
 
     .. image:: stock/v18_stock_products02.png
@@ -88,7 +88,7 @@ da normalidade.
         No entanto, isto pode gerar erros de faturação, pelo que é altamente recomendado classificar muito bem este
         aspeto do artigo antes de prosseguir com a sua utilização.
 
-.. _tracebility_of_products:
+.. _traceability_of_products:
 
 .. tip::
     A categoria do artigo é uma funcionalidade Odoo que permite que o artigo herde características na eventualidade de
@@ -397,7 +397,7 @@ de **Inventário**
     :align: center
 
 .. seealso::
-    `Saiba mais sobre a metodologia de reabastecimento Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.html>`_
+    `Saiba mais sobre a metodologia de reabastecimento Odoo <https://www.odoo.com/documentation/19.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/replenishment.html>`_
 
 Relatório de Stock
 ------------------
@@ -416,36 +416,43 @@ Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Stock` a pa
     :align: center
 
 .. seealso::
-    `Saiba mais sobre realtórios de inventário Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.html>`_
+    `Saiba mais sobre relatórios de inventário Odoo <https://www.odoo.com/documentation/19.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.html>`_
 
-Relatório de valorização
-------------------------
+Valorização de Inventário
+-------------------------
+.. note::
+    A partir da versão 19 o relatório de Valorização foi fundido com o relatório de Análise de Movimentação
+
+    A melhor forma de aceder à valorização é selecionar este relatório e mudar para a vista de Lista
+
 Neste relatório vai poder ver um agregado de todos os movimentos de inventário, com possibilidade de o filtrar e agrupar
 de diversas formas para que obtenha a informação que precisa
 
-Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Valorização` a partir da app de **Inventário**
+Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Análise de movimentação` a partir da app de **Inventário**
 
 .. image:: stock/v17_stock_products07.png
     :align: center
 
-.. image:: stock/v17_reports05.png
+.. image:: stock/v19_reports05.png
     :align: center
 
-.. image:: stock/v17_reports06.png
+.. image:: stock/v19_reports06.png
     :align: center
 
-Pode ainda fazer uma valorização numa data e hora específica que pretenda, para tal carregue no botão
-**Valorização à Data** e preencha o requisito
+Pode ainda fazer uma valorização e análise de inventário numa data e hora específica que pretenda, para tal carregue no
+botão **Valorização à Data** do mapa **Relatório de Stock** e preencha o requisito
 
-.. image:: stock/v17_reports10.png
+.. image:: stock/v19_reports10.png
     :align: center
 
-.. danger::
-    Em Odoo a valorização é sempre vista na data em que é registada em sistema, por esse motivo não é viável fazer
-    correções de períodos anteriores mas só do atual e futuro valor do inventário
+.. tip::
+    A partir da versão 19, já pode editar a data de um movimento de stock
+
+    - num documento de receção de mercadoria, mudando a Data Efetiva
+    - numa contagem mudando a Data Contagem
 
 .. seealso::
-    `Saiba mais sobre realtórios de valorização Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.html#inventory-valuation-report>`_
+    `Saiba mais sobre relatórios de valorização Odoo <https://www.odoo.com/documentation/19.0/pt_BR/applications/inventory_and_mrp/inventory/inventory_valuation/cheat_sheet.html>`_
 
 Comunicação de inventário
 -------------------------
