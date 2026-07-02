@@ -521,3 +521,58 @@ Para auditar estes valores, pode fazer uma consulta na app de **Inventário** no
    :align: center
 
 Ajuste os filtros com base nas datas e pontos considerados anteriormente e faça os agrupamentos que achar necessários
+
+Sugerimos um agrupamento pelo menos por produto e quanto aos filtros podem usar os seguintes filtros personalizados para
+encontrar as seguintes informações
+
+**Stocks**
+
+Vai buscar as entradas, subtraídas das saídas e dos componentes em operação de produção
+
+.. code-block::
+    [
+        "&",
+        "&",
+        ("product_id.is_storable", "=", True),
+        ("owner_id", "=", False),
+        "|",
+        "&",
+        ("state", "=", "done"),
+        "|",
+        "&",
+        ("location_usage", "not in", ["internal", "transit"]),
+        ("location_dest_usage", "in", ["internal", "transit"]),
+        "&",
+        ("location_usage", "in", ["internal", "transit"]),
+        ("location_dest_usage", "not in", ["internal", "transit"]),
+        "&",
+        "&",
+        ("state", "=", "assigned"),
+        ("picking_type_id.code", "=", "mrp_operation"),
+        "&",
+        ("location_usage", "in", ["internal", "transit"]),
+        ("location_dest_usage", "not in", ["internal", "transit"]),
+    ]
+
+**Componentes em operação de produção**
+
+.. code-block::
+    [
+        ("product_id.is_storable", "=", True),
+        ("owner_id", "=", False),
+        ("state", "=", "assigned"),
+        ("picking_type_id.code", "=", "mrp_operation"),
+        ("location_usage", "in", ["internal", "transit"]),
+        ("location_dest_usage", "not in", ["internal", "transit"]),
+    ]
+
+**Artigos em Transformação**
+
+.. code-block::
+    [
+        ("product_id.is_storable", "=", True),
+        ("owner_id", "=", False),
+        ("state", "=", "assigned"),
+        ("location_usage", "not in", ["internal", "transit"]),
+        ("location_dest_usage", "in", ["internal", "transit"]),
+    ]
