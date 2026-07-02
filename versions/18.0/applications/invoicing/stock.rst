@@ -42,7 +42,7 @@ da normalidade.
     - **Bens**
 
         - Sem controlo de Inventário, não é feito controlo de stock e é sempre tratado como existindo stock disponível do mesmo
-        - Com controlo de Inventário, é feito controlo de stock de uma de 3 maneiras (:ref:`Saiba mais <odoo_process_quotation_revisions>`)
+        - Com controlo de Inventário, é feito controlo de stock de uma de 3 maneiras (:ref:`Saiba mais <traceability_of_products>`)
     - **Combo**, artigo que permite a combinação de outros existentes
 
     .. image:: stock/v18_stock_products02.png
@@ -88,7 +88,7 @@ da normalidade.
         No entanto, isto pode gerar erros de faturação, pelo que é altamente recomendado classificar muito bem este
         aspeto do artigo antes de prosseguir com a sua utilização.
 
-.. _tracebility_of_products:
+.. _traceability_of_products:
 
 .. tip::
     A categoria do artigo é uma funcionalidade Odoo que permite que o artigo herde características na eventualidade de
@@ -416,7 +416,7 @@ Para ter acesso basta aceder ao menu :menuselection:`Relatórios --> Stock` a pa
     :align: center
 
 .. seealso::
-    `Saiba mais sobre realtórios de inventário Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.html>`_
+    `Saiba mais sobre relatórios de inventário Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/reporting/stock.html>`_
 
 Relatório de valorização
 ------------------------
@@ -445,7 +445,7 @@ Pode ainda fazer uma valorização numa data e hora específica que pretenda, pa
     correções de períodos anteriores mas só do atual e futuro valor do inventário
 
 .. seealso::
-    `Saiba mais sobre realtórios de valorização Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.html#inventory-valuation-report>`_
+    `Saiba mais sobre relatórios de valorização Odoo <https://www.odoo.com/documentation/18.0/pt_BR/applications/inventory_and_mrp/inventory/warehouses_storage/inventory_valuation/using_inventory_valuation.html#inventory-valuation-report>`_
 
 Comunicação de inventário
 -------------------------
