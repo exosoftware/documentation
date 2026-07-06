@@ -1,8 +1,8 @@
 :nosearch:
 
-=============================================
-SDR / Volta — Sistema de Depósito e Reembolso
-=============================================
+===========
+SDR / Volta
+===========
 O **Sistema de Depósito e Reembolso** (SDR), comummente designado por *Volta*, é um regime que aplica
 um valor de depósito reembolsável às embalagens de bebidas de utilização única. Esse depósito é
 cobrado ao cliente no momento da venda e devolvido aquando da entrega da embalagem para reciclagem.
@@ -93,3 +93,7 @@ disponível no cabeçalho da fatura enquanto esta estiver em estado de rascunho.
 .. note::
     O valor do depósito não está sujeito a IVA. Na exportação do ficheiro SAF-T, a linha é reportada
     com o motivo de isenção **M99**.
+
+.. tip::
+    Caso haja interesse em controlar as embalagens do tipo Volta recolhidas, deverá ser solicitado
+    apoio à implementação dessa funcionalidade no âmbito de consultoria funcional.
