@@ -219,13 +219,3 @@ dependências necessárias para cada módulo:
      - | `mis_builder <https://github.com/OCA/mis-builder/tree/17.0/mis_builder>`_
        | `report_xlsx <https://github.com/OCA/reporting-engine/tree/17.0/report_xlsx>`_
        | `date_range <https://github.com/OCA/server-ux/tree/17.0/date_range>`_
-   * -
-     - pt-payroll
-     - Salários
-     - ptplus_payroll_ce
-     -
-     -
-     - | `payroll <https://github.com/OCA/payroll/tree/16.0/payroll>`_
-       | `payroll_account <https://github.com/OCA/payroll/tree/16.0/payroll_account>`_
-       | `base_time_parameter <https://github.com/OCA/server-tools/tree/15.0/base_time_parameter>`_
-       | `payroll_rule_time_parameter <https://github.com/OCA/payroll/tree/16.0/payroll_rule_time_parameter>`_
