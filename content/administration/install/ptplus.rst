@@ -148,16 +148,9 @@ dependências necessárias para cada módulo:
      - pt-plus
      - Faturação
      - ptplus
-     - git+https://github.com/OCA/openupgradelib.git@master, git+https://github.com/exosoftware/runpack.git, pyopenssl==22.1.0, unicodecsv, xmlschema==3.4.3, zeep
+     - git+https://github.com/OCA/openupgradelib.git@master, git+https://github.com/exosoftware/runpack.git, pyopenssl==22.1.0, unicodecsv, xmlschema==3.4.3
      -
      -
-   * -
-     - pt-plus
-     - Faturação
-     - ptplus_account_credit_note
-     -
-     -
-     - `account_invoice_refund_link <https://github.com/OCA/account-invoicing/tree/17.0/account_invoice_refund_link>`_
    * -
      - pt-plus
      - Faturação
@@ -165,13 +158,6 @@ dependências necessárias para cada módulo:
      -
      -
      - `stock_picking_invoice_link <https://github.com/OCA/stock-logistics-workflow/tree/17.0/stock_picking_invoice_link>`_
-   * -
-     - pt-plus
-     - Faturação
-     - ptplus_backend_exo
-     - cryptography
-     -
-     -
    * -
      - pt-plus
      - Faturação
@@ -183,7 +169,7 @@ dependências necessárias para cada módulo:
      - pt-plus
      - Faturação
      - ptplus_pdf_sign
-     - pyotp, asn1crypto, pyhanko
+     - pyotp, pyhanko
      -
      -
    * -
@@ -210,12 +196,3 @@ dependências necessárias para cada módulo:
      - bs4, requests_html, pymupdf==1.24.10, opencv-contrib-python-headless, html5lib
      -
      -
-   * -
-     - pt-plus
-     - Contabilidade
-     - ptplus_accounting_mis_report
-     -
-     -
-     - | `mis_builder <https://github.com/OCA/mis-builder/tree/17.0/mis_builder>`_
-       | `report_xlsx <https://github.com/OCA/reporting-engine/tree/17.0/report_xlsx>`_
-       | `date_range <https://github.com/OCA/server-ux/tree/17.0/date_range>`_
