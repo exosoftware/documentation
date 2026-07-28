@@ -21,11 +21,16 @@ e declarado quando é efetivamente retido — no pagamento — tal como previsto
 Configuração
 ============
 
-Com o módulo instalado, a seguinte configuração é feita **automaticamente** para cada empresa
+Este processo assenta em dois módulos: o módulo nativo do Odoo **Withholding Tax on Payment**
+e o módulo dedicado da Localização PT+ **Portugal - Withholding Tax on Payment**, que é
+instalado automaticamente assim que o módulo do Odoo é instalado numa base de dados com a
+Localização PT+.
+
+Com os módulos instalados, a seguinte configuração é feita **automaticamente** para cada empresa
 portuguesa:
 
 - A conta **242 — Retenção de impostos sobre rendimentos** é definida como conta base de retenção
-  da empresa (campo *Withholding Tax Base* nas definições de contabilidade);
+  da empresa nas definições de contabilidade;
 - É criada uma sequência **RF/** por empresa, usada para numerar as retenções efetuadas nos
   pagamentos.
 
@@ -107,7 +112,7 @@ vez, no momento do pagamento**:
    * - Declaração / ficheiro
      - Comportamento
    * - SAF-T (PT)
-     - O elemento ``WithholdingTax`` é incluído no **recibo** (secção 4.4 Payments). A fatura não
+     - O elemento ``WithholdingTax`` é incluído no **recibo** (secção 4.4 — Pagamentos). A fatura não
        menciona a retenção no SAF-T nem no código QR — a menção no PDF é meramente comercial.
    * - Modelo 10 / Modelo 30
      - Os valores retidos são reportados com **data do pagamento** (e não da fatura), através dos
