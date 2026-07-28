@@ -17,6 +17,7 @@ Explore mais sobre os nossos add-ons de Faturação, Pagamentos e Stock
     invoicing/fiscal_documents
     invoicing/series_registration
     invoicing/taxes
+    invoicing/withholding_tax
     invoicing/odoo_process
     invoicing/e-invoicing
     invoicing/saphety
