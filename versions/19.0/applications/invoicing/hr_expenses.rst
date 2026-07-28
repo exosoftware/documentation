@@ -112,6 +112,74 @@ Depois de aprovada tem acesso ao documento de compensação por deslocações in
 .. image:: hr_expenses/v17_Expenses05.png
    :align: center
 
+.. _expenseReimbursement:
+
+Despesas Pagas pelo Próprio Funcionário e Reembolso
+====================================================
+
+.. important::
+    Este fluxo aplica-se apenas a empresas portuguesas, nas despesas cujo campo **Pago por** esteja definido como
+    **Funcionário (a reembolsar)**.
+
+Quando um funcionário paga uma despesa do seu próprio bolso, em vez de o Odoo publicar diretamente um recibo de
+despesa contabilizado ao funcionário, é criada uma **fatura de fornecedor em rascunho** no fornecedor real da
+despesa. Isto permite à contabilidade rever o documento antes de o publicar. Só quando essa fatura de fornecedor é
+publicada é que a dívida passa do fornecedor para o funcionário, através de um lançamento de transferência de
+dívida, e só quando essa dívida ao funcionário for liquidada é que a despesa fica **Paga**.
+
+Configuração
+____________
+
+Antes de poder usar este fluxo, defina a **Conta de Reembolso de Despesas**: aceda a
+:menuselection:`Contabilidade --> Configuração --> Definições`, procure a secção **Portugal** e no bloco
+**Reembolso de Despesas** escolha a conta de passivo corrente (reconciliável) que vai registar a dívida da empresa
+aos seus funcionários.
+
+.. image:: hr_expenses/v19_reimbursement_settings.png
+   :align: center
+
+Utilização
+__________
+
+Ao criar a despesa, no campo **Pago por** escolha **Funcionário (a reembolsar)** e preencha o campo **Fornecedor**
+com o fornecedor real da despesa. Este campo é obrigatório antes de publicar a despesa.
+
+.. image:: hr_expenses/v19_reimbursement_expense_form.png
+   :align: center
+
+.. note::
+    O campo **Fornecedor** só é visível nas despesas pagas pelo funcionário de empresas portuguesas, ou nas
+    despesas pagas pela empresa.
+
+Depois de aprovada, ao publicar a despesa com o botão **Publicar Lançamentos em Diário**, o Odoo cria uma
+**fatura de fornecedor em rascunho** no fornecedor da despesa, com o campo **Parceiro a Reembolsar** já preenchido
+com o funcionário. A despesa passa para o estado **Publicada**, mas ainda não fica **Paga**.
+
+Reveja a fatura de fornecedor criada e publique-a normalmente. Ao publicá-la, o Odoo transfere automaticamente o
+saldo a pagar do fornecedor para o funcionário, para a **Conta de Reembolso de Despesas**, através de um
+lançamento de transferência de dívida acessível pelo botão **Debt Transfer** no topo da fatura.
+
+.. image:: hr_expenses/v19_reimbursement_bill.png
+   :align: center
+
+.. image:: hr_expenses/v19_reimbursement_debt_transfer.png
+   :align: center
+
+A despesa só passa a **Paga** quando essa dívida ao funcionário for liquidada, por exemplo com um pagamento
+bancário ao funcionário reconciliado com o lançamento de transferência de dívida.
+
+.. image:: hr_expenses/v19_reimbursement_expense_paid.png
+   :align: center
+
+.. tip::
+    Se o recibo da despesa já tiver sido lido através do **Scan QR** (ver :doc:`e-Fatura <../accounting/efatura>`)
+    antes de a despesa ser publicada, o Odoo identifica automaticamente o registo e-Fatura correspondente e
+    reaproveita a fatura de fornecedor já criada por essa sincronização, em vez de criar uma fatura duplicada —
+    inclusive com uma linha por cada taxa de imposto do documento e-Fatura (por exemplo 6% + 23% no mesmo recibo).
+
+    Nesse caso, os campos de imposto da própria despesa ficam ocultos, porque a repartição de imposto real passa a
+    estar no registo e-Fatura.
+
 .. seealso::
     `Consulte a documentação Odoo sobre Despesas <https://www.odoo.com/documentation/18.0/pt_BR/applications/finance/expenses.html>`_
 

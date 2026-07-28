@@ -241,6 +241,12 @@ Se as situações inconsistentes forem desativadas no e-Fatura, a formatação c
     .. image:: efatura/v17_efatura09.png
        :align: center
 
+.. note::
+    Se o recibo de uma despesa paga pelo funcionário já tiver sido lido com o **Scan QR** antes de a despesa ser
+    publicada, o Odoo identifica o registo e-Fatura correspondente e reaproveita-o na fatura de fornecedor gerada
+    pelo reembolso, evitando duplicados. Consulte :doc:`Despesas de Funcionários <../invoicing/hr_expenses>` para
+    mais detalhes sobre o fluxo de reembolso de despesas.
+
 Scan Código QR
 ==============
 Para aqueles que não querem esperar pelo report do eFatura, podem ir inserindo as faturas em Odoo, com base no scan do
