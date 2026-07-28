@@ -21,7 +21,13 @@ e declarado quando é efetivamente retido — no pagamento — tal como previsto
 Configuração
 ============
 
-Com o módulo instalado, a seguinte configuração é feita **automaticamente** para cada empresa
+Este processo assenta em dois módulos: o módulo nativo do Odoo **Withholding Tax on Payment**
+(``l10n_account_withholding_tax``) e o módulo dedicado da Localização PT+
+**Portugal - Withholding Tax on Payment** (``ptplus_account_withholding_tax``). O módulo PT+ é
+instalado automaticamente assim que o módulo do Odoo é instalado numa base de dados com a
+Localização PT+.
+
+Com os módulos instalados, a seguinte configuração é feita **automaticamente** para cada empresa
 portuguesa:
 
 - A conta **242 — Retenção de impostos sobre rendimentos** é definida como conta base de retenção
