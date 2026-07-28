@@ -36,8 +36,7 @@ utilizador Odoo e inserir os dados na aba **Portugal**
 
 Configurações
 =============
-Tenha já criado um **diário** do tipo **Compras**, um **artigo** para ser utilizado no processo de importação de
-documentos (este artigo deve poder ser comprado) bem como **todos os impostos base** necessários através da escolha de
+Tenha já criado um **diário** do tipo **Compras** bem como **todos os impostos base** necessários através da escolha de
 um plano de contas
 
 Aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá
@@ -49,18 +48,15 @@ ao menu :menuselection:`Configuração --> Configurações`
 .. image:: efatura/v17_efaturaConfig01.png
    :align: center
 
-Procure a secção **Portugal** e configure os campos relativos ao eFatura:
+Procure a secção **Portugal** e configure os campos relativos ao E-Fatura:
 
-- Diário de compras que criou
-- Produto do eFatura que criou
-- Taxas Normal, Intermédia, Reduzida e Isenta inseridas com o plano de contas
+- O :guilabel:`Diário` de compras que criou
+- Ative a opção :guilabel:`Leitura E-Fatura`, que lhe vai permitir fazer scan dos códigos QR das faturas e criar as
+  mesmas
+- Use o botão :guilabel:`Configurar Mapeamentos` para definir que imposto e que artigo o Odoo aplica a cada imposto que
+  a AT reporta — ver :ref:`efatura-mapeamento-impostos`
 
-.. image:: efatura/v17_efaturaConfig02.png
-   :align: center
-
-Ative a opção E-Fatura Scan que lhe vai permitir fazer scan dos códigos QR das faturas e criar as mesmas
-
-.. image:: efatura/v17_efaturaConfig03.png
+.. image:: efatura/v19_efatura_settings.png
    :align: center
 
 .. important::
@@ -69,6 +65,92 @@ Ative a opção E-Fatura Scan que lhe vai permitir fazer scan dos códigos QR da
 
     Na eventualidade de ter os 2 ativos, primeiro é usado o OCR do Odoo e só em seguida o leitor de código QR da Exo
     Software.
+
+.. _efatura-mapeamento-impostos:
+
+Mapeamento de impostos do E-Fatura
+----------------------------------
+A AT não reporta o imposto do seu plano de contas — reporta as características do imposto que o seu fornecedor
+declarou. A tabela de **Mapeamento de Impostos E-Fatura** é onde diz ao Odoo, uma vez só, o que fazer com cada
+combinação dessas características: que **imposto** aplicar e com que **artigo** criar a linha da fatura de fornecedor.
+
+Chega lá pelo botão :guilabel:`Configurar Mapeamentos` das configurações, ou pelo menu
+:menuselection:`Configuração --> Mapeamento de Impostos E-Fatura`
+
+.. image:: efatura/v19_efatura_mapping_list.png
+   :align: center
+
+Cada linha da tabela tem duas metades: os **valores a aplicar** e os **critérios** pelos quais é escolhida
+
+.. image:: efatura/v19_efatura_mapping_form.png
+   :align: center
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Critério
+     - O que a AT reporta
+   * - **%**
+     - A taxa do imposto. Escreva-a como número — ``23``, ``23.0`` ou ``23,00`` são equivalentes
+   * - **Tipo de Imposto**
+     - Se a linha é de IVA, de Imposto do Selo ou Não Sujeita
+   * - **Taxa**
+     - O tipo de taxa: isenta, reduzida, intermédia ou normal
+   * - **Motivo de Isenção**
+     - O código da isenção, de M01 a M99, quando existe
+   * - **País** e **Região**
+     - O espaço fiscal do imposto: Continente, Açores ou Madeira
+   * - **Verba**
+     - Para o IVA repete o tipo de taxa; para o Imposto do Selo é a verba, por exemplo ``17.3.4``
+
+.. important::
+    **Um critério deixado em branco corresponde a qualquer valor.** É isto que lhe permite ter um mapeamento genérico:
+    por exemplo, deixar a :guilabel:`%` vazia faz o mapeamento servir todas as taxas do tipo de imposto indicado.
+
+    Quanto menos critérios preencher, mais situações o mapeamento cobre.
+
+Se mais do que um mapeamento corresponder à mesma linha, **aplica-se o primeiro a contar do topo da tabela**. Use o
+manípulo à esquerda para arrastar um mapeamento para cima e lhe dar prioridade.
+
+.. tip::
+    Pode restringir um mapeamento a **fornecedores** específicos no campo :guilabel:`Fornecedores`. Um mapeamento assim
+    nasce no topo da tabela, para que se aplique antes dos genéricos, mas continua a ser a ordem da tabela a decidir —
+    se o arrastar para baixo de um genérico, passa a ser o genérico a aplicar-se.
+
+    Na ficha do fornecedor tem um botão :guilabel:`Configurar Mapeamentos` que abre a tabela já filtrada por esse
+    fornecedor.
+
+O :guilabel:`Produto a Aplicar` e o :guilabel:`Imposto a Aplicar` são ambos opcionais. Se os deixar vazios, a linha da
+fatura de fornecedor é criada sem artigo e sem imposto, com o **valor total** que a AT reportou para essa linha — assim
+o total da fatura continua igual ao do documento do E-Fatura e completa depois a informação que faltar.
+
+Numa empresa portuguesa a tabela já vem preenchida com quatro mapeamentos para as taxas de IVA do Continente — 23%, 13%,
+6% e 0% — assentes no artigo genérico de despesas. Acrescente os que a sua atividade justificar.
+
+Mapeamento genérico para tudo o resto
+"""""""""""""""""""""""""""""""""""""
+Se não quiser configurar caso a caso, pode deixar **uma linha totalmente vazia no fundo da tabela**: sem critérios
+preenchidos corresponde a qualquer imposto, e sem artigo nem imposto a aplicar serve de rede para tudo o que os
+mapeamentos acima não apanharem.
+
+.. warning::
+    É a opção menos precisa e tem duas consequências que deve conhecer antes de a adotar:
+
+    - As faturas criadas a partir dessas linhas ficam **sem artigo e sem imposto**, com o valor total na base. Os
+      totais batem com o E-Fatura, mas a classificação contabilística e o IVA dedutível ficam por fazer à mão em cada
+      documento;
+    - Como nunca fica nada sem mapeamento, **o aviso de mapeamento em falta deixa de aparecer**. Perde o alerta que lhe
+      indicaria precisamente quais os impostos que ainda lhe faltam configurar (ver
+      :ref:`efatura-mapeamento-em-falta`).
+
+    Mantenha-a sempre em **último lugar** na tabela, para que os mapeamentos preenchidos acima continuem a ter
+    prioridade.
+
+.. note::
+    O plano de contas não traz impostos de **Imposto do Selo** criados. Se recebe faturas com selo — apólices de seguro
+    e operações de crédito, por exemplo — crie o imposto de compra respetivo e mapeie-o pela taxa e pela verba que a AT
+    reporta.
 
 Insersão da informação do e-Fatura
 ==================================
@@ -150,6 +232,36 @@ opção **Registar ao Fechar** que vai guardar no seu Odoo uma cópia dos movime
     Este método é menos recomendado porque não traz as diferentes linhas por imposto e o valor de impostos pode não
     bater certo com uma das taxas de impostos que utiliza, pelo que conseguir a equivalência pode ser mais difícil
 
+.. _efatura-mapeamento-em-falta:
+
+Impostos sem mapeamento
+-----------------------
+Um documento só dá origem a fatura de fornecedor quando **todos** os impostos que a AT reportou têm mapeamento. Se
+faltar algum, o Odoo não cria a fatura: uma fatura construída só com parte das linhas teria um total diferente do
+documento do E-Fatura e passaria por completa.
+
+O documento fica sinalizado, com um aviso no topo a dizer que impostos faltam e um triângulo amarelo nas linhas em
+causa.
+
+.. image:: efatura/v19_efatura_mapping_missing.png
+   :align: center
+
+Para resolver, carregue no botão :guilabel:`+` da linha assinalada: abre um mapeamento novo já preenchido com o que a AT
+reportou nessa linha, ficando-lhe apenas por escolher o imposto e o artigo a aplicar. Depois de gravar, corra
+**Criar/Atualizar Faturas** sobre o documento.
+
+.. tip::
+    No assistente de sincronização o resumo final indica quantos documentos ficaram à espera de mapeamento e dá-lhe dois
+    atalhos: um para a lista desses documentos e outro para a tabela de mapeamentos.
+
+    Na lista do E-Fatura tem também o filtro :guilabel:`Mapeamento de Imposto em Falta` para os encontrar a qualquer
+    momento.
+
+.. important::
+    Se pedir **Criar/Atualizar Faturas** sobre documentos a que falta mapeamento, o Odoo avisa e não cria nada,
+    indicando que impostos tem de configurar primeiro e oferecendo um botão que abre a tabela de mapeamentos. Aqui o
+    processo foi pedido por si de forma explícita, por isso nada é feito a meio.
+
 Fusão de documentos
 -------------------
 Devido à possibilidade de serem criadas faturas em duplicado porque não conseguiu fazer uma equivalência automática na
@@ -171,6 +283,8 @@ Na vista de lista as diferentes faturas vão estar codificadas por cores:
 
 - **Verde**, se os dados que constam no seu Odoo estiverem corretos
 - **Vermelho**, se os dados que constam no seu Odoo apresentarem uma **Situação Inconsistente**
+- **Amarelo**, se algum dos impostos que a AT reportou não tiver mapeamento — ver
+  :ref:`efatura-mapeamento-em-falta`
 
 .. image:: efatura/v17_efatura01.png
    :align: center
@@ -224,6 +338,11 @@ Esta formatação muda para **Vermelho** os valores que apareçam diferentes em 
 **Verde** os que estiverem corretos
 
 Se as situações inconsistentes forem desativadas no e-Fatura, a formatação condicional fica a verde no Odoo
+
+.. note::
+    O campo :guilabel:`Impostos do E-Fatura` da fatura de fornecedor compara **todos** os impostos que a AT reportou
+    para o documento, não apenas o IVA. A AT envia o IVA no total do documento e o Imposto do Selo apenas nas linhas,
+    por isso uma fatura com selo corretamente mapeado aparecia antes como divergente sem o ser.
 
 .. image:: efatura/v17_efatura06.png
    :align: center
