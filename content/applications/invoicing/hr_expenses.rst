@@ -118,21 +118,21 @@ Despesas Pagas pelo Próprio Funcionário e Reembolso
 ====================================================
 
 .. important::
-    Este fluxo aplica-se apenas a empresas portuguesas, nas despesas cujo campo **Pago por** esteja definido como
-    **Funcionário (a reembolsar)**.
+    Este fluxo aplica-se apenas a empresas com localização PT+ ativa, nas despesas cujo campo **Pago por**
+    esteja definido como **Funcionário (a reembolsar)**.
 
-Quando um funcionário paga uma despesa do seu próprio bolso, em vez de o Odoo publicar diretamente um recibo de
-despesa contabilizado ao funcionário, é criada uma **fatura de fornecedor em rascunho** no fornecedor real da
+Quando um funcionário paga uma despesa do seu próprio bolso, em vez de ser publicado diretamente um recibo de
+despesa contabilizado ao funcionário, é criada uma **fatura de fornecedor em rascunho** do fornecedor real da
 despesa. Isto permite à contabilidade rever o documento antes de o publicar. Só quando essa fatura de fornecedor é
 publicada é que a dívida passa do fornecedor para o funcionário, através de um lançamento de transferência de
-dívida, e só quando essa dívida ao funcionário for liquidada é que a despesa fica **Paga**.
+dívida, e só quando essa dívida ao funcionário for liquidada é que a despesa passa ao estado de **Paga**.
 
 Configuração
 ____________
 
 Antes de poder usar este fluxo, defina a **Conta de Reembolso de Despesas**: aceda a
 :menuselection:`Contabilidade --> Configuração --> Definições`, procure a secção **Portugal** e no bloco
-**Reembolso de Despesas** escolha a conta de passivo corrente (reconciliável) que vai registar a dívida da empresa
+**Reembolso de Despesas** escolha a conta do tipo **A pagar** (reconciliável) que vai registar a dívida da empresa
 aos seus funcionários.
 
 .. image:: hr_expenses/v19_reimbursement_settings.png
@@ -141,23 +141,26 @@ aos seus funcionários.
 Utilização
 __________
 
-Ao criar a despesa, no campo **Pago por** escolha **Funcionário (a reembolsar)** e preencha o campo **Fornecedor**
-com o fornecedor real da despesa. Este campo é obrigatório antes de publicar a despesa.
+Ao criar a despesa, escolha o **Funcionário** a reembolsar, no campo **Pago por** escolha
+**Funcionário (a reembolsar)** e preencha o campo **Fornecedor** com o real fornecedor da despesa. Este campo é
+obrigatório antes de submeter e publicar a despesa na data contabilística pretendida.
 
 .. image:: hr_expenses/v19_reimbursement_expense_form.png
    :align: center
 
 .. note::
-    O campo **Fornecedor** só é visível nas despesas pagas pelo funcionário de empresas portuguesas, ou nas
-    despesas pagas pela empresa.
+    O campo **Fornecedor** só é visível nas despesas pagas pelo funcionário para empresas com localização
+    PT+ ativa, ou nas despesas pagas pela empresa para todas.
 
 Depois de aprovada, ao publicar a despesa com o botão **Publicar Lançamentos em Diário**, o Odoo cria uma
 **fatura de fornecedor em rascunho** no fornecedor da despesa, com o campo **Parceiro a Reembolsar** já preenchido
-com o funcionário. A despesa passa para o estado **Publicada**, mas ainda não fica **Paga**.
+com o contacto do funcionário. A despesa passa para o estado **Publicada**, mas ainda não fica **Paga**.
 
-Reveja a fatura de fornecedor criada e publique-a normalmente. Ao publicá-la, o Odoo transfere automaticamente o
-saldo a pagar do fornecedor para o funcionário, para a **Conta de Reembolso de Despesas**, através de um
-lançamento de transferência de dívida acessível pelo botão **Debt Transfer** no topo da fatura.
+Reveja a fatura de fornecedor criada e publique-a normalmente.
+
+Ao publicá-la, o Odoo transfere automaticamente o saldo a pagar do fornecedor para o funcionário, para a
+**Conta de Reembolso de Despesas**, através de um lançamento de transferência de dívida acessível pelo botão
+**Transferência de Dívida** no topo da fatura.
 
 .. image:: hr_expenses/v19_reimbursement_bill.png
    :align: center
@@ -165,8 +168,8 @@ lançamento de transferência de dívida acessível pelo botão **Debt Transfer*
 .. image:: hr_expenses/v19_reimbursement_debt_transfer.png
    :align: center
 
-A despesa só passa a **Paga** quando essa dívida ao funcionário for liquidada, por exemplo com um pagamento
-bancário ao funcionário reconciliado com o lançamento de transferência de dívida.
+A despesa só passa ao estado **Paga** quando a dívida ao funcionário for liquidada através da reconciliação
+do(s) lançamento(s) de Transferência de Dívida com a respetiva linha do extrato bancário.
 
 .. image:: hr_expenses/v19_reimbursement_expense_paid.png
    :align: center
