@@ -26,13 +26,16 @@ e o módulo dedicado da Localização PT+ **Portugal - Withholding Tax on Paymen
 instalado automaticamente assim que o módulo do Odoo é instalado numa base de dados com a
 Localização PT+.
 
-Com os módulos instalados, a seguinte configuração é feita **automaticamente** para cada empresa
-portuguesa:
+Com os módulos instalados, deve ser feita a seguinte configuração manual:
 
-- A conta **242 — Retenção de impostos sobre rendimentos** é definida como conta base de retenção
+- Definir a conta **242 — Retenção de impostos sobre rendimentos** como conta base de retenção
   da empresa nas definições de contabilidade;
-- É criada uma sequência **RF/** por empresa, usada para numerar as retenções efetuadas nos
+- Criar uma sequência **RF/** por empresa, usada para numerar as retenções efetuadas nos
   pagamentos.
+
+.. note::
+    No caso de criação de bases de dados novas, esta configuração (conta e sequência) é automática
+    após a instalação dos módulos.
 
 Para que um imposto de retenção (RF) passe a ser retido no pagamento, abra a ficha do imposto em
 :menuselection:`Faturação / Contabilidade --> Configuração --> Impostos` e ative a opção
@@ -83,8 +86,8 @@ número de sequência (``RF/xxxx``) e o valor líquido a pagar (:guilabel:`Valor
 .. note::
     O campo :guilabel:`Conta pendente` é obrigatório quando o método de pagamento não tem conta
     de pagamentos pendentes configurada: com retenção, o lançamento contabilístico é criado no
-    momento do pagamento e precisa dessa conta de contrapartida (tipicamente a conta transitória do
-    banco). Para evitar preencher este campo em cada pagamento, configure a conta de pagamentos
+    momento do pagamento e precisa dessa conta de contrapartida (tipicamente a conta de pagamentos
+    pendentes). Para evitar preencher este campo em cada pagamento, configure a conta de pagamentos
     pendentes no método de pagamento do diário de banco.
 
 .. tip::
@@ -104,7 +107,7 @@ Impacto declarativo
 ===================
 
 Com a retenção no pagamento, o valor retido é contabilizado (conta 242) e declarado **uma única
-vez, no momento do pagamento**:
+vez, na data do pagamento**:
 
 .. list-table::
    :header-rows: 1
@@ -112,8 +115,8 @@ vez, no momento do pagamento**:
    * - Declaração / ficheiro
      - Comportamento
    * - SAF-T (PT)
-     - O elemento ``WithholdingTax`` é incluído no **recibo** (secção 4.4 — Pagamentos). A fatura não
-       menciona a retenção no SAF-T nem no código QR — a menção no PDF é meramente comercial.
+     - O elemento ``WithholdingTax`` é incluído no **recibo** (secção 4.4 — Pagamentos). A fatura
+       não menciona a retenção no SAF-T nem no código QR — a menção no PDF é meramente comercial.
    * - Modelo 10 / Modelo 30
      - Os valores retidos são reportados com **data do pagamento** (e não da fatura), através dos
        lançamentos contabilísticos do pagamento.
