@@ -24,6 +24,7 @@ Explore mais sobre os nossos add-ons de Faturação, Pagamentos e Stock
     invoicing/edi_sale
     invoicing/fsp
     invoicing/self-billing
+    invoicing/insurance
     invoicing/pos
     invoicing/saft_invoicing
     invoicing/sdr
