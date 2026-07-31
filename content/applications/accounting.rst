@@ -24,3 +24,4 @@ Explore mais sobre o nosso add-on de Contabilidade
     accounting/accounting_statements
     accounting/other_statements
     accounting/saft_accounting
+    accounting/cope
