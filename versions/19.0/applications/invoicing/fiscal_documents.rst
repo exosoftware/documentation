@@ -61,6 +61,8 @@ Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento 
 .. seealso::
    :ref:`Como fazer... <odoo_process_quotation>`
 
+   :doc:`Saiba como criar várias faturas pró-forma parciais a partir da mesma Ordem/Orçamento <proforma>`
+
 .. _fiscal_documents_order:
 
 Nota de encomenda
