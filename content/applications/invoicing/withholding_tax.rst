@@ -1,11 +1,11 @@
 :nosearch:
 
-===============================
-Retenções na Fonte no Pagamento
-===============================
+==================
+Retenções na Fonte
+==================
 A **Localização PT+** suporta a retenção na fonte efetuada no momento do **pagamento** do documento,
 em alternativa à retenção calculada na própria fatura. Desta forma o valor retido só é contabilizado
-e declarado quando é efetivamente retido — no pagamento — tal como previsto no Código do IRS
+e declarado quando é efetivamente retido — no pagamento — tal como previsto no `Art. 98º do CIRS <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cirs_rep/Pages/irs98.aspx>`_
 (a obrigação de retenção nasce no momento do pagamento ou colocação à disposição dos rendimentos).
 
 .. raw:: html
@@ -129,3 +129,8 @@ vez, na data do pagamento**:
     :guilabel:`Tipo de Rendimento da RF (OCDE)` do imposto; para o Modelo 10 e Declaração Mensal,
     os campos :guilabel:`Código da RF` e :guilabel:`Tipo de Rendimento da RF`. Sem estes campos
     as declarações não conseguem classificar os rendimentos.
+
+.. important::
+    O método de retenções na fonte no pagamento, aqui descrito, garante a conformidade com a regras do CIRS. O uso do
+    método de retenções na fatura continua a ser possível mas deixa à responsabilidade do cliente a mitigação dos
+    potenciais problemas das datas nos relatórios fiscais através de procedimentos de correção
