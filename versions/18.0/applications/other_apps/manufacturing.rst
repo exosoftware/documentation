@@ -357,11 +357,6 @@ serviço de industrialização, não o valor do produto.
     Esta app não está disponível na loja Odoo. Para ter acesso à mesma, terá de solicitar a sua instalação e ativação à
     **Exo Software**.
 
-.. note::
-    Os campos criados por esta app apresentam-se em inglês (**Contract Manufacturing**, **Owner**, **Provided by
-    Customer**), por ainda não existir tradução portuguesa do módulo. Os nomes usados nesta página são os que vai
-    encontrar no seu ecrã.
-
 .. raw:: html
 
     <div style="text-align: center; margin: 20px 0;">
@@ -384,11 +379,11 @@ stock.
     Enquanto a app estiver instalada não é possível desativar a opção **Remessa**. Sem propriedade de stock por
     terceiros nada neste fluxo se sustenta, pelo que a tentativa de a desligar é recusada com um aviso.
 
-Imediatamente abaixo fica o campo **Owner-Mismatch Approver**, onde deve indicar o administrador de inventário a quem os
+Imediatamente abaixo fica o campo **Aprovador de Divergência de Dono**, onde deve indicar o administrador de inventário a quem os
 pedidos de aprovação são propostos por defeito. Volte a este campo depois de decidir quem assume essa responsabilidade,
 mais à frente nesta página explica-se para que serve.
 
-A app cria também uma localização de produção dedicada, **CM Production**, por cada empresa da sua base de dados. É para
+A app cria também uma localização de produção dedicada, **Produção CM**, por cada empresa da sua base de dados. É para
 aqui que vão os consumos das ordens de fabrico por conta de terceiros, e é o que lhe permite separar estes custos da sua
 produção normal no fecho do período.
 
@@ -411,9 +406,9 @@ Configurações
 -------------
 Toda a configuração vive na **Lista de Materiais**. Na app de **Produção** vá ao menu de **Artigos** e selecione a opção
 **Listas de Materiais**, abra a lista do artigo que produz para o cliente e ative a opção **Contract Manufacturing**.
-O campo **Owner** passa a ser obrigatório: indique aí o cliente dono da mercadoria.
+O campo **Dono** passa a ser obrigatório: indique aí o cliente dono da mercadoria.
 
-Na tabela de componentes assinale, na coluna **Provided by Customer**, as linhas dos componentes que o cliente lhe
+Na tabela de componentes assinale, na coluna **Fornecido pelo Cliente**, as linhas dos componentes que o cliente lhe
 entrega. As restantes seguem o fluxo normal do Odoo, sem qualquer alteração.
 
 .. image:: manufacturing/v18_cm_bom.png
@@ -421,7 +416,7 @@ entrega. As restantes seguem o fluxo normal do Odoo, sem qualquer alteração.
 
 .. important::
     Se um artigo pode ser vendido das duas maneiras, por conta de terceiros e como venda normal, configure-lhe sempre
-    pelo menos uma Lista de Materiais **sem Owner**. Caso contrário, e existindo só a lista de fabrico por conta de
+    pelo menos uma Lista de Materiais **sem Dono**. Caso contrário, e existindo só a lista de fabrico por conta de
     terceiros, o Odoo pode escolhê-la em silêncio numa venda normal por ser a única disponível.
 
 .. note::
@@ -451,11 +446,11 @@ que declara o serviço: campo em branco significa venda normal.
    :align: center
 
 .. tip::
-    Só lhe são propostas Listas de Materiais sem Owner, ou cujo Owner seja o cliente da encomenda. Se trocar o cliente,
+    Só lhe são propostas Listas de Materiais sem Dono, ou cujo Dono seja o cliente da encomenda. Se trocar o cliente,
     a lista escolhida é limpa quando deixa de servir, para que faça nova escolha sem que a gravação seja recusada. Uma
-    lista sem Owner mantém-se, porque serve qualquer cliente.
+    lista sem Dono mantém-se, porque serve qualquer cliente.
 
-Ao confirmar a encomenda é criada a ordem de fabrico, já com o cliente no campo **Owner**, herdado da Lista de
+Ao confirmar a encomenda é criada a ordem de fabrico, já com o cliente no campo **Dono**, herdado da Lista de
 Materiais. É este valor que segue para os movimentos dos componentes e para o produto acabado.
 
 .. image:: manufacturing/v18_cm_mo.png
