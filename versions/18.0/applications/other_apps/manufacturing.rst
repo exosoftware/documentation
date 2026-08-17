@@ -334,3 +334,206 @@ Quando concluir a OP é gerado o relatório de **Avaliação**, bem como a **An�
 
 .. image:: manufacturing/v16_FM16.png
    :align: center
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
+
+.. _other_MRP_Contract_Manufacturing:
+
+MRP Contract Manufacturing
+==========================
+Há empresas que fabricam por conta de terceiros: o cliente é o dono da mercadoria, fornece parte ou a totalidade dos
+componentes, e o que sai da produção continua a ser dele. É o inverso da subcontratação nativa do Odoo, onde é a sua
+empresa que contrata alguém para produzir.
+
+Esta app garante que a propriedade do cliente atravessa todo o fluxo de fabrico, desde a receção dos componentes até ao
+produto acabado. O que é do cliente nunca entra no valor do seu inventário, e a fatura da encomenda liquida apenas o
+serviço de industrialização, não o valor do produto.
+
+.. important::
+    Esta app não está disponível na loja Odoo. Para ter acesso à mesma, terá de solicitar a sua instalação e ativação à
+    **Exo Software**.
+
+.. note::
+    Os campos criados por esta app apresentam-se em inglês (**Contract Manufacturing**, **Owner**, **Provided by
+    Customer**), por ainda não existir tradução portuguesa do módulo. Os nomes usados nesta página são os que vai
+    encontrar no seu ecrã.
+
+.. raw:: html
+
+    <div style="text-align: center; margin: 20px 0;">
+        ─── ✦ ───
+    </div>
+
+Pré-Configurações
+-----------------
+A instalação da app trata sozinha de tudo o que o fluxo precisa, não tem configurações prévias a fazer. Ainda assim vale
+a pena saber o que ficou preparado.
+
+Na app de **Inventário** vá ao menu de **Configuração** e selecione a opção **Definições**. Na secção
+**Rastreabilidade** encontra a opção **Remessa** já ativa, que é o que permite ao Odoo guardar o dono de cada artigo em
+stock.
+
+.. image:: manufacturing/v18_cm_settings.png
+   :align: center
+
+.. warning::
+    Enquanto a app estiver instalada não é possível desativar a opção **Remessa**. Sem propriedade de stock por
+    terceiros nada neste fluxo se sustenta, pelo que a tentativa de a desligar é recusada com um aviso.
+
+Imediatamente abaixo fica o campo **Owner-Mismatch Approver**, onde deve indicar o administrador de inventário a quem os
+pedidos de aprovação são propostos por defeito. Volte a este campo depois de decidir quem assume essa responsabilidade,
+mais à frente nesta página explica-se para que serve.
+
+A app cria também uma localização de produção dedicada, **CM Production**, por cada empresa da sua base de dados. É para
+aqui que vão os consumos das ordens de fabrico por conta de terceiros, e é o que lhe permite separar estes custos da sua
+produção normal no fecho do período.
+
+.. image:: manufacturing/v18_cm_location.png
+   :align: center
+
+E cria um tipo de operação de fabrico dedicado, **Contract Manufacturing**, por cada armazém, com sequência própria.
+Encontra-o na app de **Inventário**, menu de **Configuração**, opção :menuselection:`Gestão de armazém --> Tipos de
+Operações`.
+
+.. image:: manufacturing/v18_cm_operationType.png
+   :align: center
+
+.. tip::
+    O tipo de operação dedicado aplica-se às ordens de fabrico que criar manualmente. As ordens geradas
+    automaticamente a partir de uma encomenda de venda usam o tipo de operação de fabrico do armazém, por ser esse que
+    consta da regra de reabastecimento.
+
+Configurações
+-------------
+Toda a configuração vive na **Lista de Materiais**. Na app de **Produção** vá ao menu de **Artigos** e selecione a opção
+**Listas de Materiais**, abra a lista do artigo que produz para o cliente e ative a opção **Contract Manufacturing**.
+O campo **Owner** passa a ser obrigatório: indique aí o cliente dono da mercadoria.
+
+Na tabela de componentes assinale, na coluna **Provided by Customer**, as linhas dos componentes que o cliente lhe
+entrega. As restantes seguem o fluxo normal do Odoo, sem qualquer alteração.
+
+.. image:: manufacturing/v18_cm_bom.png
+   :align: center
+
+.. important::
+    Se um artigo pode ser vendido das duas maneiras, por conta de terceiros e como venda normal, configure-lhe sempre
+    pelo menos uma Lista de Materiais **sem Owner**. Caso contrário, e existindo só a lista de fabrico por conta de
+    terceiros, o Odoo pode escolhê-la em silêncio numa venda normal por ser a única disponível.
+
+.. note::
+    Uma Lista de Materiais por conta de terceiros pode não ter nenhum componente marcado como fornecido pelo cliente.
+    Corresponde ao caso em que a sua empresa fornece todos os materiais e, apesar disso, o produto final pertence ao
+    cliente.
+
+    As Listas de Materiais do tipo **Kit** não são suportadas, porque explodem na própria venda e não geram ordem de
+    fabrico.
+
+Para que os custos do serviço fiquem apurados por cliente, abra o separador **Diversos** e preencha o campo **Projeto**
+com o projeto cuja conta analítica quer usar.
+
+.. image:: manufacturing/v18_cm_bomMisc.png
+   :align: center
+
+.. important::
+    Sem projeto na Lista de Materiais, e sem custo por hora nos centros de trabalho, o apuramento analítico sai a zeros.
+    São as duas condições obrigatórias para a última secção desta página funcionar.
+
+Utilização
+----------
+Na encomenda de venda escolha, na coluna **BoM** da linha, a Lista de Materiais por conta de terceiros. É esta escolha
+que declara o serviço: campo em branco significa venda normal.
+
+.. image:: manufacturing/v18_cm_saleOrder.png
+   :align: center
+
+.. tip::
+    Só lhe são propostas Listas de Materiais sem Owner, ou cujo Owner seja o cliente da encomenda. Se trocar o cliente,
+    a lista escolhida é limpa quando deixa de servir, para que faça nova escolha sem que a gravação seja recusada. Uma
+    lista sem Owner mantém-se, porque serve qualquer cliente.
+
+Ao confirmar a encomenda é criada a ordem de fabrico, já com o cliente no campo **Owner**, herdado da Lista de
+Materiais. É este valor que segue para os movimentos dos componentes e para o produto acabado.
+
+.. image:: manufacturing/v18_cm_mo.png
+   :align: center
+
+Para os componentes que o cliente fornece e que não tem em stock, a confirmação da ordem cria uma transferência de
+entrada a partir da localização de fornecedor desse cliente, com a ordem de fabrico como **Documento de Origem**. Estes
+componentes nunca geram compra.
+
+.. image:: manufacturing/v18_cm_receipt.png
+   :align: center
+
+.. tip::
+    A ligação entre a ordem de fabrico e a receção que a alimenta permite-lhe abrir uma a partir da outra, e acompanhar
+    num único sítio o que falta receber para poder produzir.
+
+A reserva dos componentes fornecidos pelo cliente usa apenas stock desse mesmo dono. Havendo em armazém o mesmo
+componente de dois clientes diferentes, uma ordem nunca vai consumir o do outro.
+
+Se, ao concluir a ordem, algum componente consumido não pertencer ao dono da ordem, o Odoo não deixa passar em silêncio.
+
+.. image:: manufacturing/v18_cm_mismatchWizard.png
+   :align: center
+
+O que acontece a seguir depende do seu perfil:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Perfil
+     - Comportamento
+   * - Administrador de Inventário
+     - Aprova e continua de imediato. A decisão e o detalhe da divergência ficam registados no histórico do documento.
+   * - Restantes utilizadores
+     - Escolhem o administrador a quem pedem aprovação. É criada uma atividade para essa pessoa e a conclusão da ordem
+       fica bloqueada até a atividade ser fechada por um administrador de inventário.
+
+.. important::
+    Quando o que foi consumido é stock da sua empresa em vez do que o cliente devia ter fornecido, a aprovação faz mais
+    do que deixar passar: a sua empresa cede a propriedade daquela quantidade ao cliente. É gerado, na localização de
+    onde os componentes saíram, um registo de inventário que dá baixa do artigo como seu e o volta a dar entrada como
+    sendo do cliente.
+
+    Assim o seu stock é efetivamente abatido sem ter de esperar pela entrega do cliente, e a transferência de entrada
+    que alimenta a ordem passa a avisar que aquela quantidade, quando chegar, deve ser recebida como propriedade da sua
+    empresa.
+
+    O tratamento comercial do componente cedido e nunca reposto pelo cliente fica fora do âmbito da app e deve ser
+    acordado caso a caso.
+
+Concluída a ordem, o produto acabado entra em stock como propriedade do cliente e não é valorizado. A entrega dá baixa
+da consignação sem impacto patrimonial, e a fatura liquida apenas o serviço.
+
+Apuramento dos custos
+---------------------
+Na app de **Produção** vá ao menu de **Relatórios** e selecione a opção **Items Analíticos**, ou consulte-os pela app de
+**Contabilidade**. Filtre pelo período e pela conta analítica do cliente.
+
+.. image:: manufacturing/v18_cm_analytic.png
+   :align: center
+
+Só aparece aqui o que a sua empresa efetivamente suportou:
+
+- a mão de obra, com o prefixo ``[CT]``, valorizada pelo custo por hora dos centros de trabalho
+- os componentes que a sua empresa forneceu, com o prefixo ``[CP]`` seguido da ordem de fabrico e do componente
+
+Os componentes propriedade do cliente não representam custo seu e não geram qualquer linha, em nenhum cenário. Todas as
+linhas partilham a ordem de fabrico na coluna **Ref.** e o cliente na coluna **Parceiro**, o que lhe permite agrupar o
+apuramento por cliente sem abrir mais nenhum documento.
+
+.. note::
+    A valorização de inventário mantém-se **manual**, por exigência das regras do SNC. Os movimentos de stock continuam
+    a criar as camadas de valorização com o valor dos seus componentes, mas nenhum lançamento contabilístico é gerado
+    automaticamente: o apuramento do período é lançado pela Contabilidade a partir dessas camadas e destes items
+    analíticos.
+
+Para acompanhar o que está em armazém e de quem é, use os relatórios nativos de Inventário. A coluna **Dono** distingue
+o stock de cada cliente do stock da sua empresa.
+
+.. image:: manufacturing/v18_cm_quants.png
+   :align: center
