@@ -60,7 +60,7 @@ Procure a secção **Portugal** e configure os campos relativos ao E-Fatura:
    :align: center
 
 .. important::
-    Verifique que configurações tem para o OCR Odoo, o nosso leitor de código QR **Scan QR** é gratuíto, no entanto o OCR
+    Verifique que configurações tem para o OCR Odoo, o nosso leitor de código QR **Ler QR** é gratuíto, no entanto o OCR
     do Odoo **Digitalizar Documento** não o é e cobra um créditos por utilização
 
     Na eventualidade de ter os 2 ativos, primeiro é usado o OCR do Odoo e só em seguida o leitor de código QR da Exo
@@ -361,10 +361,13 @@ Se as situações inconsistentes forem desativadas no e-Fatura, a formatação c
        :align: center
 
 .. note::
-    Se o recibo de uma despesa paga pelo funcionário já tiver sido lido com o **Scan QR** antes de a despesa ser
-    publicada, o Odoo identifica o registo e-Fatura correspondente e reaproveita-o na fatura de fornecedor gerada
-    pelo reembolso, evitando duplicados. Consulte :doc:`Despesas de Funcionários <../invoicing/hr_expenses>` para
-    mais detalhes sobre o fluxo de reembolso de despesas.
+    O mesmo documento pode chegar ao Odoo pelo e-Fatura e pela app de **Despesas**, quando é um recibo que o
+    funcionário pagou do próprio bolso. Lendo o código QR do recibo, o Odoo liga a despesa ao documento do
+    e-Fatura e aproveita a fatura de fornecedor que já exista, em vez de criar uma segunda, seja o e-Fatura ou a
+    despesa a chegar primeiro.
+
+    Consulte :ref:`expenseEfaturaQR` para o processo completo: o que é lido do recibo, o que acontece quando não
+    é possível ler o código QR, e como as duas origens do mesmo documento são conciliadas.
 
 Scan Código QR
 ==============
@@ -378,13 +381,16 @@ Pode fazê-lo de duas formas:
 .. image:: efatura/v17_efaturaScan01.png
    :align: center
 
-- Numa nova fatura, faça o **Upload do ficheiro**, e carregue no botão **Scan QR**
+- Numa nova fatura, faça o **Upload do ficheiro**, e carregue no botão **Ler QR**
 
 .. image:: efatura/v17_efaturaScan02.png
    :align: center
 
 .. image:: efatura/v17_efaturaScan03.png
    :align: center
+
+O mesmo leitor está disponível na app de **Despesas**, para os recibos que o funcionário paga do próprio bolso e
+fotografa. Ver :ref:`expenseEfaturaQR`
 
 .. note::
     Qualquer um dos processos cria uma **Fatura de Fornecedor** em **Rascunho**, mas também cria uma **Linha na tabela do eFatura**
@@ -397,3 +403,28 @@ Pode fazê-lo de duas formas:
 
     .. image:: efatura/v17_efaturaScan05.png
       :align: center
+
+Uma mensagem no canto superior direito diz-lhe sempre o que saiu do código QR: qual o documento que foi lido, ou,
+quando não foi possível ler nada, o que quer fazer com o ficheiro que enviou.
+
+Quando não é possível ler o código QR
+-------------------------------------
+Se o ficheiro enviado não der nada ao Odoo, é-lhe perguntado o que fazer com ele:
+
+- :guilabel:`Aceitar` mantém o documento como está, para o preencher à mão
+- :guilabel:`Rejeitar` apaga o documento e o ficheiro
+- :guilabel:`Tentar Novamente` apaga o documento e abre outra vez o seletor de ficheiros (a câmara, no
+  telemóvel), para enviar de imediato uma nova fotografia
+
+.. image:: efatura/v19_efatura_qr_decision.png
+   :align: center
+
+A pergunta é feita em três situações: o ficheiro não tem código QR nenhum, tem-no mas não está legível (tremido,
+cortado, ou não é o código QR de uma fatura portuguesa), ou é um documento emitido a outra empresa, do qual nada
+é aproveitado. Se enviar vários ficheiros de uma vez, é perguntado um a um, indicando o nome do ficheiro e
+quantos faltam decidir.
+
+.. note::
+    Fechar a mensagem sem escolher nada tem o mesmo efeito que :guilabel:`Aceitar`: o documento fica registado.
+
+    Um documento já publicado nunca é apagado por este processo.
