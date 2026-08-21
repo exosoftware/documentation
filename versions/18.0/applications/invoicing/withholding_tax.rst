@@ -124,6 +124,10 @@ vez, na data do pagamento**:
      - O valor retido entra na declaração do **mês do pagamento**, que é o período legalmente
        correto para a entrega da retenção.
 
+.. seealso::
+    :doc:`withholding_statements`: como emitir a Declaração Mensal, o Modelo 10, o Modelo 30 e
+    a declaração de rendimentos a entregar a cada titular.
+
 .. note::
     Nos impostos de retenção usados no Modelo 30 (não residentes), preencha o campo
     :guilabel:`Tipo de Rendimento da RF (OCDE)` do imposto; para o Modelo 10 e Declaração Mensal,
