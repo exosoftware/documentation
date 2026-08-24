@@ -40,7 +40,7 @@ valores à mão.
 Todas se encontram em :menuselection:`Faturação / Contabilidade --> Relatórios`, no bloco
 **Rendimentos e Retenções**.
 
-.. image:: withholding_statements/v19_wht_stat_menu.png
+.. image:: withholding_tax/v19_wht_stat_menu.png
    :align: center
 
 Configuração dos impostos de retenção
@@ -52,7 +52,7 @@ declaração ou não consegue classificar o rendimento, ou classifica-o mal.
 Abra cada imposto de retenção em :menuselection:`Configuração --> Impostos`, no separador
 :guilabel:`Opções Avançadas`, e confirme os campos abaixo.
 
-.. image:: withholding_statements/v19_wht_stat_tax_config.png
+.. image:: withholding_tax/v19_wht_stat_tax_config.png
    :align: center
 
 .. list-table::
@@ -90,7 +90,7 @@ Reúne as retenções a entregar num mês e serve de base à guia de pagamento.
 Abra :menuselection:`Relatórios --> Declaração Mensal`, escolha o :guilabel:`Período` e o
 :guilabel:`Tipo de Retenção`.
 
-.. image:: withholding_statements/v19_wht_stat_monthly_options.png
+.. image:: withholding_tax/v19_wht_stat_monthly_options.png
    :align: center
 
 O :guilabel:`Tipo de Retenção` determina o tipo de declaração e permite emitir as duas a partir
@@ -113,7 +113,7 @@ que não lhe pertence, podendo até ficar negativa.
 A declaração deteta essas situações e avisa-o, indicando cada nota de crédito e a fatura
 correspondente, com as respetivas datas.
 
-.. image:: withholding_statements/v19_wht_stat_monthly_warning.png
+.. image:: withholding_tax/v19_wht_stat_monthly_warning.png
    :align: center
 
 O aviso aparece nos dois sentidos:
@@ -137,7 +137,7 @@ mensal de remunerações.
 Abra :menuselection:`Relatórios --> Modelo 10` e escolha o ano. Os valores aparecem organizados
 pelos quadros do modelo oficial: o **Q4** com o resumo e o **Q5** com o detalhe por titular.
 
-.. image:: withholding_statements/v19_wht_stat_mod10.png
+.. image:: withholding_tax/v19_wht_stat_mod10.png
    :align: center
 
 Além do PDF e do ficheiro para submissão, esta declaração pode ser entregue diretamente a partir
@@ -152,7 +152,7 @@ pagar, e existe para evitar a dupla tributação.
 Abra :menuselection:`Relatórios --> Modelo 30` e escolha o período. O **Q8** contém uma linha
 por titular e tipo de rendimento.
 
-.. image:: withholding_statements/v19_wht_stat_mod30_q8.png
+.. image:: withholding_tax/v19_wht_stat_mod30_q8.png
    :align: center
 
 Cada linha traz o NIF do beneficiário, o :guilabel:`Código Rend.` (campo 35), a base, o
@@ -174,7 +174,7 @@ lançamentos que alimentam o Modelo 10.
 
 Abra :menuselection:`Relatórios --> Declaração Anual` e escolha o ano.
 
-.. image:: withholding_statements/v19_wht_stat_annual.png
+.. image:: withholding_tax/v19_wht_stat_annual.png
    :align: center
 
 Obtém uma linha por titular e categoria de rendimento. A partir daqui pode:
