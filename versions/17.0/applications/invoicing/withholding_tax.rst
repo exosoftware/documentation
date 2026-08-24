@@ -1,8 +1,8 @@
 :nosearch:
 
-=================================
-Declarações de Retenções na Fonte
-=================================
+==================
+Retenções na Fonte
+==================
 As retenções na fonte que efetua aos seus fornecedores e prestadores de serviços têm de ser
 entregues à Autoridade Tributária e declaradas em vários momentos do ano. A **Localização PT+**
 gera as quatro declarações a partir dos lançamentos contabilísticos, sem que tenha de recolher
@@ -40,7 +40,7 @@ valores à mão.
 Todas se encontram em :menuselection:`Faturação / Contabilidade --> Relatórios`, no bloco
 **Rendimentos e Retenções**.
 
-.. image:: withholding_statements/v19_wht_stat_menu.png
+.. image:: withholding_tax/v19_wht_stat_menu.png
    :align: center
 
 Configuração dos impostos de retenção
@@ -52,7 +52,7 @@ declaração ou não consegue classificar o rendimento, ou classifica-o mal.
 Abra cada imposto de retenção em :menuselection:`Configuração --> Impostos`, no separador
 :guilabel:`Opções Avançadas`, e confirme os campos abaixo.
 
-.. image:: withholding_statements/v19_wht_stat_tax_config.png
+.. image:: withholding_tax/v19_wht_stat_tax_config.png
    :align: center
 
 .. list-table::
@@ -90,7 +90,7 @@ Reúne as retenções a entregar num mês e serve de base à guia de pagamento.
 Abra :menuselection:`Relatórios --> Declaração Mensal`, escolha o :guilabel:`Período` e o
 :guilabel:`Tipo de Retenção`.
 
-.. image:: withholding_statements/v19_wht_stat_monthly_options.png
+.. image:: withholding_tax/v19_wht_stat_monthly_options.png
    :align: center
 
 O :guilabel:`Tipo de Retenção` determina o tipo de declaração e permite emitir as duas a partir
@@ -113,7 +113,7 @@ que não lhe pertence, podendo até ficar negativa.
 A declaração deteta essas situações e avisa-o, indicando cada nota de crédito e a fatura
 correspondente, com as respetivas datas.
 
-.. image:: withholding_statements/v19_wht_stat_monthly_warning.png
+.. image:: withholding_tax/v19_wht_stat_monthly_warning.png
    :align: center
 
 O aviso aparece nos dois sentidos:
@@ -137,7 +137,7 @@ mensal de remunerações.
 Abra :menuselection:`Relatórios --> Modelo 10` e escolha o ano. Os valores aparecem organizados
 pelos quadros do modelo oficial: o **Q4** com o resumo e o **Q5** com o detalhe por titular.
 
-.. image:: withholding_statements/v19_wht_stat_mod10.png
+.. image:: withholding_tax/v19_wht_stat_mod10.png
    :align: center
 
 Além do PDF e do ficheiro para submissão, esta declaração pode ser entregue diretamente a partir
@@ -152,7 +152,7 @@ pagar, e existe para evitar a dupla tributação.
 Abra :menuselection:`Relatórios --> Modelo 30` e escolha o período. O **Q8** contém uma linha
 por titular e tipo de rendimento.
 
-.. image:: withholding_statements/v19_wht_stat_mod30_q8.png
+.. image:: withholding_tax/v19_wht_stat_mod30_q8.png
    :align: center
 
 Cada linha traz o NIF do beneficiário, o :guilabel:`Código Rend.` (campo 35), a base, o
@@ -174,7 +174,7 @@ lançamentos que alimentam o Modelo 10.
 
 Abra :menuselection:`Relatórios --> Declaração Anual` e escolha o ano.
 
-.. image:: withholding_statements/v19_wht_stat_annual.png
+.. image:: withholding_tax/v19_wht_stat_annual.png
    :align: center
 
 Obtém uma linha por titular e categoria de rendimento. A partir daqui pode:
@@ -189,16 +189,119 @@ depois a seleção linha a linha, na coluna :guilabel:`Sel.`.
 
 Submissão à AT
 ==============
-O **Modelo 10** e o **Modelo 30** podem ser submetidos diretamente do Odoo, através do
+O **Modelo 10** e o **Modelo 30** podem ser entregues diretamente do Odoo, através do
 webservice das **Obrigações Acessórias** da Autoridade Tributária, sem passar pelo Portal das
-Finanças. Depois de calcular a declaração, tem disponíveis as operações de **validação**,
-**submissão**, **consulta** e obtenção do **comprovativo** e da **referência de pagamento**.
-
-Para isso são necessárias as credenciais do **contabilista certificado** com poderes
-declarativos para o contribuinte. O comprovativo e a referência de pagamento podem ser enviados
-por email para os destinatários que indicar.
+Finanças. O Odoo constrói o ficheiro da declaração, envia-o, e guarda a resposta da AT, o
+comprovativo e a referência de pagamento.
 
 .. note::
     A **Declaração Mensal** e a **Declaração de rendimentos ao titular** não têm submissão por
     webservice: a primeira é exportada em XML para entrega no Portal das Finanças, a segunda
     destina-se ao titular e não à Autoridade Tributária.
+
+Credenciais
+-----------
+A entrega é feita com as credenciais do **contabilista certificado** com poderes declarativos
+para o contribuinte. São dois conjuntos de credenciais, ambos guardados na ficha do utilizador,
+no separador :guilabel:`Portugal` (em :menuselection:`Configurações --> Utilizadores` ou nas
+próprias :menuselection:`Preferências`):
+
+.. list-table::
+   :header-rows: 1
+
+   * - Campo
+     - O que preencher
+   * - :guilabel:`Nome de utilizador` e :guilabel:`Senha`
+     - Credenciais do **contribuinte** no Portal das Finanças. O nome de utilizador tem o
+       formato ``NIF/UserId``
+   * - :guilabel:`Contabilista Certificado`
+     - Ative na ficha do utilizador que é contabilista certificado e pode entregar declarações
+       em nome de contribuintes
+   * - :guilabel:`Utilizador TOC` e :guilabel:`Senha TOC`
+     - Credenciais do **contabilista certificado** no Portal das Finanças, pedidas apenas
+       quando o campo anterior está ativo
+
+.. important::
+    Sem o nome de utilizador do contribuinte, ou sem as credenciais do contabilista
+    certificado, a submissão para. O Odoo indica qual dos dois falta e onde o preencher.
+
+Campos obrigatórios da declaração
+---------------------------------
+O ficheiro da declaração leva a identificação de quem a entrega, que preenche nas opções da
+declaração antes de calcular:
+
+- :guilabel:`Cód. Serviço Finanças`: o código de quatro dígitos do serviço de finanças, vindo
+  da ficha da empresa-mãe (as declarações são entregues pela empresa-mãe, mesmo quando está a
+  trabalhar numa sucursal);
+- :guilabel:`Contabilista Certificado`: o NIF do contabilista certificado, vindo da ficha da
+  empresa;
+- :guilabel:`Representante Legal`: o NIF do sujeito passivo ou do seu representante legal.
+
+.. note::
+    Estes dois primeiros campos são exigidos para exportar o ficheiro e para submeter, mas não
+    para imprimir: o PDF continua disponível como rascunho de trabalho, mesmo com a
+    identificação incompleta.
+
+Quando não está a entregar a primeira declaração do período, o :guilabel:`Tipo de Declaração`
+passa a :guilabel:`Substituição` e são pedidas a :guilabel:`Data do Facto Orig. Subst.` e, se
+for o caso, a indicação :guilabel:`Ao abrigo Art. 119º - 1ºd?`. Se estiver a entregar fora de
+prazo com justo impedimento, indique o :guilabel:`Motivo do Justo Impedim.` e as datas de
+ocorrência e de cessação do facto, nos termos do art.º 12.º-A do Decreto-Lei n.º 452/99, de 5
+de novembro.
+
+Validar, submeter e acompanhar
+------------------------------
+Depois de calcular a declaração, o botão :guilabel:`Submeter Online` abre o passo
+:guilabel:`Submissão Online (AT)`, com as credenciais, as opções e as operações disponíveis.
+
+A opção :guilabel:`Poderes Declarativos Plenos` vem ativa: significa que o contabilista
+certificado tem poderes declarativos plenos para o contribuinte, e por isso basta o seu
+utilizador para entregar. Se os não tiver, desative-a, escolha o :guilabel:`Utilizador
+Contabilista Certificado` e preencha a :guilabel:`Senha do Contribuinte`.
+
+O trabalho faz-se por esta ordem:
+
+#. :guilabel:`Validar online`: a AT verifica a declaração e devolve os erros e alertas que
+   encontrar, **sem a entregar**. É o momento de corrigir a configuração ou os valores.
+#. :guilabel:`Submeter Online`: entrega oficial da declaração, pedindo confirmação antes de
+   enviar. Se a AT devolver apenas alertas não bloqueantes, a submissão só passa com a opção
+   :guilabel:`Aceitar Alertas` ativa.
+#. Concluída a submissão, o :guilabel:`Id da Declaração na AT` fica preenchido, e com a opção
+   :guilabel:`Obter Comprovativo` (ativa por defeito) o comprovativo é descarregado logo a
+   seguir.
+
+A partir daí, e sempre a partir desse id, tem disponíveis:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Operação
+     - O que devolve
+   * - :guilabel:`Consultar`
+     - As declarações deste modelo já entregues, com o id, a situação e a data de submissão
+   * - :guilabel:`Obter comprovativo`
+     - O comprovativo da submissão, em PDF
+   * - :guilabel:`Obter erros`
+     - Os erros que a AT encontrou na validação central da declaração entregue
+   * - :guilabel:`Obter referência de pagamento`
+     - A referência de pagamento (DUC), em PDF
+
+Os ficheiros ficam no próprio passo, para descarregar: a :guilabel:`Declaração` que foi
+enviada, o :guilabel:`Comprovativo da submissão` e a :guilabel:`Referência de pagamento`. O
+bloco :guilabel:`Resposta` mostra o que a AT devolveu, incluindo o código, a mensagem e o
+detalhe do erro quando a operação não corre bem.
+
+.. tip::
+    A consulta não precisa de id: use-a para confirmar, do lado da AT, se a declaração do
+    período já foi entregue, antes de submeter outra vez.
+
+Enviar o comprovativo por e-mail
+--------------------------------
+Obtido o comprovativo ou a referência de pagamento, o bloco :guilabel:`Enviar por e-mail`
+permite fazê-los seguir sem sair da declaração: indique os :guilabel:`Destinatários do E-mail`
+e carregue em :guilabel:`Enviar e-mail`. Os documentos vão em anexo, com uma mensagem que
+identifica a empresa e o período da declaração.
+
+.. note::
+    Cada destinatário tem de ter endereço de e-mail na ficha. O Odoo avisa qual deles não tem,
+    para que o preencha ou o retire da seleção.
