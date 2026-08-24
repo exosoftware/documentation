@@ -1,8 +1,8 @@
 :nosearch:
 
-==================
-Retenções na Fonte
-==================
+=====================
+Retenção no Pagamento
+=====================
 A **Localização PT+** suporta a retenção na fonte efetuada no momento do **pagamento** do documento,
 em alternativa à retenção calculada na própria fatura. Desta forma o valor retido só é contabilizado
 e declarado quando é efetivamente retido — no pagamento — tal como previsto no `Art. 98º do CIRS <https://info.portaldasfinancas.gov.pt/pt/informacao_fiscal/codigos_tributarios/cirs_rep/Pages/irs98.aspx>`_
