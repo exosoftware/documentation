@@ -1,0 +1,2 @@
+# Faturação
+applications/invoicing/withholding_statements.rst applications/invoicing/withholding_tax.rst  # fundida na página das retenções na fonte

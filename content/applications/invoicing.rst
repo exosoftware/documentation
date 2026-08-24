@@ -19,7 +19,6 @@ Explore mais sobre os nossos add-ons de Faturação, Pagamentos e Stock
     invoicing/series_registration
     invoicing/taxes
     invoicing/withholding_tax
-    invoicing/withholding_statements
     invoicing/odoo_process
     invoicing/e-invoicing
     invoicing/self-billing
