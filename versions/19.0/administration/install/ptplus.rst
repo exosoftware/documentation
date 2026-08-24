@@ -148,7 +148,7 @@ dependências necessárias para cada módulo:
      - pt-plus
      - Faturação
      - ptplus
-     - git+https://github.com/OCA/openupgradelib.git@master, git+https://github.com/exosoftware/runpack.git, pyopenssl==22.1.0, unicodecsv, xmlschema==3.4.3
+     - git+https://github.com/OCA/openupgradelib.git@master, git+https://github.com/exosoftware/runpack.git, pyopenssl==22.1.0, unicodecsv, xmlschema==3.4.3, zeep, pycountry >= 16.11.8
      -
      -
    * -
@@ -176,7 +176,7 @@ dependências necessárias para cada módulo:
      - pt-plus
      - Contabilidade
      - ptplus_accounting
-     - pycountry >= 16.11.8
+     -
      -
      -
    * -
