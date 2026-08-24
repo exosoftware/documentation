@@ -53,6 +53,12 @@ produção normal no fecho do período.
 .. image:: manufacturing/v18_cm_location.png
    :align: center
 
+Qual a localização a usar é uma definição por empresa, **Local de Produção de Contract Manufacturing**, que fica ao lado
+do aprovador nas definições de Inventário. Vem preenchida de origem com a localização que a app criou, pelo que em
+utilização normal não tem aqui nada a fazer; se preferir apontar a uma localização sua, basta trocá-la. Quem decide se
+uma ordem usa esta localização ou a de produção normal é a Lista de Materiais da ordem, e não a configuração do artigo,
+pelo que não há nada a definir artigo a artigo.
+
 E cria um tipo de operação de fabrico dedicado, **Contract Manufacturing**, por cada armazém, com sequência própria.
 Encontra-o na app de **Inventário**, menu de **Configuração**, opção :menuselection:`Gestão de armazém --> Tipos de
 Operações`.
@@ -68,9 +74,9 @@ Operações`.
 
 Configurações
 -------------
-Toda a configuração vive na **Lista de Materiais**. Na app de **Produção** vá ao menu de **Artigos** e selecione a opção
-**Listas de Materiais**, abra a lista do artigo que produz para o cliente e ative a opção **Contract Manufacturing**.
-O campo **Dono** passa a ser obrigatório: indique aí o cliente dono da mercadoria.
+Tirando as duas definições acima, a configuração vive toda na **Lista de Materiais**. Na app de **Produção** vá ao
+menu de **Artigos**, selecione a opção **Listas de Materiais**, abra a lista do artigo que produz para o cliente e ative
+a opção **Contract Manufacturing**. O campo **Dono** passa a ser obrigatório: indique aí o cliente dono da mercadoria.
 
 Na tabela de componentes assinale, na coluna **Fornecido pelo Cliente**, as linhas dos componentes que o cliente lhe
 entrega. As restantes seguem o fluxo normal do Odoo, sem qualquer alteração.
