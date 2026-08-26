@@ -47,11 +47,16 @@ Para emitir o pdf do orçamento basta ir ao menu **Ação** do documento e selec
 .. seealso::
    :ref:`Como fazer... <odoo_process_quotation>`
 
+.. _fiscal_documents_proforma:
+
 Fatura pró-forma
 ----------------
 
-Documento informativo frequentemente utilizado na cotação de produtos e na justificação da transação internacional de produtos.
-Após aprovação do cliente pode ser convertida em nota de encomenda.
+A fatura pró-forma é um documento informativo, sem valor fiscal, frequentemente utilizado para apresentar
+ao cliente uma proposta detalhada de produtos/serviços ou para justificar o valor de bens numa transação
+internacional. A localização Exo permite emitir uma ou várias faturas pró-forma a partir da mesma
+Ordem/Orçamento de Venda, controlando automaticamente as quantidades já enviadas para que nunca sejam
+excedidas as quantidades encomendadas.
 
 Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Orçamento / Encomenda`
 
@@ -59,9 +64,9 @@ Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento 
    :align: center
 
 .. seealso::
-   :ref:`Como fazer... <odoo_process_quotation>`
+   :ref:`Como fazer... <odoo_process_proforma_invoice>`
 
-   :doc:`Saiba como criar várias faturas pró-forma parciais a partir da mesma Ordem/Orçamento <proforma>`
+   :doc:`Saiba como criar uma ou várias faturas pró-forma parciais a partir da mesma Ordem/Orçamento <proforma>`
 
 .. _fiscal_documents_order:
 
