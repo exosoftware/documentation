@@ -65,7 +65,7 @@ acrescentando a permissão extra **Faturas Pró-Forma**
    :align: center
 
 Criar uma Fatura Pró-Forma
----------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 Existem 2 formas de criar uma Fatura Pró-Forma, a 1ª e mais simples é num novo documento selecionar uma seŕie documental
 deste tipo.
 
@@ -103,7 +103,7 @@ linhas da ordem, a quantidade já reservada em pró-formas por cada linha.
     superior direito da tabela, e selecione **Qtd. Pró-forma Enviada**.
 
 Navegação entre a Ordem original e as suas pró-formas
---------------------------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 No documento original surge o botão inteligente **Faturas Pró-forma** com a contagem de pró-formas já
 criadas, dando acesso à sua listagem.
 
