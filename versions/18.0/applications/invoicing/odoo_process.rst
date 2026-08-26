@@ -47,24 +47,97 @@ Depois deve preencher os campos necessários e selecionar a série documental a 
 .. image:: odoo_process/v17_quoteTypes.png
    :align: center
 
-.. tip::
-    No caso das **Subscrições**, terá também de selecionar o **Plano de Recorrência**
-    que determina de quanto em quanto tempo serão feitas novas faturas de forma
-    automática, bem como pode especificar uma data para o término da subscrição.
+O restante preenchimento do documento é igual ao processo nativo do Odoo
 
-    .. image:: odoo_process/v17_recurringPlan.png
+.. _odoo_process_proforma_invoice:
+
+Fatura Pró-Forma
+~~~~~~~~~~~~~~~~
+.. seealso::
+    :ref:`Consulte a informação geral sobre a Fatura pró-forma <fiscal_documents_proforma>`
+
+    :doc:`Consulte o processo geral de registo de séries documentais <series_registration>`
+
+Para ter acesso a poder emitir Faturas Pró-Forma, tem primeiro de garantir que o seu utilizador tem permissão para tal,
+acrescentando a permissão extra **Faturas Pró-Forma**
+
+.. image:: odoo_process/v19_proforma_access_right.png
+   :align: center
+
+Criar uma Fatura Pró-Forma
+---------------------------
+Existem 2 formas de criar uma Fatura Pró-Forma, a 1ª e mais simples é num novo documento selecionar uma seŕie documental
+deste tipo.
+
+.. note::
+    Esta forma permite fazer um documento solto no sistema sem ligação a outros documentos comerciais. E por esse motivo
+    não é a mais recomendada
+
+A 2ª forma, que é a que recomendamos, é feita num Orçamento ou Nota Encomenda que não esteja em rascunho nem cancelada,
+carregue no botão **Criar fatura PRÓ-FORMA**. O Odoo duplica o documento atribuindo-lhe o tipo de documento fiscal
+**Proforma Invoice**.
+
+.. image:: odoo_process/v19_proforma_order_button.png
+   :align: center
+
+.. important::
+    Só é copiada, para cada linha, a quantidade que **ainda não tenha sido incluída** em nenhuma pró-forma
+    criada anteriormente a partir do mesmo documento. Isto permite emitir várias faturas pró-forma parciais
+    referentes à mesma Ordem/Orçamento, cada uma cobrindo uma fração da quantidade total, sem nunca
+    conseguir reservar mais do que aquilo que foi encomendado.
+
+    Se todas as quantidades já estiverem reservadas nas pró-formas emitidas anteriormente, o botão informa
+    que não há nada disponível para enviar e impede a criação de uma nova pró-forma.
+
+    .. image:: odoo_process/v19_proforma_order_button_warning.png
        :align: center
 
-    .. example::
-       Se cobra uma vez a um cliente por um serviço de 2 anos, o Plano de Recorrência
-       deve ser de 2 anos e quantidade do serviço 1, não deve ser Plano de Recorrência
-       anual com quantidade a 2
+No documento original é possível acompanhar, através da coluna opcional **Qtd. Pró-forma Enviada** nas
+linhas da ordem, a quantidade já reservada em pró-formas por cada linha.
 
-        No segundo cenário isso significaria que está a cobra 2 planos com um ano de duração
+.. image:: odoo_process/v19_proforma_qty_column.png
+   :align: center
 
-    .. example::
-       Se cobra mensalmente durante 2 anos por um serviço, o plano de recorrência deve
-       ser mensal mas com uma data de término 2 anos no futuro
+.. tip::
+    Para mostrar esta coluna, na lista de linhas carregue no ícone de configuração de colunas, no canto
+    superior direito da tabela, e selecione **Qtd. Pró-forma Enviada**.
+
+Navegação entre a Ordem original e as suas pró-formas
+--------------------------------------------------------
+No documento original surge o botão inteligente **Faturas Pró-forma** com a contagem de pró-formas já
+criadas, dando acesso à sua listagem.
+
+.. image:: odoo_process/v19_proforma_smart_button.png
+   :align: center
+
+.. image:: odoo_process/v19_proforma_list.png
+   :align: center
+
+Em cada fatura pró-forma surge, por sua vez, o botão **Original Order** que permite voltar rapidamente ao
+documento de origem.
+
+.. image:: odoo_process/v19_proforma_draft.png
+   :align: center
+
+Subscrições
+~~~~~~~~~~~
+No caso das **Subscrições**, terá também de selecionar o **Plano de Recorrência**
+que determina de quanto em quanto tempo serão feitas novas faturas de forma
+automática, bem como pode especificar uma data para o término da subscrição.
+
+.. image:: odoo_process/v17_recurringPlan.png
+   :align: center
+
+.. example::
+   Se cobra uma vez a um cliente por um serviço de 2 anos, o Plano de Recorrência
+   deve ser de 2 anos e quantidade do serviço 1, não deve ser Plano de Recorrência
+   anual com quantidade a 2
+
+    No segundo cenário isso significaria que está a cobra 2 planos com um ano de duração
+
+.. example::
+   Se cobra mensalmente durante 2 anos por um serviço, o plano de recorrência deve
+   ser mensal mas com uma data de término 2 anos no futuro
 
 Descontos nos Orçamentos
 ~~~~~~~~~~~~~~~~~~~~~~~~
@@ -105,6 +178,25 @@ Descontos nos Orçamentos
     .. important::
         O texto que aparece na tabela resumo, é o texto que está na descrição do artigo **Desconto**
 
+Apesar de dizer **Orçamento** na barra de estado, o primeiro estado indica que o documento está em **Rascunho**
+
+.. image:: odoo_process/v17_quoteState01.png
+   :align: center
+
+Esta etapa significa que o documento ainda não foi fiscalmente emitido nem comunicado ao cliente, pelo que ainda pode
+ser alterado
+
+O passo seguinte antes de poder comunicar o documento ao cliente é emitir o documento, isso muda o estado para
+**Orçamento Enviado** e confere-lhe uma numeração fiscal
+
+.. image:: odoo_process/v17_quoteState02.png
+   :align: center
+
+.. image:: odoo_process/v17_quoteState03.png
+   :align: center
+
+A partir deste momento já não pode editar mais o documento, apenas :ref:`fazer uma nova revisão do mesmo <odoo_process_quotation_revision>`
+
 Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será gerada uma **Nota de encomenda**
 
 .. image:: odoo_process/v17_confirmQuote.png
@@ -113,6 +205,8 @@ Depois de aprovação do cliente/fornecedor, pode confirmar o documento e será 
 .. important::
     A legislação portuguesa proíbe a emissão de documentos não confirmados e comunicados, pelo que se tentarem fazer
     impressão do documento o mesmo sairá invalidado.
+
+.. _odoo_process_quotation_revision:
 
 Revisões de Orçamentos
 ~~~~~~~~~~~~~~~~~~~~~~
