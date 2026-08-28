@@ -16,4 +16,5 @@ Explore mais sobre os nossos adons para receber pagamentos por Multibanco e MBWa
 
     multibanco/eupago
     multibanco/ifthenpay
+    multibanco/mb_reference_quotations
 
