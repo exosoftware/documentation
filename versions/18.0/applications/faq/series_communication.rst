@@ -9,6 +9,21 @@ Comunicação de Séries
 
 .. _faq_invoice_ATusers:
 
+Permissões para criar sequências em Odoo
+========================================
+De forma nativa **apenas** utilizadores com permissões técnicas podem criar Sequências em Odoo por motivos de segurança
+
+.. image:: series_communication/v19_sequenceCreation.png
+   :align: center
+
+Como para se registar uma Série Documental é preciso criar uma sequência, por vezes a pessoa que se espera que o faça
+pode não ter permissão para tal
+
+Se realmente o quiser fazer, pode mudar essa permissão para outro grupo, como por exemplo :menuselection:`Contabilidade --> Administrador`
+
+A partir desse momento quem tiver a permissão selecionada já vai poder criar séries. Não esquecer que tem de ser um
+nível de permissão que consiga efetivamente aceder ao menu de criação e configuração de Séries documentais
+
 Preciso de criar um subutilizador no site das Finanças?
 =======================================================
 **Não**
@@ -16,7 +31,7 @@ Preciso de criar um subutilizador no site das Finanças?
 Pode ser usado o nome de utilizador e a senha de acesso geral às Finanças. Estas credenciais têm, por definição, autorização para efetuar qualquer tipo de operação
 
 .. note::
-    A criação de subutlizadores é recomendada quando a empresa tem vários colaboradores a interagir com as Finanças e se pretende separar as autorizações de cada um
+    A criação de subutilizadores é recomendada quando a empresa tem vários colaboradores a interagir com as Finanças e se pretende separar as autorizações de cada um
 
     .. example::
         Pode haver utilizadores com permissão para emitir guias de remessa e outros com permissão para comunicar séries ou faturas
