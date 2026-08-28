@@ -7,8 +7,6 @@ Comunicação de Séries
 .. seealso::
     :doc:`Consulte o nosso Guia sobre registo de Séries <../invoicing/series_registration>`
 
-.. _faq_invoice_ATusers:
-
 Permissões para criar sequências em Odoo
 ========================================
 De forma nativa **apenas** utilizadores com permissões técnicas podem criar Sequências em Odoo por motivos de segurança
@@ -23,6 +21,8 @@ Se realmente o quiser fazer, pode mudar essa permissão para outro grupo, como p
 
 A partir desse momento quem tiver a permissão selecionada já vai poder criar séries. Não esquecer que tem de ser um
 nível de permissão que consiga efetivamente aceder ao menu de criação e configuração de Séries documentais
+
+.. _faq_invoice_ATusers:
 
 Preciso de criar um subutilizador no site das Finanças?
 =======================================================
