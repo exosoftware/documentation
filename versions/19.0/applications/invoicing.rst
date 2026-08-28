@@ -15,7 +15,6 @@ Explore mais sobre os nossos add-ons de Faturação, Pagamentos e Stock
     :titlesonly:
 
     invoicing/fiscal_documents
-    invoicing/proforma
     invoicing/series_registration
     invoicing/taxes
     invoicing/withholding_tax
