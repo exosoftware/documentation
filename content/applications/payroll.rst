@@ -23,5 +23,4 @@ Explore mais sobre o nosso add-on de Salários
     payroll/relatorio_unico
     payroll/mapa_seguros
     payroll/outros_mapas
-    payroll/relogio_ponto
     payroll/integracoes_odoo
