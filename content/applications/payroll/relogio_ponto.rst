@@ -97,9 +97,11 @@ horas extra — um contrato sem conjunto atribuído não é afetado.
 
 Percentagens
 ------------
-As percentagens vivem no contrato de cada trabalhador, e os valores por omissão
-para novos contratos em :menuselection:`Definições --> Folha de Salários`,
-agrupados por natureza:
+As percentagens de pagamento vivem no contrato de cada trabalhador, e os valores
+por omissão para novos contratos em :menuselection:`Definições --> Folha de
+Salários`, agrupados por natureza. A conversão para Banco de Horas é a exceção:
+é uma política de empresa, pelo que vive apenas nas Definições e aplica-se a
+todos os trabalhadores.
 
 .. image:: relogio_ponto/v19_settings_overtime_groups.png
    :align: center
@@ -116,7 +118,8 @@ agrupados por natureza:
      - Pagamento em dinheiro acima desse limiar.
    * - **Horas Extra - Conversão para Banco de Horas**
      - Quantas horas são creditadas ao Banco de Horas por cada hora
-       trabalhada. Independente das percentagens de pagamento.
+       trabalhada. Independente das percentagens de pagamento, e igual para
+       toda a empresa.
    * - **Horas Extra Noturnas**
      - Horas extra prestadas em período noturno.
 
@@ -226,9 +229,33 @@ Pagar em dinheiro
     horas ao saldo do trabalhador, em vez de as deixar descontadas sem
     pagamento por trás.
 
-Em alternativa, a partir do próprio recibo em rascunho: se o trabalhador tiver
-saldo pendente à data de fim desse recibo, aparece um botão **Pagar Banco de
-Horas** que adiciona o saldo como input.
+Pagar a partir do recibo de vencimento
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Não é preciso passar pela ficha do trabalhador. Em qualquer recibo **em
+rascunho**, separador **Entradas Salariais**, se o trabalhador tiver saldo
+pendente à data de fim do recibo aparece um aviso com esse saldo e o botão
+**Pagar Banco de Horas**:
+
+.. image:: relogio_ponto/v19_payslip_payout_button.png
+   :align: center
+
+O botão faz de uma vez o que o caminho manual faz em três passos: cria o
+pagamento, confirma-o — drenando os lotes mais antigos primeiro — e insere-o
+neste mesmo recibo como input **Pagamento de Banco de Horas**, que é a linha
+visível na imagem acima.
+
+O botão é exatamente o mesmo num recibo que pertence a uma execução de
+pagamento. Em :menuselection:`Folha de Salários --> Recibos de Vencimento -->
+Execuções de Pagamento`, abra o lote, abra o recibo do trabalhador e use o
+botão no separador **Entradas Salariais**:
+
+.. image:: relogio_ponto/v19_batch_payslip_payout_button.png
+   :align: center
+
+.. note::
+    O pagamento é sempre por recibo: não existe uma ação de lote que pague o
+    Banco de Horas de todos os trabalhadores de uma só vez. O saldo de cada
+    trabalhador é calculado à data de fim do respetivo recibo.
 
 Lotes
 ~~~~~
@@ -239,7 +266,7 @@ Cada dia de horas extra compensáveis gera o seu próprio lote, em
    :align: center
 
 As **Horas Creditadas** são as horas trabalhadas já majoradas pela percentagem
-de conversão do contrato — no exemplo acima, uma hora trabalhada a 25% credita
+de conversão da empresa — no exemplo acima, uma hora trabalhada a 25% credita
 1h15 ao banco.
 
 .. warning::
