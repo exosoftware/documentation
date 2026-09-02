@@ -262,17 +262,98 @@ reportou nessa linha, ficando-lhe apenas por escolher o imposto e o artigo a apl
     indicando que impostos tem de configurar primeiro e oferecendo um botão que abre a tabela de mapeamentos. Aqui o
     processo foi pedido por si de forma explícita, por isso nada é feito a meio.
 
-Fusão de documentos
--------------------
-Devido à possibilidade de serem criadas faturas em duplicado porque não conseguiu fazer uma equivalência automática na
-insersão dos dados provenientes do e-Fatura, adicionamos a possibilidade de fundir uma fatura de rascunho com outra que
-já exista em sistema.
+.. _efatura-fusao:
 
-Para o fazer basta selecionar as duas faturas que quer fundir, ir ao menu **Ação** e selecionar a opção
-**Fundir Faturas do E-Fatura**
+Fusão de faturas duplicadas
+---------------------------
+Quando a sincronização não consegue ligar um documento do e-Fatura a uma fatura de fornecedor que já existe, cria uma
+fatura nova em rascunho, e o mesmo documento passa a existir duas vezes em Odoo: a fatura que registou e a que veio do
+e-Fatura. A fusão resolve essa duplicação sem tocar na fatura que quer manter.
 
-.. image:: efatura/v17_efaturaMerge.png
+A janela de fusão abre-se de duas formas:
+
+- Na lista de **Faturas de Fornecedor**, selecione as duas faturas e escolha
+  :menuselection:`Ações --> Fundir Faturas E-Fatura`
+
+.. image:: efatura/v19_efatura_merge_action.png
    :align: center
+
+- Numa fatura em que o Odoo deteta um possível duplicado, o aviso no topo do formulário oferece o botão
+  :guilabel:`Fundir E-Fatura`. Nesse caso o botão nativo **Eliminar duplicado** não aparece: apagaria a fatura que tem
+  o documento do e-Fatura ligado, e a sincronização seguinte voltaria a criá-la
+
+.. image:: efatura/v19_efatura_merge_banner.png
+   :align: center
+
+A janela
+""""""""
+Antes de fazer o que quer que seja, a janela mostra-lhe o que vai acontecer.
+
+.. image:: efatura/v19_efatura_merge_wizard.png
+   :align: center
+
+- Em cima, quando existem, os **avisos** (a amarelo) e os **bloqueios** (a vermelho), explicados mais abaixo
+- O bloco azul **Documento do E-Fatura**, com o que a AT comunicou: documento, fornecedor, situação, data, total e
+  impostos. É a referência contra a qual as duas faturas são comparadas
+- Dois blocos lado a lado, **Fatura a manter** (a verde) e **Fatura a remover** (a vermelho), cada um com a fatura, o
+  fornecedor, a data, o total, os impostos e a situação. A data, o total ou os impostos que não batem certo com o que a
+  AT comunicou aparecem a **laranja**, para ver de imediato qual das duas coincide com o e-Fatura
+- No fundo de cada bloco, uma nota a dizer o que acontece a essa fatura
+
+Os botões:
+
+- :guilabel:`Fundir` executa a fusão
+- :guilabel:`Trocar` inverte os papéis: a fatura que ia sair passa a ser a que fica, e a janela atualiza-se
+- :guilabel:`Cancelar` fecha a janela sem alterar nada
+
+O que a fusão faz
+"""""""""""""""""
+- O documento do e-Fatura passa a estar ligado à fatura que fica. **Essa fatura não é alterada em nada**: número, datas,
+  valores e linhas mantêm-se tal como estão, mesmo que já esteja publicada
+- Os anexos da fatura que sai (o PDF do fornecedor, por exemplo) são copiados para a fatura que fica, para que o
+  documento não se perca
+- A fatura que sai é **apagada** se estiver em rascunho, **anulada** se estiver publicada, e deixada como está se já
+  estiver anulada
+- No chatter da fatura que fica é registado com que fatura foi fundida e o que lhe aconteceu
+
+Qual das duas fica
+""""""""""""""""""
+Por defeito:
+
+- Uma fatura publicada fica sempre em vez de uma em rascunho, porque já está na contabilidade
+- Uma fatura anulada nunca fica
+- Entre duas no mesmo estado, fica a que não tem o documento do e-Fatura ligado, que é normalmente a que trabalhou,
+  com a classificação contabilística e a analítica já feitas
+
+Se a escolha não for a que pretende, use :guilabel:`Trocar`.
+
+Avisos
+""""""
+Os avisos não impedem a fusão, mas merecem uma segunda leitura antes de carregar em :guilabel:`Fundir`:
+
+- As duas faturas divergem na data, no total, nos impostos ou na moeda. O aviso diz qual das duas coincide com o
+  documento do e-Fatura e, como nada é copiado de uma para a outra, confirme a fatura que fica ou troque
+- As duas faturas estão em fornecedores diferentes
+- As duas faturas estão publicadas: o documento foi lançado duas vezes, e anular a segunda retira o custo e o IVA que
+  ela lançou. Se o período já foi declarado à AT, a correção não termina aqui
+- A fatura que fica já tem ativos ou diferimentos calculados a partir de uma data e de valores que a AT contradiz.
+  Reveja-os depois da fusão
+
+.. image:: efatura/v19_efatura_merge_wizard_warning.png
+   :align: center
+
+Bloqueios
+"""""""""
+A fusão é recusada, e o botão :guilabel:`Fundir` não aparece, quando a fatura a remover já produziu contabilidade que
+não pode ser desfeita por si:
+
+- Tem pagamentos conciliados
+- Deu origem a um ativo
+- Gerou lançamentos de diferimento
+
+Nestes casos, desfaça primeiro a conciliação, o ativo ou o diferimento, ou carregue em :guilabel:`Trocar` para manter
+essa fatura e remover a outra. Também não é possível deixar o documento do e-Fatura numa fatura anulada, nem fundir
+faturas de empresas diferentes.
 
 Trabalhar a informação em Odoo
 ==============================
@@ -285,6 +366,9 @@ Na vista de lista as diferentes faturas vão estar codificadas por cores:
 - **Vermelho**, se os dados que constam no seu Odoo apresentarem uma **Situação Inconsistente**
 - **Amarelo**, se algum dos impostos que a AT reportou não tiver mapeamento — ver
   :ref:`efatura-mapeamento-em-falta`
+- **Cinzento**, se o documento ainda não tem fatura de fornecedor ligada. Não há nada a verificar enquanto ela não
+  existir, por isso não aparece a verde como um documento já tratado. O filtro :guilabel:`Sem ligação` mostra-lhe só
+  estes documentos
 
 .. image:: efatura/v17_efatura01.png
    :align: center
@@ -330,6 +414,18 @@ Do lado do documento Odoo a ligação é feita na aba **Outra Informação** no 
 
     Esta ligação só pode ser alterada do lado do documento e-Fatura, mas o link do documento Odoo liga diretamente a
     esse documento
+
+.. note::
+    Numa base de dados com várias empresas, um documento do e-Fatura só é ligado a faturas de fornecedor da sua
+    própria empresa, mesmo quando as empresas partilham os fornecedores e veem os documentos umas das outras. O mesmo
+    vale para o documento que a leitura de um código QR, uma despesa ou uma importação procura: cada empresa só
+    encontra os seus.
+
+.. note::
+    Nas faturas de fornecedor criadas a partir do e-Fatura, e na fatura de uma despesa preenchida a partir do código
+    QR, escolher o artigo numa linha não altera o valor nem os impostos dessa linha: continuam a ser os que a AT
+    comunicou para o documento, para que a fatura não deixe de bater certo com o e-Fatura. Complete a classificação à
+    vontade, os valores ficam.
 
 Outra funcionalidade que também o ajuda a gerir a sua vista de documentos é a utilização de formatação condicional
 que pode ver tanto na vista de lista, como no próprio documento.
@@ -423,6 +519,23 @@ A pergunta é feita em três situações: o ficheiro não tem código QR nenhum,
 cortado, ou não é o código QR de uma fatura portuguesa), ou é um documento emitido a outra empresa, do qual nada
 é aproveitado. Se enviar vários ficheiros de uma vez, é perguntado um a um, indicando o nome do ficheiro e
 quantos faltam decidir.
+
+Quando a causa não está na fotografia, a mensagem diz-lhe porque é que nada foi lido:
+
+- **Leitor de Código QR Indisponível**: o servidor não consegue ler códigos QR, por isso nenhum documento é lido.
+  Devem faltar dependências para a funcionalidade funcionar corretamente: confirme as
+  :ref:`dependências do PT+ <ptplus_dependencies>`, em particular as do módulo ``ptplus_accounting_efatura``. Uma
+  nova fotografia não mudaria nada, por isso a opção :guilabel:`Tentar Novamente` não é oferecida
+- **Código QR Não Lido a Tempo**: o documento é longo e a procura do código QR foi interrompida por ter esgotado o
+  tempo de que dispõe. Anexe só a página que tem o código QR para o ter lido. Também aqui a opção
+  :guilabel:`Tentar Novamente` não é oferecida
+
+O botão :guilabel:`Ler QR` da fatura de fornecedor e da despesa dá a mesma razão que o envio do ficheiro.
+
+.. tip::
+    Num documento de várias páginas a procura começa pela primeira e pela última página, onde o código QR de uma
+    fatura normalmente está, por isso um documento longo já não demora minutos a ler. Uma fatura emitida por software,
+    cujo código QR é uma imagem, é lida de imediato seja qual for o número de páginas.
 
 .. note::
     Fechar a mensagem sem escolher nada tem o mesmo efeito que :guilabel:`Aceitar`: o documento fica registado.
