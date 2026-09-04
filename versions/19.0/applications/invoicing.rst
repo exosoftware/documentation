@@ -20,8 +20,6 @@ Explore mais sobre os nossos add-ons de Faturação, Pagamentos e Stock
     invoicing/withholding_tax
     invoicing/odoo_process
     invoicing/e-invoicing
-    invoicing/saphety
-    invoicing/edi_sale
     invoicing/fsp
     invoicing/self-billing
     invoicing/insurance
