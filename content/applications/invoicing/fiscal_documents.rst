@@ -32,6 +32,22 @@ Community ou Enterprise do Odoo), vá ao menu de **Configuração** e no separad
 .. image:: fiscal_documents/v17_seriesList.png
    :align: center
 
+O **Filtro de Operações** de cada guia só apresenta os tipos de operação com que essa guia pode circular, e num
+movimento só ficam disponíveis as séries cujo filtro inclui o tipo de operação em causa.
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   * - Guia
+     - Tipos de operação aceites
+   * - **Guia de Remessa**, **Guia de Transporte** e **Guia de Consignação**
+     - Transferências internas e entregas
+   * - **Guia de Transporte de Ativos**
+     - Todas as operações exceto entregas, incluindo receções e transferências internas
+   * - **Guia de Devolução**
+     - Apenas entregas, por ser o documento das devoluções a fornecedores
+
 .. _fiscal_documents_quote:
 
 Orçamento
@@ -440,6 +456,9 @@ Os motivos que podem levar à emissão deste tipo de guias são os seguintes:
 - Movimentação de bens entre armazéns/instalações do mesmo agente económico
 - Movimentação de bens para empresas subcontratadas para transformação
 - Deslocações de bens para exposições ou feiras
+
+Como não há transmissão de propriedade, esta guia pode ser associada a qualquer tipo de operação exceto entregas,
+incluindo receções: quando os bens regressam de um subcontratado, a guia é emitida na receção que os recebe.
 
 Para emitir o pdf da guia basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Documentos de Transporte`
 
