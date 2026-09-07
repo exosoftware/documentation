@@ -1,9 +1,9 @@
 :nosearch:
 
-========
-Salários
-========
-Explore mais sobre o nosso add-on de Salários
+=============
+Salários e HR
+=============
+Explore mais sobre o nosso add-on de Salários e Recursos Humanos
 
 .. raw:: html
 
@@ -24,3 +24,4 @@ Explore mais sobre o nosso add-on de Salários
     payroll/mapa_anual_acumulado
     payroll/declaracao_anual_rendimentos
     payroll/relatorio_unico
+    payroll/recrutamento
