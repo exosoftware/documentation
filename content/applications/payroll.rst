@@ -1,9 +1,9 @@
 :nosearch:
 
-========
-Salários
-========
-Explore mais sobre o nosso add-on de Salários
+=============
+Salários e HR
+=============
+Explore mais sobre o nosso add-on de Salários e Recursos Humanos
 
 .. raw:: html
 
@@ -27,3 +27,4 @@ Explore mais sobre o nosso add-on de Salários
     payroll/relatorio_unico
     payroll/outros_mapas
     payroll/integracoes_odoo
+    payroll/recrutamento
