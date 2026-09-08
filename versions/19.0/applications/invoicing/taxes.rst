@@ -137,6 +137,23 @@ Independentemente do tipo de imposto aplicado a produtos ou serviços, **a Posi�
 Estas posições fiscais já estão configuradas na Localização PT+ Exo, basta associar ao parceiro que o mapeamento
 automático trata das conversões.
 
+.. tip::
+    Desde a v19 que o Odoo inseriu um novo conceito, a **Posição Fiscal Doméstica**.
+
+    Este conceito faz com que na escolha de impostos na ficha de um artigo, apenas apareçam impostos pertencentes a esta
+    posição fiscal doméstica.
+
+    O cálculo que determina das posições fiscais, qual é a considerada doméstica, é feito regularmente e o seu maior
+    contribuidor é a sequência da posição fiscal na listagem. A posição que englobe o país ao qual pertence a empresa
+    que esteja mais acima nesta listagem, normalmente é a selecionada.
+
+    Por esse motivo a Exo configura a posição fiscal **Continente** como sendo a 1ª da lista.
+
+    Se mudar esta ordem, pode deixar de conseguir selecionar alguns dos impostos na ficha do artigo, apesar de os mesmos
+    estarem ativos.
+
+    Para solucionar basta que volte a mudar esta ordenação.
+
 .. important::
     **Criação de posições fiscais diretamente nos formulários**
 
