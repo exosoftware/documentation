@@ -53,6 +53,12 @@ produção normal no fecho do período.
 .. image:: manufacturing/v18_cm_location.png
    :align: center
 
+Qual a localização a usar é uma definição por empresa, **Local de Produção de Contract Manufacturing**, que fica ao lado
+do aprovador nas definições de Inventário. Vem preenchida de origem com a localização que a app criou, pelo que em
+utilização normal não tem aqui nada a fazer; se preferir apontar a uma localização sua, basta trocá-la. Quem decide se
+uma ordem usa esta localização ou a de produção normal é a Lista de Materiais da ordem, e não a configuração do artigo,
+pelo que não há nada a definir artigo a artigo.
+
 E cria um tipo de operação de fabrico dedicado, **Contract Manufacturing**, por cada armazém, com sequência própria.
 Encontra-o na app de **Inventário**, menu de **Configuração**, opção :menuselection:`Gestão de armazém --> Tipos de
 Operações`.
@@ -60,18 +66,17 @@ Operações`.
 .. image:: manufacturing/v18_cm_operationType.png
    :align: center
 
-.. TODO: validar o processo de produção com 2 rotas distintas e forçar a localização criada pela app mas mantendo a rota normal para outras produções
-
 .. tip::
-    O tipo de operação dedicado aplica-se às ordens de fabrico que criar manualmente. As ordens geradas
-    automaticamente a partir de uma encomenda de venda usam o tipo de operação de fabrico do armazém, por ser esse que
-    consta da regra de reabastecimento.
+    O tipo de operação é imposto pela Lista de Materiais, em todas as vias de criação da ordem: manual, gerada a partir
+    da encomenda de venda, ou por reabastecimento. Uma Lista de Materiais de Contract Manufacturing traz o tipo
+    dedicado, e uma lista regular repõe o tipo de fabrico do armazém, sem precisar de o declarar. Como a numeração segue
+    a sequência do tipo de operação, as ordens por conta de terceiros ficam também numeradas à parte.
 
 Configurações
 -------------
-Toda a configuração vive na **Lista de Materiais**. Na app de **Produção** vá ao menu de **Artigos** e selecione a opção
-**Listas de Materiais**, abra a lista do artigo que produz para o cliente e ative a opção **Contract Manufacturing**.
-O campo **Dono** passa a ser obrigatório: indique aí o cliente dono da mercadoria.
+Tirando as duas definições acima, a configuração vive toda na **Lista de Materiais**. Na app de **Produção** vá ao
+menu de **Artigos**, selecione a opção **Listas de Materiais**, abra a lista do artigo que produz para o cliente e ative
+a opção **Contract Manufacturing**. O campo **Dono** passa a ser obrigatório: indique aí o cliente dono da mercadoria.
 
 Na tabela de componentes assinale, na coluna **Fornecido pelo Cliente**, as linhas dos componentes que o cliente lhe
 entrega. As restantes seguem o fluxo normal do Odoo, sem qualquer alteração.
@@ -101,6 +106,11 @@ com o projeto cuja conta analítica quer usar.
 .. important::
     Sem projeto na Lista de Materiais, e sem custo por hora nos centros de trabalho, o apuramento analítico sai a zeros.
     São as duas condições obrigatórias para a última secção desta página funcionar.
+
+.. note::
+    Para que os prazos de entrega dos componentes que o cliente fornece sejam considerados, esse cliente tem de existir
+    como **fornecedor** do componente, na lista de fornecedores do artigo. É semanticamente estranho, mas é o mecanismo
+    nativo do Odoo para prazos de aprovisionamento. Na ausência de prazo, assume-se entrega imediata.
 
 Utilização
 ----------
@@ -181,6 +191,14 @@ O que acontece a seguir depende do seu perfil:
 
 Concluída a ordem, o produto acabado entra em stock como propriedade do cliente e não é valorizado. A entrega dá baixa
 da consignação sem impacto patrimonial, e a fatura liquida apenas o serviço.
+
+.. warning::
+    Cancelar a encomenda de venda **não** cancela a ordem de fabrico. É comportamento nativo do Odoo, e pode ser
+    alterado na configuração da regra da rota de reabastecimento, ativando a propagação de cancelamento.
+
+.. note::
+    Numa ordem parcial, gerada quando conclui menos do que a quantidade pedida, o Dono, o tipo de operação e a
+    localização de produção acompanham a ordem de origem.
 
 Apuramento dos custos
 ---------------------

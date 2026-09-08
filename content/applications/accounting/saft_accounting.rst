@@ -95,7 +95,7 @@ Documentação em breve
     Importação
     ==========
 
-.. TODO : Ferramenta ainda com problemas, João
+.. TODO : Problemas iniciais corrigidos pelo André falta testar em termos funcionais
 
 ..
     Para poder importar o ficheiro SAF-T de Contabilidade, aceda à app **Faturação / Contabilidade** (dependendo

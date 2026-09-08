@@ -20,8 +20,10 @@ Explore mais sobre o nosso add-on de Salários
     payroll/comissoes_folha_salarios
     payroll/automatismos_processamento
     payroll/dmr_dri
+    payroll/folha_de_ferias
+    payroll/mapa_agregado_recibos
+    payroll/mapa_anual_acumulado
+    payroll/declaracao_anual_rendimentos
     payroll/relatorio_unico
-    payroll/mapa_seguros
     payroll/outros_mapas
-    payroll/relogio_ponto
     payroll/integracoes_odoo
