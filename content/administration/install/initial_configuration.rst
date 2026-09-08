@@ -102,6 +102,27 @@ linha vai ser ocultada.
 .. image:: initial_configuration/v17_bankAccount4.png
     :align: center
 
+Localização Fiscal
+==================
+
+Atualmente a Localização PT+ disponibiliza 2 localizações fiscais:
+
+- **Base**, onde tem aceso ao plano normal do SNC
+- **Microentidades**, onde tem acesso ao plano simplificado do SNC para microempresas
+
+.. note::
+    Pode personalizar o seu plano de contas depois de selecionar um dos planos disponíveis para melhor se adaptar ao seu
+    caso específico
+
+.. danger::
+    É fundamental escolher corretamente a localização fiscal correta a aplicar à empresa antes da emissão dos primeiros
+    documentos fiscais e contabilísticos.
+
+    Depois de selecionar uma delas e gravar a configuração, não vai poder alterar.
+
+.. seealso::
+    :doc:`Veja em detalhe os planos de contas que estão disponíveis com a Localização PT+ <../../applications/accounting/coa>`
+
 Como ativar a Localização PT+
 =============================
 A nossa localização está dividida em vários módulos para que seja o mais conveniente possível de utilizar, pelo que nos
@@ -156,27 +177,6 @@ as alterações.
     :doc:`Consulte as nossas FAQs sobre configuração <../../applications/faq/configuration>`
 
     :doc:`Consulte as nossas FAQs sobre a secção Detalhes da Fatura <../../applications/faq/invoice>`
-
-Localização Fiscal
-==================
-
-Atualmente a Localização PT+ disponibiliza 2 localizações fiscais:
-
-- **Base**, onde tem aceso ao plano normal do SNC
-- **Microentidades**, onde tem acesso ao plano simplificado do SNC para microempresas
-
-.. note::
-    Pode personalizar o seu plano de contas depois de selecionar um dos planos disponíveis para melhor se adaptar ao seu
-    caso específico
-
-.. danger::
-    É fundamental escolher corretamente a localização fiscal correta a aplicar à empresa antes da emissão dos primeiros
-    documentos fiscais e contabilísticos.
-
-    Depois de selecionar uma delas e gravar a configuração, não vai poder alterar.
-
-.. seealso::
-    :doc:`Veja em detalhe os planos de contas que estão disponíveis com a Localização PT+ <../../applications/accounting/coa>`
 
 Configuração do utilizador
 ==========================
