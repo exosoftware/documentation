@@ -137,23 +137,6 @@ Independentemente do tipo de imposto aplicado a produtos ou serviços, **a Posi�
 Estas posições fiscais já estão configuradas na Localização PT+ Exo, basta associar ao parceiro que o mapeamento
 automático trata das conversões.
 
-.. tip::
-    Desde a v19 que o Odoo inseriu um novo conceito, a **Posição Fiscal Doméstica**.
-
-    Este conceito faz com que na escolha de impostos na ficha de um artigo, apenas apareçam impostos pertencentes a esta
-    posição fiscal doméstica.
-
-    O cálculo que determina das posições fiscais, qual é a considerada doméstica, é feito regularmente e o seu maior
-    contribuidor é a sequência da posição fiscal na listagem. A posição que englobe o país ao qual pertence a empresa
-    que esteja mais acima nesta listagem, normalmente é a selecionada.
-
-    Por esse motivo a Exo configura a posição fiscal **Continente** como sendo a 1ª da lista.
-
-    Se mudar esta ordem, pode deixar de conseguir selecionar alguns dos impostos na ficha do artigo, apesar de os mesmos
-    estarem ativos.
-
-    Para solucionar basta que volte a mudar esta ordenação.
-
 .. important::
     **Criação de posições fiscais diretamente nos formulários**
 
@@ -172,6 +155,54 @@ Depois é só gravar com outro nome.
 
 .. image:: taxes/v17_fiscalPositions.png
   :align: center
+
+Posição Fiscal Doméstica
+------------------------
+**O que é**
+
+A partir da versão 19, o Odoo elege automaticamente uma das posições fiscais como posição fiscal doméstica (Domestic
+Fiscal Position). Essa eleição condiciona os impostos disponíveis na ficha do artigo: o campo de impostos passa a
+mostrar apenas os impostos associados à posição fiscal eleita.
+
+.. example::
+    Exemplo prático: o imposto IVA 23% Mercadorias está associado à posição fiscal Continente. Se a posição doméstica
+    eleita for Açores, esse imposto deixa de estar disponível para seleção na ficha do artigo, apesar de estar ativo e
+    corretamente configurado.
+
+    Não se trata de um erro na configuração do imposto — é o filtro da posição doméstica a atuar.
+
+..
+    Caso se detete que outras áreas são afetadas pela lógica da Posição Fiscal Doméstica este é o sítio para colocar essa informação
+
+**Como é determinada**
+
+Dos critérios que identificámos, dois são relevantes na prática:
+
+- **País**, a posição fiscal tem de corresponder ao país da empresa.
+- **Ordenação**, de entre as posições elegíveis, é normalmente escolhida a que estiver mais acima na listagem.
+
+Podem existir outros critérios que não identificámos. No caso português, como Continente, Madeira e Açores estão todas
+associadas a Portugal, o país não desempata: a ordenação é o fator decisivo.
+
+.. tip::
+    O valor eleito fica gravado e não é recalculado a cada utilização. Alterar a ordenação das posições fiscais força o
+    recálculo de imediato.
+
+**Configuração entregue no PT+**
+
+A Exo entrega a posição fiscal Continente em primeiro lugar na listagem. A opção foi apenas de ordenação, e não de
+forçar a eleição por outra via. Isto porque a ordenação é suficiente para obter o resultado pretendido, é visível para o
+cliente e é reversível sem intervenção técnica.
+
+.. important::
+    **Se alterar a ordenação**
+
+    Alterar a ordem das posições fiscais é uma operação permitida e pode ter razões legítimas. Convém, no entanto,
+    conhecer as consequências.
+
+    - **Sintoma:** deixa de conseguir selecionar determinados impostos na ficha do artigo, apesar de estarem ativos.
+    - **Causa:** a posição fiscal doméstica passou a ser outra, e o campo de impostos está limitado aos impostos dessa posição.
+    - **Resolução:** reponha a ordenação anterior, colocando novamente Continente em primeiro lugar. A alteração da ordem força o recálculo e os impostos voltam a ficar disponíveis.
 
 Motivos de isenção de IVA
 =========================
