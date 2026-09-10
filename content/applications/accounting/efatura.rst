@@ -55,9 +55,15 @@ Procure a secção **Portugal** e configure os campos relativos ao E-Fatura:
   mesmas
 - Use o botão :guilabel:`Configurar Mapeamentos` para definir que imposto e que artigo o Odoo aplica a cada imposto que
   a AT reporta — ver :ref:`efatura-mapeamento-impostos`
+- Em :guilabel:`Documentos de Auto-faturação` escolha o que fazer com os documentos que emite em nome dos seus
+  fornecedores — ver :ref:`efatura-autofaturas`
 
 .. image:: efatura/v19_efatura_settings.png
    :align: center
+
+.. note::
+    As configurações do E-Fatura estão disponíveis em qualquer empresa portuguesa, mesmo que não emita as suas faturas
+    com a **Faturação Portuguesa** ativa.
 
 .. important::
     Verifique que configurações tem para o OCR Odoo, o nosso leitor de código QR **Ler QR** é gratuíto, no entanto o OCR
@@ -261,6 +267,34 @@ reportou nessa linha, ficando-lhe apenas por escolher o imposto e o artigo a apl
     Se pedir **Criar/Atualizar Faturas** sobre documentos a que falta mapeamento, o Odoo avisa e não cria nada,
     indicando que impostos tem de configurar primeiro e oferecendo um botão que abre a tabela de mapeamentos. Aqui o
     processo foi pedido por si de forma explícita, por isso nada é feito a meio.
+
+.. _efatura-autofaturas:
+
+Autofaturas
+-----------
+Se tem acordos de auto-faturação, isto é, se é a sua empresa que emite as faturas em nome de alguns fornecedores, esses
+documentos são comunicados por si à AT e voltam ao E-Fatura dias depois, agora do lado das compras. Como foram emitidos
+no Odoo, já os tem no sistema e com os valores certos.
+
+O campo :guilabel:`Documentos de Auto-faturação`, nas configurações do E-Fatura, decide o que a sincronização faz com
+eles:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 65
+
+   * - Opção
+     - O que acontece
+   * - :guilabel:`Recolher e associar ao documento emitido`
+     - A escolha por omissão. Os documentos entram na lista do E-Fatura e ficam associados à fatura que emitiu para
+       eles. Não lhes é pedido mapeamento de impostos e nunca lhes é criada uma segunda fatura de fornecedor.
+   * - :guilabel:`Deixar de fora da sincronização`
+     - Os documentos não são recolhidos. A lista do E-Fatura fica só com os documentos dos seus fornecedores, e o
+       resumo no fim de cada sincronização diz quantas autofaturas ficaram de fora.
+
+.. note::
+    A escolha só produz efeito nas sincronizações seguintes. As autofaturas recolhidas antes mantêm-se na lista do
+    E-Fatura, associadas à fatura respetiva.
 
 .. _efatura-fusao:
 
