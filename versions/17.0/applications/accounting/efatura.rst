@@ -54,9 +54,15 @@ Procure a secção **Portugal** e configure os campos relativos ao eFatura:
 - Diário de compras que criou
 - Produto do eFatura que criou
 - Taxas Normal, Intermédia, Reduzida e Isenta inseridas com o plano de contas
+- Em **Documentos de Auto-faturação**, o que fazer com os documentos que emite em nome dos seus fornecedores — ver
+  `Autofaturas`_
 
 .. image:: efatura/v17_efaturaConfig02.png
    :align: center
+
+.. note::
+    As configurações do E-Fatura estão disponíveis em qualquer empresa portuguesa, mesmo que não emita as suas faturas
+    com a **Faturação Portuguesa** ativa.
 
 Ative a opção E-Fatura Scan que lhe vai permitir fazer scan dos códigos QR das faturas e criar as mesmas
 
@@ -149,6 +155,31 @@ opção **Registar ao Fechar** que vai guardar no seu Odoo uma cópia dos movime
 .. tip::
     Este método é menos recomendado porque não traz as diferentes linhas por imposto e o valor de impostos pode não
     bater certo com uma das taxas de impostos que utiliza, pelo que conseguir a equivalência pode ser mais difícil
+
+Autofaturas
+-----------
+Se tem acordos de auto-faturação, isto é, se é a sua empresa que emite as faturas em nome de alguns fornecedores, esses
+documentos são comunicados por si à AT e voltam ao e-Fatura dias depois, agora do lado das compras. Como foram emitidos
+no Odoo, já os tem no sistema e com os valores certos.
+
+O campo **Documentos de Auto-faturação**, nas configurações do E-Fatura, decide o que a sincronização faz com eles:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 35 65
+
+   * - Opção
+     - O que acontece
+   * - **Recolher e associar ao documento emitido**
+     - A escolha por omissão. Os documentos entram na lista do e-Fatura e ficam associados à fatura que emitiu para
+       eles, e nunca lhes é criada uma segunda fatura de fornecedor.
+   * - **Deixar de fora da sincronização**
+     - Os documentos não são recolhidos. A lista do e-Fatura fica só com os documentos dos seus fornecedores, e o
+       resumo no fim de cada sincronização diz quantas autofaturas ficaram de fora.
+
+.. note::
+    A escolha só produz efeito nas sincronizações seguintes. As autofaturas recolhidas antes mantêm-se na lista do
+    e-Fatura, associadas à fatura respetiva.
 
 Fusão de documentos
 -------------------
