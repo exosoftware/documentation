@@ -65,12 +65,10 @@ Classificar os movimentos
 -------------------------
 A classificação acompanha o dia a dia, sem passos adicionais:
 
-- **Ao registar um pagamento**, o campo :guilabel:`Distribuição de Fluxos de Caixa` vem pré-preenchido com
-  a sugestão dos modelos, calculada a partir das linhas das faturas a pagar; pode ser ajustado antes de
-  criar o pagamento
-
-.. image:: cashflow/v19_cashflow_pagamento.png
-   :align: center
+- **Ao registar um pagamento**, a sugestão dos modelos, calculada a partir das linhas das faturas a pagar,
+  é aplicada automaticamente ao pagamento criado; o assistente de registo não mostra nada sobre fluxos de
+  caixa, e a distribuição pode ser revista ou alterada no campo :guilabel:`Distribuição de Fluxos de Caixa`
+  do próprio pagamento
 
 - **Ao reconciliar uma transação bancária** com faturas, pagamentos ou outros lançamentos, a classificação
   é aplicada automaticamente quando os modelos mapeiam as linhas dos documentos liquidados: cada documento
@@ -78,6 +76,14 @@ A classificação acompanha o dia a dia, sem passos adicionais:
 
 - **Ao lançar diretamente numa conta mapeada** (comissões bancárias, impostos, movimentos de empréstimos),
   o movimento é classificado na publicação do lançamento
+
+- **Nas transferências entre bancos e caixa** (depósitos e levantamentos de numerário, transferências entre
+  contas bancárias), as duas pernas do movimento são classificadas automaticamente como transferências
+  internas de caixa e equivalentes, que não são fluxos de caixa e ficam fora da demonstração. Vale tanto
+  para um único lançamento entre as duas contas como para uma transação bancária e uma transação de caixa
+  ligadas pela conta de transferências internas da empresa, assim que são reconciliadas entre si. A regra
+  de raiz sobre as contas de caixa e de depósitos à ordem (classes 11 e 12) trata disso, e a demonstração
+  avisa quando as transferências internas do período não somam zero
 
 .. note::
     A sugestão comporta-se como um valor por defeito: um valor introduzido pelo utilizador nunca é
