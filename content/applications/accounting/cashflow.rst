@@ -66,9 +66,8 @@ Classificar os movimentos
 A classificação acompanha o dia a dia, sem passos adicionais:
 
 - **Ao registar um pagamento**, a sugestão dos modelos, calculada a partir das linhas das faturas a pagar,
-  é aplicada automaticamente ao pagamento criado; o assistente de registo não mostra nada sobre fluxos de
-  caixa, e a distribuição pode ser revista ou alterada no campo :guilabel:`Distribuição de Fluxos de Caixa`
-  do próprio pagamento
+  é aplicada automaticamente ao pagamento criado; o assistente de registo não pede nada sobre fluxos de
+  caixa
 
 - **Ao reconciliar uma transação bancária** com faturas, pagamentos ou outros lançamentos, a classificação
   é aplicada automaticamente quando os modelos mapeiam as linhas dos documentos liquidados: cada documento
@@ -89,38 +88,53 @@ A classificação acompanha o dia a dia, sem passos adicionais:
     A sugestão comporta-se como um valor por defeito: um valor introduzido pelo utilizador nunca é
     substituído automaticamente
 
-Os movimentos de bancos e caixa por classificar são assinalados nos próprios documentos e podem ser
-consultados a qualquer momento a partir dos avisos da demonstração (ver abaixo)
-
-Classificar movimentos do passado
----------------------------------
-Para classificar em bloco os movimentos do passado (por exemplo, logo após a instalação do módulo), use o
-menu :menuselection:`Revisão --> Controlar --> Classificar Fluxos de Caixa`: o assistente abre com todos os
-movimentos por classificar, sugere a distribuição dos modelos onde algo mapeia e mostra os documentos por
-detrás de cada movimento
+Classificar à mão
+-----------------
+O que os modelos não classificam fica assinalado no lançamento e é tratado no menu
+:menuselection:`Revisão --> Controlar --> Classificar Fluxos de Caixa`, a lista de todos os movimentos de
+bancos e caixa, aberta nos que estão por classificar
 
 .. image:: cashflow/v19_cashflow_wizard_lista.png
    :align: center
 
-As sugestões têm de ser aceites (movimento a movimento, com o visto, ou todas de uma vez com
-:guilabel:`Aceitar Todas as Sugestões`), podem ser rejeitadas com a cruz, e qualquer distribuição pode ser
-editada diretamente. :guilabel:`Aplicar` escreve apenas os valores aceites ou editados, deixando os
-restantes por classificar
+A lista pesquisa-se, filtra-se (por classificar, classificados, transferências internas, hoje, esta semana,
+qualquer período) e agrupa-se por diário, parceiro, categorias, conta ou mês; um movimento repartido por
+várias categorias aparece em cada uma delas. A :guilabel:`Distribuição de Fluxos de Caixa` edita-se
+diretamente na linha e, com vários movimentos selecionados, todos recebem a mesma categoria, cada um pelo
+seu valor
 
-No detalhe de cada movimento, cada linha dos documentos liquidados (ou a contrapartida direta do próprio
-lançamento, quando o movimento foi lançado diretamente numa conta) pode ser classificada individualmente:
-a distribuição do movimento passa a ser a soma por categoria das linhas classificadas. O botão
-:guilabel:`Documentos` abre os documentos por detrás do movimento
+Quando os modelos mapeiam os documentos por detrás de um movimento por classificar, a proposta aparece na
+coluna :guilabel:`Sugestão de Fluxos de Caixa` e a seta ao lado passa-a para a distribuição. O botão
+:guilabel:`Aceitar Sugestões` faz o mesmo para os movimentos selecionados, ou para todos os que o filtro
+mostra quando não há nenhum selecionado. Os documentos de cada movimento estão na própria linha e abrem-se
+a partir dela
+
+.. tip::
+    Depois de aceitar, a notificação oferece :guilabel:`Anular` enquanto estiver visível, o que repõe
+    exatamente o que estava antes
+
+Classificar em detalhe
+----------------------
+Um movimento pode liquidar documentos de naturezas diferentes. Nesse caso selecione os movimentos e use
+:guilabel:`Classificar em Detalhe`: abre a lista das linhas dos documentos por detrás deles (ou das
+contrapartidas diretas, quando o movimento foi lançado diretamente numa conta), agrupada por movimento
 
 .. image:: cashflow/v19_cashflow_wizard_detalhe.png
    :align: center
 
-.. tip::
-    Para classificar vários movimentos em conjunto, selecione-os na lista e use
-    :guilabel:`Classificar Selecionados em Conjunto`: os movimentos fundem-se numa única linha, classificada
-    linha a linha no detalhe, e ao aplicar cada movimento recebe a soma das suas próprias linhas
+Cada linha mostra a categoria que os modelos propõem e a categoria que o movimento tem para ela, vazia
+enquanto a linha não estiver classificada. O cabeçalho de cada grupo mostra a distribuição do movimento e,
+depois de uma seta, aquela que fica se aceitar as sugestões pendentes. Escolher ou aceitar uma categoria
+escreve logo no movimento, que passa a ter a soma por categoria das suas linhas classificadas, sem ser
+preciso indicar valores
 
-O mesmo assistente pode ser aberto para um único movimento a partir dos itens de diário por classificar
+.. tip::
+    Uma categoria escolhida à mão diferente da proposta fica assinalada a amarelo e tem o filtro
+    :guilabel:`Alteradas Manualmente`, para rever mais tarde o que foi decidido fora dos modelos
+
+Os movimentos sem nada por trás (uma transação que ainda está na conta transitória) não têm linhas aqui e
+classificam-se na lista. O mesmo detalhe abre para um único movimento a partir dos itens de diário por
+classificar ou dos avisos da demonstração
 
 Demonstração dos Fluxos de Caixa
 ================================
