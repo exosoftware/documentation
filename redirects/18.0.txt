@@ -1,2 +1,4 @@
 # Faturação
 applications/invoicing/withholding_statements.rst applications/invoicing/withholding_tax.rst  # fundida na página das retenções na fonte
+applications/invoicing/saphety.rst applications/invoicing/e-invoicing.rst  # fundida na página única de faturação eletrónica CIUS-PT
+applications/invoicing/edi_sale.rst applications/invoicing/e-invoicing.rst  # fundida na página única de faturação eletrónica CIUS-PT
