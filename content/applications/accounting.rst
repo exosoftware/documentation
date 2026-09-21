@@ -20,6 +20,7 @@ Explore mais sobre o nosso add-on de Contabilidade
     accounting/ies_statements
     accounting/efatura
     accounting/cashflow
+    accounting/equity
     accounting/assets
     accounting/accounting_statements
     accounting/other_statements
