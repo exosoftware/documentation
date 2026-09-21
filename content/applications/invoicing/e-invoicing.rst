@@ -45,6 +45,9 @@ montante, na encomenda.
      - Campos B2G na encomenda de venda, com propagação para a fatura.
      - E-invoicing CIUS-PT e Vendas PT+
 
+Os três módulos fazem parte da sua subscrição **PT+** e não exigem pedido à Exo Software: ativam-se
+diretamente nas definições, tal como qualquer outra funcionalidade da localização.
+
 .. warning::
     A comunicação em CIUS-PT cobre exclusivamente **faturas e notas de crédito**, e apenas no
     **sentido da venda**. Guias de remessa, encomendas a fornecedores, receção de documentos e o
@@ -57,11 +60,11 @@ montante, na encomenda.
         ─── ✦ ───
     </div>
 
-Pré-Configurações
+Configurações
 ==================
-Os três módulos fazem parte da sua subscrição **PT+** e não exigem pedido à Exo Software: ativam-se
-diretamente nas definições, tal como qualquer outra funcionalidade da localização.
 
+Ativação dos módulos
+-------------------------
 Aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou
 Enterprise do Odoo), vá ao menu :menuselection:`Configuração --> Configurações` e na secção
 **Portugal** ative a opção :guilabel:`Faturação Eletrónica`. Se pretender transmissão automática
@@ -82,8 +85,11 @@ que a opção anterior está ativa.
     publicar faturas apesar de a validação do ficheiro CIUS-PT falhar — não recomendado fora de um
     ambiente de testes.
 
-Configurações
-==================
+Credenciais do broker
+------------------------
+Com a opção **Broker EDI Saphety** ativa, preencha o :guilabel:`Nome de Utilizador` e a
+:guilabel:`Palavra-passe` da conta Saphety da sua empresa, na mesma secção Portugal das
+definições — campos assinalados a azul na imagem acima — e guarde.
 
 Formato do parceiro e herança
 -------------------------------
@@ -105,15 +111,6 @@ o campo :guilabel:`Formato da fatura eletrónica` como :guilabel:`Portugal (CIUS
     interface: o Odoo esconde o separador de faturação nesse caso, por não ser normalmente esse
     contacto a ser faturado. A definição no parceiro principal é o suficiente e aplica-se de forma
     transparente sempre que um documento é emitido para qualquer um dos seus contactos.
-
-Credenciais do broker
-------------------------
-Com a opção **Broker EDI Saphety** ativa, preencha o :guilabel:`Nome de Utilizador` e a
-:guilabel:`Palavra-passe` da conta Saphety da sua empresa, na mesma secção Portugal das
-definições, e guarde.
-
-.. image:: e-invoicing/v19_edi_settings.png
-   :align: center
 
 Verificação prévia do destinatário
 --------------------------------------
@@ -146,9 +143,6 @@ para correção.
 
 O ficheiro XML CIUS-PT é gerado nesse mesmo momento — não no envio — e a sua representação visual
 é incluída no PDF da fatura, pelo que **não precisa de transmitir o PDF em separado**.
-
-.. seealso::
-    :doc:`Consulte as nossas FAQs sobre Faturação eletrónica <../faq/e-invoicing_errors>`
 
 Via manual, sem broker
 --------------------------
@@ -249,3 +243,6 @@ Erros de submissão
 Um erro no estado de submissão (coluna **Estado da Submissão Saphety** a *Erro*) remete quase
 sempre para o NIF do parceiro ou para as credenciais Saphety da empresa. Confirme ambos — usando o
 botão :guilabel:`Check Sovos/Saphety` na ficha do parceiro — e reenvie a fatura.
+
+.. seealso::
+    :doc:`Consulte as nossas FAQs sobre Faturação eletrónica <../faq/e-invoicing_errors>`
