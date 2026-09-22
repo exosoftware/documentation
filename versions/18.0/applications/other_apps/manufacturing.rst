@@ -94,7 +94,8 @@ entrega. As restantes seguem o fluxo normal do Odoo, sem qualquer alteração.
     pelo menos uma Lista de Materiais **sem Dono**. Caso contrário, e existindo só a lista de fabrico por conta de
     terceiros, o Odoo pode criar uma ordem de produção sem lista de materiais.
 
-    O cenário mais normalizado será pegar numa lista sem dono, duplicar a mesma e converter para uma lista com dono
+    O cenário mais normalizado será pegar numa lista sem dono, duplicar a mesma e converter para uma lista com dono.
+    Nunca esquecendo de mudar o tipo de operação na Lista de Materiais para a operação de Contract Manufacturing.
 
 .. note::
     Uma Lista de Materiais por conta de terceiros pode não ter nenhum componente marcado como fornecido pelo cliente.
