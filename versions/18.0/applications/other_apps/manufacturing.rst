@@ -26,8 +26,8 @@ serviço de industrialização, não o valor do produto.
         ─── ✦ ───
     </div>
 
-Pré-Configurações
------------------
+Pré-requisitos
+--------------
 A instalação da app trata sozinha de tudo o que o fluxo precisa, não tem configurações prévias a fazer. Ainda assim vale
 a pena saber o que ficou preparado.
 
@@ -68,9 +68,14 @@ Operações`.
 
 .. tip::
     O tipo de operação é imposto pela Lista de Materiais, em todas as vias de criação da ordem: manual, gerada a partir
-    da encomenda de venda, ou por reabastecimento. Uma Lista de Materiais de Contract Manufacturing traz o tipo
-    dedicado, e uma lista regular repõe o tipo de fabrico do armazém, sem precisar de o declarar. Como a numeração segue
-    a sequência do tipo de operação, as ordens por conta de terceiros ficam também numeradas à parte.
+    da encomenda de venda, ou por reabastecimento.
+
+    Uma Lista de Materiais de Contract Manufacturing traz o tipo dedicado que usa a localização dedicada.
+
+    Uma lista regular repõe o tipo de fabrico do armazém, sem precisar de o declarar, neste caso segue a lógica nativa
+    de usar a localização definida no artigo.
+
+    Como a numeração segue a sequência do tipo de operação, as ordens por conta de terceiros ficam também numeradas à parte.
 
 Configurações
 -------------
@@ -87,13 +92,16 @@ entrega. As restantes seguem o fluxo normal do Odoo, sem qualquer alteração.
 .. important::
     Se um artigo pode ser vendido das duas maneiras, por conta de terceiros e como venda normal, configure-lhe sempre
     pelo menos uma Lista de Materiais **sem Dono**. Caso contrário, e existindo só a lista de fabrico por conta de
-    terceiros, o Odoo pode escolhê-la em silêncio numa venda normal por ser a única disponível.
+    terceiros, o Odoo pode criar uma ordem de produção sem lista de materiais.
+
+    O cenário mais normalizado será pegar numa lista sem dono, duplicar a mesma e converter para uma lista com dono
 
 .. note::
     Uma Lista de Materiais por conta de terceiros pode não ter nenhum componente marcado como fornecido pelo cliente.
     Corresponde ao caso em que a sua empresa fornece todos os materiais e, apesar disso, o produto final pertence ao
     cliente.
 
+.. danger::
     As Listas de Materiais do tipo **Kit** não são suportadas, porque explodem na própria venda e não geram ordem de
     fabrico.
 
@@ -121,9 +129,12 @@ que declara o serviço: campo em branco significa venda normal.
    :align: center
 
 .. tip::
-    Só lhe são propostas Listas de Materiais sem Dono, ou cujo Dono seja o cliente da encomenda. Se trocar o cliente,
-    a lista escolhida é limpa quando deixa de servir, para que faça nova escolha sem que a gravação seja recusada. Uma
-    lista sem Dono mantém-se, porque serve qualquer cliente.
+    Só lhe são propostas Listas de Materiais sem Dono, ou cujo Dono seja o cliente da encomenda.
+
+    Se trocar o cliente, a lista escolhida é limpa e deve gravar o documento para atualizar a lista de opções, para que
+    possa fazer nova escolha sem que a gravação volte a limpar o campo.
+
+    Uma lista sem Dono mantém-se, porque serve qualquer cliente.
 
 .. important::
     Apesar de não ser obrigatório, é altamente recomendável que utilize a rota **Make to Order (MTO)** na venda deste
@@ -202,16 +213,16 @@ da consignação sem impacto patrimonial, e a fatura liquida apenas o serviço.
 
 Apuramento dos custos
 ---------------------
-Na app de **Produção** vá ao menu de **Relatórios** e selecione a opção **Items Analíticos**, ou consulte-os pela app de
-**Contabilidade**. Filtre pelo período e pela conta analítica do cliente.
+Na app de **Contabilidade** vá ao menu de **Contabilidade** e selecione a opção **Items Analíticos**. Filtre pelo
+período e pela conta analítica do cliente.
 
 .. image:: manufacturing/v18_cm_analytic.png
    :align: center
 
 Só aparece aqui o que a sua empresa efetivamente suportou:
 
-- a mão de obra, com o prefixo ``[CT]``, valorizada pelo custo por hora dos centros de trabalho
-- os componentes que a sua empresa forneceu, com o prefixo ``[CP]`` seguido da ordem de fabrico e do componente
+- a mão de obra, com o prefixo ``[CT]``, valorizada pelo custo por hora dos centros de trabalho. Só existe se o centro de trabalho tiver distribuição analítica e custo por hora definidos, e se houver tempo registado na ordem de trabalho.
+- os componentes que a sua empresa forneceu, com o prefixo ``[CP]`` seguido da ordem de fabrico e do componente. A linha nasce da distribuição analítica da lista de materiais: sem projeto associado à lista de materiais, o consumo dos componentes não chega à analítica.
 
 Os componentes propriedade do cliente não representam custo seu e não geram qualquer linha, em nenhum cenário. Todas as
 linhas partilham a ordem de fabrico na coluna **Ref.** e o cliente na coluna **Parceiro**, o que lhe permite agrupar o
