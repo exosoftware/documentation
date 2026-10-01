@@ -68,7 +68,7 @@ Terminada a revisão tem duas opções:
 DRI
 ===
 A Declaração de Remunerações Individual (DRI) utiliza o mesmo formato de registos (Cabeçalho,
-Estabelecimento, um registo por Funcionário e Totais) que a :doc:`Folha de Férias <mapa_seguros>`,
+Estabelecimento, um registo por Funcionário e Totais) que a :doc:`Folha de Férias <folha_de_ferias>`,
 mas em vez de ser dirigida a uma seguradora é dirigida à Segurança Social Direta e abrange todos os
 trabalhadores da empresa nesse mês, não apenas os cobertos por uma apólice de seguro
 
