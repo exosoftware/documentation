@@ -18,13 +18,13 @@ Criar um complemento
 Na app **Folha de Salários**, vá ao menu
 :menuselection:`Funcionários --> Complemento Salarial (PT)`.
 
-.. image:: abonos_descontos/v19_complementos_menu.png
+.. image:: complementos_salariais/v19_complementos_menu.png
    :align: center
 
 A lista abre com os complementos **Em Execução**. Use os filtros para ver os concluídos ou
 cancelados, ou para separar penhoras de complementos, e agrupe por funcionário ou tipo.
 
-.. image:: abonos_descontos/v19_complementos_lista.png
+.. image:: complementos_salariais/v19_complementos_lista.png
    :align: center
 
 Carregue em **Novo** e preencha:
@@ -49,7 +49,7 @@ Carregue em **Novo** e preencha:
    * - **Data Final**
      - Último mês em que o complemento entra nos recibos. Vazio significa sem fim.
 
-.. image:: abonos_descontos/v19_complementos_formulario.png
+.. image:: complementos_salariais/v19_complementos_formulario.png
    :align: center
 
 .. note::
@@ -93,7 +93,7 @@ Crie um complemento salarial com o **Tipo de Entrada**
 **Incapacidade Temporária Parcial [%]** e preencha o **Grau de Incapacidade (%)** indicado pela
 seguradora, a **Data Inicial** e a **Data Final** do período de incapacidade.
 
-.. image:: abonos_descontos/v19_complementos_itp.png
+.. image:: complementos_salariais/v19_complementos_itp.png
    :align: center
 
 O grau tem de ser superior a 0% e inferior a 100%. Uma incapacidade absoluta lança-se como uma
@@ -119,7 +119,7 @@ O recibo mostra a linha de desconto **Incapacidade Temporária Parcial**, calcul
 Num mês completo o desconto é igual ao grau aplicado à base. Se houver dois graus no mesmo mês,
 os dois descontos somam-se.
 
-.. image:: abonos_descontos/v19_complementos_recibo_itp.png
+.. image:: complementos_salariais/v19_complementos_recibo_itp.png
    :align: center
 
 .. list-table:: Exemplo — vencimento de 1100,00 €, 30% de 17/09/2026 a 31/10/2026, recibo de setembro
