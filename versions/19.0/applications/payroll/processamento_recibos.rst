@@ -21,13 +21,13 @@ Criar a execução de pagamento
 Na app **Folha de Salários**, vá ao menu
 :menuselection:`Recibos de Vencimento --> Execuções de Pagamento`.
 
-.. image:: recibos_derclaracoes/v19_recibos_menu_execucoes.png
+.. image:: processamento_recibos/v19_recibos_menu_execucoes.png
    :align: center
 
 A lista mostra as execuções agrupadas por estado (**Pronto**, **Concluído**, **Pago**), com o custo
 para a entidade patronal, o bruto e o líquido de cada uma. Carregue em **Novo**.
 
-.. image:: recibos_derclaracoes/v19_recibos_execucoes.png
+.. image:: processamento_recibos/v19_recibos_execucoes.png
    :align: center
 
 Preencha a **Nova Execução de Pagamento**:
@@ -50,7 +50,7 @@ Preencha a **Nova Execução de Pagamento**:
    * - **Período**
      - Primeiro e último dia do mês a processar.
 
-.. image:: recibos_derclaracoes/v19_recibos_nova_execucao.png
+.. image:: processamento_recibos/v19_recibos_nova_execucao.png
    :align: center
 
 Carregue em **Continuar**.
@@ -60,13 +60,13 @@ Gerar os recibos
 Na janela **Selecionar Funcionários** aparecem os funcionários com contrato ativo no período.
 Selecione os funcionários a processar e carregue em **Selecionar**.
 
-.. image:: recibos_derclaracoes/v19_recibos_selecionar_funcionarios.png
+.. image:: processamento_recibos/v19_recibos_selecionar_funcionarios.png
    :align: center
 
 Para acrescentar mais funcionários a uma execução já criada, use o menu **⋮** do cartão da execução
 e escolha **Gerar Recibos de Vencimento**.
 
-.. image:: recibos_derclaracoes/v19_recibos_gerar.png
+.. image:: processamento_recibos/v19_recibos_gerar.png
    :align: center
 
 Ao gerar os recibos, o Odoo:
@@ -74,7 +74,7 @@ Ao gerar os recibos, o Odoo:
 - gera as entradas de trabalho do período (assiduidade, ausências, faltas);
 - ajusta o período de cada recibo às datas de início e de fim do contrato, quando o funcionário
   entra ou sai a meio do mês;
-- junta os complementos salariais ativos de cada funcionário (ver :doc:`abonos_descontos`);
+- junta os complementos salariais ativos de cada funcionário (ver :doc:`complementos_salariais`);
 - calcula os recibos (vencimento, subsídios, IRS, Segurança Social e líquido).
 
 .. note::
@@ -86,14 +86,14 @@ Rever e validar
 Abra a execução para ver os recibos gerados, com o salário base, o bruto, o líquido e o estado de
 cada um.
 
-.. image:: recibos_derclaracoes/v19_recibos_execucao.png
+.. image:: processamento_recibos/v19_recibos_execucao.png
    :align: center
 
 Abra um recibo para conferir o detalhe no separador **Cálculo de Salário**. Se alterar alguma
 informação do funcionário, das ausências ou das entradas salariais, carregue em **Calcular Recibo**
 para o recalcular.
 
-.. image:: recibos_derclaracoes/v19_recibos_recibo_calculo.png
+.. image:: processamento_recibos/v19_recibos_recibo_calculo.png
    :align: center
 
 Quando todos os recibos estiverem corretos, carregue em **Validar** na execução. Os recibos passam a
@@ -110,7 +110,7 @@ Enviar os recibos por email
 Na lista de recibos, selecione os recibos a enviar e escolha
 :menuselection:`Ações --> Enviar Recibo(s) por Email PT`.
 
-.. image:: recibos_derclaracoes/v19_recibos_enviar_email.png
+.. image:: processamento_recibos/v19_recibos_enviar_email.png
    :align: center
 
 Os recibos ficam marcados para envio e são enviados em segundo plano, de 30 em 30, para o email de
@@ -123,7 +123,7 @@ admissão ou uma correção depois de o lote estar fechado), vá ao menu
 :menuselection:`Recibos de Vencimento --> Recibos de Vencimento` e carregue em
 **Novo Off-Cycle**.
 
-.. image:: recibos_derclaracoes/v19_recibos_individual_lista.png
+.. image:: processamento_recibos/v19_recibos_individual_lista.png
    :align: center
 
 1. Escolha o **funcionário**. A **Estrutura** (**PT: Pagamento Mensal**) e o **Período** (mês
@@ -133,10 +133,10 @@ admissão ou uma correção depois de o lote estar fechado), vá ao menu
    das entradas de trabalho.
 
 3. Confira o separador **Entradas Salariais**. Os complementos salariais ativos do funcionário já
-   aparecem (ver :doc:`abonos_descontos`). Carregue em **Adicionar uma linha** para lançar outras
+   aparecem (ver :doc:`complementos_salariais`). Carregue em **Adicionar uma linha** para lançar outras
    remunerações ou descontos do mês, por exemplo um prémio ou horas extra.
 
-   .. image:: recibos_derclaracoes/v19_recibos_individual_novo.png
+   .. image:: processamento_recibos/v19_recibos_individual_novo.png
       :align: center
 
 4. Carregue em **Calcular Recibo** e confira o separador **Cálculo de Salário**.
@@ -189,7 +189,7 @@ A forma de pagamento dos subsídios define-se no contrato de cada funcionário, 
    * - **Recibo Independente**
      - Marque para que o subsídio saia num recibo próprio, e não no recibo de salário desse mês.
 
-.. image:: recibos_derclaracoes/v19_recibos_subsidios_contrato.png
+.. image:: processamento_recibos/v19_recibos_subsidios_contrato.png
    :align: center
 
 .. tip::
@@ -211,13 +211,13 @@ Crie o recibo como em `Processar um recibo individual`_ e, antes de calcular, pr
 **Outra Informação** o campo **Recibo Independente** com o subsídio a pagar. Carregue em
 **Calcular Recibo**.
 
-.. image:: recibos_derclaracoes/v19_recibos_independente_info.png
+.. image:: processamento_recibos/v19_recibos_independente_info.png
    :align: center
 
 O recibo independente não tem dias trabalhados nem complementos salariais. Tem apenas o subsídio,
 o IRS e a Segurança Social correspondentes, e o líquido.
 
-.. image:: recibos_derclaracoes/v19_recibos_independente_calculo.png
+.. image:: processamento_recibos/v19_recibos_independente_calculo.png
    :align: center
 
 .. note::
@@ -235,13 +235,13 @@ recibo de salário do mês: um prémio, uma gratificação, horas extra ou outro
 
 2. No separador **Outra Informação**, escolha **Normal** no campo **Recibo Independente**.
 
-   .. image:: recibos_derclaracoes/v19_recibos_normal_info.png
+   .. image:: processamento_recibos/v19_recibos_normal_info.png
       :align: center
 
 3. No separador **Entradas Salariais**, carregue em **Adicionar uma linha** e lance a remuneração
    a pagar, com o tipo e o valor.
 
-   .. image:: recibos_derclaracoes/v19_recibos_normal_entradas.png
+   .. image:: processamento_recibos/v19_recibos_normal_entradas.png
       :align: center
 
 4. Carregue em **Calcular Recibo**.
@@ -250,7 +250,7 @@ O recibo tem apenas as remunerações lançadas nas **Entradas Salariais**, o IR
 o líquido. O vencimento base não é pago de novo: só é usado como referência para calcular o
 salário-hora, por exemplo no valor das horas extra. Os complementos salariais também não entram.
 
-.. image:: recibos_derclaracoes/v19_recibos_normal_calculo.png
+.. image:: processamento_recibos/v19_recibos_normal_calculo.png
    :align: center
 
 O IRS é calculado sobre o total das remunerações do mês: o recibo normal soma-se ao recibo de salário

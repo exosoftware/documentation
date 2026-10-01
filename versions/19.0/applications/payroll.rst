@@ -14,8 +14,8 @@ Explore mais sobre o nosso add-on de Salários
 .. toctree::
     :titlesonly:
 
-    payroll/recibos_derclaracoes
-    payroll/abonos_descontos
+    payroll/processamento_recibos
+    payroll/complementos_salariais
     payroll/despesas_folha_salarios
     payroll/dmr_dri
     payroll/folha_de_ferias

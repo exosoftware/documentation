@@ -15,13 +15,13 @@ descontos de IRS e de Segurança Social efetuados, nos termos do artigo 119º, n
 Para a gerar aceda à app **Salários**, vá ao menu :menuselection:`Relatórios --> Declaração Anual de
 Rendimentos`
 
-.. image:: recibos_derclaracoes/v19_income_stmt_menu.png
+.. image:: processamento_recibos/v19_income_stmt_menu.png
    :align: center
 
 Escolha o **Período** (ano) a que se refere a declaração e selecione os **Trabalhadores** para os
 quais pretende emitir o documento
 
-.. image:: recibos_derclaracoes/v19_income_stmt_form.png
+.. image:: processamento_recibos/v19_income_stmt_form.png
    :align: center
 
 Carregue em **Calcular** para que o assistente reúna, a partir dos recibos de vencimento
@@ -29,7 +29,7 @@ processados nesse ano, os valores de rendimento sujeito, rendimento não sujeito
 trabalhador. Estes valores ficam disponíveis no separador **Linhas** para revisão antes de emitir o
 documento final
 
-.. image:: recibos_derclaracoes/v19_income_stmt_lines.png
+.. image:: processamento_recibos/v19_income_stmt_lines.png
    :align: center
 
 .. tip::
@@ -49,5 +49,5 @@ Terminada a revisão tem duas opções:
 O documento gerado resume, por trabalhador, o total de rendimentos ilíquidos sujeitos, o total de
 rendimentos não sujeitos e o total de descontos (IRS e Segurança Social) do período escolhido
 
-.. image:: recibos_derclaracoes/v19_income_stmt_pdf.png
+.. image:: processamento_recibos/v19_income_stmt_pdf.png
    :align: center
