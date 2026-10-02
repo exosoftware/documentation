@@ -46,9 +46,14 @@ Imediatamente abaixo fica o campo **Aprovador de Divergência de Dono**, onde de
 pedidos de aprovação são propostos por defeito. Volte a este campo depois de decidir quem assume essa responsabilidade,
 :ref:`mais à frente nesta página explica-se para que serve <mrp_contract_manufacturing_owner_mismatch_approver>`.
 
+.. note::
+    A app apoia-se nas apps **Código de Barras** e **Shop Floor** do Odoo Enterprise, onde aplica as mesmas
+    verificações de Dono que na vista de formulário.
+
 A app cria também uma localização de produção dedicada, **Produção CM**, por cada empresa da sua base de dados. É para
 aqui que vão os consumos das ordens de fabrico por conta de terceiros, e é o que lhe permite separar estes custos da sua
-produção normal no fecho do período.
+produção normal no fecho do período. Cria ainda, por empresa, a conta analítica **Unbuild of Contract Manufacturing**,
+para onde vai a mão de obra das ordens que venham a ser desmontadas.
 
 .. image:: manufacturing/v18_cm_location.png
    :align: center
@@ -95,7 +100,8 @@ entrega. As restantes seguem o fluxo normal do Odoo, sem qualquer alteração.
     terceiros, o Odoo pode criar uma ordem de produção sem lista de materiais.
 
     O cenário mais normalizado será pegar numa lista sem dono, duplicar a mesma e converter para uma lista com dono.
-    Nunca esquecendo de mudar o tipo de operação na Lista de Materiais para a operação de Contract Manufacturing.
+    Ao ativar a opção **Contract Manufacturing** o tipo de operação passa para o dedicado; se ficar com outro, a
+    gravação é recusada, tal como é recusada uma lista sem Dono com o tipo de operação de Contract Manufacturing.
 
 .. note::
     Uma Lista de Materiais por conta de terceiros pode não ter nenhum componente marcado como fornecido pelo cliente.
@@ -165,52 +171,84 @@ componentes nunca geram compra.
     A ligação entre a ordem de fabrico e a receção que a alimenta permite-lhe abrir uma a partir da outra, e acompanhar
     num único sítio o que falta receber para poder produzir.
 
-A reserva dos componentes fornecidos pelo cliente usa apenas stock desse mesmo dono. Havendo em armazém o mesmo
-componente de dois clientes diferentes, uma ordem nunca vai consumir o do outro.
-
-Se, ao concluir a ordem, algum componente consumido não pertencer ao dono da ordem, o Odoo não deixa passar em silêncio.
-
-.. image:: manufacturing/v18_cm_mismatchWizard.png
-   :align: center
+A reserva dos componentes fornecidos pelo cliente usa apenas stock desse mesmo dono, também na transferência de recolha
+dos componentes quando o armazém produz em dois ou três passos. Havendo em armazém o mesmo componente de dois clientes
+diferentes, uma ordem nunca vai consumir o do outro. Não havendo stock do cliente, a ordem fica por reservar e a receção
+pedida ao cliente cobre só o que falta: o stock da sua empresa nunca é reservado para cobrir estes componentes.
 
 .. _mrp_contract_manufacturing_owner_mismatch_approver:
 
-O que acontece a seguir depende do seu perfil:
+Autorização de Dono
+~~~~~~~~~~~~~~~~~~~
+Se alguém registar material cujo Dono não é o da ordem, seja stock da sua empresa ou de outro cliente, o Odoo não deixa
+passar em silêncio, mas também não bloqueia o documento inteiro. A quantidade registada é retida, a linha fica com um
+pedido de **Autorização de Dono**, e o resto do documento valida normalmente; a linha retida segue para a ordem parcial.
+A regra é a mesma no consumo da ordem de fabrico, na transferência de recolha dos componentes e na guia de remessa.
 
-.. list-table::
-   :header-rows: 1
-
-   * - Perfil
-     - Comportamento
-   * - Administrador de Inventário
-     - Aprova e continua de imediato. A decisão e o detalhe da divergência ficam registados no histórico do documento.
-   * - Restantes utilizadores
-     - Escolhem o administrador a quem pedem aprovação. É criada uma atividade para essa pessoa e a conclusão da ordem
-       fica bloqueada até a atividade ser fechada por um administrador de inventário.
+O pedido é atribuído ao **Aprovador de Divergência de Dono** das definições de Inventário, e pode ser reatribuído no
+próprio pedido. Só um **Administrador de Inventário** o aprova ou recusa: na app de **Produção**, menu de
+**Operações**, opção **Autorizações de Dono**, a partir da atividade que recebe, ou pelo botão **Autorizações** da
+ordem ou da transferência.
 
 .. important::
-    Quando o que foi consumido é stock da sua empresa em vez do que o cliente devia ter fornecido, a aprovação faz mais
-    do que deixar passar: a sua empresa cede a propriedade daquela quantidade ao cliente. É gerado, na localização de
-    onde os componentes saíram, um registo de inventário que dá baixa do artigo como seu e o volta a dar entrada como
-    sendo do cliente.
+    Concluir a atividade não é aprovar. Qualquer utilizador com acesso ao documento consegue fechar uma atividade, por
+    isso só a ação **Aprovar**, reservada aos administradores de inventário, liberta a linha.
+
+Depois de aprovado, o operador volta a registar o material, que passa até à quantidade autorizada. Quantidade acima da
+autorizada é retida de novo e gera outro pedido. Se o pedido for recusado, a linha fica marcada como não autorizada e
+deve ser registado outro material.
+
+.. important::
+    Quando o material autorizado é stock da sua empresa em vez do que o cliente devia ter fornecido, a autorização faz
+    mais do que deixar passar: no fecho da ordem, ou na validação da transferência, a sua empresa cede ao cliente a
+    propriedade da quantidade efetivamente usada. É gerado, na localização de onde o material saiu, um registo de
+    inventário que dá baixa do artigo como seu e o volta a dar entrada como sendo do cliente.
 
     Assim o seu stock é efetivamente abatido sem ter de esperar pela entrega do cliente, e a transferência de entrada
     que alimenta a ordem passa a avisar que aquela quantidade, quando chegar, deve ser recebida como propriedade da sua
     empresa.
 
-    O tratamento comercial do componente cedido e nunca reposto pelo cliente fica fora do âmbito da app e deve ser
+    O tratamento comercial do material cedido e nunca reposto pelo cliente fica fora do âmbito da app e deve ser
     acordado caso a caso entre a sua empresa e o seu cliente.
+
+Shop Floor e app de Código de Barras
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+As duas interfaces aplicam a mesma verificação que a vista de formulário. No **Shop Floor**, ao registar o componente,
+o cartão volta à quantidade retida, mostra o estado **Autorização Pendente** e avisa o operador.
+
+Na app de **Código de Barras**, ler um artigo de outro Dono dá um aviso imediato, a linha mostra o estado da
+autorização e, ao gravar, o que ficou retido é avisado de novo.
+
+.. warning::
+    Na app de Código de Barras, ler um artigo fora do que está reservado pode trazer o Dono de outro cliente sem o
+    operador o ver: é precisamente esse registo que fica retido. O botão **Adicionar Produto** grava a linha por
+    formulário, e nesse caso só o estado na linha avisa.
 
 Concluída a ordem, o produto acabado entra em stock como propriedade do cliente e não é valorizado. A entrega dá baixa
 da consignação sem impacto patrimonial, e a fatura liquida apenas o serviço.
+
+A guia de remessa de uma venda de Contract Manufacturing só reserva unidades cujo Dono seja o cliente da encomenda.
+Unidades iguais que sejam da sua empresa ficam livres para outros clientes; expedir uma delas passa pela mesma
+autorização de Dono e pela mesma cedência de propriedade.
 
 .. warning::
     Cancelar a encomenda de venda **não** cancela a ordem de fabrico. É comportamento nativo do Odoo, e pode ser
     alterado na configuração da regra da rota de reabastecimento, ativando a propagação de cancelamento.
 
 .. note::
-    Numa ordem parcial, gerada quando conclui menos do que a quantidade pedida, o Dono, o tipo de operação e a
-    localização de produção acompanham a ordem de origem.
+    Numa ordem parcial, gerada quando conclui menos do que a quantidade pedida, o Dono, o tipo de operação, a
+    localização de produção e os pedidos de autorização pendentes acompanham a ordem de origem.
+
+Desmontagem
+~~~~~~~~~~~
+Desmontar uma ordem de fabrico por conta de terceiros é um procedimento normal. Os componentes voltam a stock com o
+Dono correto, o produto desmontado sai sem qualquer impacto patrimonial, e a analítica é acertada: o custo dos
+componentes que a sua empresa tinha fornecido é anulado no projeto do cliente, e a mão de obra é anulada nesse projeto
+e imputada à conta **Unbuild of Contract Manufacturing**, para que o custo saia do projeto do cliente sem desaparecer.
+
+.. note::
+    Os valores acertados são os que a ordem de fabrico tinha imputado, proporcionais à quantidade desmontada, e não uma
+    nova medição do trabalho de desmontar.
 
 Apuramento dos custos
 ---------------------
@@ -228,6 +266,16 @@ Só aparece aqui o que a sua empresa efetivamente suportou:
 Os componentes propriedade do cliente não representam custo seu e não geram qualquer linha, em nenhum cenário. Todas as
 linhas partilham a ordem de fabrico na coluna **Ref.** e o cliente na coluna **Parceiro**, o que lhe permite agrupar o
 apuramento por cliente sem abrir mais nenhum documento.
+
+Uma desmontagem acrescenta aqui as suas próprias linhas, com a referência da desmontagem: o inverso de cada componente
+no projeto do cliente, o inverso da mão de obra nesse projeto e a mesma mão de obra na conta **Unbuild of Contract
+Manufacturing**. Somando o período, o projeto do cliente fica a zeros nos componentes devolvidos e a mão de obra passa
+para a conta de desmontagem.
+
+.. note::
+    O resumo de custos da ordem de fabrico e a estrutura da lista de materiais seguem o mesmo critério: os componentes
+    do cliente aparecem a zero nas colunas de custo da ordem, da lista e real, e os totais mostram só o custo da sua
+    empresa. O custo unitário mantém-se, por ser o que o componente custaria se fosse a sua empresa a fornecê-lo.
 
 .. note::
     A valorização de inventário mantém-se **manual**, por exigência das regras do SNC. Os movimentos de stock continuam
