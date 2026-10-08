@@ -6,11 +6,107 @@ Declarações de IVA
 Veja os procedimentos que deve seguir para conseguir cada uma das declarações de IVA e garantir que os seus períodos
 fiscais estão salvaguardados
 
+A Declaração Periódica do IVA e a Declaração Recapitulativa têm um ecrã novo, descrito em
+`Nova Declaração Periódica e Declaração Recapitulativa`_. As declarações anteriores continuam disponíveis e são
+descritas nas secções seguintes
+
 .. raw:: html
 
     <div style="text-align: center; margin: 20px 0;">
         ─── ✦ ───
     </div>
+
+Nova Declaração Periódica e Declaração Recapitulativa
+=====================================================
+A Declaração Periódica do IVA e a Declaração Recapitulativa passam a ter um ecrã próprio, no mesmo sítio das restantes
+declarações. Escolhe o período, calcula a declaração, revê cada campo e exporta o ficheiro XML para submeter no Portal
+das Finanças ou o formulário oficial em PDF. O cálculo demora poucos segundos, mesmo em empresas com muitos movimentos
+
+Para as abrir deve na app **Contabilidade** ir ao menu :menuselection:`Relatórios --> Portugal --> Impostos` e
+selecionar a opção **Declaração Periódica de IVA** ou **Declaração Recapitulativa de IVA**
+
+.. image:: vat_statements/v17_vat_new_menu.png
+   :align: center
+
+.. note::
+    As declarações anteriores (**Declarações de Impostos** e **Declaração Recapitulativa**) continuam disponíveis no
+    mesmo menu. Pode retirar as duas versões para o mesmo período e comparar os valores
+
+Declaração Periódica do IVA
+---------------------------
+No assistente que abre selecione o **Período**: o mês ou o trimestre a declarar
+
+A **Localização da Sede** é preenchida com base na morada da Empresa. Os valores da **Declaração Anterior** (campo 61,
+excesso a reportar) e da **Decl. Recapitulativa** (campo 7) são lidos das declarações do Registo de Dataports
+marcadas como reportadas, e pode alterá-los antes de calcular
+
+Na secção **Valores Manuais** pode acrescentar os valores que não estão no Odoo, como o imposto das importações já
+liquidado ou imposto dedutível adicional
+
+.. image:: vat_statements/v17_vat_new_dp_options.png
+   :align: center
+
+Assinale **Solicitar Reembolso** se pretende pedir o reembolso do crédito de imposto, e **Fora de Prazo** se a
+declaração for entregue depois do prazo. Carregue em **Calcular**
+
+Depois do cálculo, a secção **Avisos** indica o que convém rever antes de submeter a declaração, por exemplo:
+
+- o total da Declaração Recapitulativa não bate com as operações intracomunitárias do período
+- há impostos de IVA usados no período sem etiqueta da declaração periódica, cujos valores ficam fora da declaração
+- há notas de crédito no período relativas a faturas de outro período, que ficam fora desta declaração e devem ser
+  declaradas na declaração de substituição do período de cada fatura
+
+.. important::
+    As notas de crédito das operações dos campos 7, 8, 9, 14 e 15 (e do campo 104 que as acompanha) contam sempre no
+    período da fatura que corrigem, seja por devolução dos bens ou por desconto, abatimento ou bónus. Uma nota de
+    crédito com data noutro período não entra na declaração desse período: declare-a na declaração periódica de
+    substituição do período da fatura e, quando altera o campo 7, também na Declaração Recapitulativa de substituição
+
+Logo abaixo, a secção **Declaração** resume o tipo de operações encontradas, e a secção **Anexo R** indica as regiões
+com operações, diferentes da sede
+
+.. image:: vat_statements/v17_vat_new_dp_warnings.png
+   :align: center
+
+O separador **Rosto** mostra o valor de cada campo da declaração. Carregue em **Ver** para abrir os movimentos
+contabilísticos que compõem o campo
+
+.. image:: vat_statements/v17_vat_new_dp_rosto.png
+   :align: center
+
+Os separadores **Anexo 40** e **Anexo 41** detalham as regularizações. Quando pede o reembolso aparecem também os
+anexos de reembolso de **Clientes** e de **Fornecedores**
+
+O **Anexo R** das operações localizadas nas outras regiões é calculado com a declaração e aparece no seu próprio
+separador, sem ter de ser retirado região a região. O primeiro Anexo R preenche os campos 65 e 66 da declaração, e só
+um segundo Anexo R, quando há operações nas duas outras regiões, preenche os campos 67 e 68
+
+Depois de rever os valores, exporte o ficheiro com **Exportar XML** para o submeter no Portal das Finanças, ou o
+formulário oficial com **Exportar PDF**. Para mudar o período ou os valores manuais carregue em **Alterar Opções** e
+volte a calcular
+
+.. image:: vat_statements/v17_vat_new_dp_buttons.png
+   :align: center
+
+.. tip::
+    Depois de exportar, assinale **Registar ao Fechar** e **Registar como Reportado** antes de fechar o assistente. A
+    declaração fica guardada no Registo de Dataports, e é daí que a declaração do período seguinte lê o excesso a
+    reportar (campo 61)
+
+Declaração Recapitulativa
+-------------------------
+No assistente que abre selecione o **Período** e carregue em **Calcular**. O separador **Faturação** lista o valor das
+transmissões intracomunitárias por país, cliente e natureza (bens ou serviços), e a secção **Totais** soma-os. As notas
+de crédito contam no período da fatura que corrigem, tal como no campo 7 da Declaração Periódica
+
+Carregue em **Exportar XML** para obter o ficheiro a submeter no Portal das Finanças
+
+.. image:: vat_statements/v17_vat_new_recap.png
+   :align: center
+
+.. tip::
+    Assinale também aqui **Registar ao Fechar** e **Registar como Reportado** antes de fechar o assistente. É do
+    Registo de Dataports que a Declaração Periódica do mesmo período lê o total do campo 7
 
 Declaração Periódica IVA
 ========================
@@ -174,11 +270,10 @@ A Declaração Periódica é emitida com base na morada fiscal da empresa, no en
 com incidência em alguma das outras regiões do território nacional, para esse efeito usa-se este anexo
 
 .. important::
-    É aconselhado que historicamente se preencha sempre como **Anexo R - Região #1** e **Anexo R - Região #2** para as
-    mesmas regiões, por exemplo:
-
-    - A entidade tem sede fiscal no Continente
-    - Usar sempre Região #1 para Açores e Região #2 para Madeira ou vice-versa
+    Segundo as instruções de preenchimento da declaração periódica, o primeiro Anexo R preenchido vai sempre para os
+    campos 65 e 66 da declaração, seja qual for a região. Só quando há um segundo Anexo R, ou seja operações nas duas
+    regiões diferentes da sede, é que este preenche os campos 67 e 68. Por exemplo, numa empresa com sede no Continente
+    e operações apenas na Madeira, o Anexo R da Madeira preenche os campos 65 e 66
 
 Para a retirarem deve na app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou
 Enterprise do Odoo), vá ao menu de **Relatórios** e no separador Portugal selecione a opção **Declarações Impostos**
