@@ -52,9 +52,15 @@ declaração for entregue depois do prazo. Carregue em **Calcular**
 Depois do cálculo, a secção **Avisos** indica o que convém rever antes de submeter a declaração, por exemplo:
 
 - o total da Declaração Recapitulativa não bate com as operações intracomunitárias do período
-- há impostos de IVA sem etiqueta da declaração periódica
-- há notas de crédito no período relativas a faturas de outro período, que podem obrigar a uma declaração de
-  substituição desse período
+- há impostos de IVA usados no período sem etiqueta da declaração periódica, cujos valores ficam fora da declaração
+- há notas de crédito no período relativas a faturas de outro período, que ficam fora desta declaração e devem ser
+  declaradas na declaração de substituição do período de cada fatura
+
+.. important::
+    As notas de crédito das operações dos campos 7, 8, 9, 14 e 15 (e do campo 104 que as acompanha) contam sempre no
+    período da fatura que corrigem, seja por devolução dos bens ou por desconto, abatimento ou bónus. Uma nota de
+    crédito com data noutro período não entra na declaração desse período: declare-a na declaração periódica de
+    substituição do período da fatura e, quando altera o campo 7, também na Declaração Recapitulativa de substituição
 
 Logo abaixo, a secção **Declaração** resume o tipo de operações encontradas, e a secção **Anexo R** indica as regiões
 com operações, diferentes da sede
@@ -90,7 +96,8 @@ volte a calcular
 Declaração Recapitulativa
 -------------------------
 No assistente que abre selecione o **Período** e carregue em **Calcular**. O separador **Faturação** lista o valor das
-transmissões intracomunitárias por país, cliente e natureza (bens ou serviços), e a secção **Totais** soma-os
+transmissões intracomunitárias por país, cliente e natureza (bens ou serviços), e a secção **Totais** soma-os. As notas
+de crédito contam no período da fatura que corrigem, tal como no campo 7 da Declaração Periódica
 
 Carregue em **Exportar XML** para obter o ficheiro a submeter no Portal das Finanças
 
