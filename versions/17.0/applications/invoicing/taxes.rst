@@ -48,6 +48,11 @@ cumpram as regras base da legislação portuguesa e seja feita a devida ligaçã
         - **VTT**, Transmissão de Viaturas de Turismo
         - **PRT**, Regime de pequeno retalhista
 
+        Estas siglas em particular precisam de acompanhamento devido procedimentos esquematizados para cada caso
+
+        - **DDP**, Dedução na Declaração periódica
+        - **ALDP**, Auto liquidação na Declaração periódica
+
     - Se ainda não existir, basta duplicar o imposto base mais parecido, aplicar a exceção e gravar com um nome mais detalhado para mais fácil procura na utilização.
 
     .. example::
