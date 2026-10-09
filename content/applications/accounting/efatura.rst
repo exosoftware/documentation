@@ -36,8 +36,7 @@ utilizador Odoo e inserir os dados na aba **Portugal**
 
 Configurações
 =============
-Tenha já criado um **diário** do tipo **Compras**, um **artigo** para ser utilizado no processo de importação de
-documentos (este artigo deve poder ser comprado) bem como **todos os impostos base** necessários através da escolha de
+Tenha já criado um **diário** do tipo **Compras** bem como **todos os impostos base** necessários através da escolha de
 um plano de contas
 
 Aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá
@@ -49,32 +48,115 @@ ao menu :menuselection:`Configuração --> Configurações`
 .. image:: efatura/v17_efaturaConfig01.png
    :align: center
 
-Procure a secção **Portugal** e configure os campos relativos ao eFatura:
+Procure a secção **Portugal** e configure os campos relativos ao E-Fatura:
 
-- Diário de compras que criou
-- Produto do eFatura que criou
-- Taxas Normal, Intermédia, Reduzida e Isenta inseridas com o plano de contas
-- Em **Documentos de Auto-faturação**, o que fazer com os documentos que emite em nome dos seus fornecedores — ver
-  `Autofaturas`_
+- O :guilabel:`Diário` de compras que criou
+- Ative a opção :guilabel:`Leitura E-Fatura`, que lhe vai permitir fazer scan dos códigos QR das faturas e criar as
+  mesmas
+- Use o botão :guilabel:`Configurar Mapeamentos` para definir que imposto e que artigo o Odoo aplica a cada imposto que
+  a AT reporta — ver :ref:`efatura-mapeamento-impostos`
+- Em :guilabel:`Documentos de Auto-faturação` escolha o que fazer com os documentos que emite em nome dos seus
+  fornecedores — ver :ref:`efatura-autofaturas`
 
-.. image:: efatura/v17_efaturaConfig02.png
+.. image:: efatura/v19_efatura_settings.png
    :align: center
 
 .. note::
     As configurações do E-Fatura estão disponíveis em qualquer empresa portuguesa, mesmo que não emita as suas faturas
     com a **Faturação Portuguesa** ativa.
 
-Ative a opção E-Fatura Scan que lhe vai permitir fazer scan dos códigos QR das faturas e criar as mesmas
-
-.. image:: efatura/v17_efaturaConfig03.png
-   :align: center
-
 .. important::
-    Verifique que configurações tem para o OCR Odoo, o nosso leitor de código QR **Scan QR** é gratuíto, no entanto o OCR
+    Verifique que configurações tem para o OCR Odoo, o nosso leitor de código QR **Ler QR** é gratuíto, no entanto o OCR
     do Odoo **Digitalizar Documento** não o é e cobra um créditos por utilização
 
     Na eventualidade de ter os 2 ativos, primeiro é usado o OCR do Odoo e só em seguida o leitor de código QR da Exo
     Software.
+
+.. _efatura-mapeamento-impostos:
+
+Mapeamento de impostos do E-Fatura
+----------------------------------
+A AT não reporta o imposto do seu plano de contas — reporta as características do imposto que o seu fornecedor
+declarou. A tabela de **Mapeamento de Impostos E-Fatura** é onde diz ao Odoo, uma vez só, o que fazer com cada
+combinação dessas características: que **imposto** aplicar e com que **artigo** criar a linha da fatura de fornecedor.
+
+Chega lá pelo botão :guilabel:`Configurar Mapeamentos` das configurações, ou pelo menu
+:menuselection:`Configuração --> Mapeamento de Impostos E-Fatura`
+
+.. image:: efatura/v19_efatura_mapping_list.png
+   :align: center
+
+Cada linha da tabela tem duas metades: os **valores a aplicar** e os **critérios** pelos quais é escolhida
+
+.. image:: efatura/v19_efatura_mapping_form.png
+   :align: center
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Critério
+     - O que a AT reporta
+   * - **%**
+     - A taxa do imposto. Escreva-a como número — ``23``, ``23.0`` ou ``23,00`` são equivalentes
+   * - **Tipo de Imposto**
+     - Se a linha é de IVA, de Imposto do Selo ou Não Sujeita
+   * - **Taxa**
+     - O tipo de taxa: isenta, reduzida, intermédia ou normal
+   * - **Motivo de Isenção**
+     - O código da isenção, de M01 a M99, quando existe
+   * - **País** e **Região**
+     - O espaço fiscal do imposto: Continente, Açores ou Madeira
+   * - **Verba**
+     - Para o IVA repete o tipo de taxa; para o Imposto do Selo é a verba, por exemplo ``17.3.4``
+
+.. important::
+    **Um critério deixado em branco corresponde a qualquer valor.** É isto que lhe permite ter um mapeamento genérico:
+    por exemplo, deixar a :guilabel:`%` vazia faz o mapeamento servir todas as taxas do tipo de imposto indicado.
+
+    Quanto menos critérios preencher, mais situações o mapeamento cobre.
+
+Se mais do que um mapeamento corresponder à mesma linha, **aplica-se o primeiro a contar do topo da tabela**. Use o
+manípulo à esquerda para arrastar um mapeamento para cima e lhe dar prioridade.
+
+.. tip::
+    Pode restringir um mapeamento a **fornecedores** específicos no campo :guilabel:`Fornecedores`. Um mapeamento assim
+    nasce no topo da tabela, para que se aplique antes dos genéricos, mas continua a ser a ordem da tabela a decidir —
+    se o arrastar para baixo de um genérico, passa a ser o genérico a aplicar-se.
+
+    Na ficha do fornecedor tem um botão :guilabel:`Configurar Mapeamentos` que abre a tabela já filtrada por esse
+    fornecedor.
+
+O :guilabel:`Produto a Aplicar` e o :guilabel:`Imposto a Aplicar` são ambos opcionais. Se os deixar vazios, a linha da
+fatura de fornecedor é criada sem artigo e sem imposto, com o **valor total** que a AT reportou para essa linha — assim
+o total da fatura continua igual ao do documento do E-Fatura e completa depois a informação que faltar.
+
+Numa empresa portuguesa a tabela já vem preenchida com quatro mapeamentos para as taxas de IVA do Continente — 23%, 13%,
+6% e 0% — assentes no artigo genérico de despesas. Acrescente os que a sua atividade justificar.
+
+Mapeamento genérico para tudo o resto
+"""""""""""""""""""""""""""""""""""""
+Se não quiser configurar caso a caso, pode deixar **uma linha totalmente vazia no fundo da tabela**: sem critérios
+preenchidos corresponde a qualquer imposto, e sem artigo nem imposto a aplicar serve de rede para tudo o que os
+mapeamentos acima não apanharem.
+
+.. warning::
+    É a opção menos precisa e tem duas consequências que deve conhecer antes de a adotar:
+
+    - As faturas criadas a partir dessas linhas ficam **sem artigo e sem imposto**, com o valor total na base. Os
+      totais batem com o E-Fatura, mas a classificação contabilística e o IVA dedutível ficam por fazer à mão em cada
+      documento;
+    - Como nunca fica nada sem mapeamento, **o aviso de mapeamento em falta deixa de aparecer**. Perde o alerta que lhe
+      indicaria precisamente quais os impostos que ainda lhe faltam configurar (ver
+      :ref:`efatura-mapeamento-em-falta`).
+
+    Mantenha-a sempre em **último lugar** na tabela, para que os mapeamentos preenchidos acima continuem a ter
+    prioridade.
+
+.. note::
+    O plano de contas não traz impostos de **Imposto do Selo** criados. Se recebe faturas com selo — apólices de seguro
+    e operações de crédito, por exemplo — crie o imposto de compra respetivo e mapeie-o pela taxa e pela verba que a AT
+    reporta.
 
 Insersão da informação do e-Fatura
 ==================================
@@ -156,13 +238,46 @@ opção **Registar ao Fechar** que vai guardar no seu Odoo uma cópia dos movime
     Este método é menos recomendado porque não traz as diferentes linhas por imposto e o valor de impostos pode não
     bater certo com uma das taxas de impostos que utiliza, pelo que conseguir a equivalência pode ser mais difícil
 
+.. _efatura-mapeamento-em-falta:
+
+Impostos sem mapeamento
+-----------------------
+Um documento só dá origem a fatura de fornecedor quando **todos** os impostos que a AT reportou têm mapeamento. Se
+faltar algum, o Odoo não cria a fatura: uma fatura construída só com parte das linhas teria um total diferente do
+documento do E-Fatura e passaria por completa.
+
+O documento fica sinalizado, com um aviso no topo a dizer que impostos faltam e um triângulo amarelo nas linhas em
+causa.
+
+.. image:: efatura/v19_efatura_mapping_missing.png
+   :align: center
+
+Para resolver, carregue no botão :guilabel:`+` da linha assinalada: abre um mapeamento novo já preenchido com o que a AT
+reportou nessa linha, ficando-lhe apenas por escolher o imposto e o artigo a aplicar. Depois de gravar, corra
+**Criar/Atualizar Faturas** sobre o documento.
+
+.. tip::
+    No assistente de sincronização o resumo final indica quantos documentos ficaram à espera de mapeamento e dá-lhe dois
+    atalhos: um para a lista desses documentos e outro para a tabela de mapeamentos.
+
+    Na lista do E-Fatura tem também o filtro :guilabel:`Mapeamento de Imposto em Falta` para os encontrar a qualquer
+    momento.
+
+.. important::
+    Se pedir **Criar/Atualizar Faturas** sobre documentos a que falta mapeamento, o Odoo avisa e não cria nada,
+    indicando que impostos tem de configurar primeiro e oferecendo um botão que abre a tabela de mapeamentos. Aqui o
+    processo foi pedido por si de forma explícita, por isso nada é feito a meio.
+
+.. _efatura-autofaturas:
+
 Autofaturas
 -----------
 Se tem acordos de auto-faturação, isto é, se é a sua empresa que emite as faturas em nome de alguns fornecedores, esses
-documentos são comunicados por si à AT e voltam ao e-Fatura dias depois, agora do lado das compras. Como foram emitidos
+documentos são comunicados por si à AT e voltam ao E-Fatura dias depois, agora do lado das compras. Como foram emitidos
 no Odoo, já os tem no sistema e com os valores certos.
 
-O campo **Documentos de Auto-faturação**, nas configurações do E-Fatura, decide o que a sincronização faz com eles:
+O campo :guilabel:`Documentos de Auto-faturação`, nas configurações do E-Fatura, decide o que a sincronização faz com
+eles:
 
 .. list-table::
    :header-rows: 1
@@ -170,28 +285,109 @@ O campo **Documentos de Auto-faturação**, nas configurações do E-Fatura, dec
 
    * - Opção
      - O que acontece
-   * - **Recolher e associar ao documento emitido**
-     - A escolha por omissão. Os documentos entram na lista do e-Fatura e ficam associados à fatura que emitiu para
-       eles, e nunca lhes é criada uma segunda fatura de fornecedor.
-   * - **Deixar de fora da sincronização**
-     - Os documentos não são recolhidos. A lista do e-Fatura fica só com os documentos dos seus fornecedores, e o
+   * - :guilabel:`Recolher e associar ao documento emitido`
+     - A escolha por omissão. Os documentos entram na lista do E-Fatura e ficam associados à fatura que emitiu para
+       eles. Não lhes é pedido mapeamento de impostos e nunca lhes é criada uma segunda fatura de fornecedor.
+   * - :guilabel:`Deixar de fora da sincronização`
+     - Os documentos não são recolhidos. A lista do E-Fatura fica só com os documentos dos seus fornecedores, e o
        resumo no fim de cada sincronização diz quantas autofaturas ficaram de fora.
 
 .. note::
     A escolha só produz efeito nas sincronizações seguintes. As autofaturas recolhidas antes mantêm-se na lista do
-    e-Fatura, associadas à fatura respetiva.
+    E-Fatura, associadas à fatura respetiva.
 
-Fusão de documentos
--------------------
-Devido à possibilidade de serem criadas faturas em duplicado porque não conseguiu fazer uma equivalência automática na
-insersão dos dados provenientes do e-Fatura, adicionamos a possibilidade de fundir uma fatura de rascunho com outra que
-já exista em sistema.
+.. _efatura-fusao:
 
-Para o fazer basta selecionar as duas faturas que quer fundir, ir ao menu **Ação** e selecionar a opção
-**Fundir Faturas do E-Fatura**
+Fusão de faturas duplicadas
+---------------------------
+Quando a sincronização não consegue ligar um documento do e-Fatura a uma fatura de fornecedor que já existe, cria uma
+fatura nova em rascunho, e o mesmo documento passa a existir duas vezes em Odoo: a fatura que registou e a que veio do
+e-Fatura. A fusão resolve essa duplicação sem tocar na fatura que quer manter.
 
-.. image:: efatura/v17_efaturaMerge.png
+A janela de fusão abre-se de duas formas:
+
+- Na lista de **Faturas de Fornecedor**, selecione as duas faturas e escolha
+  :menuselection:`Ações --> Fundir Faturas E-Fatura`
+
+.. image:: efatura/v19_efatura_merge_action.png
    :align: center
+
+- Numa fatura em que o Odoo deteta um possível duplicado, o aviso no topo do formulário oferece o botão
+  :guilabel:`Fundir E-Fatura`. Prefira-o ao botão nativo **Eliminar duplicado**, que se limita a apagar uma das
+  faturas: se apagar a que tem o documento do e-Fatura ligado, a sincronização seguinte volta a criá-la
+
+.. image:: efatura/v19_efatura_merge_banner.png
+   :align: center
+
+A janela
+""""""""
+Antes de fazer o que quer que seja, a janela mostra-lhe o que vai acontecer.
+
+.. image:: efatura/v19_efatura_merge_wizard.png
+   :align: center
+
+- Em cima, quando existem, os **avisos** (a amarelo) e os **bloqueios** (a vermelho), explicados mais abaixo
+- O bloco azul **Documento do E-Fatura**, com o que a AT comunicou: documento, fornecedor, situação, data, total e
+  impostos. É a referência contra a qual as duas faturas são comparadas
+- Dois blocos lado a lado, **Fatura a manter** (a verde) e **Fatura a remover** (a vermelho), cada um com a fatura, o
+  fornecedor, a data, o total, os impostos e a situação. A data, o total ou os impostos que não batem certo com o que a
+  AT comunicou aparecem a **laranja**, para ver de imediato qual das duas coincide com o e-Fatura
+- No fundo de cada bloco, uma nota a dizer o que acontece a essa fatura
+
+Os botões:
+
+- :guilabel:`Fundir` executa a fusão
+- :guilabel:`Trocar` inverte os papéis: a fatura que ia sair passa a ser a que fica, e a janela atualiza-se
+- :guilabel:`Cancelar` fecha a janela sem alterar nada
+
+O que a fusão faz
+"""""""""""""""""
+- O documento do e-Fatura passa a estar ligado à fatura que fica. **Essa fatura não é alterada em nada**: número, datas,
+  valores e linhas mantêm-se tal como estão, mesmo que já esteja publicada
+- Os anexos da fatura que sai (o PDF do fornecedor, por exemplo) são copiados para a fatura que fica, para que o
+  documento não se perca
+- A fatura que sai é **apagada** se estiver em rascunho, **anulada** se estiver publicada, e deixada como está se já
+  estiver anulada
+- No chatter da fatura que fica é registado com que fatura foi fundida e o que lhe aconteceu
+
+Qual das duas fica
+""""""""""""""""""
+Por defeito:
+
+- Uma fatura publicada fica sempre em vez de uma em rascunho, porque já está na contabilidade
+- Uma fatura anulada nunca fica
+- Entre duas no mesmo estado, fica a que não tem o documento do e-Fatura ligado, que é normalmente a que trabalhou,
+  com a classificação contabilística e a analítica já feitas
+
+Se a escolha não for a que pretende, use :guilabel:`Trocar`.
+
+Avisos
+""""""
+Os avisos não impedem a fusão, mas merecem uma segunda leitura antes de carregar em :guilabel:`Fundir`:
+
+- As duas faturas divergem na data, no total, nos impostos ou na moeda. O aviso diz qual das duas coincide com o
+  documento do e-Fatura e, como nada é copiado de uma para a outra, confirme a fatura que fica ou troque
+- As duas faturas estão em fornecedores diferentes
+- As duas faturas estão publicadas: o documento foi lançado duas vezes, e anular a segunda retira o custo e o IVA que
+  ela lançou. Se o período já foi declarado à AT, a correção não termina aqui
+- A fatura que fica já tem ativos ou diferimentos calculados a partir de uma data e de valores que a AT contradiz.
+  Reveja-os depois da fusão
+
+.. image:: efatura/v19_efatura_merge_wizard_warning.png
+   :align: center
+
+Bloqueios
+"""""""""
+A fusão é recusada, e o botão :guilabel:`Fundir` não aparece, quando a fatura a remover já produziu contabilidade que
+não pode ser desfeita por si:
+
+- Tem pagamentos conciliados
+- Deu origem a um ativo
+- Gerou lançamentos de diferimento
+
+Nestes casos, desfaça primeiro a conciliação, o ativo ou o diferimento, ou carregue em :guilabel:`Trocar` para manter
+essa fatura e remover a outra. Também não é possível deixar o documento do e-Fatura numa fatura anulada, nem fundir
+faturas de empresas diferentes.
 
 Trabalhar a informação em Odoo
 ==============================
@@ -202,6 +398,11 @@ Na vista de lista as diferentes faturas vão estar codificadas por cores:
 
 - **Verde**, se os dados que constam no seu Odoo estiverem corretos
 - **Vermelho**, se os dados que constam no seu Odoo apresentarem uma **Situação Inconsistente**
+- **Amarelo**, se algum dos impostos que a AT reportou não tiver mapeamento — ver
+  :ref:`efatura-mapeamento-em-falta`
+- **Cinzento**, se o documento ainda não tem fatura de fornecedor ligada. Não há nada a verificar enquanto ela não
+  existir, por isso não aparece a verde como um documento já tratado. O filtro :guilabel:`Sem ligação` mostra-lhe só
+  estes documentos
 
 .. image:: efatura/v17_efatura01.png
    :align: center
@@ -248,6 +449,18 @@ Do lado do documento Odoo a ligação é feita na aba **Outra Informação** no 
     Esta ligação só pode ser alterada do lado do documento e-Fatura, mas o link do documento Odoo liga diretamente a
     esse documento
 
+.. note::
+    Numa base de dados com várias empresas, um documento do e-Fatura só é ligado a faturas de fornecedor da sua
+    própria empresa, mesmo quando as empresas partilham os fornecedores e veem os documentos umas das outras. O mesmo
+    vale para o documento que a leitura de um código QR, uma despesa ou uma importação procura: cada empresa só
+    encontra os seus.
+
+.. note::
+    Nas faturas de fornecedor criadas a partir do e-Fatura, e na fatura de uma despesa preenchida a partir do código
+    QR, escolher o artigo numa linha não altera o valor nem os impostos dessa linha: continuam a ser os que a AT
+    comunicou para o documento, para que a fatura não deixe de bater certo com o e-Fatura. Complete a classificação à
+    vontade, os valores ficam.
+
 Outra funcionalidade que também o ajuda a gerir a sua vista de documentos é a utilização de formatação condicional
 que pode ver tanto na vista de lista, como no próprio documento.
 
@@ -255,6 +468,11 @@ Esta formatação muda para **Vermelho** os valores que apareçam diferentes em 
 **Verde** os que estiverem corretos
 
 Se as situações inconsistentes forem desativadas no e-Fatura, a formatação condicional fica a verde no Odoo
+
+.. note::
+    O campo :guilabel:`Impostos do E-Fatura` da fatura de fornecedor compara **todos** os impostos que a AT reportou
+    para o documento, não apenas o IVA. A AT envia o IVA no total do documento e o Imposto do Selo apenas nas linhas,
+    por isso uma fatura com selo corretamente mapeado aparecia antes como divergente sem o ser.
 
 .. image:: efatura/v17_efatura06.png
    :align: center
@@ -272,6 +490,14 @@ Se as situações inconsistentes forem desativadas no e-Fatura, a formatação c
     .. image:: efatura/v17_efatura09.png
        :align: center
 
+.. note::
+    O mesmo documento pode chegar ao Odoo pelo e-Fatura e pela app de **Despesas**, quando é um recibo que o
+    funcionário pagou do próprio bolso. Lendo o código QR do recibo, o Odoo preenche a despesa com o fornecedor, a
+    data, o total e o número do documento, que são os dados pelos quais encontra o mesmo documento na lista do
+    e-Fatura.
+
+    Consulte :ref:`expenseEfaturaQR` para o que é lido do recibo e em que momentos.
+
 Scan Código QR
 ==============
 Para aqueles que não querem esperar pelo report do eFatura, podem ir inserindo as faturas em Odoo, com base no scan do
@@ -284,13 +510,16 @@ Pode fazê-lo de duas formas:
 .. image:: efatura/v17_efaturaScan01.png
    :align: center
 
-- Numa nova fatura, faça o **Upload do ficheiro**, e carregue no botão **Scan QR**
+- Numa nova fatura, faça o **Upload do ficheiro**, e carregue no botão **Ler QR**
 
 .. image:: efatura/v17_efaturaScan02.png
    :align: center
 
 .. image:: efatura/v17_efaturaScan03.png
    :align: center
+
+O mesmo leitor está disponível na app de **Despesas**, para os recibos que o funcionário paga do próprio bolso e
+fotografa. Ver :ref:`expenseEfaturaQR`
 
 .. note::
     Qualquer um dos processos cria uma **Fatura de Fornecedor** em **Rascunho**, mas também cria uma **Linha na tabela do eFatura**
@@ -303,3 +532,28 @@ Pode fazê-lo de duas formas:
 
     .. image:: efatura/v17_efaturaScan05.png
       :align: center
+
+Sempre que carrega em :guilabel:`Ler QR`, na fatura de fornecedor ou na despesa, uma mensagem no canto superior
+direito diz-lhe o que saiu do código QR: se foi lido, ou, quando não foi possível ler nada, porquê.
+
+Quando não é possível ler o código QR
+-------------------------------------
+Uma fotografia tremida ou cortada, e um ficheiro sem código QR de fatura portuguesa, não dão nada ao Odoo: a
+mensagem diz-lhe **Código QR Não Detetado** e o documento fica como está, para o preencher à mão.
+
+Há duas situações em que a causa não está no ficheiro que enviou, e enviar outro não resolveria nada:
+
+- **Leitor de Código QR Indisponível**: o servidor não consegue ler códigos QR, por isso nenhum documento é lido.
+  Devem faltar dependências para a funcionalidade funcionar corretamente: confirme as
+  :ref:`dependências do PT+ <ptplus_dependencies>`, em particular as do módulo ``ptplus_accounting_efatura``
+- **Código QR Não Lido a Tempo**: o documento é longo e a procura do código QR foi interrompida por ter esgotado o
+  tempo de que dispõe. Anexe só a página que tem o código QR para o ter lido
+
+.. tip::
+    Num documento de várias páginas a procura começa pela primeira e pela última página, onde o código QR de uma
+    fatura normalmente está, por isso um documento longo já não demora minutos a ler. Uma fatura emitida por software,
+    cujo código QR é uma imagem, é lida de imediato seja qual for o número de páginas.
+
+.. note::
+    Um documento emitido a outra empresa não é aproveitado: a mensagem diz-lhe **NIF de Empresa Diferente
+    Detetado** e a fatura de fornecedor fica por preencher.

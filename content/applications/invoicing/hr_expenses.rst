@@ -112,6 +112,58 @@ Depois de aprovada tem acesso ao documento de compensação por deslocações in
 .. image:: hr_expenses/v17_Expenses05.png
    :align: center
 
+.. _expenseEfaturaQR:
+
+Recibos com Código QR
+=====================
+
+.. important::
+    Esta funcionalidade não está disponível na loja Odoo. Para ter acesso à mesma, terá que solicitar a sua
+    instalação e ativação na sua base de dados
+
+Todas as faturas e recibos emitidos em Portugal são obrigados a ter um código QR. O Odoo lê esse código na
+fotografia ou no PDF do recibo e preenche a despesa com os dados que o próprio documento traz, sem que ninguém os
+tenha de escrever.
+
+Configuração
+____________
+
+Nas configurações da app **Faturação / Contabilidade**, secção **Portugal**, ative a opção
+:guilabel:`Leitura E-Fatura` (ver :doc:`e-Fatura <../accounting/efatura>`)
+
+Ler o código QR do recibo
+_________________________
+
+O código QR é lido em dois momentos:
+
+- Ao carregar recibos com o botão :guilabel:`Enviar` da lista de despesas, que é também o que a aplicação móvel do
+  Odoo faz quando o funcionário fotografa o recibo. É criada uma despesa por cada ficheiro, já preenchida
+- A pedido, no botão :guilabel:`Ler QR` da despesa, que percorre os anexos do documento. É o que usa quando o
+  recibo só é anexado depois de a despesa existir
+
+Do código QR vêm o :guilabel:`Total`, a :guilabel:`Data da Despesa`, o :guilabel:`Fornecedor` e a descrição da
+despesa, composta pelo nome do fornecedor e pelo número do documento.
+
+.. image:: hr_expenses/v19_expense_qr_form.png
+   :align: center
+
+.. tip::
+    Se o fornecedor ainda não existir na sua base de dados, é criado a partir do NIF que vem no código QR e fica
+    marcado com o pisco **Criado pelo E-Fatura** na ficha do contacto. Use-o para encontrar os contactos cujos
+    dados ainda estão por completar.
+
+Quando não é possível ler o código QR
+_____________________________________
+
+Uma fotografia tremida ou cortada, e um recibo sem código QR, não dão nada ao Odoo: a despesa fica registada na
+mesma, para a preencher à mão. Carregue em :guilabel:`Ler QR` para saber porque é que nada foi lido; as razões
+são as mesmas que a fatura de fornecedor dá, descritas em :doc:`e-Fatura <../accounting/efatura>`
+
+.. note::
+    O mesmo documento chega também ao Odoo pela sincronização do e-Fatura, do lado das compras. A despesa não
+    fica ligada a esse documento: os dados lidos do código QR, o fornecedor, a data, o total e o número do
+    documento, são o que lhe permite reconhecer os dois registos como sendo o mesmo.
+
 .. seealso::
     `Consulte a documentação Odoo sobre Despesas <https://www.odoo.com/documentation/18.0/pt_BR/applications/finance/expenses.html>`_
 
