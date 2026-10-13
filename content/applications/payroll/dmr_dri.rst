@@ -89,3 +89,8 @@ trabalhador, incluindo os dias trabalhados e o valor de vencimento desse mês
    :align: center
 
 Carregue em **Exportar TXT** para obter o ficheiro pronto a entregar à Segurança Social
+
+.. note::
+    As empresas que aderiram à Simplificação do Ciclo Contributivo (SCC) já não entregam a DRI: os
+    valores de remuneração são comunicados diretamente à Segurança Social a partir do Odoo. Veja
+    :doc:`Segurança Social - Ciclo Contributivo <seguranca_social_scc>`
