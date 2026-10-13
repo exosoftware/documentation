@@ -16,7 +16,7 @@ confirmação, pagamento das contribuições e comunicações do trabalhador.
     </div>
 
 .. note::
-    A adesão à SCC decorre de forma gradual, por contacto da Segurança Social, e é irreversível.
+    A adesão à SCC é irreversível.
     Enquanto a empresa não aderir, continua a entregar a declaração de remunerações como até aqui
     (veja :doc:`DMR e DRI <dmr_dri>`). Depois da adesão, a exportação da DRI deixa de estar
     disponível.
