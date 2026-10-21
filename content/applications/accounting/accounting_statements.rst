@@ -37,6 +37,10 @@ Clique em **Calcular**. O separador **Contas** lista as contas por código, com 
 **Débito**, **Crédito** e **Saldo Final**. O saldo inicial reúne todos os movimentos anteriores à data de
 início, e o saldo final junta-lhe os débitos e os créditos do período
 
+As contas aparecem agrupadas pelos grupos contabilísticos do plano de contas, da classe até ao último grau,
+como no balancete nativo do Odoo. Cada grupo tem uma linha de subtotal a negrito com o saldo inicial, os
+débitos, os créditos e o saldo final das contas que reúne, e as contas ficam por baixo do respetivo grupo
+
 Com o detalhe ligado, as linhas de cada parceiro ou produto aparecem por baixo da respetiva conta e somam o
 valor da conta. Os movimentos sem parceiro ou sem produto ficam no fim do detalhe, em **Sem Parceiro** ou
 **Sem Produto**
