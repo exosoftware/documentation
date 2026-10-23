@@ -18,6 +18,7 @@ Explore mais sobre o nosso add-on de Salários
     payroll/abonos_descontos
     payroll/despesas_folha_salarios
     payroll/dmr_dri
+    payroll/seguranca_social_scc
     payroll/folha_de_ferias
     payroll/mapa_agregado_recibos
     payroll/mapa_anual_acumulado
