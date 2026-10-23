@@ -55,13 +55,28 @@ divergências, estão por reenviar ou a confirmação foi recusada, aparecem a v
 
 Carregue em **Novo**, escolha o **Ano-Mês** e carregue em **Calcular**. O Odoo junta os valores
 dos recibos de vencimento desse mês, um registo por trabalhador e natureza de remuneração. As
-faltas reduzem os dias e a remuneração base do mês. O **Responsável** da declaração, por omissão
-quem a criou, é quem recebe os lembretes e avisos dessa declaração.
+faltas reduzem os dias e a remuneração base do mês. Um trabalhador que esteve ausente o mês todo,
+por exemplo de baixa, é declarado sem dias e com valor zero: se não fosse declarado, a Segurança
+Social apurava o mês com a remuneração permanente que tem registada. O **Responsável** da
+declaração, por omissão quem a criou, é quem recebe os lembretes e avisos dessa declaração.
+
+O botão **Linhas da Declaração** abre os registos da declaração numa lista própria, onde os pode
+filtrar, agrupar e exportar.
 
 Reveja os valores e carregue em **Enviar à Segurança Social**.
 
 .. image:: seguranca_social_scc/v18_scc_draft.png
    :align: center
+
+Antes de enviar, o Odoo confirma que a Segurança Social tem os contratos dos recibos do mês como
+estão no Odoo. Os trabalhadores que não foram consultados na Segurança Social no último dia são
+consultados nesse momento. Se faltar comunicar algum contrato, nada é enviado e a mensagem indica
+os funcionários a resolver primeiro (veja `Comunicações do trabalhador`_). Os membros de órgãos
+estatutários não têm contrato na Segurança Social e não entram nesta verificação.
+
+Uma remuneração permanente por comunicar não impede o envio. Como a Segurança Social apura o mês
+a partir das remunerações permanentes que tem registadas, a declaração mostra um aviso com os
+funcionários que têm remunerações novas por comunicar.
 
 A declaração passa pelos estados **Enviado** e **Integrado** à medida que a Segurança Social a
 processa. Os alertas que a Segurança Social devolver ficam junto de cada registo, no separador
@@ -99,8 +114,9 @@ mês ter sido calculado e enviado de novo.
 Confirmar o mês
 ===============
 Terminado o mês, a Segurança Social faz o apuramento definitivo e a declaração passa a
-**Apurado**. Até lá, os valores que devolve são provisórios. Carregue em **Obter Valores** para ir
-buscar o apuramento.
+**Apurado**. Até lá, os valores que devolve são provisórios. Depois de o mês terminar,
+**Atualizar Estado** vai também buscar o apuramento. Se a Segurança Social ainda não apurou o mês,
+o Odoo avisa.
 
 Comparação por trabalhador
 --------------------------
@@ -164,15 +180,32 @@ A admissão, as alterações de contrato, a cessação e as remunerações perma
 trabalhador também se comunicam à Segurança Social a partir do Odoo, no separador **Comunicação
 SS** do contrato do funcionário, em :menuselection:`Folha de Salários --> Contratos`.
 
-Comece por carregar em **Consultar Contrato na SS**. As comunicações disponíveis seguem o que a
-Segurança Social tem registado para o trabalhador, e até à primeira consulta só aparecem as duas
-consultas.
+Comece por carregar em **Consultar na SS**. As comunicações disponíveis seguem o que a Segurança
+Social tem registado para o trabalhador, e até à primeira consulta só aparece este botão.
+
+A consulta guarda duas tabelas, que o separador mostra: os **Contratos Registados na Segurança
+Social** (datas, modalidade, remuneração base e motivo) e as **Remunerações Permanentes Registadas
+na Segurança Social** (tipo, datas e valor), de todos os contratos do trabalhador. A partir delas,
+o separador indica em dois campos o que já está comunicado:
+
+- **Contrato Comunicado à SS**: a Segurança Social tem o contrato como está no Odoo, com o mesmo
+  início e, num contrato a termo, o mesmo fim. É este campo que permite enviar a declaração mensal
+- **Remunerações Comunicadas à SS**: as remunerações permanentes do contrato foram comunicadas a
+  partir do Odoo, ou a Segurança Social já tem os mesmos valores, por exemplo porque foram
+  comunicados na Segurança Social Direta
 
 .. image:: seguranca_social_scc/v18_scc_contract.png
    :align: center
 
-Depois da consulta, o separador mostra os contratos que a Segurança Social tem registados e oferece
-apenas o que falta comunicar, pela ordem que a Segurança Social aceita:
+.. tip::
+    Para consultar muitos trabalhadores de uma vez, selecione-os na lista de funcionários e use
+    :menuselection:`Ação --> Consultar na SS`. Pode incluir funcionários arquivados: são
+    consultados pelo seu último contrato. A Segurança Social responde por blocos de trabalhadores,
+    e no fim o Odoo indica os que não foi possível consultar, por exemplo por não terem NISS
+    válido.
+
+Depois da consulta, o separador oferece apenas o que falta comunicar, pela ordem que a Segurança
+Social aceita:
 
 .. list-table::
    :header-rows: 1
@@ -188,8 +221,10 @@ apenas o que falta comunicar, pela ordem que a Segurança Social aceita:
        um contrato a termo, numa nova modalidade ou numa nova remuneração
    * - **Comunicar Remuneração Permanente**
      - O contrato alterou a remuneração base, o abono para falhas, as diuturnidades, a isenção de
-       horário ou os duodécimos dos subsídios de férias e de Natal, e ainda não foi comunicado.
-       Deve ser comunicado até ao dia 10 do mês seguinte à alteração
+       horário ou os duodécimos dos subsídios de férias e de Natal, e ainda não foi comunicado. Também
+       aparece quando a consulta mostra que a Segurança Social tem outros valores, por exemplo um
+       aumento que nunca lhe foi comunicado. Deve ser comunicado até ao dia 10 do mês seguinte à
+       alteração
    * - **Comunicar Cessação**
      - O contrato que a Segurança Social tem registado terminou. O motivo de cessação da Segurança
        Social é proposto a partir do motivo de fim de contrato. Indique também se a comunicação é
@@ -204,10 +239,12 @@ apenas o que falta comunicar, pela ordem que a Segurança Social aceita:
 
 Quando um contrato altera uma destas remunerações e ainda não foi comunicado, o contrato mostra um
 aviso. Antes de cada envio, o Odoo volta a consultar a Segurança Social: se a situação já não for a
-esperada, não envia nada e diz o que falta comunicar. **Consultar Remunerações na SS** mostra as
-remunerações permanentes que a Segurança Social tem registadas para o período do contrato. Se
-coincidirem com as do contrato, por exemplo porque foram comunicadas na Segurança Social Direta, o
-contrato fica marcado como comunicado.
+esperada, não envia nada e diz o que falta comunicar.
+
+.. note::
+    Os membros de órgãos estatutários (MOE) não têm contrato de trabalho na Segurança Social. Para
+    eles, o Odoo não oferece a comunicação do vínculo e comunica apenas as remunerações
+    permanentes.
 
 O **Código do Local de Trabalho SS** vem do código de estabelecimento do contacto do local de
 trabalho do funcionário, o mesmo que é usado na DRI.
