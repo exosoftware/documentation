@@ -15,9 +15,9 @@ ficheiro estruturado (XML), e é o formato usado quando fatura eletronicamente e
 
 Não existe um broker único em Portugal: cada entidade pública escolhe o seu. A Exo tem
 integração implementada com a **Saphety** — entretanto adquirida pela Sovos, pelo que a interface
-do produto apresenta as duas designações. Para alcançar destinatários servidos por outro broker,
-contrata diretamente com a Saphety a abertura de interligação — um valor **por interligação,
-pagamento único**, não por destinatário nem recorrente. A este acresce a avença do broker, e é
+do produto apresenta as duas designações — e com a **Generix**. Para alcançar
+destinatários servidos por outro broker, estas contratam diretamente a abertura de
+interligação — um valor **por interligação, pagamento único**, não por destinatário nem recorrente. A este acresce a avença do broker, e é
 este custo recorrente — não o de implementação — que justifica optar pela via manual descrita
 mais abaixo para um volume esporádico de faturas B2G.
 
@@ -25,9 +25,9 @@ mais abaixo para um volume esporádico de faturas B2G.
     A negociação e o pagamento destes valores são matéria entre a sua empresa e a Saphety;
     valores indicativos, alteráveis unilateralmente pela Saphety.
 
-A solução é composta por três módulos, com um único fluxo: a base gera e valida o ficheiro
-CIUS-PT; o broker acrescenta-lhe transmissão automática; o de vendas acrescenta captura a
-montante, na encomenda.
+A solução é composta por quatro módulos, com um único fluxo: a base gera e valida o ficheiro
+CIUS-PT; o de broker (Saphety ou Generix) acrescenta-lhe transmissão automática; o de vendas
+acrescenta captura a montante, na encomenda.
 
 .. list-table::
    :header-rows: 1
@@ -41,12 +41,15 @@ montante, na encomenda.
    * - **Portugal - Saphety EDI**
      - Transmissão automática ao broker e acompanhamento do estado de entrega.
      - E-invoicing CIUS-PT
+   * - **Portugal - Generix EDI**
+     - Transmissão automática à Generix e acompanhamento do estado de entrega.
+     - E-invoicing CIUS-PT
    * - **Portugal - Sales B2G and EDI**
      - Campos B2G na encomenda de venda, com propagação para a fatura.
      - E-invoicing CIUS-PT e Vendas PT+
 
-Os três módulos fazem parte da sua subscrição **PT+** e não exigem pedido à Exo Software: ativam-se
-diretamente nas definições, tal como qualquer outra funcionalidade da localização.
+Os quatro módulos fazem parte da sua subscrição **PT+** e não exigem pedido à Exo Software:
+ativam-se diretamente nas definições, tal como qualquer outra funcionalidade da localização.
 
 .. warning::
     A comunicação em CIUS-PT cobre exclusivamente **faturas e notas de crédito**, e apenas no
@@ -68,8 +71,9 @@ Ativação dos módulos
 Aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou
 Enterprise do Odoo), vá ao menu :menuselection:`Configuração --> Configurações` e na secção
 **Portugal** ative a opção :guilabel:`Faturação Eletrónica`. Se pretender transmissão automática
-via Saphety, ative também a opção :guilabel:`Broker EDI Saphety`, disponível na mesma secção assim
-que a opção anterior está ativa.
+via Saphety, ative também a opção :guilabel:`Broker EDI Saphety`; via Generix, a opção
+:guilabel:`Generix EDI broker`. Ambas ficam disponíveis na mesma secção assim que a opção
+anterior está ativa.
 
 .. image:: e-invoicing/v19_edi_settings.png
    :align: center
@@ -90,6 +94,13 @@ Credenciais do broker
 Com a opção **Broker EDI Saphety** ativa, preencha o :guilabel:`Nome de Utilizador` e a
 :guilabel:`Palavra-passe` da conta Saphety da sua empresa, na mesma secção Portugal das
 definições — campos assinalados a azul na imagem acima — e guarde.
+
+Com a opção **Generix EDI broker** ativa, o procedimento é o mesmo: preencha o
+:guilabel:`Username` e a :guilabel:`Password` da conta Generix da sua empresa, logo abaixo da
+opção, e guarde.
+
+.. image:: e-invoicing/v19_edi_settings_generix.png
+   :align: center
 
 Formato do parceiro e herança
 -------------------------------
@@ -122,9 +133,14 @@ vermelho caso contrário.
 .. image:: e-invoicing/v19_edi_partner_saphety_check.png
    :align: center
 
+Se usar a Generix, a verificação é a mesma, através do botão :guilabel:`Check Generix`, no mesmo
+sítio. A consulta só é feita quando o campo :guilabel:`Envio de faturas` do parceiro está definido
+como :guilabel:`by Generix` e as credenciais Generix estão preenchidas nas definições.
+
 .. important::
     Trate esta verificação como **pré-condição do fluxo**, não como funcionalidade acessória: um
-    NIF não registado na Saphety impede a entrega mesmo com o ficheiro CIUS-PT correto.
+    NIF não registado no broker (Saphety ou Generix) impede a entrega mesmo com o ficheiro
+    CIUS-PT correto.
 
 Utilização
 ==================
@@ -158,11 +174,11 @@ atividade (ícone de clip no canto superior direito):
 
 Descarregue-o a partir daí e submeta-o no portal do broker escolhido.
 
-Via broker (Saphety)
-------------------------
-Com a **Saphety EDI** instalada e configurada, a transmissão é automática e **assíncrona**: um
-processo agendado do Odoo envia os ficheiros pendentes em lote e atualiza periodicamente o estado
-de cada um. Depois de confirmar a fatura não espere ver a transmissão de imediato — é o
+Via broker (Saphety ou Generix)
+-----------------------------------
+Com a **Saphety EDI** ou a **Generix EDI** instalada e configurada, a transmissão é automática e
+**assíncrona**: um processo agendado do Odoo envia os ficheiros pendentes em lote e atualiza
+periodicamente o estado de cada um. Depois de confirmar a fatura não espere ver a transmissão de imediato — é o
 comportamento esperado, não uma falha.
 
 .. note::
@@ -192,9 +208,13 @@ Depois de a fatura ter sido enviada pelo menos uma vez (botão :guilabel:`Enviar
      - Estado devolvido pela própria plataforma Saphety (por exemplo, *Received*) — texto
        apresentado tal como a Saphety o devolve, sem tradução.
 
+Com a Generix, a lógica é a mesma e as colunas equivalentes são **Generix Request Status**
+(*Queued*, *Running*, *Error* ou *Finished*) e **Generix Document Status** (por exemplo,
+*Received*).
+
 .. tip::
-    Se a coluna **Estado da Submissão Saphety** indicar *Erro*, verifique o NIF do parceiro e as
-    credenciais Saphety nas definições, e reenvie a fatura.
+    Se a coluna **Estado da Submissão Saphety** (ou **Generix Request Status**) indicar *Erro*,
+    verifique o NIF do parceiro e as credenciais do broker nas definições, e reenvie a fatura.
 
 Campos para faturação a entidades públicas (B2G)
 ----------------------------------------------------
@@ -240,9 +260,10 @@ exemplo, algumas exigem referências Multibanco, que o CIUS-PT prevê mas não t
 
 Erros de submissão
 ----------------------
-Um erro no estado de submissão (coluna **Estado da Submissão Saphety** a *Erro*) remete quase
-sempre para o NIF do parceiro ou para as credenciais Saphety da empresa. Confirme ambos — usando o
-botão :guilabel:`Check Sovos/Saphety` na ficha do parceiro — e reenvie a fatura.
+Um erro no estado de submissão (coluna **Estado da Submissão Saphety** ou **Generix Request
+Status** a *Erro*) remete quase sempre para o NIF do parceiro ou para as credenciais do broker na
+empresa. Confirme ambos — usando o botão :guilabel:`Check Sovos/Saphety` ou
+:guilabel:`Check Generix` na ficha do parceiro — e reenvie a fatura.
 
 .. seealso::
     :doc:`Consulte as nossas FAQs sobre Faturação eletrónica <../faq/e-invoicing_errors>`
