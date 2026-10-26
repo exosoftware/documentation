@@ -138,8 +138,8 @@ que declara o serviço: campo em branco significa venda normal.
 .. tip::
     Só lhe são propostas Listas de Materiais sem Dono, ou cujo Dono seja o cliente da encomenda.
 
-    Se trocar o cliente, a lista escolhida é limpa e deve gravar o documento para atualizar a lista de opções, para que
-    possa fazer nova escolha sem que a gravação volte a limpar o campo.
+    Se trocar o cliente, a lista escolhida é limpa e as opções passam logo a ser as do novo cliente, sem ser preciso
+    gravar o documento.
 
     Uma lista sem Dono mantém-se, porque serve qualquer cliente.
 
@@ -243,12 +243,14 @@ Desmontagem
 ~~~~~~~~~~~
 Desmontar uma ordem de fabrico por conta de terceiros é um procedimento normal. Os componentes voltam a stock com o
 Dono correto, o produto desmontado sai sem qualquer impacto patrimonial, e a analítica é acertada: o custo dos
-componentes que a sua empresa tinha fornecido é anulado no projeto do cliente, e a mão de obra é anulada nesse projeto
-e imputada à conta **Unbuild of Contract Manufacturing**, para que o custo saia do projeto do cliente sem desaparecer.
+componentes que a sua empresa tinha fornecido é anulado no projeto do cliente, e a mão de obra, incluindo o tempo
+registado pelos funcionários, é anulada nesse projeto e imputada à conta **Unbuild of Contract Manufacturing**, para
+que o custo saia do projeto do cliente sem desaparecer.
 
 .. note::
-    Os valores acertados são os que a ordem de fabrico tinha imputado, proporcionais à quantidade desmontada, e não uma
-    nova medição do trabalho de desmontar.
+    Os valores acertados são os que a ordem de fabrico tinha imputado, e não uma nova medição do trabalho de desmontar.
+    São proporcionais à quantidade desmontada: desmontar uma unidade de uma ordem de duas acerta metade dos valores
+    da ordem.
 
 Apuramento dos custos
 ---------------------
@@ -261,6 +263,7 @@ período e pela conta analítica do cliente.
 Só aparece aqui o que a sua empresa efetivamente suportou:
 
 - a mão de obra, com o prefixo ``[CT]``, valorizada pelo custo por hora dos centros de trabalho. Só existe se o centro de trabalho tiver distribuição analítica e custo por hora definidos, e se houver tempo registado na ordem de trabalho.
+- o tempo dos funcionários, com o prefixo ``[EMPL]`` seguido da ordem de trabalho e do nome do funcionário, valorizado pelo custo por hora do funcionário. Só existe quando o tempo é registado por funcionário.
 - os componentes que a sua empresa forneceu, com o prefixo ``[CP]`` seguido da ordem de fabrico e do componente. A linha nasce da distribuição analítica da lista de materiais: sem projeto associado à lista de materiais, o consumo dos componentes não chega à analítica.
 
 Os componentes propriedade do cliente não representam custo seu e não geram qualquer linha, em nenhum cenário. Todas as
@@ -268,9 +271,10 @@ linhas partilham a ordem de fabrico na coluna **Ref.** e o cliente na coluna **P
 apuramento por cliente sem abrir mais nenhum documento.
 
 Uma desmontagem acrescenta aqui as suas próprias linhas, com a referência da desmontagem: o inverso de cada componente
-no projeto do cliente, o inverso da mão de obra nesse projeto e a mesma mão de obra na conta **Unbuild of Contract
-Manufacturing**. Somando o período, o projeto do cliente fica a zeros nos componentes devolvidos e a mão de obra passa
-para a conta de desmontagem.
+no projeto do cliente, o inverso da mão de obra e do tempo dos funcionários nesse projeto, e os mesmos valores de mão
+de obra e de tempo dos funcionários na conta **Unbuild of Contract Manufacturing**. Somando o período, o projeto do
+cliente fica a zeros nos componentes devolvidos, e a mão de obra e o tempo dos funcionários passam para a conta de
+desmontagem.
 
 .. note::
     O resumo de custos da ordem de fabrico e a estrutura da lista de materiais seguem o mesmo critério: os componentes
