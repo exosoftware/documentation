@@ -28,6 +28,29 @@ utilizador Odoo e inserir os dados na aba **Portugal**
 Deve garantir que em Odoo o utilizador tem permissões para fazer a comunicação de séries, mas também o login de acesso
 na AT está autorizado a fazer essa mesma comunicação.
 
+Certificados AT
+===============
+
+A comunicação com a AT e a assinatura dos documentos fiscais usam certificados que já vêm instalados com a
+localização. Uma empresa que tenha certificado próprio registado na AT pode substituí-los em
+:menuselection:`Faturação --> Configuração --> Definições`, secção **Portugal**, bloco **Certificados AT**: carregue o
+ficheiro de certificados fornecido pela Exo Software em :guilabel:`Ficheiro de certificados` e guarde.
+
+A partir daí é esse ficheiro que é usado, em vez do que vem instalado, até ser removido com o botão
+:guilabel:`Remover`. Ao guardar, uma notificação indica até quando cada certificado é válido, e o bloco passa a
+mostrar essa validade; o aviso destaca-se quando algum certificado já expirou ou está prestes a expirar.
+
+.. image:: series_registration/v18_at_certificates_configured.png
+   :align: center
+
+.. note::
+    O ficheiro é guardado encriptado, uma única vez para toda a base de dados: todas as empresas que usem o mesmo
+    serviço de certificação partilham-no. Quem mantém os certificados que vêm instalados não precisa de fazer nada.
+
+.. tip::
+    Se o ficheiro guardado deixar de poder ser lido, as definições continuam a abrir, assinalam o problema a vermelho e
+    permitem removê-lo, voltando aos certificados instalados.
+
 Séries
 ======
 
