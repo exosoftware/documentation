@@ -5,70 +5,14 @@ SAF-T Faturação
 ===============
 O SAF-T de faturação é uma obrigação legal que tem de ser cumprida junto da AT
 
-Aprenda como o gerar e lidar com alguns erros de validação que possam surgir durante a sua criação, e como consultar o
-estado do elemento SAF-T de cada documento
+Aprenda o que é o elemento SAF-T de cada documento e como consultar o seu estado, e depois como gerar o ficheiro e lidar
+com alguns erros de validação que possam surgir durante a sua criação
 
 .. raw:: html
 
     <div style="text-align: center; margin: 20px 0;">
         ─── ✦ ───
     </div>
-
-Exportação
-==========
-Para poder exportar o ficheiro SAF-T de Faturação que tem de submeter à Autoridade Tributária, aceda à app
-**Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu
-**Relatórios** e no separador **Portugal** selecione a opção **Exportar SAF-T**.
-
-.. image:: fiscal_documents/v17_appInvoicingAccounting.png
-   :align: center
-
-.. image:: saft_invoicing/v17_exportSAFT1.png
-   :align: center
-
-Vai abrir uma janela que predefine o **Período** como Mês Passado, mas pode selecionar o período como lhe for mais
-conveniente, mudando o **Período** ou alterando a **Data Inicial** e/ou **Data Final**.
-
-É recomendado que mantenha o visto na opção **Validar** para fazer uma verificação do ficheiro, no entanto se espera que
-o ficheiro seja muito grande pode optar por não fazer esta verificação.
-
-Carregue em **Exportar XML**.
-
-.. image:: saft_invoicing/v17_exportSAFT2.png
-   :align: center
-
-.. note::
-    Caso tenha os nossos módulos de contabilidade instalados, terá um campo extra para selecionar o tipo de SAF-T
-    escolha a opção **Faturação**
-
-    .. image:: saft_invoicing/v17_exportSAFT6.png
-        :align: center
-
-Vai ser gerada uma nova janela com um resumo de possíveis erros que existam nos documentos para que seja mais fácil ver
-necessidade de correção de erros
-
-No campo **Motivo** pode encontrar uma descrição do que está a causar o erro
-
-.. image:: saft_invoicing/v17_exportSAFT3.png
-   :align: center
-
-Depois de não ter erros, faça download do ficheiro gerado para inserir no site da Autoridade Tributária.
-
-.. image:: saft_invoicing/v17_exportSAFT4.png
-   :align: center
-
-Esta janela tem ainda duas opções:
-
-   - **Registar ao Fechar**, Vai criar uma entrada junto com uma cópia do ficheiro gerado para que possa consultar posteriormente
-   - **Registar como Submetido**, se o visto estiver ativo o registo gerado vai ser considerado como submetido sem problemas à AT
-
-.. image:: saft_invoicing/v17_exportSAFT5.png
-   :align: center
-
-Submeta o ficheiro à AT, depois de submeter o ficheiro pode fechar esta janela.
-
-.. seealso::
-    :doc:`Consulte as nossas FAQs sobre SAF-T de Faturação <../faq/saft_errors>`
 
 .. _invoice_saft_element:
 
@@ -152,6 +96,62 @@ Nas mesmas listas, selecione um ou mais documentos e abra o menu **Ações**. Te
 .. warning::
     Bloqueie um elemento apenas quando o pretende manter exatamente como está, por exemplo depois de os nossos
     serviços o corrigirem. Um elemento bloqueado não acompanha as alterações do documento
+
+Exportação
+==========
+Para poder exportar o ficheiro SAF-T de Faturação que tem de submeter à Autoridade Tributária, aceda à app
+**Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou Enterprise do Odoo), vá ao menu
+**Relatórios** e no separador **Portugal** selecione a opção **Exportar SAF-T**.
+
+.. image:: fiscal_documents/v17_appInvoicingAccounting.png
+   :align: center
+
+.. image:: saft_invoicing/v17_exportSAFT1.png
+   :align: center
+
+Vai abrir uma janela que predefine o **Período** como Mês Passado, mas pode selecionar o período como lhe for mais
+conveniente, mudando o **Período** ou alterando a **Data Inicial** e/ou **Data Final**.
+
+É recomendado que mantenha o visto na opção **Validar** para fazer uma verificação do ficheiro, no entanto se espera que
+o ficheiro seja muito grande pode optar por não fazer esta verificação.
+
+Carregue em **Exportar XML**.
+
+.. image:: saft_invoicing/v17_exportSAFT2.png
+   :align: center
+
+.. note::
+    Caso tenha os nossos módulos de contabilidade instalados, terá um campo extra para selecionar o tipo de SAF-T
+    escolha a opção **Faturação**
+
+    .. image:: saft_invoicing/v17_exportSAFT6.png
+        :align: center
+
+Vai ser gerada uma nova janela com um resumo de possíveis erros que existam nos documentos para que seja mais fácil ver
+necessidade de correção de erros
+
+No campo **Motivo** pode encontrar uma descrição do que está a causar o erro
+
+.. image:: saft_invoicing/v17_exportSAFT3.png
+   :align: center
+
+Depois de não ter erros, faça download do ficheiro gerado para inserir no site da Autoridade Tributária.
+
+.. image:: saft_invoicing/v17_exportSAFT4.png
+   :align: center
+
+Esta janela tem ainda duas opções:
+
+   - **Registar ao Fechar**, Vai criar uma entrada junto com uma cópia do ficheiro gerado para que possa consultar posteriormente
+   - **Registar como Submetido**, se o visto estiver ativo o registo gerado vai ser considerado como submetido sem problemas à AT
+
+.. image:: saft_invoicing/v17_exportSAFT5.png
+   :align: center
+
+Submeta o ficheiro à AT, depois de submeter o ficheiro pode fechar esta janela.
+
+.. seealso::
+    :doc:`Consulte as nossas FAQs sobre SAF-T de Faturação <../faq/saft_errors>`
 
 .. _invoice_saft_invoice_cron:
 
