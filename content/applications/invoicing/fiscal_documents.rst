@@ -511,3 +511,42 @@ Alertas
 =======
 .. important::
     :download:`Obrigatoriedade de comunicação de documentos fiscalmente relevantes <fiscal_documents/comunicacao_working_documents.pdf>`
+
+.. _fiscal_documents_multiway:
+
+Impressão em várias vias
+========================
+Os relatórios em várias vias imprimem o mesmo documento com a indicação de cada via: original, duplicado, triplicado,
+etc. Estão disponíveis nos seguintes relatórios:
+
+- **Faturas (multi-via)**
+- **Recibo de Pagamento (multi-via)**
+- **Documento de Venda (multi-via)**
+- **Documentos de Transporte (multi-via)**
+
+Por defeito, o PDF em várias vias não fica guardado no chatter do documento. Só o PDF do relatório normal fica guardado.
+Assim, o chatter não acumula cópias do mesmo documento
+
+Se pretender guardar também o PDF em várias vias:
+
+#. Ative o **Modo programador**
+#. Na app **Definições**, aceda ao menu :menuselection:`Técnico --> Relatórios` e abra o relatório em várias vias
+   que pretende alterar
+#. No separador **Propriedades Avançadas**, preencha o campo **Guardar como Prefixo do Anexo** com:
+
+   .. code-block:: python
+
+      object.system_entry_date and '{} (multi-via).pdf'.format(object.pt_get_fullname(lang=object.company_id.partner_id.lang))
+
+#. Guarde
+
+.. image:: fiscal_documents/v19_multiwayAttachment.png
+   :align: center
+
+Com esta expressão, o PDF só fica guardado depois de o documento ser emitido. Os rascunhos não ficam guardados
+
+.. warning::
+    Use sempre um nome diferente do nome do relatório normal, por exemplo com o sufixo ``(multi-via)``. Se usar o
+    mesmo nome, a impressão normal da fatura pode passar a mostrar o PDF em várias vias
+
+Para voltar ao comportamento por defeito, apague o conteúdo do campo **Guardar como Prefixo do Anexo**
