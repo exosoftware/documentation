@@ -4,7 +4,7 @@
 Relatórios Contabilísticos
 ==========================
 A localização da **Exo Software** acrescenta à app de **Faturação / Contabilidade** os relatórios
-contabilísticos usados em Portugal, com consulta no ecrã e exportação para Excel
+contabilísticos usados em Portugal, com consulta no ecrã e exportação para PDF e Excel
 
 .. raw:: html
 
@@ -15,7 +15,8 @@ contabilísticos usados em Portugal, com consulta no ecrã e exportação para E
 Balancete
 =========
 O balancete mostra, para cada conta com movimentos, o saldo no início do período, os débitos e os créditos
-do período e o saldo no fim do período
+do período e o saldo no fim do período. Só entram as contas das classes 1 a 8 do plano de contas do SNC:
+uma conta criada fora destas classes fica fora do balancete e do total
 
 Para o obter, aceda à app de **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community
 ou Enterprise do Odoo) e vá ao menu :menuselection:`Relatórios --> Portugal --> Financeiros --> Balancete`
@@ -49,8 +50,11 @@ valor da conta. Os movimentos sem parceiro ou sem produto ficam no fim do detalh
    :align: center
 
 A lista termina com uma linha de **Total**, em que o total dos débitos é igual ao total dos créditos. O botão
-**Ver** de cada linha abre os movimentos que compõem o respetivo saldo final, e o botão **Exportar XLSX**
-gera o balancete em Excel, com as mesmas colunas e linhas
+**Ver** de cada linha abre os movimentos que compõem o respetivo saldo final
+
+Os botões **Exportar PDF** e **Exportar XLSX** geram o balancete em PDF e em Excel, com as mesmas colunas e
+linhas. Os dois ficheiros indicam a data e a hora em que o balancete foi emitido: no PDF, no cabeçalho de
+cada página, ao lado do nome da empresa e da numeração das páginas; no Excel, na linha por baixo do período
 
 .. note::
     Numa empresa com sucursais, o balancete junta sempre os lançamentos da empresa principal e de todas as
