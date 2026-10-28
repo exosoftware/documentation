@@ -222,10 +222,18 @@ deve ser registado outro material.
 Shop Floor e app de Código de Barras
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As duas interfaces aplicam a mesma verificação que a vista de formulário. No **Shop Floor**, ao registar o componente,
-o cartão volta à quantidade retida, mostra o estado **Autorização Pendente** e avisa o operador.
+o cartão recarrega, mostra o estado **Autorização de Dono pendente** e avisa o operador de que a quantidade ficou
+retida.
+
+.. image:: manufacturing/v18_cm_shopFloor.png
+   :align: center
 
 Na app de **Código de Barras**, ler um artigo de outro Dono dá um aviso imediato, a linha mostra o estado da
-autorização e, ao gravar, o que ficou retido é avisado de novo.
+autorização e, ao gravar, o que ficou retido é avisado de novo. A linha mostra o estado também quando o material foi
+registado noutra interface, como nesta ordem de fabrico, registada no Shop Floor.
+
+.. image:: manufacturing/v18_cm_barcode.png
+   :align: center
 
 .. warning::
     Na app de Código de Barras, ler um artigo fora do que está reservado pode trazer o Dono de outro cliente sem o
