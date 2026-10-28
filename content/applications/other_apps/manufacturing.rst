@@ -190,6 +190,14 @@ próprio pedido. Só um **Administrador de Inventário** o aprova ou recusa: na 
 **Operações**, opção **Autorizações de Dono**, a partir da atividade que recebe, ou pelo botão **Autorizações** da
 ordem ou da transferência.
 
+.. image:: manufacturing/v18_cm_authorizations.png
+   :align: center
+
+No pedido, os botões **Aprovar** e **Recusar** ficam no topo, e a atividade atribuída ao aprovador aparece ao lado.
+
+.. image:: manufacturing/v18_cm_authorizationForm.png
+   :align: center
+
 .. important::
     Concluir a atividade não é aprovar. Qualquer utilizador com acesso ao documento consegue fechar uma atividade, por
     isso só a ação **Aprovar**, reservada aos administradores de inventário, liberta a linha.
@@ -276,10 +284,19 @@ de obra e de tempo dos funcionários na conta **Unbuild of Contract Manufacturin
 cliente fica a zeros nos componentes devolvidos, e a mão de obra e o tempo dos funcionários passam para a conta de
 desmontagem.
 
+.. image:: manufacturing/v18_cm_unbuildAnalytic.png
+   :align: center
+
+O resumo de custos da ordem de fabrico e a estrutura da lista de materiais seguem o mesmo critério: os componentes do
+cliente aparecem a zero nas colunas de custo da ordem, da lista e real, e os totais mostram só o custo da sua empresa.
+Para ver as quatro colunas no resumo da ordem, ative-as no filtro **Mostrar**.
+
+.. image:: manufacturing/v18_cm_moOverview.png
+   :align: center
+
 .. note::
-    O resumo de custos da ordem de fabrico e a estrutura da lista de materiais seguem o mesmo critério: os componentes
-    do cliente aparecem a zero nas colunas de custo da ordem, da lista e real, e os totais mostram só o custo da sua
-    empresa. O custo unitário mantém-se, por ser o que o componente custaria se fosse a sua empresa a fornecê-lo.
+    O custo unitário mantém-se, por ser o que o componente custaria se fosse a sua empresa a fornecê-lo. Esta leitura
+    difere da do Odoo nativo, que valoriza todos os componentes da ordem como se fossem da sua empresa.
 
 .. note::
     A valorização de inventário mantém-se **manual**, por exigência das regras do SNC. Os movimentos de stock continuam
