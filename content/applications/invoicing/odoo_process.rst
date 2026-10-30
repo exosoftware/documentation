@@ -284,6 +284,19 @@ A maioria dos campos já vão estar preenchidos pois são herdados da Nota de en
     Como os campos não são herdados de uma Nota de encomenda terão de ser preenchidos manualmente como se estivesse a
     criar um orçamento.
 
+.. warning::
+    Uma fatura criada diretamente não pode ter artigos do tipo **Combo**. Se uma linha da fatura tiver um combo, o
+    Odoo não confirma a fatura e mostra uma mensagem.
+
+    A lei exige que a fatura indique os bens e os serviços vendidos (alínea b) do n.º 5 do artigo 36.º do CIVA). Um
+    combo não mostra os artigos que o compõem.
+
+    Para faturar um combo, use um destes processos:
+
+    - Emita a fatura a partir da **Nota de encomenda** ou do **Ponto de Venda**. A fatura mostra o combo como uma
+      secção, com uma linha para cada artigo do combo.
+    - Numa fatura criada diretamente, adicione uma linha para cada artigo do combo.
+
 Descontos nas Faturas
 ~~~~~~~~~~~~~~~~~~~~~
 
