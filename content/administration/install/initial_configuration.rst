@@ -178,6 +178,38 @@ as alterações.
 
     :doc:`Consulte as nossas FAQs sobre a secção Detalhes da Fatura <../../applications/faq/invoice>`
 
+Código de subscrição PT+
+========================
+A Localização PT+ precisa de uma subscrição válida para emitir documentos fiscais. A **Exo Software** fornece o
+código de subscrição quando contrata a Localização PT+.
+
+Para introduzir o código:
+
+#. Na app **Faturação / Contabilidade**, abra o menu :menuselection:`Configuração --> Definições`.
+#. Na secção **Portugal**, preencha o campo **Código de Subscrição**.
+#. Clique em **Guardar**.
+
+O campo só aparece com a opção **Faturação Portuguesa** ativa. Com esta opção ativa, o campo é obrigatório. O código
+é um só para a base de dados e vale para todas as empresas.
+
+.. image:: initial_configuration/v19_subscriptionCode.png
+   :align: center
+
+Quando guarda um código novo, o Odoo valida o código junto da Exo Software. O campo **Validade** mostra a data de fim
+da subscrição. O Odoo repete esta validação de forma automática todas as semanas.
+
+Para validar o código de imediato, clique no botão **Recarregar** (a seta circular ao lado do código). Use este botão
+depois de renovar a subscrição, para atualizar a data em **Validade**.
+
+.. important::
+    Renove a subscrição antes da data em **Validade**. Depois desta data, o Odoo mostra um aviso diário aos
+    administradores. Passados 15 dias, o Odoo bloqueia a emissão de documentos fiscais e a exportação de ficheiros e
+    declarações, como o SAF-T.
+
+.. tip::
+    Se a data em **Validade** não aparece ou não muda depois de uma renovação, clique em **Recarregar**. Se o problema
+    continuar, contacte a Exo Software.
+
 Configuração do utilizador
 ==========================
 
