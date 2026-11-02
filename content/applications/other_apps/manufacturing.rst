@@ -53,7 +53,8 @@ pedidos de aprovação são propostos por defeito. Volte a este campo depois de 
 A app cria também uma localização de produção dedicada, **Produção CM**, por cada empresa da sua base de dados. É para
 aqui que vão os consumos das ordens de fabrico por conta de terceiros, e é o que lhe permite separar estes custos da sua
 produção normal no fecho do período. Cria ainda, por empresa, a conta analítica **Unbuild of Contract Manufacturing**,
-para onde vai a mão de obra das ordens que venham a ser desmontadas.
+para onde vai a mão de obra das ordens que venham a ser desmontadas. Numa empresa criada depois da instalação, a conta
+toma a língua de quem cria a empresa: em português chama-se **Desmontagem de Contract Manufacturing**.
 
 .. image:: manufacturing/v18_cm_location.png
    :align: center
