@@ -77,6 +77,17 @@ contabilísticos que compõem o campo
 Os separadores **Anexo 40** e **Anexo 41** detalham as regularizações. Quando pede o reembolso aparecem também os
 anexos de reembolso de **Clientes** e de **Fornecedores**
 
+Os dois anexos incluem também os quadros em vigor desde julho de 2026, que seguem no ficheiro XML sem ter de os
+preencher no Portal das Finanças:
+
+- a tabela **Regularizações abrangidas pela verba 2.42 da lista I**, nos dois anexos, com uma linha por ano e período
+  da fatura corrigida
+- no Anexo 41, os campos 3C/4C do **Artigo 6.º do Decreto-Lei n.º 198/90** (vendas a exportadores nacionais) e os
+  campos 3D/4D do **Decreto-Lei n.º 19/2017** (e-Taxfree)
+
+Estes valores vêm das notas de crédito com a **Norma de Regularização de IVA** correspondente: as notas de crédito a
+clientes para o Anexo 40 e as notas de crédito de fornecedor para o Anexo 41
+
 O **Anexo R** das operações localizadas nas outras regiões é calculado com a declaração e aparece no seu próprio
 separador, sem ter de ser retirado região a região. O primeiro Anexo R preenche os campos 65 e 66 da declaração, e só
 um segundo Anexo R, quando há operações nas duas outras regiões, preenche os campos 67 e 68
