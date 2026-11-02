@@ -20,7 +20,10 @@ versions/
 ├── 18.0/         ← documentação COMPLETA do Odoo 18.0
 │   ├── index.rst
 │   └── applications/ ...
-└── 19.0/         ← documentação COMPLETA do Odoo 19.0
+├── 19.0/         ← documentação COMPLETA do Odoo 19.0
+│   ├── index.rst
+│   └── applications/ ...
+└── 20.0/         ← documentação COMPLETA do Odoo 20.0
     ├── index.rst
     └── applications/ ...
 ```

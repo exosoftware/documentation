@@ -9,6 +9,7 @@
 #   - versions/17.0/   -> the complete docs for Odoo 17.0
 #   - versions/18.0/   -> the complete docs for Odoo 18.0
 #   - versions/19.0/   -> the complete docs for Odoo 19.0
+#   - versions/20.0/   -> the complete docs for Odoo 20.0
 #
 # The script builds each version's tree and produces ./public/<version>/<lang>/.
 # Because everything is on one branch, ANY push rebuilds ALL versions — there is
@@ -31,7 +32,7 @@ set -euo pipefail
 # ---------------------------------------------------------------------------
 # Configuration (override via env vars in Cloudflare)
 # ---------------------------------------------------------------------------
-VERSIONS="${VERSIONS:-17.0 18.0 19.0}"                              # versions to build
+VERSIONS="${VERSIONS:-17.0 18.0 19.0 20.0}"                         # versions to build
 LANGS="${LANGS:-pt_PT}"                                             # languages to build
 CANONICAL_VERSION="${CANONICAL_VERSION:-19.0}"                      # canonical version (SEO)
 ROOT_URL="${ROOT_URL:-https://documentation.exosoftware.pt}"       # public domain (project_root)
