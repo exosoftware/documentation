@@ -113,11 +113,35 @@ criadas, dando acesso à sua listagem.
 .. image:: odoo_process/v19_proforma_list.png
    :align: center
 
-Em cada fatura pró-forma surge, por sua vez, o botão **Original Order** que permite voltar rapidamente ao
+Em cada fatura pró-forma surge, por sua vez, o botão **Encomenda Original** que permite voltar rapidamente ao
 documento de origem.
 
 .. image:: odoo_process/v19_proforma_draft.png
    :align: center
+
+Confirmar e faturar uma Fatura Pró-Forma
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+A fatura pró-forma não passa pelo estado **Orçamento enviado**. Em rascunho, não tem o botão **Emitir Doc.**:
+o botão **Confirmar** emite o documento e passa-o diretamente a **Ordem de Vendas**.
+
+.. image:: odoo_process/v19_proforma_confirm_button.png
+   :align: center
+
+Depois de confirmada, a fatura pró-forma segue o processo normal de uma ordem de venda: pode entregar os
+artigos e criar a fatura com o botão **Criar Fatura**. A fatura pró-forma mantém o seu número e não dá origem
+a uma nota de encomenda. No ficheiro SAF-T, a fatura indica a fatura pró-forma como documento de origem.
+
+.. note::
+    Uma fatura pró-forma que já esteja no estado **Orçamento enviado** também pode ser confirmada com o botão
+    **Confirmar**.
+
+.. important::
+    Quando a fatura pró-forma é criada a partir de uma Nota de Encomenda já confirmada, a sua confirmação não
+    cria uma nova entrega, porque a Nota de Encomenda já entrega os artigos. Fature os artigos **apenas num dos
+    dois documentos**, na fatura pró-forma ou na Nota de Encomenda, para não os faturar duas vezes.
+
+    Os artigos faturados pelas quantidades entregues só podem ser faturados na Nota de Encomenda, porque é ela
+    que faz a entrega.
 
 Subscrições
 ~~~~~~~~~~~
