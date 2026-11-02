@@ -26,7 +26,7 @@ mais abaixo para um volume esporádico de faturas B2G.
     valores indicativos, alteráveis unilateralmente pela Saphety.
 
 A solução é composta por quatro módulos, com um único fluxo: a base gera e valida o ficheiro
-CIUS-PT; o de broker (Saphety ou Generix) acrescenta-lhe transmissão automática; o de vendas
+CIUS-PT; o de broker (Saphety ou Generix) acrescenta-lhe a transmissão ao broker; o de vendas
 acrescenta captura a montante, na encomenda.
 
 .. list-table::
@@ -39,10 +39,10 @@ acrescenta captura a montante, na encomenda.
      - Geração e validação do ficheiro CIUS-PT na fatura e nota de crédito. Funciona sozinho.
      - —
    * - **Portugal - Saphety EDI**
-     - Transmissão automática ao broker e acompanhamento do estado de entrega.
+     - Transmissão ao broker, no envio da fatura, e acompanhamento do estado de entrega.
      - E-invoicing CIUS-PT
    * - **Portugal - Generix EDI**
-     - Transmissão automática à Generix e acompanhamento do estado de entrega.
+     - Transmissão à Generix, no envio da fatura, e acompanhamento do estado de entrega.
      - E-invoicing CIUS-PT
    * - **Portugal - Sales B2G and EDI**
      - Campos B2G na encomenda de venda, com propagação para a fatura.
@@ -70,7 +70,7 @@ Ativação dos módulos
 -------------------------
 Aceda à app **Faturação / Contabilidade** (dependendo respetivamente se tem versão Community ou
 Enterprise do Odoo), vá ao menu :menuselection:`Configuração --> Configurações` e na secção
-**Portugal** ative a opção :guilabel:`Faturação Eletrónica`. Se pretender transmissão automática
+**Portugal** ative a opção :guilabel:`Faturação Eletrónica`. Se pretender transmitir as faturas
 via Saphety, ative também a opção :guilabel:`Broker EDI Saphety`; via Generix, a opção
 :guilabel:`Generix EDI broker`. Ambas ficam disponíveis na mesma secção assim que a opção
 anterior está ativa.
@@ -135,7 +135,7 @@ vermelho caso contrário.
 
 Se usar a Generix, a verificação é a mesma, através do botão :guilabel:`Check Generix`, no mesmo
 sítio. A consulta só é feita quando o campo :guilabel:`Envio de faturas` do parceiro está definido
-como :guilabel:`by Generix` e as credenciais Generix estão preenchidas nas definições.
+como :guilabel:`pela Generix` e as credenciais Generix estão preenchidas nas definições.
 
 .. important::
     Trate esta verificação como **pré-condição do fluxo**, não como funcionalidade acessória: um
@@ -176,16 +176,32 @@ Descarregue-o a partir daí e submeta-o no portal do broker escolhido.
 
 Via broker (Saphety ou Generix)
 -----------------------------------
-Com a **Saphety EDI** ou a **Generix EDI** instalada e configurada, a transmissão é automática e
-**assíncrona**: um processo agendado do Odoo envia os ficheiros pendentes em lote e atualiza
-periodicamente o estado de cada um. Depois de confirmar a fatura não espere ver a transmissão de imediato — é o
-comportamento esperado, não uma falha.
+Com a **Saphety EDI** ou a **Generix EDI** instalada e configurada, a publicação da fatura
+**não** transmite o ficheiro CIUS-PT ao broker. A transmissão só acontece quando envia a fatura:
+
+#. Abra a fatura publicada e clique em :guilabel:`Enviar`.
+#. Na janela de envio, selecione :guilabel:`pela Saphety` ou :guilabel:`pela Generix`.
+#. Clique em :guilabel:`Enviar` para confirmar.
+
+.. image:: e-invoicing/v19_edi_send_wizard_generix.png
+   :align: center
+
+Se não selecionar uma destas opções, o Odoo não envia o ficheiro ao broker.
+
+.. tip::
+    Defina o campo :guilabel:`Envio de faturas` do parceiro como :guilabel:`pela Saphety` ou
+    :guilabel:`pela Generix`. Assim, a janela de envio mostra essa opção já selecionada para as
+    faturas desse parceiro.
+
+Depois do envio, o broker processa o documento de forma **assíncrona**. Um processo agendado do
+Odoo consulta o broker periodicamente e atualiza o estado de cada documento. Não espere ver o
+estado final logo após o envio: é o comportamento esperado, não uma falha.
 
 .. note::
     Este processo corre na Ação Agendada nativa do Odoo para documentos EDI
     (:menuselection:`Definições --> Técnico --> Automação --> Ações Agendadas`). Se a sua base de
-    dados não tiver essa ação ativa, o envio automático não ocorre até a ativar — confirme com a
-    Exo Software ou com o seu administrador de sistema se não vir movimento.
+    dados não tiver essa ação ativa, o estado dos documentos não é atualizado até a ativar —
+    confirme com a Exo Software ou com o seu administrador de sistema se não vir movimento.
 
 Depois de a fatura ter sido enviada pelo menos uma vez (botão :guilabel:`Enviar`), o separador
 :guilabel:`Documentos EDI` da fatura mostra o estado do documento CIUS-PT:
