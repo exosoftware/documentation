@@ -24,3 +24,4 @@ Explore mais sobre o nosso add-on de Salários
     payroll/mapa_anual_acumulado
     payroll/declaracao_anual_rendimentos
     payroll/relatorio_unico
+    payroll/configurador_salario
