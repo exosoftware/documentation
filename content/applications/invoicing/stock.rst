@@ -218,6 +218,12 @@ atenção para:
 .. image:: stock/v17_stock_operations03.png
     :align: center
 
+.. note::
+    Por defeito, uma receção não emite guia: quem envia a mercadoria é que a emite. Se precisar de uma guia sua numa
+    receção, por exemplo uma Guia de Transporte de Ativos para bens seus que regressam de um subcontratado, basta
+    escolher a Série Documental na receção. A receção passa a ser tratada como documento fiscal e a guia é emitida e
+    comunicada à AT na validação, como nas restantes operações.
+
 Consumo Interno em Odoo
 -----------------------
 **É suportado nativamente pelo Odoo**, no entanto o consumo interno de artigos que foram comprados para stock, não é
@@ -331,6 +337,11 @@ Guias de Devolução
 As guias de devolução devem ser feitas a partir do documento original que lhes deu origem para que se mantenha o
 rastreamento do processo. Por esse motivo, em Odoo nos documentos de Recebimento/Entrega tem rápido acesso ao botão
 **Devolução**
+
+.. important::
+    A Guia de Devolução é o documento com que devolve mercadoria a um fornecedor, por isso só pode ser associada a
+    operações de entrega. Quando é um cliente a devolver-lhe mercadoria, a receção correspondente não leva guia sua:
+    a guia de devolução, quando exigida, é emitida pelo cliente.
 
 .. image::  stock/v17_slips06.png
     :align: center
