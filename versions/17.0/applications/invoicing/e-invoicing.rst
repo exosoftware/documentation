@@ -123,6 +123,45 @@ o campo :guilabel:`Formato da fatura eletrónica` como :guilabel:`Portugal (CIUS
     contacto a ser faturado. A definição no parceiro principal é o suficiente e aplica-se de forma
     transparente sempre que um documento é emitido para qualquer um dos seus contactos.
 
+GLN do cliente e do local de entrega (Generix)
+--------------------------------------------------
+Alguns clientes com várias lojas, por exemplo cadeias de retalho, identificam cada loja e cada
+local de entrega pelo seu GLN (*Global Location Number*). Com a **Generix EDI** instalada, o
+campo :guilabel:`GLN` fica visível em todos os contactos:
+
+#. Abra a ficha do contacto: a loja que usa como cliente nas faturas, ou a morada de entrega.
+#. No separador :guilabel:`Vendas e Compras`, secção **Diversos**, preencha o campo
+   :guilabel:`GLN`.
+#. Guarde a ficha.
+
+.. image:: e-invoicing/v18_edi_partner_buyer_gln.png
+   :align: center
+
+O campo também aparece no formulário de cada contacto, no separador
+:guilabel:`Endereços e contactos` da ficha do parceiro principal.
+
+O ficheiro CIUS-PT usa o GLN de dois contactos da fatura:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 70
+
+   * - Contacto da fatura
+     - O que o GLN identifica no ficheiro CIUS-PT
+   * - **Cliente**
+     - O comprador. Sem GLN, o ficheiro identifica o comprador pela :guilabel:`Referência` do
+       parceiro principal.
+   * - **Morada de entrega**
+     - O local de entrega.
+
+Se a fatura não tiver morada de entrega, o Odoo usa o cliente como local de entrega. Nesse caso,
+o mesmo GLN identifica o comprador e o local de entrega.
+
+.. important::
+    Ao contrário do formato da fatura eletrónica, o GLN **não é herdado** do parceiro principal.
+    Preencha-o em cada contacto que usa nas faturas, como cliente ou como morada de entrega. O GLN
+    do parceiro principal só é usado nas faturas emitidas ao próprio parceiro principal.
+
 Verificação prévia do destinatário
 --------------------------------------
 Antes de faturar, confirme que o NIF do parceiro está registado na plataforma Saphety: na ficha
