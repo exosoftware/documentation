@@ -19,6 +19,11 @@ A Declaração Mensal de Remunerações (DMR-AT) é a declaração mensal que re
 Tributária os rendimentos de cada trabalhador, as retenções de IRS e as contribuições obrigatórias
 desse mês
 
+.. note::
+    A DMR não inclui os recibos dos funcionários não residentes. Os salários destes funcionários
+    são declarados no :doc:`Modelo 30 <../invoicing/withholding_tax>`, que os lê dos recibos de
+    vencimento.
+
 Para a preparar aceda à app **Salários**, vá ao menu :menuselection:`Relatórios --> DMR`
 
 .. image:: dmr_dri/v19_dmr_menu.png
