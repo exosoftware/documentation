@@ -289,6 +289,83 @@ internas (01).
     O campo :guilabel:`Tipo de Declaração` permite indicar se está a entregar a primeira
     declaração do período ou uma declaração de substituição.
 
+Funcionários não residentes
+---------------------------
+Os salários pagos a funcionários não residentes são declarados no Modelo 30, e não na DMR. Quando
+a app **Salários** da Localização PT+ está instalada, o Modelo 30 lê estes salários dos recibos de
+vencimento. Não precisa de os lançar à mão.
+
+Um caso frequente é o funcionário com residência fiscal num país com uma convenção para evitar a
+dupla tributação. Este funcionário desconta para a Segurança Social, mas pode ficar dispensado da
+retenção de IRS.
+
+Configurar o funcionário
+~~~~~~~~~~~~~~~~~~~~~~~~
+Abra a ficha do funcionário na app **Funcionários** e vá ao separador :guilabel:`Pessoal`.
+
+1. No bloco :guilabel:`Cidadania`, ative :guilabel:`Não residente`.
+2. No bloco :guilabel:`Localização`, preencha o país da :guilabel:`Morada Privada`. Este é o país
+   de residência que vai para a declaração.
+
+.. image:: withholding_tax/v20_wht_stat_mod30_nonres_employee.png
+   :align: center
+
+3. No bloco :guilabel:`Dados Fiscais`, preencha o :guilabel:`NIF` português do funcionário. A AT
+   exige um NIF português para cada beneficiário.
+4. Preencha a :guilabel:`Taxa de IRS`:
+
+   - escreva **0** quando o funcionário está dispensado de retenção por uma convenção;
+   - escreva a taxa a reter nos outros casos.
+
+.. image:: withholding_tax/v20_wht_stat_mod30_nonres_tax.png
+   :align: center
+
+.. note::
+    Se a morada privada não tiver país, o Modelo 30 usa a :guilabel:`Nacionalidade (País)` do
+    funcionário.
+
+Processar os salários
+~~~~~~~~~~~~~~~~~~~~~
+Processe e valide os recibos de vencimento do funcionário como os dos outros funcionários. O recibo
+calcula a Segurança Social. Com a taxa de IRS a 0, o recibo não retém IRS.
+
+A :doc:`DMR <../payroll/dmr_dri>` não inclui os recibos dos funcionários não residentes.
+
+Declarar no Modelo 30
+~~~~~~~~~~~~~~~~~~~~~
+Abra :menuselection:`Relatórios --> Modelo 30`, escolha o período e clique em
+:guilabel:`Calcular`. O Modelo 30 lê os recibos validados e pagos cujo período de referência está
+no período da declaração, como a DMR. O **Q8** mostra uma linha por funcionário.
+
+.. image:: withholding_tax/v20_wht_stat_mod30_nonres_q8.png
+   :align: center
+
+.. list-table::
+   :header-rows: 1
+
+   * - Coluna
+     - Valor
+   * - :guilabel:`NIF (PT)`
+     - O NIF português do funcionário
+   * - :guilabel:`Código Rend.`
+     - **15**, trabalho dependente
+   * - :guilabel:`Base`
+     - O rendimento sujeito dos recibos do período
+   * - :guilabel:`Código Imposto`
+     - **02** quando a taxa de IRS é 0 (dispensa por convenção), **01** quando há taxa (Código do
+       IRS)
+   * - :guilabel:`% Taxa` e :guilabel:`Retenção na Fonte`
+     - A taxa de IRS do funcionário e o IRS retido nos recibos
+   * - :guilabel:`NIPC`
+     - O NIF da empresa
+
+Quando os recibos retêm IRS, o **Q6** mostra o total na linha do trabalho dependente. Clique em
+:guilabel:`Ver` numa linha para abrir os recibos que lhe deram origem.
+
+.. important::
+    Antes de calcular, o Modelo 30 confirma o NIF da empresa e, para cada funcionário não
+    residente, o NIF e o país. Se faltar um destes dados, uma mensagem diz o que deve preencher.
+
 Declaração de rendimentos ao titular
 ====================================
 No início de cada ano tem de entregar a cada titular um comprovativo dos rendimentos que lhe
