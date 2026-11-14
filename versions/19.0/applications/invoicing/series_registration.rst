@@ -94,7 +94,7 @@ documental já existente.
     Se transitar de outro software o ideal é sempre criar uma nova série.
     A opção de manter séries só deve ser utilizada para os seguintes casos:
 
-     - Transitou entre sistemas Odoo
+     - Transitou entre sistemas Odoo **com localização PT+**
      - Por dificuldades técnicas teve de registar a série primeiro na AT e só depois a vai usar no Odoo
 
     Para todos os outros cenários deve sempre usar uma nova série
