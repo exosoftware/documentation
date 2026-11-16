@@ -102,6 +102,68 @@ opção, e guarde.
 .. image:: e-invoicing/v19_edi_settings_generix.png
    :align: center
 
+Ações agendadas
+------------------
+A transmissão ao broker e o acompanhamento do estado usam duas ações agendadas. Para as ver,
+ative o modo de programador e abra
+:menuselection:`Definições --> Técnico --> Automação --> Ações Agendadas`.
+
+.. image:: e-invoicing/v18_edi_crons_list.png
+   :align: center
+
+.. list-table::
+   :header-rows: 1
+   :widths: 30 45 25
+
+   * - Ação agendada
+     - O que faz
+     - Execução por omissão
+   * - **PT EDI: Enviar faturas eletrónicas agendadas**
+     - Transmite ao broker as faturas eletrónicas que aguardam o envio agendado. Só tem efeito
+       com a opção `Envio agendado`_ ativa.
+     - Uma vez por dia, à noite (21h00 UTC).
+   * - **EDI : Realizar operações de serviços web**
+     - Consulta o broker e atualiza o estado dos documentos enviados. Consulte
+       `Atualização do estado dos documentos`_.
+     - Uma vez por dia.
+
+.. note::
+    O Odoo instala a ação **EDI : Realizar operações de serviços web** desativada. A instalação
+    da **Saphety EDI** ou da **Generix EDI** ativa-a. Se o estado dos documentos não muda,
+    confirme que a ação tem o campo :guilabel:`Ativo` ligado.
+
+Envio agendado
+-----------------
+Por omissão, o Odoo transmite a fatura eletrónica ao broker quando envia a fatura. Para
+transmitir todas as faturas eletrónicas de uma vez, a uma hora fixa, ative o envio agendado:
+
+#. Em :menuselection:`Configuração --> Configurações`, secção **Portugal**, marque a opção
+   :guilabel:`Envio Agendado de Faturas Eletrónicas`, por baixo de
+   :guilabel:`Faturação Eletrónica`.
+#. Clique em :guilabel:`Guardar`.
+#. Clique em :guilabel:`Definir a hora de envio`. O Odoo abre a ação agendada
+   **PT EDI: Enviar faturas eletrónicas agendadas**.
+
+.. image:: e-invoicing/v18_edi_scheduled_sending_settings.png
+   :align: center
+
+Na ação agendada, defina quando o Odoo envia as faturas:
+
+#. No campo :guilabel:`Próxima Data de Execução`, defina o dia e a hora do próximo envio.
+#. No campo :guilabel:`Executar a Cada`, defina o intervalo entre dois envios.
+#. Guarde.
+
+.. image:: e-invoicing/v18_edi_scheduled_sending_cron.png
+   :align: center
+
+.. note::
+    A opção é definida por empresa. A ação agendada é comum a todas as empresas da base de
+    dados: a hora de envio é a mesma para todas.
+
+.. tip::
+    Para enviar de imediato as faturas que aguardam, abra a ação agendada e clique em
+    :guilabel:`Executar Manualmente`.
+
 Formato do parceiro e herança
 -------------------------------
 Indique, na ficha de cada parceiro cliente, que este deve receber faturas em CIUS-PT. Abra a
@@ -225,24 +287,62 @@ Com a **Saphety EDI** ou a **Generix EDI** instalada e configurada, a publicaç�
 .. image:: e-invoicing/v19_edi_send_wizard_generix.png
    :align: center
 
-Se não selecionar uma destas opções, o Odoo não envia o ficheiro ao broker.
+Se não selecionar uma destas opções, o Odoo não envia o ficheiro ao broker. Com o
+`Envio agendado`_ ativo, o Odoo transmite o ficheiro mais tarde, na hora definida.
 
 .. tip::
     Defina o campo :guilabel:`Envio de faturas` do parceiro como :guilabel:`pela Saphety` ou
     :guilabel:`pela Generix`. Assim, a janela de envio mostra essa opção já selecionada para as
     faturas desse parceiro.
 
-Depois do envio, o broker processa o documento de forma **assíncrona**. Um processo agendado do
-Odoo consulta o broker periodicamente e atualiza o estado de cada documento. Não espere ver o
+Com o envio agendado ativo
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Com a opção :guilabel:`Envio Agendado de Faturas Eletrónicas` ativa, o botão :guilabel:`Enviar`
+não transmite o ficheiro CIUS-PT. A fatura fica a aguardar pela ação agendada
+**PT EDI: Enviar faturas eletrónicas agendadas**:
+
+- No topo da fatura, o Odoo mostra a mensagem *Esta fatura eletrónica será enviada pela Saphety
+  na próxima execução do envio agendado* (ou *pela Generix*).
+- Na lista de faturas, o filtro :guilabel:`Fatura eletrónica agendada` mostra todas as faturas
+  que aguardam.
+- Não pode enviar outra vez uma fatura que aguarda. Se tentar, o Odoo mostra o erro *O CIUS-PT
+  já está agendado para envio e não pode ser enviado novamente*.
+
+Na hora definida, a ação agendada transmite as faturas por ordem de data e de número. A ação só
+transmite faturas publicadas: uma fatura anulada antes dessa hora não é transmitida.
+
+Se a transmissão de uma fatura falha (por exemplo, o broker não responde), as outras faturas
+são transmitidas na mesma. A fatura com falha continua a aguardar e a ação tenta outra vez na
+execução seguinte. O motivo da falha fica no histórico da fatura, com a mensagem *O envio
+agendado da fatura eletrónica falhou e será tentado novamente na próxima execução*.
+
+Atualização do estado dos documentos
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Depois da transmissão, o broker processa o documento de forma **assíncrona**. Não espere ver o
 estado final logo após o envio: é o comportamento esperado, não uma falha.
 
-.. note::
-    Este processo corre na Ação Agendada nativa do Odoo para documentos EDI
-    (:menuselection:`Definições --> Técnico --> Automação --> Ações Agendadas`). Se a sua base de
-    dados não tiver essa ação ativa, o estado dos documentos não é atualizado até a ativar —
-    confirme com a Exo Software ou com o seu administrador de sistema se não vir movimento.
+A ação agendada **EDI : Realizar operações de serviços web** consulta o broker e atualiza o
+estado. Em cada execução, para cada documento com o estado da submissão *Em Espera* ou
+*Em Curso*:
 
-Depois de a fatura ter sido enviada pelo menos uma vez (botão :guilabel:`Enviar`), o separador
+#. A ação consulta o estado do pedido de entrega e atualiza a coluna do estado da submissão.
+#. Quando o broker devolve o identificador do documento, a ação consulta também o estado do
+   documento na plataforma do broker (por exemplo, *Received*).
+#. Quando o broker devolve erros, a ação mostra-os na fatura, no separador
+   :guilabel:`Documentos EDI`.
+
+Quando o estado da submissão passa a *Concluído* ou *Erro*, a ação deixa de consultar esse
+documento.
+
+.. tip::
+    Por omissão, a ação corre uma vez por dia. Uma fatura transmitida à noite pelo envio
+    agendado só mostra o estado novo na execução seguinte desta ação. Para atualizar os estados
+    mais vezes, diminua o intervalo no campo :guilabel:`Executar a Cada` da ação (por exemplo,
+    1 hora). Para atualizar de imediato, clique em :guilabel:`Executar Manualmente`.
+
+Estados na fatura
+~~~~~~~~~~~~~~~~~~~~
+Depois de a fatura ser transmitida ao broker, o separador
 :guilabel:`Documentos EDI` da fatura mostra o estado do documento CIUS-PT:
 
 .. image:: e-invoicing/v19_edi_invoice_edi_tab.png
