@@ -184,7 +184,8 @@ Autorização de Dono
 Se alguém registar material cujo Dono não é o da ordem, seja stock da sua empresa ou de outro cliente, o Odoo não deixa
 passar em silêncio, mas também não bloqueia o documento inteiro. A quantidade registada é retida, a linha fica com um
 pedido de **Autorização de Dono**, e o resto do documento valida normalmente; a linha retida segue para a ordem parcial.
-A regra é a mesma no consumo da ordem de fabrico, na transferência de recolha dos componentes e na guia de remessa.
+A regra é a mesma no consumo da ordem de fabrico, na transferência de recolha dos componentes e na transferência de
+entrega.
 
 O pedido é atribuído ao **Aprovador de Divergência de Dono** das definições de Inventário, e pode ser reatribuído no
 próprio pedido. Só um **Administrador de Inventário** o aprova ou recusa: na app de **Produção**, menu de
@@ -244,9 +245,9 @@ registado noutra interface, como nesta ordem de fabrico, registada no Shop Floor
 Concluída a ordem, o produto acabado entra em stock como propriedade do cliente e não é valorizado. A entrega dá baixa
 da consignação sem impacto patrimonial, e a fatura liquida apenas o serviço.
 
-A guia de remessa de uma venda de Contract Manufacturing só reserva unidades cujo Dono seja o cliente da encomenda.
-Unidades iguais que sejam da sua empresa ficam livres para outros clientes; expedir uma delas passa pela mesma
-autorização de Dono e pela mesma cedência de propriedade.
+A transferência de entrega de uma venda de Contract Manufacturing só reserva unidades cujo Dono seja o cliente da
+encomenda. Unidades iguais que sejam da sua empresa ficam livres para outros clientes; expedir uma delas passa pela
+mesma autorização de Dono e pela mesma cedência de propriedade.
 
 .. warning::
     Cancelar a encomenda de venda **não** cancela a ordem de fabrico. É comportamento nativo do Odoo, e pode ser
