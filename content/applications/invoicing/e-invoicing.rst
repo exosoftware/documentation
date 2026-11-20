@@ -224,6 +224,49 @@ o mesmo GLN identifica o comprador e o local de entrega.
     Preencha-o em cada contacto que usa nas faturas, como cliente ou como morada de entrega. O GLN
     do parceiro principal só é usado nas faturas emitidas ao próprio parceiro principal.
 
+Preços líquidos nas faturas eletrónicas (Generix)
+----------------------------------------------------
+Por omissão, cada linha do ficheiro CIUS-PT tem o preço unitário sem desconto e o desconto da
+linha em separado. A plataforma de alguns clientes não aceita descontos. Para esses clientes,
+envie o preço unitário com o desconto já deduzido. Com a **Generix EDI** instalada:
+
+#. Abra a ficha do parceiro principal do cliente.
+#. No separador :guilabel:`Contabilidade`, secção **Faturas a Clientes**, marque a opção
+   :guilabel:`Preços Líquidos nas Faturas Eletrónicas`.
+#. Guarde a ficha.
+
+.. image:: e-invoicing/v18_edi_partner_net_price.png
+   :align: center
+
+A opção só aparece quando o :guilabel:`Formato de Fatura Eletrónica` do parceiro é
+:guilabel:`Portugal (CIUS-PT)`. Consulte `Formato do parceiro e herança`_.
+
+Com a opção marcada, as linhas do ficheiro CIUS-PT mudam assim:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 30 30
+
+   * - Linha da fatura: 2 unidades a 100,00 € com 10% de desconto
+     - Sem a opção
+     - Com a opção
+   * - **Preço unitário**
+     - 100,00 €
+     - 90,00 €
+   * - **Desconto da linha**
+     - 20,00 €
+     - —
+   * - **Total da linha**
+     - 180,00 €
+     - 180,00 €
+
+O total da linha e o total da fatura não mudam. A opção só muda o ficheiro CIUS-PT: a fatura no
+Odoo e o PDF continuam a mostrar o preço unitário e o desconto.
+
+.. note::
+    O Odoo lê a opção no parceiro principal. A opção aplica-se às faturas emitidas a todos os
+    seus contactos.
+
 Verificação prévia do destinatário
 --------------------------------------
 Antes de faturar, confirme que o NIF do parceiro está registado na plataforma Saphety: na ficha
