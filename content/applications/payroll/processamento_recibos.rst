@@ -73,13 +73,47 @@ Ao gerar os recibos, o Odoo:
 
 - gera as entradas de trabalho do período (assiduidade, ausências, faltas);
 - ajusta o período de cada recibo às datas de início e de fim do contrato, quando o funcionário
-  entra ou sai a meio do mês;
+  entra ou sai a meio do mês (ver também `Mudança de contrato no período`_);
 - junta os complementos salariais ativos de cada funcionário (ver :doc:`complementos_salariais`);
 - calcula os recibos (vencimento, subsídios, IRS, Segurança Social e líquido).
 
 .. note::
     Se houver conflitos nas entradas de trabalho, por exemplo uma ausência sobreposta a outra, os
     recibos não são gerados. Resolva os conflitos em **Registos de Trabalho** e gere de novo.
+
+Mudança de contrato no período
+------------------------------
+Um contrato pode terminar e outro começar no dia seguinte, no mesmo período. O motivo do fim do
+primeiro contrato decide quantos recibos o Odoo gera nesse período.
+
+Antes de criar o novo contrato, abra o funcionário e vá ao separador **Folha de Salários**. Em
+**Dados do Contrato**, preencha o campo **Razão para Termino de Contrato**:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   * - Motivo
+     - Recibos no período
+   * - **Por Renovação do Contrato a Termo**
+     - Um recibo, no novo contrato, seja qual for o dia da renovação.
+   * - **Por Atualização das Condições Contratuais**
+     - Dois recibos quando a mudança é a meio do período. Um recibo quando a mudança é no primeiro
+       dia do período.
+   * - **Por Atualização das Condições Contratuais e Renovação**
+     - Igual à atualização das condições contratuais.
+
+O recibo de uma renovação cobre o período inteiro e é calculado como um mês normal:
+
+- tem os dias de trabalho e as faltas dos dois contratos;
+- não desconta dias por início ou por fim de contrato.
+
+Nenhum destes três motivos termina a relação de trabalho. Por isso, o Odoo não comunica uma
+cessação à Segurança Social.
+
+.. note::
+    O recibo único só existe quando o novo contrato começa no dia a seguir ao fim do contrato
+    renovado. Se houver dias entre os dois contratos, o Odoo gera um recibo para cada contrato.
 
 Rever e validar
 ---------------
