@@ -12,6 +12,7 @@ O processo de faturação em Odoo foi pensado para seguir sempre a mesma sequên
 
             - Nota de Crédito
             - Nota de Débito
+            - Correção da taxa de IVA
 
         - Reconciliação de documentos
 
@@ -605,6 +606,75 @@ Em seguida confirme a nota de débito.
 
 .. seealso::
    :ref:`O que é uma nota de débito <fiscal_documents_debitNote>`
+
+.. _odoo_process_vat_rate_correction:
+
+Correção da taxa de IVA
+~~~~~~~~~~~~~~~~~~~~~~~
+Quando uma fatura tem uma taxa de IVA errada, corrija só o IVA com uma nota de crédito ou uma nota de débito.
+O documento de correção não altera o valor tributável. Leva só a diferença de IVA.
+
+.. important::
+    O Ofício-Circulado n.º 25120/2026 da AT define este procedimento. O documento de correção tem de indicar a fatura
+    que corrige e a taxa de IVA corrigida.
+
+- Use uma **nota de crédito** quando a taxa aplicada é superior à taxa devida.
+- Use uma **nota de débito** quando a taxa aplicada é inferior à taxa devida.
+
+Nota de crédito
+^^^^^^^^^^^^^^^
+1. Abra a fatura emitida e clique em **Nota de Crédito**.
+2. Escreva o motivo, por exemplo "Taxa de IVA errada".
+3. Selecione a opção **Correção Taxa IVA**.
+4. Clique em **Reverter**.
+
+.. image:: odoo_process/v18_vatRateCorrection1.png
+   :align: center
+
+O Odoo cria a nota de crédito em rascunho. Cada linha da fatura dá uma linha de correção:
+
+- O artigo é **Regularização de IVA**.
+- O preço é zero. Por isso, o valor tributável da nota de crédito é zero.
+- O imposto é o imposto da linha da fatura.
+- A coluna **Base Regularizada** mostra o valor tributável da linha da fatura.
+
+5. Em cada linha, escolha a taxa correta na coluna **IVA Corrigido**.
+6. Remova as linhas que não precisam de correção.
+7. Confirme a nota de crédito.
+
+.. image:: odoo_process/v18_vatRateCorrection2.png
+   :align: center
+
+A coluna **IVA Regularizado** mostra a diferença de IVA. No exemplo, a fatura de 1000,00 € tem IVA a 23% (230,00 €)
+em vez de 6% (60,00 €). A nota de crédito regulariza 170,00 € de IVA.
+
+A descrição da linha indica a taxa corrigida, por exemplo "Correção de taxa do IVA para 6%".
+
+Nota de débito
+^^^^^^^^^^^^^^
+1. Abra a fatura emitida. No menu **Ação**, selecione **Nota de Débito**.
+2. Escreva o motivo.
+3. Selecione a opção **Correção Taxa IVA**.
+4. Clique em **Criar Nota de Débito**.
+
+.. image:: odoo_process/v18_vatRateCorrection3.png
+   :align: center
+
+Depois, siga os passos 5 a 7 da nota de crédito.
+
+Validações
+^^^^^^^^^^
+O Odoo não confirma o documento de correção nestes casos:
+
+- Uma linha não tem a taxa corrigida.
+- Numa nota de crédito, a taxa corrigida não é inferior à taxa aplicada.
+- Numa nota de débito, a taxa corrigida não é superior à taxa aplicada.
+- O IVA a regularizar é superior ao IVA que a linha da fatura ainda tem.
+- O preço, o desconto ou os impostos da linha foram alterados.
+
+.. tip::
+    A opção **Correção Taxa IVA** também existe nas faturas de fornecedor. Use-a para registar as notas de crédito e
+    de débito só de IVA que recebe dos fornecedores.
 
 .. _odoo_process_create_recipt:
 
