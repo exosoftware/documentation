@@ -58,6 +58,9 @@ internacional. A localização Exo permite emitir uma ou várias faturas pró-fo
 Ordem/Orçamento de Venda, controlando automaticamente as quantidades já enviadas para que nunca sejam
 excedidas as quantidades encomendadas.
 
+Depois de confirmada, a fatura pró-forma pode ser entregue e faturada diretamente, sem dar origem a uma nota
+de encomenda.
+
 Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento e selecionar a opção :menuselection:`Imprimir --> Orçamento / Encomenda`
 
 .. image:: fiscal_documents/v17_printQuote.png
@@ -73,8 +76,8 @@ Para emitir o pdf da fatura pró-forma basta ir ao menu **Ação** do documento 
 Nota de encomenda
 -----------------
 
-A nota de encomenda é um documento que é gerado automaticamente, sempre que um orçamento ou fatura pró-forma são
-confirmados depois da aprovação do cliente.
+A nota de encomenda é um documento que é gerado automaticamente, sempre que um orçamento é confirmado depois
+da aprovação do cliente.
 
 Este documento tem uma série de numeração independente dos anteriores.
 
